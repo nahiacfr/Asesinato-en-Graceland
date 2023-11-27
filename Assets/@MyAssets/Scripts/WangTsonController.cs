@@ -10,12 +10,12 @@ public class WangTsonController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<NavMeshAgent>().destination = player.transform.position;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        GetComponent<NavMeshAgent>().destination = player.transform.position;
     }
 }
