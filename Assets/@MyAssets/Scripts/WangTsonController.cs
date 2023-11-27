@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -17,5 +18,24 @@ public class WangTsonController : MonoBehaviour
     void Update()
     {
         GetComponent<NavMeshAgent>().destination = player.transform.position;
+        if (GetComponent<NavMeshAgent>().remainingDistance >2)
+        {
+            Walk();
+        }
+        else
+        {
+            Stop();
+        }
     }
+
+    private void Stop()
+    {
+        GetComponent<Animator>().SetTrigger("Stand");
+    }
+
+    private void Walk()
+    {
+        GetComponent<Animator>().SetTrigger("Walk");
+    }
+
 }
