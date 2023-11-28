@@ -175,8 +175,8 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\josuj\git\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
 --root-assembly=C:\Users\josuj\git\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.Services.Core.Scheduler.dll
 --root-assembly=C:\Users\josuj\git\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.Services.Core.Device.dll
---root-assembly=C:\Users\josuj\git\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.Services.Core.Analytics.dll
 --root-assembly=C:\Users\josuj\git\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
+--root-assembly=C:\Users\josuj\git\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.Services.Core.Analytics.dll
 --root-assembly=C:\Users\josuj\git\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.XR.Management.dll
 --root-assembly=C:\Users\josuj\git\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.Services.Core.Threading.dll
 --root-assembly=C:\Users\josuj\git\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.Services.Core.Configuration.dll
