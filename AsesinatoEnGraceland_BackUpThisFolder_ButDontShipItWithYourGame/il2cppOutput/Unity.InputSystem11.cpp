@@ -2206,7 +2206,7 @@ IL_002e:
 		MethodInfo_t* L_13 = V_2;
 		NullCheck(L_13);
 		Type_t* L_14;
-		L_14 = VirtualFuncInvoker0< Type_t* >::Invoke(38 /* System.Type System.Reflection.MethodInfo::get_ReturnType() */, L_13);
+		L_14 = VirtualFuncInvoker0< Type_t* >::Invoke(40 /* System.Type System.Reflection.MethodInfo::get_ReturnType() */, L_13);
 		return L_14;
 	}
 
@@ -2577,7 +2577,7 @@ IL_0042:
 		Type_t* L_10 = ___type0;
 		NullCheck(L_10);
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_11;
-		L_11 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(108 /* System.Type[] System.Type::GetInterfaces() */, L_10);
+		L_11 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(111 /* System.Type[] System.Type::GetInterfaces() */, L_10);
 		// var haveFoundInterface = false;
 		V_0 = (bool)0;
 		// foreach (var element in interfaces)
@@ -2688,7 +2688,7 @@ IL_0091:
 		Type_t* L_34 = ___type0;
 		NullCheck(L_34);
 		Type_t* L_35;
-		L_35 = VirtualFuncInvoker0< Type_t* >::Invoke(106 /* System.Type System.Type::get_BaseType() */, L_34);
+		L_35 = VirtualFuncInvoker0< Type_t* >::Invoke(109 /* System.Type System.Type::get_BaseType() */, L_34);
 		___type0 = L_35;
 		// if (type == null || type == typeof(object))
 		Type_t* L_36 = ___type0;
@@ -2726,7 +2726,7 @@ IL_00b9:
 		Type_t* L_42 = ___type0;
 		NullCheck(L_42);
 		Type_t* L_43;
-		L_43 = VirtualFuncInvoker0< Type_t* >::Invoke(106 /* System.Type System.Type::get_BaseType() */, L_42);
+		L_43 = VirtualFuncInvoker0< Type_t* >::Invoke(109 /* System.Type System.Type::get_BaseType() */, L_42);
 		___type0 = L_43;
 		// if (type == typeof(object))
 		Type_t* L_44 = ___type0;
