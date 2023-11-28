@@ -16,11 +16,8 @@ public class CharacterCanvas : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.GameObject().CompareTag("Jugador"))
-        {
-           
+        {  
             canvasPersonaje.SetActive(true);
-            canvasPersonaje.transform.position = other.transform.position;
-            canvasPersonaje.transform.rotation = other.transform.rotation;
         }
     }
 

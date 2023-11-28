@@ -18,7 +18,7 @@ public class WangTsonController : MonoBehaviour
     void Update()
     {
         GetComponent<NavMeshAgent>().destination = player.transform.position;
-        if (GetComponent<NavMeshAgent>().remainingDistance >2)
+        if (GetComponent<NavMeshAgent>().remainingDistance > 2)
         {
             Walk();
         }
