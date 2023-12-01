@@ -230,6 +230,7 @@ UnityEngine.Application::Quit
 UnityEngine.Application::set_targetFrameRate
 UnityEngine.Application::get_platform
 UnityEngine.AsyncOperation::InternalDestroy
+UnityEngine.AudioListener::set_volume
 UnityEngine.AudioSettings::StartAudioOutput
 UnityEngine.AudioSettings::StopAudioOutput
 UnityEngine.AudioSource::get_isPlaying
@@ -862,7 +863,9 @@ UnityEngine.PlayerConnectionInternal::RegisterInternal
 UnityEngine.PlayerConnectionInternal::SendMessage
 UnityEngine.PlayerConnectionInternal::UnregisterInternal
 UnityEngine.PlayerPrefs::HasKey
+UnityEngine.PlayerPrefs::TrySetFloat
 UnityEngine.PlayerPrefs::TrySetSetString
+UnityEngine.PlayerPrefs::GetFloat
 UnityEngine.PlayerPrefs::GetString
 UnityEngine.PlayerPrefs::Save
 UnityEngine.Profiling.Profiler::GetRuntimeMemorySizeLong
