@@ -4525,7 +4525,7 @@ FINALLY_0076_1:
 						{
 							ProcessWaitHandle_t8460169FB67A55A5531F08CB2FDC37090B13A1C2* L_11 = V_2;
 							NullCheck(L_11);
-							VirtualActionInvoker0::Invoke(11 /* System.Void System.Threading.WaitHandle::Close() */, L_11);
+							VirtualActionInvoker0::Invoke(12 /* System.Void System.Threading.WaitHandle::Close() */, L_11);
 						}
 
 IL_007f_1:
@@ -4544,7 +4544,7 @@ IL_007f_1:
 					ProcessWaitHandle_t8460169FB67A55A5531F08CB2FDC37090B13A1C2* L_14 = V_2;
 					NullCheck(L_14);
 					bool L_15;
-					L_15 = VirtualFuncInvoker2< bool, int32_t, bool >::Invoke(8 /* System.Boolean System.Threading.WaitHandle::WaitOne(System.Int32,System.Boolean) */, L_14, 0, (bool)0);
+					L_15 = VirtualFuncInvoker2< bool, int32_t, bool >::Invoke(9 /* System.Boolean System.Threading.WaitHandle::WaitOne(System.Int32,System.Boolean) */, L_14, 0, (bool)0);
 					__this->___signaled_21 = L_15;
 					goto IL_0080_1;
 				}// end try (depth: 2)
@@ -5418,7 +5418,7 @@ FINALLY_0066:
 				{
 					ProcessWaitHandle_t8460169FB67A55A5531F08CB2FDC37090B13A1C2* L_3 = V_0;
 					NullCheck(L_3);
-					VirtualActionInvoker0::Invoke(11 /* System.Void System.Threading.WaitHandle::Close() */, L_3);
+					VirtualActionInvoker0::Invoke(12 /* System.Void System.Threading.WaitHandle::Close() */, L_3);
 				}
 
 IL_006f:
@@ -5438,7 +5438,7 @@ IL_006f:
 				ProcessWaitHandle_t8460169FB67A55A5531F08CB2FDC37090B13A1C2* L_6 = V_0;
 				NullCheck(L_6);
 				bool L_7;
-				L_7 = VirtualFuncInvoker2< bool, int32_t, bool >::Invoke(8 /* System.Boolean System.Threading.WaitHandle::WaitOne(System.Int32,System.Boolean) */, L_6, 0, (bool)0);
+				L_7 = VirtualFuncInvoker2< bool, int32_t, bool >::Invoke(9 /* System.Boolean System.Threading.WaitHandle::WaitOne(System.Int32,System.Boolean) */, L_6, 0, (bool)0);
 				if (!L_7)
 				{
 					goto IL_0064_1;
@@ -5880,7 +5880,7 @@ IL_0054:
 				L_6 = RegisteredWaitHandle_Unregister_m448C91734A98AC351F7634466E0BF265C1326A20(L_5, (WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8*)NULL, NULL);
 				WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8* L_7 = __this->___waitHandle_25;
 				NullCheck(L_7);
-				VirtualActionInvoker0::Invoke(11 /* System.Void System.Threading.WaitHandle::Close() */, L_7);
+				VirtualActionInvoker0::Invoke(12 /* System.Void System.Threading.WaitHandle::Close() */, L_7);
 				__this->___waitHandle_25 = (WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___waitHandle_25), (void*)(WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8*)NULL);
 				__this->___registeredWaitHandle_24 = (RegisteredWaitHandle_t5AEE89AB4B4A54EAC5B66A72A0D7D2EF8C82EC86*)NULL;

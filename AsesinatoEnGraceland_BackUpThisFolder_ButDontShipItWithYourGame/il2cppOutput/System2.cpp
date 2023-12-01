@@ -23751,7 +23751,7 @@ IL_0060_1:
 				L_16 = InterfaceFuncInvoker0< WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8* >::Invoke(1 /* System.Threading.WaitHandle System.IAsyncResult::get_AsyncWaitHandle() */, IAsyncResult_t7B9B5A0ECB35DCEC31B8A8122C37D687369253B5_il2cpp_TypeInfo_var, L_15);
 				NullCheck(L_16);
 				bool L_17;
-				L_17 = VirtualFuncInvoker1< bool, int32_t >::Invoke(10 /* System.Boolean System.Threading.WaitHandle::WaitOne(System.Int32) */, L_16, ((int32_t)200));
+				L_17 = VirtualFuncInvoker1< bool, int32_t >::Invoke(11 /* System.Boolean System.Threading.WaitHandle::WaitOne(System.Int32) */, L_16, ((int32_t)200));
 			}
 
 IL_0076_1:
@@ -23805,7 +23805,7 @@ IL_00b9_1:
 			{
 				ManualResetEvent_t63959486AA41A113A4353D0BF4A68E77EBA0A158* L_23 = __this->___eofEvent_6;
 				NullCheck(L_23);
-				VirtualActionInvoker0::Invoke(11 /* System.Void System.Threading.WaitHandle::Close() */, L_23);
+				VirtualActionInvoker0::Invoke(12 /* System.Void System.Threading.WaitHandle::Close() */, L_23);
 				__this->___eofEvent_6 = (ManualResetEvent_t63959486AA41A113A4353D0BF4A68E77EBA0A158*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___eofEvent_6), (void*)(ManualResetEvent_t63959486AA41A113A4353D0BF4A68E77EBA0A158*)NULL);
 			}
