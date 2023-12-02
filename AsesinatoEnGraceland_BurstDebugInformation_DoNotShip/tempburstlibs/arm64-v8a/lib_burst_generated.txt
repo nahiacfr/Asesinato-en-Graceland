@@ -168,12 +168,12 @@ Library: lib_burst_generated
 --root-assembly=D:\DesarrolloVideojuegosPruebas\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.Burst.dll
 --root-assembly=D:\DesarrolloVideojuegosPruebas\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.RenderPipeline.Universal.ShaderLibrary.dll
 --root-assembly=D:\DesarrolloVideojuegosPruebas\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.Services.Core.Environments.dll
+--root-assembly=D:\DesarrolloVideojuegosPruebas\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=D:\DesarrolloVideojuegosPruebas\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.Services.Core.Internal.dll
 --root-assembly=D:\DesarrolloVideojuegosPruebas\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.XR.CoreUtils.dll
 --root-assembly=D:\DesarrolloVideojuegosPruebas\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.dll
 --root-assembly=D:\DesarrolloVideojuegosPruebas\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.Timeline.dll
 --root-assembly=D:\DesarrolloVideojuegosPruebas\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
---root-assembly=D:\DesarrolloVideojuegosPruebas\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=D:\DesarrolloVideojuegosPruebas\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.Services.Core.Scheduler.dll
 --root-assembly=D:\DesarrolloVideojuegosPruebas\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.Services.Core.Device.dll
 --root-assembly=D:\DesarrolloVideojuegosPruebas\AsesinatoEnGraceland\Temp\StagingArea\Data\Managed\Unity.Services.Core.Analytics.dll
