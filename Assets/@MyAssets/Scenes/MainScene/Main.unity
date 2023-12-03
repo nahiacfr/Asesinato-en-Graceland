@@ -1844,7 +1844,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 129964212}
-  - component: {fileID: 129964213}
   m_Layer: 0
   m_Name: Brian
   m_TagString: Untagged
@@ -1868,19 +1867,6 @@ Transform:
   m_Father: {fileID: 1278200343}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &129964213
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129964211}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.1951828, y: 2.105812, z: 1.9702997}
-  m_Center: {x: -23.598, y: 2.325843, z: -11.795}
 --- !u!43 &132865252
 Mesh:
   m_ObjectHideFlags: 0
@@ -3326,21 +3312,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasPersonaje: {fileID: 1587216774}
---- !u!114 &240634296
-MonoBehaviour:
+  rightRayInteractor: {fileID: 491304904}
+  leftRayInteractor: {fileID: 1856029574}
+--- !u!65 &240634297
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240634292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e6070eed35497e438dcd347c5432eae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jugadorTag: Jugador
-  rightRayInteractor: {fileID: 0}
-  leftRayInteractor: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.1951828, y: 2.105812, z: 1.9702997}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &247984346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4787,14 +4773,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393227989}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.356, y: -0.192, z: -0.13}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0.3779, y: 0.032, z: 0.044}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4750508579069719462}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
 --- !u!65 &393227991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4806,8 +4792,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.23872347, y: 0.29117122, z: 0.15451775}
-  m_Center: {x: -0.036415696, y: 0.15646501, z: 0.07835981}
+  m_Size: {x: 0.23872347, y: 0.19718316, z: 0.15451775}
+  m_Center: {x: -0.0364157, y: 0.10947096, z: 0.07835981}
 --- !u!114 &393227992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6301,8 +6287,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.195183, y: 2.105812, z: 1.9703}
-  m_Center: {x: -6.886292, y: 2.39, z: 0.09906769}
+  m_Size: {x: 2.1951828, y: 2.105812, z: 2.669476}
+  m_Center: {x: -6.886292, y: 2.39, z: 0.44865584}
 --- !u!114 &525989651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6351,8 +6337,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugadorTag: Jugador
-  rightRayInteractor: {fileID: 0}
-  leftRayInteractor: {fileID: 0}
+  rightRayInteractor: {fileID: 491304904}
+  leftRayInteractor: {fileID: 1856029574}
 --- !u!1 &609065644
 GameObject:
   m_ObjectHideFlags: 0
@@ -7491,7 +7477,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 757483278}
-  - component: {fileID: 757483279}
   m_Layer: 0
   m_Name: Amber
   m_TagString: Untagged
@@ -7515,19 +7500,6 @@ Transform:
   m_Father: {fileID: 1278200343}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &757483279
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 757483277}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.1951828, y: 2.105812, z: 1.9702997}
-  m_Center: {x: -29.348953, y: 2.3258429, z: -5.5883822}
 --- !u!43 &783338848
 Mesh:
   m_ObjectHideFlags: 0
@@ -8476,21 +8448,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasPersonaje: {fileID: 1354177567}
---- !u!114 &871015426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871015421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e6070eed35497e438dcd347c5432eae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jugadorTag: Jugador
-  rightRayInteractor: {fileID: 0}
-  leftRayInteractor: {fileID: 0}
+  rightRayInteractor: {fileID: 491304904}
+  leftRayInteractor: {fileID: 1856029574}
 --- !u!43 &885440481
 Mesh:
   m_ObjectHideFlags: 0
@@ -8927,7 +8886,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 912131208}
-  - component: {fileID: 912131209}
   m_Layer: 0
   m_Name: James
   m_TagString: Untagged
@@ -8951,19 +8909,6 @@ Transform:
   m_Father: {fileID: 1278200343}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &912131209
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912131207}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.1951828, y: 2.105812, z: 1.9702997}
-  m_Center: {x: -17.33, y: 2.325843, z: -15.32}
 --- !u!43 &913158568
 Mesh:
   m_ObjectHideFlags: 0
@@ -9973,7 +9918,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1016255542}
-  - component: {fileID: 1016255543}
   m_Layer: 0
   m_Name: Sophie
   m_TagString: Untagged
@@ -9997,19 +9941,6 @@ Transform:
   m_Father: {fileID: 1278200343}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1016255543
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016255541}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.1951828, y: 2.105812, z: 1.9702997}
-  m_Center: {x: -25.64, y: 2.325843, z: -13.7}
 --- !u!1 &1044509221
 GameObject:
   m_ObjectHideFlags: 0
@@ -10291,7 +10222,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1058279659}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.4
   m_Height: 2
   m_Direction: 1
@@ -10357,6 +10288,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1058279665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058279659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d174c8460447d3345a89a28ad9ba05a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasPersonaje: {fileID: 1728407778}
+  rightRayInteractor: {fileID: 491304904}
+  leftRayInteractor: {fileID: 1856029574}
 --- !u!43 &1077990258
 Mesh:
   m_ObjectHideFlags: 0
@@ -10654,14 +10600,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083207647}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.222, y: 0.154, z: -0.13}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -0.143, y: 0.338, z: 0.044}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4750508579069719462}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
 --- !u!65 &1083207649
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10673,8 +10619,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.23872347, y: 0.29117122, z: 0.15451775}
-  m_Center: {x: -0.036415696, y: 0.15646501, z: 0.07835981}
+  m_Size: {x: 0.23872347, y: 0.2166122, z: 0.15451775}
+  m_Center: {x: -0.0364157, y: 0.11918552, z: 0.07835981}
 --- !u!114 &1083207650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14338,7 +14284,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -15098,21 +15044,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasPersonaje: {fileID: 41112783}
---- !u!114 &1486658518
-MonoBehaviour:
+  rightRayInteractor: {fileID: 491304904}
+  leftRayInteractor: {fileID: 1856029574}
+--- !u!65 &1486658519
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486658512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e6070eed35497e438dcd347c5432eae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jugadorTag: Jugador
-  rightRayInteractor: {fileID: 0}
-  leftRayInteractor: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.1951828, y: 2.105812, z: 1.9702997}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1499832896
 GameObject:
   m_ObjectHideFlags: 0
@@ -15981,21 +15927,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasPersonaje: {fileID: 118800240}
---- !u!114 &1554429037
-MonoBehaviour:
+  rightRayInteractor: {fileID: 491304904}
+  leftRayInteractor: {fileID: 1856029574}
+--- !u!65 &1554429037
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318099865}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e6070eed35497e438dcd347c5432eae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jugadorTag: Jugador
-  rightRayInteractor: {fileID: 0}
-  leftRayInteractor: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.1951828, y: 2.105812, z: 1.9702997}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1557349399
 GameObject:
   m_ObjectHideFlags: 0
@@ -16376,8 +16322,8 @@ RectTransform:
   m_Father: {fileID: 1919510632}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -16480,21 +16426,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasPersonaje: {fileID: 1981151346}
---- !u!114 &1637236109
-MonoBehaviour:
+  rightRayInteractor: {fileID: 491304904}
+  leftRayInteractor: {fileID: 1856029574}
+--- !u!65 &1637236110
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637236104}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e6070eed35497e438dcd347c5432eae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jugadorTag: Jugador
-  rightRayInteractor: {fileID: 0}
-  leftRayInteractor: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.1951828, y: 2.105812, z: 2.2035189}
+  m_Center: {x: -0.0000000036951189, y: 1, z: 0.1166096}
 --- !u!1001 &1663928796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17109,21 +17055,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasPersonaje: {fileID: 680813739}
---- !u!114 &1687510502
-MonoBehaviour:
+  rightRayInteractor: {fileID: 491304904}
+  leftRayInteractor: {fileID: 1856029574}
+--- !u!65 &1687510504
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687510498}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e6070eed35497e438dcd347c5432eae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jugadorTag: Jugador
-  rightRayInteractor: {fileID: 0}
-  leftRayInteractor: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.1951828, y: 2.105812, z: 1.9702997}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1689350321
 GameObject:
   m_ObjectHideFlags: 0
@@ -17553,7 +17499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1703809702
 Transform:
   m_ObjectHideFlags: 0
@@ -17764,6 +17710,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1728407778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1489487370548756673, guid: 0b4715d531ac91747b926f86e79c2fc1,
+    type: 3}
+  m_PrefabInstance: {fileID: 247984346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1730858839
 GameObject:
   m_ObjectHideFlags: 0
@@ -18095,21 +18047,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasPersonaje: {fileID: 1795241361}
---- !u!114 &1734145297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734145292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e6070eed35497e438dcd347c5432eae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jugadorTag: Jugador
-  rightRayInteractor: {fileID: 0}
-  leftRayInteractor: {fileID: 0}
+  rightRayInteractor: {fileID: 491304904}
+  leftRayInteractor: {fileID: 1856029574}
 --- !u!43 &1735162430
 Mesh:
   m_ObjectHideFlags: 0
@@ -18447,7 +18386,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1766551746}
-  - component: {fileID: 1766551747}
   m_Layer: 0
   m_Name: Megan
   m_TagString: Untagged
@@ -18471,19 +18409,6 @@ Transform:
   m_Father: {fileID: 1278200343}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1766551747
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766551745}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.1951828, y: 2.105812, z: 1.9702997}
-  m_Center: {x: -26.89, y: 2.325843, z: -8.84}
 --- !u!114 &1775298556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20251,14 +20176,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844535118}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.425, y: -0.688, z: -0.13}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0.589, y: -0.259, z: 0.067}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4750508579069719462}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
 --- !u!65 &1844535120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20270,8 +20195,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.079817645, y: 0.29254362, z: 0.2705883}
-  m_Center: {x: -0.05368824, y: 0.3633556, z: 0.13639508}
+  m_Size: {x: 0.2859558, y: 0.06698651, z: 0.25084206}
+  m_Center: {x: -0.09700091, y: 0.25057724, z: 0.055954035}
 --- !u!114 &1844535121
 MonoBehaviour:
   m_ObjectHideFlags: 0

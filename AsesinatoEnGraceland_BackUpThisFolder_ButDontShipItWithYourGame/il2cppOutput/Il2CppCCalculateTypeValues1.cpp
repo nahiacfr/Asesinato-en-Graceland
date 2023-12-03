@@ -24303,6 +24303,10 @@ struct CharacterCanvas_t3E3F1A2861EFD10ED503E7FAA3C8A96DE0F3BB58  : public MonoB
 {
 	// UnityEngine.GameObject CharacterCanvas::canvasPersonaje
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvasPersonaje_4;
+	// UnityEngine.GameObject CharacterCanvas::rightRayInteractor
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___rightRayInteractor_5;
+	// UnityEngine.GameObject CharacterCanvas::leftRayInteractor
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___leftRayInteractor_6;
 };
 
 // UnityEngine.XR.Interaction.Toolkit.CharacterControllerDriver

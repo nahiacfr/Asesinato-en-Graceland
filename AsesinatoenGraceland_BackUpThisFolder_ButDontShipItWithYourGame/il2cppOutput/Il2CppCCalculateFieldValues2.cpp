@@ -13479,6 +13479,10 @@ struct CharacterCanvas_t3E3F1A2861EFD10ED503E7FAA3C8A96DE0F3BB58  : public MonoB
 {
 	// UnityEngine.GameObject CharacterCanvas::canvasPersonaje
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvasPersonaje_4;
+	// UnityEngine.GameObject CharacterCanvas::rightRayInteractor
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___rightRayInteractor_5;
+	// UnityEngine.GameObject CharacterCanvas::leftRayInteractor
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___leftRayInteractor_6;
 };
 
 // ChatController
@@ -17066,9 +17070,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6452[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6453[3] = 
 {
 	static_cast<int32_t>(offsetof(AnimateHandOnInput_tA9C05EB723ADD1EBE533839D67AD3A3A82F68156, ___pinchAnimationAction_4)),static_cast<int32_t>(offsetof(AnimateHandOnInput_tA9C05EB723ADD1EBE533839D67AD3A3A82F68156, ___gripAnimationAction_5)),static_cast<int32_t>(offsetof(AnimateHandOnInput_tA9C05EB723ADD1EBE533839D67AD3A3A82F68156, ___handAnimator_6)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6454[1] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6454[3] = 
 {
-	static_cast<int32_t>(offsetof(CharacterCanvas_t3E3F1A2861EFD10ED503E7FAA3C8A96DE0F3BB58, ___canvasPersonaje_4)),};
+	static_cast<int32_t>(offsetof(CharacterCanvas_t3E3F1A2861EFD10ED503E7FAA3C8A96DE0F3BB58, ___canvasPersonaje_4)),static_cast<int32_t>(offsetof(CharacterCanvas_t3E3F1A2861EFD10ED503E7FAA3C8A96DE0F3BB58, ___rightRayInteractor_5)),static_cast<int32_t>(offsetof(CharacterCanvas_t3E3F1A2861EFD10ED503E7FAA3C8A96DE0F3BB58, ___leftRayInteractor_6)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6455[6] = 
 {
 	static_cast<int32_t>(offsetof(GameMenuManager_t4EFB562831C781235DFA17A401712B864FE07308, ___head_4)),static_cast<int32_t>(offsetof(GameMenuManager_t4EFB562831C781235DFA17A401712B864FE07308, ___spawnDistance_5)),static_cast<int32_t>(offsetof(GameMenuManager_t4EFB562831C781235DFA17A401712B864FE07308, ___menu_6)),static_cast<int32_t>(offsetof(GameMenuManager_t4EFB562831C781235DFA17A401712B864FE07308, ___showButoon_7)),static_cast<int32_t>(offsetof(GameMenuManager_t4EFB562831C781235DFA17A401712B864FE07308, ___rightRay_8)),static_cast<int32_t>(offsetof(GameMenuManager_t4EFB562831C781235DFA17A401712B864FE07308, ___leftRay_9)),};

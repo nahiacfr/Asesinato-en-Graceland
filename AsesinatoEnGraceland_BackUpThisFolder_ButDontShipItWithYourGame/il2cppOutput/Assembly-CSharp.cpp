@@ -5491,6 +5491,10 @@ struct CharacterCanvas_t3E3F1A2861EFD10ED503E7FAA3C8A96DE0F3BB58  : public MonoB
 {
 	// UnityEngine.GameObject CharacterCanvas::canvasPersonaje
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvasPersonaje_4;
+	// UnityEngine.GameObject CharacterCanvas::rightRayInteractor
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___rightRayInteractor_5;
+	// UnityEngine.GameObject CharacterCanvas::leftRayInteractor
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___leftRayInteractor_6;
 };
 
 // ChatController
@@ -10437,6 +10441,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterCanvas_Start_mE5D6B9CDB182C9C18
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___canvasPersonaje_4;
 		NullCheck(L_0);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)0, NULL);
+		// rightRayInteractor.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___rightRayInteractor_5;
+		NullCheck(L_1);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, (bool)0, NULL);
+		// leftRayInteractor.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___leftRayInteractor_6;
+		NullCheck(L_2);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)0, NULL);
 		// }
 		return;
 	}
@@ -10460,7 +10472,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterCanvas_OnTriggerEnter_mAB283638
 		L_2 = GameObject_CompareTag_m6378BE50D009A93D46036F74CC3F7E2ECB0636E5(L_1, _stringLiteralEF158343E7FE6576D2F3E2C66CCFF1A55E037AAF, NULL);
 		if (!L_2)
 		{
-			goto IL_001e;
+			goto IL_0036;
 		}
 	}
 	{
@@ -10468,9 +10480,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterCanvas_OnTriggerEnter_mAB283638
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___canvasPersonaje_4;
 		NullCheck(L_3);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)1, NULL);
+		// rightRayInteractor.SetActive(true);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___rightRayInteractor_5;
+		NullCheck(L_4);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)1, NULL);
+		// leftRayInteractor.SetActive(true);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___leftRayInteractor_6;
+		NullCheck(L_5);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_5, (bool)1, NULL);
 	}
 
-IL_001e:
+IL_0036:
 	{
 		// }
 		return;
@@ -10495,7 +10515,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterCanvas_OnTriggerExit_m48030869B
 		L_2 = GameObject_CompareTag_m6378BE50D009A93D46036F74CC3F7E2ECB0636E5(L_1, _stringLiteralEF158343E7FE6576D2F3E2C66CCFF1A55E037AAF, NULL);
 		if (!L_2)
 		{
-			goto IL_001e;
+			goto IL_0036;
 		}
 	}
 	{
@@ -10503,9 +10523,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterCanvas_OnTriggerExit_m48030869B
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___canvasPersonaje_4;
 		NullCheck(L_3);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)0, NULL);
+		// rightRayInteractor.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___rightRayInteractor_5;
+		NullCheck(L_4);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)0, NULL);
+		// leftRayInteractor.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___leftRayInteractor_6;
+		NullCheck(L_5);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_5, (bool)0, NULL);
 	}
 
-IL_001e:
+IL_0036:
 	{
 		// }
 		return;
