@@ -30,6 +30,7 @@ public class CharacterCanvas : MonoBehaviour
             {
                 rightRayInteractor.SetActive(true);
                 leftRayInteractor.SetActive(true);
+                this.GetComponent<Animator>().SetTrigger("Salute");
             }
             this.gameObject.transform.LookAt(other.transform.position);
         }
