@@ -8,6 +8,7 @@ using UnityEngine.AI;
 public class WangTsonController : MonoBehaviour
 {
     public GameObject player;
+    public Transform pizarraLocation;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,7 @@ public class WangTsonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         GetComponent<NavMeshAgent>().destination = player.transform.position;
         if (GetComponent<NavMeshAgent>().remainingDistance > 2)
         {
@@ -26,6 +28,7 @@ public class WangTsonController : MonoBehaviour
         {
             Stop();
         }
+        */
     }
 
     private void Stop()
@@ -38,4 +41,18 @@ public class WangTsonController : MonoBehaviour
         GetComponent<Animator>().SetTrigger("Walk");
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        transform.LookAt(other.transform.position);
+    }
+
+    public void ApuntarEnPizarra(int numPista)
+    {
+        //Animacion de caminar
+
+        //Moverse hasta la pizarra
+
+        //Actualizar la pizarra con la pista
+
+    }
 }
