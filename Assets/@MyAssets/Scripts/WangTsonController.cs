@@ -9,6 +9,10 @@ public class WangTsonController : MonoBehaviour
 {
     public GameObject player;
     public Transform pizarraLocation;
+    public Transform baseLocation;
+    public GameObject pizarra;
+
+    private int numeroPista;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,10 +53,37 @@ public class WangTsonController : MonoBehaviour
     public void ApuntarEnPizarra(int numPista)
     {
         //Animacion de caminar
-
+        Walk();
         //Moverse hasta la pizarra
-
+        GoTo(pizarraLocation);
         //Actualizar la pizarra con la pista
+        numeroPista = numPista;
+        if (Arrive())
+        {
+            pizarra.GetComponent<PizarraController>().Apuntar(numeroPista);
+            GoTo(baseLocation);
+            if (Arrive())
+            {
+                Stop();
+            }
+        }
+    }
 
+    private bool Arrive()
+    {
+        if (GetComponent<NavMeshAgent>().remainingDistance <= 0.5f)
+        {
+            return true;
+        }
+        else
+        {
+            Invoke("Arrive", 0.2f);
+            return false;
+        }
+    }
+
+    private void GoTo(Transform destination)
+    {
+        GetComponent<NavMeshAgent>().SetDestination(destination.position);
     }
 }
