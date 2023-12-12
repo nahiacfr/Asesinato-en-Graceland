@@ -65,7 +65,7 @@ public class PuzlesController : MonoBehaviour
     {
         counter++;
         textCounter.text = counter.ToString();
-        if (counter >= 2)
+        if (counter >= 5)
         {
             PhoneCharged();
         }

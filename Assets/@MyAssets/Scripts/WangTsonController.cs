@@ -53,20 +53,21 @@ public class WangTsonController : MonoBehaviour
     public void ApuntarEnPizarra(int numPista)
     {
         //Animacion de caminar
-        Walk();
+    //    Walk();
         //Moverse hasta la pizarra
-        GoTo(pizarraLocation);
+    //    GoTo(pizarraLocation);
         //Actualizar la pizarra con la pista
         numeroPista = numPista;
-        if (Arrive())
-        {
+    //    if (Arrive())
+    //    {
             pizarra.GetComponent<PizarraController>().Apuntar(numeroPista);
-            GoTo(baseLocation);
+    /*        GoTo(baseLocation);
             if (Arrive())
             {
                 Stop();
             }
         }
+    */
     }
 
     private bool Arrive()

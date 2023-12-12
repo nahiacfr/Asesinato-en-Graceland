@@ -8974,12 +8974,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_AnalizeWeapon_mDADCA4DE
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_weaponAnalized_m5014FF440C9B1400EB55557F7A257BB29C14C580 (PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* __this, const RuntimeMethod* method) ;
 // System.Void PuzlesController::StartAnalizingWeapon()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_StartAnalizingWeapon_m7528A88DC7978D728C5E1FAAAB82D546682DC97B (PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* __this, const RuntimeMethod* method) ;
-// System.Void WangTsonController::Walk()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WangTsonController_Walk_m5FA5634EF775DF9EEA4E3CD739ADFED65E33C65C (WangTsonController_t0491F9AF1A588DB68D859049E0BF0A5AF0258B2D* __this, const RuntimeMethod* method) ;
-// System.Void WangTsonController::GoTo(UnityEngine.Transform)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WangTsonController_GoTo_m163CA7AA15837ECA88EA47EF7257E69F1ADA6216 (WangTsonController_t0491F9AF1A588DB68D859049E0BF0A5AF0258B2D* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___destination0, const RuntimeMethod* method) ;
-// System.Boolean WangTsonController::Arrive()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WangTsonController_Arrive_mA1DAEECC8894017DBE8B94EDFD80C477A3B15E7F (WangTsonController_t0491F9AF1A588DB68D859049E0BF0A5AF0258B2D* __this, const RuntimeMethod* method) ;
 // T UnityEngine.GameObject::GetComponent<PizarraController>()
 inline PizarraController_tAB04C39AA2203FD494C9D77555DDA5211556F97B* GameObject_GetComponent_TisPizarraController_tAB04C39AA2203FD494C9D77555DDA5211556F97B_m293ECF397E67EE0A573E6351E66D6C85966223BA (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
 {
@@ -8987,8 +8981,6 @@ inline PizarraController_tAB04C39AA2203FD494C9D77555DDA5211556F97B* GameObject_G
 }
 // System.Void PizarraController::Apuntar(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PizarraController_Apuntar_mFBE75FED83D624945E8F544FD55210BB12C26100 (PizarraController_tAB04C39AA2203FD494C9D77555DDA5211556F97B* __this, int32_t ___num0, const RuntimeMethod* method) ;
-// System.Void WangTsonController::Stop()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WangTsonController_Stop_m3AD015D504A6FE7D3CAD88C5BC5FB058FE068968 (WangTsonController_t0491F9AF1A588DB68D859049E0BF0A5AF0258B2D* __this, const RuntimeMethod* method) ;
 // T UnityEngine.Component::GetComponent<UnityEngine.AI.NavMeshAgent>()
 inline NavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F* Component_GetComponent_TisNavMeshAgent_t5D0CCC0B3B78242F286C9BD8EDD87C3CCBD0A66F_m45B783D78932EFB8409019F84FED6DF3A492F16F (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
 {
@@ -11681,9 +11673,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_ChargingPhone_m880CB8D8
 		L_3 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_2, NULL);
 		NullCheck(L_1);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_1, L_3);
-		// if (counter >= 2)
+		// if (counter >= 5)
 		int32_t L_4 = __this->___counter_8;
-		if ((((int32_t)L_4) < ((int32_t)2)))
+		if ((((int32_t)L_4) < ((int32_t)5)))
 		{
 			goto IL_0034;
 		}
@@ -11977,49 +11969,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WangTsonController_ApuntarEnPizarra_m477
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// Walk();
-		WangTsonController_Walk_m5FA5634EF775DF9EEA4E3CD739ADFED65E33C65C(__this, NULL);
-		// GoTo(pizarraLocation);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___pizarraLocation_5;
-		WangTsonController_GoTo_m163CA7AA15837ECA88EA47EF7257E69F1ADA6216(__this, L_0, NULL);
 		// numeroPista = numPista;
-		int32_t L_1 = ___numPista0;
-		__this->___numeroPista_8 = L_1;
-		// if (Arrive())
-		bool L_2;
-		L_2 = WangTsonController_Arrive_mA1DAEECC8894017DBE8B94EDFD80C477A3B15E7F(__this, NULL);
-		if (!L_2)
-		{
-			goto IL_0051;
-		}
-	}
-	{
+		int32_t L_0 = ___numPista0;
+		__this->___numeroPista_8 = L_0;
 		// pizarra.GetComponent<PizarraController>().Apuntar(numeroPista);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___pizarra_7;
-		NullCheck(L_3);
-		PizarraController_tAB04C39AA2203FD494C9D77555DDA5211556F97B* L_4;
-		L_4 = GameObject_GetComponent_TisPizarraController_tAB04C39AA2203FD494C9D77555DDA5211556F97B_m293ECF397E67EE0A573E6351E66D6C85966223BA(L_3, GameObject_GetComponent_TisPizarraController_tAB04C39AA2203FD494C9D77555DDA5211556F97B_m293ECF397E67EE0A573E6351E66D6C85966223BA_RuntimeMethod_var);
-		int32_t L_5 = __this->___numeroPista_8;
-		NullCheck(L_4);
-		PizarraController_Apuntar_mFBE75FED83D624945E8F544FD55210BB12C26100(L_4, L_5, NULL);
-		// GoTo(baseLocation);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6 = __this->___baseLocation_6;
-		WangTsonController_GoTo_m163CA7AA15837ECA88EA47EF7257E69F1ADA6216(__this, L_6, NULL);
-		// if (Arrive())
-		bool L_7;
-		L_7 = WangTsonController_Arrive_mA1DAEECC8894017DBE8B94EDFD80C477A3B15E7F(__this, NULL);
-		if (!L_7)
-		{
-			goto IL_0051;
-		}
-	}
-	{
-		// Stop();
-		WangTsonController_Stop_m3AD015D504A6FE7D3CAD88C5BC5FB058FE068968(__this, NULL);
-	}
-
-IL_0051:
-	{
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___pizarra_7;
+		NullCheck(L_1);
+		PizarraController_tAB04C39AA2203FD494C9D77555DDA5211556F97B* L_2;
+		L_2 = GameObject_GetComponent_TisPizarraController_tAB04C39AA2203FD494C9D77555DDA5211556F97B_m293ECF397E67EE0A573E6351E66D6C85966223BA(L_1, GameObject_GetComponent_TisPizarraController_tAB04C39AA2203FD494C9D77555DDA5211556F97B_m293ECF397E67EE0A573E6351E66D6C85966223BA_RuntimeMethod_var);
+		int32_t L_3 = __this->___numeroPista_8;
+		NullCheck(L_2);
+		PizarraController_Apuntar_mFBE75FED83D624945E8F544FD55210BB12C26100(L_2, L_3, NULL);
 		// }
 		return;
 	}
