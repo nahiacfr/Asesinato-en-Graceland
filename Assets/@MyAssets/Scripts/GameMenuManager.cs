@@ -1,30 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class GameMenuManager : MonoBehaviour
 {
     public Transform head;
-    public float spawnDistance = 4;
+    public float spawnDistance = 4f;
     public GameObject menu;
-    public InputActionProperty showButoon;
+    public InputActionProperty showButton;
     public GameObject rightRay;
     public GameObject leftRay;
 
+    private bool menuActive = false;
+
+    void Start()
+    {
+        menu.SetActive(false);
+        rightRay.SetActive(false);
+        leftRay.SetActive(false);
+    }
+
     void Update()
     {
-        if (showButoon.action.WasPressedThisFrame())
+        if (showButton.action.WasPressedThisFrame())
         {
-            menu.SetActive(!menu.activeSelf);
+            menuActive = !menuActive;
 
-            menu.transform.position = head.position + new Vector3(head.forward.x, 2, head.forward.z).normalized * spawnDistance;
+            menu.SetActive(menuActive);
+            rightRay.SetActive(menuActive);
+            leftRay.SetActive(menuActive);
 
-            rightRay.SetActive(!rightRay.activeSelf);
-            leftRay.SetActive(!leftRay.activeSelf);
+            if (menuActive)
+            {
+                Vector3 spawnPosition = head.position + head.forward * spawnDistance;
+                menu.transform.position = new Vector3(spawnPosition.x, menu.transform.position.y, spawnPosition.z);
+
+                menu.transform.LookAt(new Vector3(head.position.x, menu.transform.position.y, head.position.z));
+                menu.transform.forward *= -1;
+            }
         }
-
-        menu.transform.LookAt(new Vector3(head.position.x, menu.transform.position.y, head.position.z));
-        menu.transform.forward *= -1;
     }
 }
