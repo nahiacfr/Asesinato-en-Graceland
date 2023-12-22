@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 
 public class Crono : MonoBehaviour
 {
-
     [SerializeField] TextMeshProUGUI textoCrono;
     [SerializeField] private float tiempo;
     [SerializeField] private GameObject tiempoTerminado;
@@ -39,5 +38,10 @@ public class Crono : MonoBehaviour
     void Update()
     {
         Cronometro();
+    }
+
+    public void IniciarCronometro()
+    {
+        tiempoDetenido = false;
     }
 }

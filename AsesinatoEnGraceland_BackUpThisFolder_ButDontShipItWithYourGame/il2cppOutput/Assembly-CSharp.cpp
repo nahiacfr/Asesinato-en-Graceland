@@ -456,6 +456,8 @@ struct Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184;
 struct CameraController_t7E0AA7DC0B482A31CC3D60F6032912FE8B581DA8;
 // UnityEngine.Canvas
 struct Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26;
+// CanvasComenzarCrono
+struct CanvasComenzarCrono_t26F7781510AA98943277980F4A8253C808A5AA1C;
 // CanvasDelanteJugador
 struct CanvasDelanteJugador_tB4A0B65556EF6A1B7F12F8C67D26114330C4D898;
 // UnityEngine.CanvasGroup
@@ -5518,6 +5520,15 @@ struct CameraController_t7E0AA7DC0B482A31CC3D60F6032912FE8B581DA8  : public Mono
 	float ___mouseWheel_26;
 };
 
+// CanvasComenzarCrono
+struct CanvasComenzarCrono_t26F7781510AA98943277980F4A8253C808A5AA1C  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// System.Boolean CanvasComenzarCrono::cronometroActivo
+	bool ___cronometroActivo_4;
+	// Crono CanvasComenzarCrono::cronometroScript
+	Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B* ___cronometroScript_5;
+};
+
 // CanvasDelanteJugador
 struct CanvasDelanteJugador_tB4A0B65556EF6A1B7F12F8C67D26114330C4D898  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -8933,6 +8944,8 @@ inline float InputAction_ReadValue_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE2
 }
 // System.Void UnityEngine.Animator::SetFloat(System.String,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_SetFloat_m10C78733FAFC7AFEDBDACC48B7C66D3A35A0A7FE (Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* __this, String_t* ___name0, float ___value1, const RuntimeMethod* method) ;
+// System.Void Crono::IniciarCronometro()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Crono_IniciarCronometro_mD0B865F7823D96FCAE089236729EF26D88114FF4 (Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B* __this, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Transform::get_position()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::op_Addition(UnityEngine.Vector3,UnityEngine.Vector3)
@@ -10666,6 +10679,67 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimateHandOnInput__ctor_mEA43A853FB1CB8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void CanvasComenzarCrono::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasComenzarCrono_Start_mFAEAA6B75CD188059526B0E23ACFBCD0FD5472F6 (CanvasComenzarCrono_t26F7781510AA98943277980F4A8253C808A5AA1C* __this, const RuntimeMethod* method) 
+{
+	{
+		// cronometroActivo = false;
+		__this->___cronometroActivo_4 = (bool)0;
+		// }
+		return;
+	}
+}
+// System.Void CanvasComenzarCrono::ComenzarCrono()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasComenzarCrono_ComenzarCrono_m140C0A70A01DC1436F366E7C62D83318A994F9D9 (CanvasComenzarCrono_t26F7781510AA98943277980F4A8253C808A5AA1C* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// cronometroActivo = true;
+		__this->___cronometroActivo_4 = (bool)1;
+		// if (cronometroScript != null)
+		Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B* L_0 = __this->___cronometroScript_5;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		// cronometroScript.IniciarCronometro();
+		Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B* L_2 = __this->___cronometroScript_5;
+		NullCheck(L_2);
+		Crono_IniciarCronometro_mD0B865F7823D96FCAE089236729EF26D88114FF4(L_2, NULL);
+	}
+
+IL_0020:
+	{
+		// }
+		return;
+	}
+}
+// System.Void CanvasComenzarCrono::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasComenzarCrono__ctor_m8D74871D1C53DAAAB4100C33FBD30870017D29C9 (CanvasComenzarCrono_t26F7781510AA98943277980F4A8253C808A5AA1C* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // System.Void CanvasDelanteJugador::Update()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasDelanteJugador_Update_mA70ACF538F2D8A3DCD99FF426D9D29874770D0C3 (CanvasDelanteJugador_tB4A0B65556EF6A1B7F12F8C67D26114330C4D898* __this, const RuntimeMethod* method) 
 {
@@ -11088,6 +11162,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Crono_Update_mCBB88224303AD32DD62BCB0389
 	{
 		// Cronometro();
 		Crono_Cronometro_m74E905AC0D97B5A7FE83054F92E50328F766CE8E(__this, NULL);
+		// }
+		return;
+	}
+}
+// System.Void Crono::IniciarCronometro()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Crono_IniciarCronometro_mD0B865F7823D96FCAE089236729EF26D88114FF4 (Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B* __this, const RuntimeMethod* method) 
+{
+	{
+		// tiempoDetenido = false;
+		__this->___tiempoDetenido_7 = (bool)0;
 		// }
 		return;
 	}
