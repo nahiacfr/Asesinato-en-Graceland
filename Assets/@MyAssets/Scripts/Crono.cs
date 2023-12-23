@@ -32,6 +32,8 @@ public class Crono : MonoBehaviour
             tiempoDetenido = true;
             tiempo = 0;
             tiempoTerminado.SetActive(true);
+
+            SceneManager.LoadScene("Lose");
         }
     }
 
