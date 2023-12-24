@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class CanvasComenzarCrono : MonoBehaviour
 {
-    private bool cronometroActivo;
     public Crono cronometroScript;
-
-    void Start()
-    {
-        cronometroActivo = false;
-    }
+    public GameObject puertaBloqueada;
 
     public void ComenzarCrono()
     {
-        cronometroActivo = true;
         if (cronometroScript != null)
         {
             cronometroScript.IniciarCronometro();
+        }
+
+        if (puertaBloqueada != null)
+        {
+            puertaBloqueada.SetActive(false);
         }
     }
 }

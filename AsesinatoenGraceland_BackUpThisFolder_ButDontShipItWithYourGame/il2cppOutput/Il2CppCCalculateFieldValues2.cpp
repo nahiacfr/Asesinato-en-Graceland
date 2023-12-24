@@ -13479,10 +13479,8 @@ struct CameraController_t7E0AA7DC0B482A31CC3D60F6032912FE8B581DA8  : public Mono
 // CanvasComenzarCrono
 struct CanvasComenzarCrono_t26F7781510AA98943277980F4A8253C808A5AA1C  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// System.Boolean CanvasComenzarCrono::cronometroActivo
-	bool ___cronometroActivo_4;
 	// Crono CanvasComenzarCrono::cronometroScript
-	Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B* ___cronometroScript_5;
+	Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B* ___cronometroScript_4;
 };
 
 // CanvasDelanteJugador
@@ -13569,8 +13567,8 @@ struct Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B  : public MonoBehaviour_t
 	float ___tiempo_5;
 	// UnityEngine.GameObject Crono::tiempoTerminado
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___tiempoTerminado_6;
-	// System.Boolean Crono::tiempoDetenido
-	bool ___tiempoDetenido_7;
+	// System.Boolean Crono::iniciaCrono
+	bool ___iniciaCrono_7;
 	// System.Int32 Crono::tiempoMinutos
 	int32_t ___tiempoMinutos_8;
 	// System.Int32 Crono::tiempoSegundos
@@ -17210,9 +17208,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6453[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6454[3] = 
 {
 	static_cast<int32_t>(offsetof(AnimateHandOnInput_tA9C05EB723ADD1EBE533839D67AD3A3A82F68156, ___pinchAnimationAction_4)),static_cast<int32_t>(offsetof(AnimateHandOnInput_tA9C05EB723ADD1EBE533839D67AD3A3A82F68156, ___gripAnimationAction_5)),static_cast<int32_t>(offsetof(AnimateHandOnInput_tA9C05EB723ADD1EBE533839D67AD3A3A82F68156, ___handAnimator_6)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6455[2] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6455[1] = 
 {
-	static_cast<int32_t>(offsetof(CanvasComenzarCrono_t26F7781510AA98943277980F4A8253C808A5AA1C, ___cronometroActivo_4)),static_cast<int32_t>(offsetof(CanvasComenzarCrono_t26F7781510AA98943277980F4A8253C808A5AA1C, ___cronometroScript_5)),};
+	static_cast<int32_t>(offsetof(CanvasComenzarCrono_t26F7781510AA98943277980F4A8253C808A5AA1C, ___cronometroScript_4)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6456[2] = 
 {
 	static_cast<int32_t>(offsetof(CanvasDelanteJugador_tB4A0B65556EF6A1B7F12F8C67D26114330C4D898, ___personaje_4)),static_cast<int32_t>(offsetof(CanvasDelanteJugador_tB4A0B65556EF6A1B7F12F8C67D26114330C4D898, ___offset_5)),};
@@ -17224,7 +17222,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6458[3] =
 	static_cast<int32_t>(offsetof(CharacterCanvas_t3E3F1A2861EFD10ED503E7FAA3C8A96DE0F3BB58, ___canvasPersonaje_4)),static_cast<int32_t>(offsetof(CharacterCanvas_t3E3F1A2861EFD10ED503E7FAA3C8A96DE0F3BB58, ___rightRayInteractor_5)),static_cast<int32_t>(offsetof(CharacterCanvas_t3E3F1A2861EFD10ED503E7FAA3C8A96DE0F3BB58, ___leftRayInteractor_6)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6459[7] = 
 {
-	static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___textoCrono_4)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempo_5)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempoTerminado_6)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempoDetenido_7)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempoMinutos_8)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempoSegundos_9)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempoDecimasSegundo_10)),};
+	static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___textoCrono_4)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempo_5)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempoTerminado_6)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___iniciaCrono_7)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempoMinutos_8)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempoSegundos_9)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempoDecimasSegundo_10)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6460[7] = 
 {
 	static_cast<int32_t>(offsetof(GameMenuManager_t4EFB562831C781235DFA17A401712B864FE07308, ___head_4)),static_cast<int32_t>(offsetof(GameMenuManager_t4EFB562831C781235DFA17A401712B864FE07308, ___spawnDistance_5)),static_cast<int32_t>(offsetof(GameMenuManager_t4EFB562831C781235DFA17A401712B864FE07308, ___menu_6)),static_cast<int32_t>(offsetof(GameMenuManager_t4EFB562831C781235DFA17A401712B864FE07308, ___showButton_7)),static_cast<int32_t>(offsetof(GameMenuManager_t4EFB562831C781235DFA17A401712B864FE07308, ___rightRay_8)),static_cast<int32_t>(offsetof(GameMenuManager_t4EFB562831C781235DFA17A401712B864FE07308, ___leftRay_9)),static_cast<int32_t>(offsetof(GameMenuManager_t4EFB562831C781235DFA17A401712B864FE07308, ___menuActive_10)),};

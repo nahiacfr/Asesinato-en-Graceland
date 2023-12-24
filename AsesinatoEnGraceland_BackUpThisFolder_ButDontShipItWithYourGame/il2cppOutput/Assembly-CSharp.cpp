@@ -5527,10 +5527,8 @@ struct CameraController_t7E0AA7DC0B482A31CC3D60F6032912FE8B581DA8  : public Mono
 // CanvasComenzarCrono
 struct CanvasComenzarCrono_t26F7781510AA98943277980F4A8253C808A5AA1C  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// System.Boolean CanvasComenzarCrono::cronometroActivo
-	bool ___cronometroActivo_4;
 	// Crono CanvasComenzarCrono::cronometroScript
-	Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B* ___cronometroScript_5;
+	Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B* ___cronometroScript_4;
 };
 
 // CanvasDelanteJugador
@@ -5617,8 +5615,8 @@ struct Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B  : public MonoBehaviour_t
 	float ___tiempo_5;
 	// UnityEngine.GameObject Crono::tiempoTerminado
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___tiempoTerminado_6;
-	// System.Boolean Crono::tiempoDetenido
-	bool ___tiempoDetenido_7;
+	// System.Boolean Crono::iniciaCrono
+	bool ___iniciaCrono_7;
 	// System.Int32 Crono::tiempoMinutos
 	int32_t ___tiempoMinutos_8;
 	// System.Int32 Crono::tiempoSegundos
@@ -10688,16 +10686,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimateHandOnInput__ctor_mEA43A853FB1CB8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void CanvasComenzarCrono::Start()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasComenzarCrono_Start_mFAEAA6B75CD188059526B0E23ACFBCD0FD5472F6 (CanvasComenzarCrono_t26F7781510AA98943277980F4A8253C808A5AA1C* __this, const RuntimeMethod* method) 
-{
-	{
-		// cronometroActivo = false;
-		__this->___cronometroActivo_4 = (bool)0;
-		// }
-		return;
-	}
-}
 // System.Void CanvasComenzarCrono::ComenzarCrono()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasComenzarCrono_ComenzarCrono_m140C0A70A01DC1436F366E7C62D83318A994F9D9 (CanvasComenzarCrono_t26F7781510AA98943277980F4A8253C808A5AA1C* __this, const RuntimeMethod* method) 
 {
@@ -10708,26 +10696,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasComenzarCrono_ComenzarCrono_m140C0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// cronometroActivo = true;
-		__this->___cronometroActivo_4 = (bool)1;
 		// if (cronometroScript != null)
-		Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B* L_0 = __this->___cronometroScript_5;
+		Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B* L_0 = __this->___cronometroScript_4;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_1)
 		{
-			goto IL_0020;
+			goto IL_0019;
 		}
 	}
 	{
 		// cronometroScript.IniciarCronometro();
-		Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B* L_2 = __this->___cronometroScript_5;
+		Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B* L_2 = __this->___cronometroScript_4;
 		NullCheck(L_2);
 		Crono_IniciarCronometro_mD0B865F7823D96FCAE089236729EF26D88114FF4(L_2, NULL);
 	}
 
-IL_0020:
+IL_0019:
 	{
 		// }
 		return;
@@ -11096,9 +11082,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Crono_Cronometro_m74E905AC0D97B5A7FE8305
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// if (!tiempoDetenido)
-		bool L_0 = __this->___tiempoDetenido_7;
-		if (L_0)
+		// if (iniciaCrono)
+		bool L_0 = __this->___iniciaCrono_7;
+		if (!L_0)
 		{
 			goto IL_001a;
 		}
@@ -11147,12 +11133,10 @@ IL_001a:
 		float L_20 = __this->___tiempo_5;
 		if ((!(((float)L_20) <= ((float)(0.0f)))))
 		{
-			goto IL_00d0;
+			goto IL_00c9;
 		}
 	}
 	{
-		// tiempoDetenido = true;
-		__this->___tiempoDetenido_7 = (bool)1;
 		// tiempo = 0;
 		__this->___tiempo_5 = (0.0f);
 		// tiempoTerminado.SetActive(true);
@@ -11164,7 +11148,7 @@ IL_001a:
 		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(_stringLiteral74B83A50A58269C4EECA165C2ABB62B80AAFC9D0, NULL);
 	}
 
-IL_00d0:
+IL_00c9:
 	{
 		// }
 		return;
@@ -11174,8 +11158,20 @@ IL_00d0:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Crono_Update_mCBB88224303AD32DD62BCB038981847812464FB2 (Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B* __this, const RuntimeMethod* method) 
 {
 	{
+		// if (iniciaCrono)
+		bool L_0 = __this->___iniciaCrono_7;
+		if (!L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
 		// Cronometro();
 		Crono_Cronometro_m74E905AC0D97B5A7FE83054F92E50328F766CE8E(__this, NULL);
+	}
+
+IL_000e:
+	{
 		// }
 		return;
 	}
@@ -11184,8 +11180,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Crono_Update_mCBB88224303AD32DD62BCB0389
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Crono_IniciarCronometro_mD0B865F7823D96FCAE089236729EF26D88114FF4 (Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B* __this, const RuntimeMethod* method) 
 {
 	{
-		// tiempoDetenido = false;
-		__this->___tiempoDetenido_7 = (bool)0;
+		// iniciaCrono = true;
+		__this->___iniciaCrono_7 = (bool)1;
 		// }
 		return;
 	}

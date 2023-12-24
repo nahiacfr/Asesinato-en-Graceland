@@ -11,13 +11,13 @@ public class Crono : MonoBehaviour
     [SerializeField] private float tiempo;
     [SerializeField] private GameObject tiempoTerminado;
 
-    bool tiempoDetenido;
+    bool iniciaCrono = false;
 
     private int tiempoMinutos, tiempoSegundos, tiempoDecimasSegundo;
 
     void Cronometro()
     {
-        if (!tiempoDetenido)
+        if (iniciaCrono)
         {
             tiempo -= Time.deltaTime;
         }
@@ -30,7 +30,6 @@ public class Crono : MonoBehaviour
 
         if (tiempo <= 0)
         {
-            tiempoDetenido = true;
             tiempo = 0;
             tiempoTerminado.SetActive(true);
 
@@ -40,11 +39,14 @@ public class Crono : MonoBehaviour
 
     void Update()
     {
-        Cronometro();
+        if (iniciaCrono)
+        {
+            Cronometro();
+        }
     }
 
     public void IniciarCronometro()
     {
-        tiempoDetenido = false;
+        iniciaCrono = true;
     }
 }

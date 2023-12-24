@@ -24316,10 +24316,8 @@ struct CameraController_t7E0AA7DC0B482A31CC3D60F6032912FE8B581DA8  : public Mono
 // CanvasComenzarCrono
 struct CanvasComenzarCrono_t26F7781510AA98943277980F4A8253C808A5AA1C  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// System.Boolean CanvasComenzarCrono::cronometroActivo
-	bool ___cronometroActivo_4;
 	// Crono CanvasComenzarCrono::cronometroScript
-	Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B* ___cronometroScript_5;
+	Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B* ___cronometroScript_4;
 };
 
 // CanvasDelanteJugador
@@ -24421,8 +24419,8 @@ struct Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B  : public MonoBehaviour_t
 	float ___tiempo_5;
 	// UnityEngine.GameObject Crono::tiempoTerminado
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___tiempoTerminado_6;
-	// System.Boolean Crono::tiempoDetenido
-	bool ___tiempoDetenido_7;
+	// System.Boolean Crono::iniciaCrono
+	bool ___iniciaCrono_7;
 	// System.Int32 Crono::tiempoMinutos
 	int32_t ___tiempoMinutos_8;
 	// System.Int32 Crono::tiempoSegundos
