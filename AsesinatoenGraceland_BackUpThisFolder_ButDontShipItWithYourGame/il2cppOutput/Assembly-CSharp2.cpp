@@ -21,6 +21,78 @@ struct VirtualActionInvoker0
 		((Action)invokeData.methodPtr)(obj, invokeData.method);
 	}
 };
+struct InvokerActionInvoker0
+{
+	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj)
+	{
+		method->invoker_method(methodPtr, method, obj, NULL, NULL);
+	}
+};
+template <typename T1>
+struct InvokerActionInvoker1
+{
+	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1 p1)
+	{
+		void* params[1] = { &p1 };
+		method->invoker_method(methodPtr, method, obj, params, NULL);
+	}
+};
+template <typename T1>
+struct InvokerActionInvoker1<T1*>
+{
+	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1* p1)
+	{
+		void* params[1] = { p1 };
+		method->invoker_method(methodPtr, method, obj, params, NULL);
+	}
+};
+template <typename T1, typename T2>
+struct InvokerActionInvoker2
+{
+	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1 p1, T2 p2)
+	{
+		void* params[2] = { &p1, &p2 };
+		method->invoker_method(methodPtr, method, obj, params, NULL);
+	}
+};
+template <typename T1, typename T2>
+struct InvokerActionInvoker2<T1*, T2>
+{
+	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1* p1, T2 p2)
+	{
+		void* params[2] = { p1, &p2 };
+		method->invoker_method(methodPtr, method, obj, params, NULL);
+	}
+};
+template <typename T1, typename T2, typename T3>
+struct InvokerActionInvoker3
+{
+	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1 p1, T2 p2, T3 p3)
+	{
+		void* params[3] = { &p1, &p2, &p3 };
+		method->invoker_method(methodPtr, method, obj, params, NULL);
+	}
+};
+template <typename T1, typename T2, typename T3>
+struct InvokerActionInvoker3<T1*, T2, T3>
+{
+	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1* p1, T2 p2, T3 p3)
+	{
+		void* params[3] = { p1, &p2, &p3 };
+		method->invoker_method(methodPtr, method, obj, params, NULL);
+	}
+};
+template <typename T1, typename T2, typename T3, typename T4>
+struct InvokerActionInvoker4;
+template <typename T1, typename T2, typename T3, typename T4>
+struct InvokerActionInvoker4<T1*, T2, T3, T4>
+{
+	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1* p1, T2 p2, T3 p3, T4 p4)
+	{
+		void* params[4] = { p1, &p2, &p3, &p4 };
+		method->invoker_method(methodPtr, method, obj, params, NULL);
+	}
+};
 
 // System.Collections.Generic.IEnumerable`1<System.Int32>
 struct IEnumerable_1_tCE758D940790D6D0D56B457E522C195F8C413AF2;
@@ -34,14 +106,24 @@ struct List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73;
 struct List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B;
 // System.Collections.Generic.List`1<UnityEngine.Vector3>
 struct List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B;
+// System.Delegate[]
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
 // System.Int32[]
 struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
 // UnityEngine.Vector2[]
 struct Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA;
 // UnityEngine.Vector3[]
 struct Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C;
+// System.AsyncCallback
+struct AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C;
 // UnityEngine.Component
 struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3;
+// System.Delegate
+struct Delegate_t;
+// System.DelegateData
+struct DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E;
+// System.IAsyncResult
+struct IAsyncResult_t7B9B5A0ECB35DCEC31B8A8122C37D687369253B5;
 // PropMaker.Ladder
 struct Ladder_t7E7D2C20156D7E9D077F024C74E1F3C9CB85C15A;
 // UnityEngine.Mesh
@@ -52,6 +134,8 @@ struct MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455;
 struct MeshFilter_t6D1CE2473A1E45AC73013400585A1163BF66B2F5;
 // UnityEngine.MeshRenderer
 struct MeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE;
+// System.Reflection.MethodInfo
+struct MethodInfo_t;
 // UnityEngine.MonoBehaviour
 struct MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71;
 // UnityEngine.Object
@@ -64,19 +148,30 @@ struct String_t;
 struct Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1;
 // System.Void
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
+// FillefranzTools.Helper/ForEach
+struct ForEach_t9D4A8E0E0060FDAED2CEC54D3449B036BF21DFEB;
+// FillefranzTools.Helper/Function
+struct Function_t067AEBDDB28DF3B009BB38FE3BFD4FDDFEE7742B;
+// FillefranzTools.Helper/GridFunction2D
+struct GridFunction2D_t62F59E4C9D7E140BD9A5DD1A34605094771BCD9B;
+// FillefranzTools.Helper/GridFunction3D
+struct GridFunction3D_t56D3426C3894411B09825B82497743A0448EB5E5;
 
 IL2CPP_EXTERN_C RuntimeClass* Helper_t4C1D75F8F501E3C3350F5CF4596BAE983DB527EB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C String_t* _stringLiteralBCD6A8E9DCF930FE19989EC467783CF6B1C53E18;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisMeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455_mFC0F02CCD26A6A186031CF43E92D7B60EA1CC370_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisMeshFilter_t6D1CE2473A1E45AC73013400585A1163BF66B2F5_mB82F66059DFB5715DD85BDED1D90BC03A6C9E623_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisMeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE_m0EDA0079FA3617687C4A28623B79A37D618D9CFB_RuntimeMethod_var;
@@ -97,7 +192,10 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m46EEFFA770BE665EA0CB3A533
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m8F2E15FC96DA75186C51228128A0660709E4E810_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_set_Item_m35C8C18BF5DF9A5C8867BF0C872BC39275A41A9C_RuntimeMethod_var;
+struct Delegate_t_marshaled_com;
+struct Delegate_t_marshaled_pinvoke;
 
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
 struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
 struct Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA;
 struct Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C;
@@ -359,6 +457,71 @@ struct U3CU3Ec__DisplayClass35_0_tA91CB26E915E1C611D280EB5800FE8AD144EFEEA
 	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___tris_1;
 };
 
+// System.Delegate
+struct Delegate_t  : public RuntimeObject
+{
+	// System.IntPtr System.Delegate::method_ptr
+	Il2CppMethodPointer ___method_ptr_0;
+	// System.IntPtr System.Delegate::invoke_impl
+	intptr_t ___invoke_impl_1;
+	// System.Object System.Delegate::m_target
+	RuntimeObject* ___m_target_2;
+	// System.IntPtr System.Delegate::method
+	intptr_t ___method_3;
+	// System.IntPtr System.Delegate::delegate_trampoline
+	intptr_t ___delegate_trampoline_4;
+	// System.IntPtr System.Delegate::extra_arg
+	intptr_t ___extra_arg_5;
+	// System.IntPtr System.Delegate::method_code
+	intptr_t ___method_code_6;
+	// System.IntPtr System.Delegate::interp_method
+	intptr_t ___interp_method_7;
+	// System.IntPtr System.Delegate::interp_invoke_impl
+	intptr_t ___interp_invoke_impl_8;
+	// System.Reflection.MethodInfo System.Delegate::method_info
+	MethodInfo_t* ___method_info_9;
+	// System.Reflection.MethodInfo System.Delegate::original_method_info
+	MethodInfo_t* ___original_method_info_10;
+	// System.DelegateData System.Delegate::data
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data_11;
+	// System.Boolean System.Delegate::method_is_virtual
+	bool ___method_is_virtual_12;
+};
+// Native definition for P/Invoke marshalling of System.Delegate
+struct Delegate_t_marshaled_pinvoke
+{
+	intptr_t ___method_ptr_0;
+	intptr_t ___invoke_impl_1;
+	Il2CppIUnknown* ___m_target_2;
+	intptr_t ___method_3;
+	intptr_t ___delegate_trampoline_4;
+	intptr_t ___extra_arg_5;
+	intptr_t ___method_code_6;
+	intptr_t ___interp_method_7;
+	intptr_t ___interp_invoke_impl_8;
+	MethodInfo_t* ___method_info_9;
+	MethodInfo_t* ___original_method_info_10;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data_11;
+	int32_t ___method_is_virtual_12;
+};
+// Native definition for COM marshalling of System.Delegate
+struct Delegate_t_marshaled_com
+{
+	intptr_t ___method_ptr_0;
+	intptr_t ___invoke_impl_1;
+	Il2CppIUnknown* ___m_target_2;
+	intptr_t ___method_3;
+	intptr_t ___delegate_trampoline_4;
+	intptr_t ___extra_arg_5;
+	intptr_t ___method_code_6;
+	intptr_t ___interp_method_7;
+	intptr_t ___interp_invoke_impl_8;
+	MethodInfo_t* ___method_info_9;
+	MethodInfo_t* ___original_method_info_10;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data_11;
+	int32_t ___method_is_virtual_12;
+};
+
 // UnityEngine.Object
 struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C  : public RuntimeObject
 {
@@ -382,6 +545,87 @@ struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_com
 	intptr_t ___m_CachedPtr_0;
 };
 
+// FillefranzTools.Parabola
+struct Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877 
+{
+	// UnityEngine.Vector3 FillefranzTools.Parabola::startPoint
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startPoint_0;
+	// UnityEngine.Vector3 FillefranzTools.Parabola::endPoint
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___endPoint_1;
+	// System.Boolean FillefranzTools.Parabola::fixHeight
+	bool ___fixHeight_2;
+	// System.Single FillefranzTools.Parabola::fixedHeight
+	float ___fixedHeight_3;
+	// System.Boolean FillefranzTools.Parabola::curveDown
+	bool ___curveDown_4;
+	// System.Single FillefranzTools.Parabola::flatness
+	float ___flatness_5;
+	// System.Single FillefranzTools.Parabola::<a>k__BackingField
+	float ___U3CaU3Ek__BackingField_6;
+	// System.Single FillefranzTools.Parabola::<b>k__BackingField
+	float ___U3CbU3Ek__BackingField_7;
+	// System.Single FillefranzTools.Parabola::<c>k__BackingField
+	float ___U3CcU3Ek__BackingField_8;
+	// System.Single FillefranzTools.Parabola::angle
+	float ___angle_9;
+	// System.Single FillefranzTools.Parabola::v0
+	float ___v0_10;
+	// System.Single FillefranzTools.Parabola::time
+	float ___time_11;
+	// System.Single FillefranzTools.Parabola::height
+	float ___height_12;
+	// System.Single FillefranzTools.Parabola::gndDst
+	float ___gndDst_13;
+	// UnityEngine.Vector3 FillefranzTools.Parabola::direction
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___direction_14;
+	// UnityEngine.Vector3 FillefranzTools.Parabola::groundDirection
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___groundDirection_15;
+	// UnityEngine.Vector3 FillefranzTools.Parabola::targetPos
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___targetPos_16;
+};
+// Native definition for P/Invoke marshalling of FillefranzTools.Parabola
+struct Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877_marshaled_pinvoke
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startPoint_0;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___endPoint_1;
+	int32_t ___fixHeight_2;
+	float ___fixedHeight_3;
+	int32_t ___curveDown_4;
+	float ___flatness_5;
+	float ___U3CaU3Ek__BackingField_6;
+	float ___U3CbU3Ek__BackingField_7;
+	float ___U3CcU3Ek__BackingField_8;
+	float ___angle_9;
+	float ___v0_10;
+	float ___time_11;
+	float ___height_12;
+	float ___gndDst_13;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___direction_14;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___groundDirection_15;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___targetPos_16;
+};
+// Native definition for COM marshalling of FillefranzTools.Parabola
+struct Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877_marshaled_com
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startPoint_0;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___endPoint_1;
+	int32_t ___fixHeight_2;
+	float ___fixedHeight_3;
+	int32_t ___curveDown_4;
+	float ___flatness_5;
+	float ___U3CaU3Ek__BackingField_6;
+	float ___U3CbU3Ek__BackingField_7;
+	float ___U3CcU3Ek__BackingField_8;
+	float ___angle_9;
+	float ___v0_10;
+	float ___time_11;
+	float ___height_12;
+	float ___gndDst_13;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___direction_14;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___groundDirection_15;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___targetPos_16;
+};
+
 // UnityEngine.Component
 struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
 {
@@ -389,6 +633,28 @@ struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3  : public Object_tC12
 
 // UnityEngine.Mesh
 struct Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+
+// System.MulticastDelegate
+struct MulticastDelegate_t  : public Delegate_t
+{
+	// System.Delegate[] System.MulticastDelegate::delegates
+	DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* ___delegates_13;
+};
+// Native definition for P/Invoke marshalling of System.MulticastDelegate
+struct MulticastDelegate_t_marshaled_pinvoke : public Delegate_t_marshaled_pinvoke
+{
+	Delegate_t_marshaled_pinvoke** ___delegates_13;
+};
+// Native definition for COM marshalling of System.MulticastDelegate
+struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
+{
+	Delegate_t_marshaled_com** ___delegates_13;
+};
+
+// System.AsyncCallback
+struct AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C  : public MulticastDelegate_t
 {
 };
 
@@ -414,6 +680,26 @@ struct Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF  : public Component_t3
 
 // UnityEngine.Transform
 struct Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
+{
+};
+
+// FillefranzTools.Helper/ForEach
+struct ForEach_t9D4A8E0E0060FDAED2CEC54D3449B036BF21DFEB  : public MulticastDelegate_t
+{
+};
+
+// FillefranzTools.Helper/Function
+struct Function_t067AEBDDB28DF3B009BB38FE3BFD4FDDFEE7742B  : public MulticastDelegate_t
+{
+};
+
+// FillefranzTools.Helper/GridFunction2D
+struct GridFunction2D_t62F59E4C9D7E140BD9A5DD1A34605094771BCD9B  : public MulticastDelegate_t
+{
+};
+
+// FillefranzTools.Helper/GridFunction3D
+struct GridFunction3D_t56D3426C3894411B09825B82497743A0448EB5E5  : public MulticastDelegate_t
 {
 };
 
@@ -508,6 +794,41 @@ struct Ladder_t7E7D2C20156D7E9D077F024C74E1F3C9CB85C15A  : public Prop_tE5F9C57C
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
+// System.Delegate[]
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771  : public RuntimeArray
+{
+	ALIGN_FIELD (8) Delegate_t* m_Items[1];
+
+	inline Delegate_t* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Delegate_t** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Delegate_t* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline Delegate_t* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Delegate_t** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Delegate_t* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
 // UnityEngine.Vector3[]
 struct Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C  : public RuntimeArray
 {
@@ -646,12 +967,120 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_mC54E2BCBE43279A96FC082F5CD
 // System.Void System.Collections.Generic.List`1<UnityEngine.Vector2>::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m88C4BD8AC607DB3585552068F4DC437406358D5F_gshared (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* __this, const RuntimeMethod* method) ;
 
-// UnityEngine.Vector3 UnityEngine.Vector3::op_Subtraction(UnityEngine.Vector3,UnityEngine.Vector3)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___a0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___b1, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::get_a()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Parabola_get_a_m45657B88E4858AB7B90EEC89388F69ACA341E1DD_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) ;
+// System.Void FillefranzTools.Parabola::set_a(System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Parabola_set_a_m93234FDAFF2059B499CEC330BB682A802583526B_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___value0, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::get_b()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Parabola_get_b_m06FC4C4FC4136097B8BF0313413B497537BD1FB0_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) ;
+// System.Void FillefranzTools.Parabola::set_b(System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Parabola_set_b_m9A9E83C230FEE06963971E2D935587620EBF3380_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___value0, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::get_c()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Parabola_get_c_m5AD3671CEE18CCAFBDD327392760C595BB315FA2_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) ;
+// System.Void FillefranzTools.Parabola::set_c(System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Parabola_set_c_mAF6F75BA41324AD4C3A56625F2666792E3FE44C3_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___value0, const RuntimeMethod* method) ;
+// System.String System.String::Format(System.String,System.Object,System.Object,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C (String_t* ___format0, RuntimeObject* ___arg01, RuntimeObject* ___arg12, RuntimeObject* ___arg23, const RuntimeMethod* method) ;
+// System.String FillefranzTools.Parabola::get_equation()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Parabola_get_equation_mECBD56080A3552AA80F33212B8AC7ED47C9C90A8 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::get_Height()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Parabola_get_Height_m1F7CD2074EB90BA935E1E8CCEB06990812E143E4_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::get_Angle()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Parabola_get_Angle_m4E391DC7D8343F68AC9FD5D59D3D68F4EEE88C05_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::get_GroundDistance()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Parabola_get_GroundDistance_m74A67B47F8979477CA6AD697A16114C18689209F_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::get_normalized()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 FillefranzTools.Parabola::get_Direction()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_get_Direction_m00D4B1A4769B83C9354C52535D6442FCE96162B3 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 FillefranzTools.Parabola::get_GroundDirection()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_get_GroundDirection_m10A1E37CB84CD83F450E2D407125686DE660EBDF (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 FillefranzTools.Parabola::Evaluate(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___t0, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 FillefranzTools.Parabola::get_Center()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_get_Center_m370021598246A3567F320515FD397863B6C65247 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 UnityEngine.Vector3::get_zero()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) ;
 // UnityEngine.Vector3 FillefranzTools.ExtensionMethods::OverrideY(UnityEngine.Vector3,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ExtensionMethods_OverrideY_mD6CCA8D712AEA47186521FA999EFDB16D3854334 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___v30, float ___y1, const RuntimeMethod* method) ;
+// System.Single UnityEngine.Vector3::Distance(UnityEngine.Vector3,UnityEngine.Vector3)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___a0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___b1, const RuntimeMethod* method) ;
+// System.Boolean FillefranzTools.Parabola::Recalculate()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Parabola_Recalculate_mBBFFF00304A2B0269CE16E3F3BDA8FEEA98E3D1F (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) ;
+// System.Void FillefranzTools.Parabola::.ctor(UnityEngine.Vector3,UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Parabola__ctor_m294348227A0399934868CDC061D36DF7EF4EE35E (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startPoint0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___endPoint1, const RuntimeMethod* method) ;
+// System.Void FillefranzTools.Parabola::.ctor(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Parabola__ctor_m4878780E0853590DE3289CCBC460E33A18E5B142 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startPoint0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___endPoint1, float ___fixedHeight2, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 UnityEngine.Physics::get_gravity()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Physics_get_gravity_m94393492AE4ED8B38A22ECCDCD2DDDB71BFA010D (const RuntimeMethod* method) ;
+// UnityEngine.Vector3 UnityEngine.Vector3::op_Multiply(UnityEngine.Vector3,System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___a0, float ___d1, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 UnityEngine.Vector3::op_Addition(UnityEngine.Vector3,UnityEngine.Vector3)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___a0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___b1, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 UnityEngine.Vector3::get_up()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline (const RuntimeMethod* method) ;
+// System.Single UnityEngine.Mathf::Sign(System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Sign_m42EE1F0BC041AF14F89DED7F762BE996E2C50D8A_inline (float ___f0, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.ExtensionMethods::Square(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ExtensionMethods_Square_m381CF8C8AC297B3435EF8E93C07B7DBA499CBC1E (float ___value0, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::GetTFromY(System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_GetTFromY_m8E08DB230D50BAFECFB8D4122841F6FFBE19AEBF (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___y0, float ___sign1, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::GetTFromX(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_GetTFromX_m32768B2D6A72CAE005D72CF94F1F10B85C47DC49 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___x0, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::GetY(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_GetY_mD83C77375BF4FA34724B9EA6524634795BDCFBF9 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___x0, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::GetX(System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_GetX_m3074D8B2CEF2AFE54050B653920654FDD0337EB9 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___y0, float ___sign1, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 UnityEngine.Vector3::op_Subtraction(UnityEngine.Vector3,UnityEngine.Vector3)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___a0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___b1, const RuntimeMethod* method) ;
+// System.Single UnityEngine.Vector3::get_magnitude()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_get_magnitude_mF0D6017E90B345F1F52D1CC564C640F1A847AF2D_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Vector3::.ctor(System.Single,System.Single,System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method) ;
+// System.Void FillefranzTools.Parabola::CalculatePathWithHeight(UnityEngine.Vector3,System.Single,System.Single&,System.Single&,System.Single&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Parabola_CalculatePathWithHeight_mD97EC9597A2A12FB3A16314780C64C28BA7B0DE4 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___targetPos0, float ___h1, float* ___v02, float* ___angle3, float* ___time4, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Helper::QuadraticFormula(System.Single,System.Single,System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Helper_QuadraticFormula_m75133E30977735435261ADCBF0ACA3B2291C4216 (float ___a0, float ___b1, float ___c2, float ___sign3, const RuntimeMethod* method) ;
+// System.Single UnityEngine.Mathf::Max(System.Single,System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline (float ___a0, float ___b1, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::Length(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_Length_m5C058B5C13FAAF93B48AE7990EB9A01616757BDD (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___step0, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::Length(System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_Length_m76630EEFF6F4726D05986E883A29373A9E0B0394 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___step0, float ___maxT1, const RuntimeMethod* method) ;
+// System.Int32 FillefranzTools.Parabola::Sections(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Parabola_Sections_m06EB57E4D58E369DFC90A217B00B88B73F3FBA34 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___step0, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::DstToTime(System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_DstToTime_m00E7882CE989C77E9362C2C28F27E4AB1A0C6E43 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___step0, float ___distance1, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::Derivation(System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_Derivation_m62302FBD24228DAD89DC2A2A58F5F69F5454CBEC (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___t0, float ___dX1, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 FillefranzTools.Parabola::DirectionAtPoint(System.Single,System.Single,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_DirectionAtPoint_m96613167B3F1BB5B1BA62A910745DC978CF5837A (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___t0, float ___step1, int32_t ___sign2, const RuntimeMethod* method) ;
+// UnityEngine.Quaternion UnityEngine.Quaternion::LookRotation(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_LookRotation_mDB2CCA75B8E1AB98104F2A6E1A1EA57D0D1298D7 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___forward0, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 UnityEngine.Quaternion::op_Multiply(UnityEngine.Quaternion,UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Quaternion_op_Multiply_mE1EBA73F9173432B50F8F17CE8190C5A7986FB8C (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___rotation0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___point1, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 FillefranzTools.Parabola::NormalAtPoint(System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_NormalAtPoint_m2DA3EA91DF7271DB78089DF12E23AC3413B05953 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___t0, float ___step1, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::GetClosestTFromPos(UnityEngine.Vector3,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_GetClosestTFromPos_m3A9177D00AEB699959D1CC663B5349C96D773354 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___pos0, float ___step1, const RuntimeMethod* method) ;
+// UnityEngine.Vector2 FillefranzTools.ExtensionMethods::FromXZ(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ExtensionMethods_FromXZ_m6074BC8E1147608844517952C23BE0A0C2FBF136 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___v30, const RuntimeMethod* method) ;
+// System.Single UnityEngine.Vector2::Distance(UnityEngine.Vector2,UnityEngine.Vector2)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector2_Distance_mBACBB1609E1894D68F882D86A93519E311810C89_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___b1, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::GetHeightFromXZ(UnityEngine.Vector3,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_GetHeightFromXZ_m8AFD7D1D7A6D0E9B40D136841241DD39C997DFB8 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position0, float ___step1, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 FillefranzTools.Parabola::MaxPoint(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_MaxPoint_m35A55A88C3F7D60FD28BDBB8A329583764BE234A (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___step0, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::MaxPointT(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_MaxPointT_m385947A4BB37321C638E89A729B7D19CA39FA252 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___step0, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::StartToMaxDst(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_StartToMaxDst_m1FD573D14A44914FDE8330C00941826F46DCD23D (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___step0, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::DstToMax(UnityEngine.Vector3,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_DstToMax_m53D5100CBB064C83951292053ACF3BBD0FC3BAC9 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___point0, float ___step1, const RuntimeMethod* method) ;
+// System.Single UnityEngine.Vector3::Angle(UnityEngine.Vector3,UnityEngine.Vector3)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Angle_mB16906B482814C140FE5BA9D041D2DC11E42A68D_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___from0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___to1, const RuntimeMethod* method) ;
+// System.Single FillefranzTools.Parabola::GetAngleAtPoint(System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_GetAngleAtPoint_m8BDF2CD07F8C971D2BD4EFBBC16ADE589A60672E (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___t0, float ___step1, const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.Vector3::op_Equality(UnityEngine.Vector3,UnityEngine.Vector3)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___lhs0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___rhs1, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 PropMaker.Ladder::get_forward()
@@ -660,18 +1089,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_AngleAxis_mF37022977B297E63AA70D69EA1C4C922FF22CC80 (float ___angle0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___axis1, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::get_forward()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_forward_mAA55A7034304DF8B2152EAD49AE779FC4CA2EB4A_inline (const RuntimeMethod* method) ;
-// UnityEngine.Vector3 UnityEngine.Quaternion::op_Multiply(UnityEngine.Quaternion,UnityEngine.Vector3)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Quaternion_op_Multiply_mE1EBA73F9173432B50F8F17CE8190C5A7986FB8C (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___rotation0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___point1, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::get_right()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_right_mFF573AFBBB2186E7AFA1BA7CA271A78DF67E4EA0_inline (const RuntimeMethod* method) ;
-// UnityEngine.Quaternion UnityEngine.Quaternion::LookRotation(UnityEngine.Vector3)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_LookRotation_mDB2CCA75B8E1AB98104F2A6E1A1EA57D0D1298D7 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___forward0, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::Cross(UnityEngine.Vector3,UnityEngine.Vector3)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Cross_mF93A280558BCE756D13B6CC5DCD7DE8A43148987_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___lhs0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___rhs1, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 PropMaker.Ladder::get_up()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Ladder_get_up_mB2C99B91214AA29E73F442CF608F3C5B3AA12AAB (Ladder_t7E7D2C20156D7E9D077F024C74E1F3C9CB85C15A* __this, const RuntimeMethod* method) ;
-// System.Single UnityEngine.Vector3::Distance(UnityEngine.Vector3,UnityEngine.Vector3)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___a0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___b1, const RuntimeMethod* method) ;
 // System.Void PropMaker.Ladder::Recenter()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Ladder_Recenter_mE74A7E0F254DD73C949492DA8C9D18A4B6B0BB3B (Ladder_t7E7D2C20156D7E9D077F024C74E1F3C9CB85C15A* __this, const RuntimeMethod* method) ;
 // System.Void PropMaker.Ladder::CreateRail(System.Int32)
@@ -682,10 +1105,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Ladder_CalculateStepValues_mE6D1B6DFF77E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Ladder_PlaceSteps_mC542866E19F076A95949CCD177D8B67BCBCCE137 (Ladder_t7E7D2C20156D7E9D077F024C74E1F3C9CB85C15A* __this, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 PropMaker.Ladder::get_right()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Ladder_get_right_m29E137C18FFC7C9CBC9DD841CA75B4962FD29E46 (Ladder_t7E7D2C20156D7E9D077F024C74E1F3C9CB85C15A* __this, const RuntimeMethod* method) ;
-// UnityEngine.Vector3 UnityEngine.Vector3::op_Multiply(UnityEngine.Vector3,System.Single)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___a0, float ___d1, const RuntimeMethod* method) ;
-// UnityEngine.Vector3 UnityEngine.Vector3::op_Addition(UnityEngine.Vector3,UnityEngine.Vector3)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___a0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___b1, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___x0, float ___y1, const RuntimeMethod* method) ;
 // UnityEngine.Vector2 UnityEngine.Vector2::get_one()
@@ -808,8 +1227,6 @@ inline void List_1_AddRange_m5074E49FED0A20D75EEBFEF32BD7C59CBB6F0FEE (List_1_t7
 {
 	((  void (*) (List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B*, RuntimeObject*, const RuntimeMethod*))List_1_AddRange_m5074E49FED0A20D75EEBFEF32BD7C59CBB6F0FEE_gshared)(__this, ___collection0, method);
 }
-// UnityEngine.Vector3 UnityEngine.Vector3::get_zero()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.Vector3::op_Inequality(UnityEngine.Vector3,UnityEngine.Vector3)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Inequality_m9F170CDFBF1E490E559DA5D06D6547501A402BBF_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___lhs0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___rhs1, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<UnityEngine.Vector3>::Add(T)
@@ -839,8 +1256,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_left_m8C1116485A9E689760AEE1142F5977852278B7E1_inline (const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::get_back()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_back_mCA5A84170E8DE5CE38C0551B4CCAD647BF215E57_inline (const RuntimeMethod* method) ;
-// UnityEngine.Vector3 UnityEngine.Vector3::get_up()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline (const RuntimeMethod* method) ;
 // UnityEngine.Vector2 UnityEngine.Vector2::get_up()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_get_up_m41067879408BB378593EF7406AF2525F176F0ABF_inline (const RuntimeMethod* method) ;
 // UnityEngine.Vector2 UnityEngine.Vector2::get_right()
@@ -890,14 +1305,2287 @@ inline void List_1__ctor_m88C4BD8AC607DB3585552068F4DC437406358D5F (List_1_t8F37
 }
 // System.Void UnityEngine.MonoBehaviour::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Vector3::.ctor(System.Single,System.Single,System.Single)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::Normalize(UnityEngine.Vector3)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Normalize_mEF8349CC39674236CFC694189AFD36E31F89AC8F_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___value0, const RuntimeMethod* method) ;
+// System.Single UnityEngine.Vector3::get_sqrMagnitude()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_get_sqrMagnitude_m43C27DEC47C4811FB30AB474FF2131A963B66FC8_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) ;
+// System.Single UnityEngine.Vector3::Dot(UnityEngine.Vector3,UnityEngine.Vector3)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Dot_mBB86BB940AA0A32FA7D3C02AC42E5BC7095A5D52_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___lhs0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___rhs1, const RuntimeMethod* method) ;
+// System.Single UnityEngine.Mathf::Clamp(System.Single,System.Single,System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline (float ___value0, float ___min1, float ___max2, const RuntimeMethod* method) ;
 // System.Single UnityEngine.Vector3::Magnitude(UnityEngine.Vector3)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Magnitude_m21652D951393A3D7CE92CE40049A0E7F76544D1B_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___vector0, const RuntimeMethod* method) ;
 // System.Void System.Array::Clear(System.Array,System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Clear_m50BAA3751899858B097D3FF2ED31F284703FE5CB (RuntimeArray* ___array0, int32_t ___index1, int32_t ___length2, const RuntimeMethod* method) ;
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void GridFunction2D_Invoke_mE4FEF62D1CE4E689A4C1BF1F5FA04CD3C33A6DA1_Multicast(GridFunction2D_t62F59E4C9D7E140BD9A5DD1A34605094771BCD9B* __this, int32_t ___x0, int32_t ___y1, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates_13->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates_13->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		GridFunction2D_t62F59E4C9D7E140BD9A5DD1A34605094771BCD9B* currentDelegate = reinterpret_cast<GridFunction2D_t62F59E4C9D7E140BD9A5DD1A34605094771BCD9B*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, int32_t, int32_t, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl_1)((Il2CppObject*)currentDelegate->___method_code_6, ___x0, ___y1, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method_3));
+	}
+}
+void GridFunction2D_Invoke_mE4FEF62D1CE4E689A4C1BF1F5FA04CD3C33A6DA1_OpenInst(GridFunction2D_t62F59E4C9D7E140BD9A5DD1A34605094771BCD9B* __this, int32_t ___x0, int32_t ___y1, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (int32_t, int32_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr_0)(___x0, ___y1, method);
+}
+void GridFunction2D_Invoke_mE4FEF62D1CE4E689A4C1BF1F5FA04CD3C33A6DA1_OpenStatic(GridFunction2D_t62F59E4C9D7E140BD9A5DD1A34605094771BCD9B* __this, int32_t ___x0, int32_t ___y1, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (int32_t, int32_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr_0)(___x0, ___y1, method);
+}
+void GridFunction2D_Invoke_mE4FEF62D1CE4E689A4C1BF1F5FA04CD3C33A6DA1_OpenStaticInvoker(GridFunction2D_t62F59E4C9D7E140BD9A5DD1A34605094771BCD9B* __this, int32_t ___x0, int32_t ___y1, const RuntimeMethod* method)
+{
+	InvokerActionInvoker2< int32_t, int32_t >::Invoke(__this->___method_ptr_0, method, NULL, ___x0, ___y1);
+}
+void GridFunction2D_Invoke_mE4FEF62D1CE4E689A4C1BF1F5FA04CD3C33A6DA1_ClosedStaticInvoker(GridFunction2D_t62F59E4C9D7E140BD9A5DD1A34605094771BCD9B* __this, int32_t ___x0, int32_t ___y1, const RuntimeMethod* method)
+{
+	InvokerActionInvoker3< RuntimeObject*, int32_t, int32_t >::Invoke(__this->___method_ptr_0, method, NULL, __this->___m_target_2, ___x0, ___y1);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_GridFunction2D_t62F59E4C9D7E140BD9A5DD1A34605094771BCD9B (GridFunction2D_t62F59E4C9D7E140BD9A5DD1A34605094771BCD9B* __this, int32_t ___x0, int32_t ___y1, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc)(int32_t, int32_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	// Native function invocation
+	il2cppPInvokeFunc(___x0, ___y1);
+
+}
+// System.Void FillefranzTools.Helper/GridFunction2D::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridFunction2D__ctor_m89BA60F642286EE8A81D9D71D59E3BA28B2AB0EA (GridFunction2D_t62F59E4C9D7E140BD9A5DD1A34605094771BCD9B* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) 
+{
+	__this->___method_ptr_0 = il2cpp_codegen_get_virtual_call_method_pointer((RuntimeMethod*)___method1);
+	__this->___method_3 = ___method1;
+	__this->___m_target_2 = ___object0;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target_2), (void*)___object0);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___method1);
+	__this->___method_code_6 = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___method1))
+	{
+		bool isOpen = parameterCount == 2;
+		if (il2cpp_codegen_call_method_via_invoker((RuntimeMethod*)___method1))
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&GridFunction2D_Invoke_mE4FEF62D1CE4E689A4C1BF1F5FA04CD3C33A6DA1_OpenStaticInvoker;
+			else
+				__this->___invoke_impl_1 = (intptr_t)&GridFunction2D_Invoke_mE4FEF62D1CE4E689A4C1BF1F5FA04CD3C33A6DA1_ClosedStaticInvoker;
+		else
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&GridFunction2D_Invoke_mE4FEF62D1CE4E689A4C1BF1F5FA04CD3C33A6DA1_OpenStatic;
+			else
+				{
+					__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+					__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+				}
+	}
+	else
+	{
+		if (___object0 == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+		__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+	}
+	__this->___extra_arg_5 = (intptr_t)&GridFunction2D_Invoke_mE4FEF62D1CE4E689A4C1BF1F5FA04CD3C33A6DA1_Multicast;
+}
+// System.Void FillefranzTools.Helper/GridFunction2D::Invoke(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridFunction2D_Invoke_mE4FEF62D1CE4E689A4C1BF1F5FA04CD3C33A6DA1 (GridFunction2D_t62F59E4C9D7E140BD9A5DD1A34605094771BCD9B* __this, int32_t ___x0, int32_t ___y1, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, int32_t, int32_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___x0, ___y1, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
+}
+// System.IAsyncResult FillefranzTools.Helper/GridFunction2D::BeginInvoke(System.Int32,System.Int32,System.AsyncCallback,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GridFunction2D_BeginInvoke_m25411C9770D1EC39DD6D5D24D14CB44923570819 (GridFunction2D_t62F59E4C9D7E140BD9A5DD1A34605094771BCD9B* __this, int32_t ___x0, int32_t ___y1, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___callback2, RuntimeObject* ___object3, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	void *__d_args[3] = {0};
+	__d_args[0] = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &___x0);
+	__d_args[1] = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &___y1);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___callback2, (RuntimeObject*)___object3);
+}
+// System.Void FillefranzTools.Helper/GridFunction2D::EndInvoke(System.IAsyncResult)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridFunction2D_EndInvoke_m17844DC24AB6B3865CC15AA50993B08B8FA8150B (GridFunction2D_t62F59E4C9D7E140BD9A5DD1A34605094771BCD9B* __this, RuntimeObject* ___result0, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void GridFunction3D_Invoke_m977132449F9570376D582F710E306F4245317B95_Multicast(GridFunction3D_t56D3426C3894411B09825B82497743A0448EB5E5* __this, int32_t ___x0, int32_t ___y1, int32_t ___z2, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates_13->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates_13->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		GridFunction3D_t56D3426C3894411B09825B82497743A0448EB5E5* currentDelegate = reinterpret_cast<GridFunction3D_t56D3426C3894411B09825B82497743A0448EB5E5*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, int32_t, int32_t, int32_t, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl_1)((Il2CppObject*)currentDelegate->___method_code_6, ___x0, ___y1, ___z2, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method_3));
+	}
+}
+void GridFunction3D_Invoke_m977132449F9570376D582F710E306F4245317B95_OpenInst(GridFunction3D_t56D3426C3894411B09825B82497743A0448EB5E5* __this, int32_t ___x0, int32_t ___y1, int32_t ___z2, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (int32_t, int32_t, int32_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr_0)(___x0, ___y1, ___z2, method);
+}
+void GridFunction3D_Invoke_m977132449F9570376D582F710E306F4245317B95_OpenStatic(GridFunction3D_t56D3426C3894411B09825B82497743A0448EB5E5* __this, int32_t ___x0, int32_t ___y1, int32_t ___z2, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (int32_t, int32_t, int32_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr_0)(___x0, ___y1, ___z2, method);
+}
+void GridFunction3D_Invoke_m977132449F9570376D582F710E306F4245317B95_OpenStaticInvoker(GridFunction3D_t56D3426C3894411B09825B82497743A0448EB5E5* __this, int32_t ___x0, int32_t ___y1, int32_t ___z2, const RuntimeMethod* method)
+{
+	InvokerActionInvoker3< int32_t, int32_t, int32_t >::Invoke(__this->___method_ptr_0, method, NULL, ___x0, ___y1, ___z2);
+}
+void GridFunction3D_Invoke_m977132449F9570376D582F710E306F4245317B95_ClosedStaticInvoker(GridFunction3D_t56D3426C3894411B09825B82497743A0448EB5E5* __this, int32_t ___x0, int32_t ___y1, int32_t ___z2, const RuntimeMethod* method)
+{
+	InvokerActionInvoker4< RuntimeObject*, int32_t, int32_t, int32_t >::Invoke(__this->___method_ptr_0, method, NULL, __this->___m_target_2, ___x0, ___y1, ___z2);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_GridFunction3D_t56D3426C3894411B09825B82497743A0448EB5E5 (GridFunction3D_t56D3426C3894411B09825B82497743A0448EB5E5* __this, int32_t ___x0, int32_t ___y1, int32_t ___z2, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc)(int32_t, int32_t, int32_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	// Native function invocation
+	il2cppPInvokeFunc(___x0, ___y1, ___z2);
+
+}
+// System.Void FillefranzTools.Helper/GridFunction3D::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridFunction3D__ctor_m8E3B5D3860320F9F0ED7716D05078610222C72C7 (GridFunction3D_t56D3426C3894411B09825B82497743A0448EB5E5* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) 
+{
+	__this->___method_ptr_0 = il2cpp_codegen_get_virtual_call_method_pointer((RuntimeMethod*)___method1);
+	__this->___method_3 = ___method1;
+	__this->___m_target_2 = ___object0;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target_2), (void*)___object0);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___method1);
+	__this->___method_code_6 = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___method1))
+	{
+		bool isOpen = parameterCount == 3;
+		if (il2cpp_codegen_call_method_via_invoker((RuntimeMethod*)___method1))
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&GridFunction3D_Invoke_m977132449F9570376D582F710E306F4245317B95_OpenStaticInvoker;
+			else
+				__this->___invoke_impl_1 = (intptr_t)&GridFunction3D_Invoke_m977132449F9570376D582F710E306F4245317B95_ClosedStaticInvoker;
+		else
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&GridFunction3D_Invoke_m977132449F9570376D582F710E306F4245317B95_OpenStatic;
+			else
+				{
+					__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+					__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+				}
+	}
+	else
+	{
+		if (___object0 == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+		__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+	}
+	__this->___extra_arg_5 = (intptr_t)&GridFunction3D_Invoke_m977132449F9570376D582F710E306F4245317B95_Multicast;
+}
+// System.Void FillefranzTools.Helper/GridFunction3D::Invoke(System.Int32,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridFunction3D_Invoke_m977132449F9570376D582F710E306F4245317B95 (GridFunction3D_t56D3426C3894411B09825B82497743A0448EB5E5* __this, int32_t ___x0, int32_t ___y1, int32_t ___z2, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, int32_t, int32_t, int32_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___x0, ___y1, ___z2, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
+}
+// System.IAsyncResult FillefranzTools.Helper/GridFunction3D::BeginInvoke(System.Int32,System.Int32,System.Int32,System.AsyncCallback,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GridFunction3D_BeginInvoke_m6623663B843AFE9DCD70A0DB4E22C17F481DAD59 (GridFunction3D_t56D3426C3894411B09825B82497743A0448EB5E5* __this, int32_t ___x0, int32_t ___y1, int32_t ___z2, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___callback3, RuntimeObject* ___object4, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	void *__d_args[4] = {0};
+	__d_args[0] = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &___x0);
+	__d_args[1] = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &___y1);
+	__d_args[2] = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &___z2);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___callback3, (RuntimeObject*)___object4);
+}
+// System.Void FillefranzTools.Helper/GridFunction3D::EndInvoke(System.IAsyncResult)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridFunction3D_EndInvoke_m0B2C3CDB9DA1043EA49037D3278CDF58502CE776 (GridFunction3D_t56D3426C3894411B09825B82497743A0448EB5E5* __this, RuntimeObject* ___result0, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void ForEach_Invoke_m9356E6A80540B1E9D4B62D735E750241C9134F79_Multicast(ForEach_t9D4A8E0E0060FDAED2CEC54D3449B036BF21DFEB* __this, int32_t ___i0, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates_13->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates_13->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		ForEach_t9D4A8E0E0060FDAED2CEC54D3449B036BF21DFEB* currentDelegate = reinterpret_cast<ForEach_t9D4A8E0E0060FDAED2CEC54D3449B036BF21DFEB*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, int32_t, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl_1)((Il2CppObject*)currentDelegate->___method_code_6, ___i0, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method_3));
+	}
+}
+void ForEach_Invoke_m9356E6A80540B1E9D4B62D735E750241C9134F79_OpenInst(ForEach_t9D4A8E0E0060FDAED2CEC54D3449B036BF21DFEB* __this, int32_t ___i0, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (int32_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr_0)(___i0, method);
+}
+void ForEach_Invoke_m9356E6A80540B1E9D4B62D735E750241C9134F79_OpenStatic(ForEach_t9D4A8E0E0060FDAED2CEC54D3449B036BF21DFEB* __this, int32_t ___i0, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (int32_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr_0)(___i0, method);
+}
+void ForEach_Invoke_m9356E6A80540B1E9D4B62D735E750241C9134F79_OpenStaticInvoker(ForEach_t9D4A8E0E0060FDAED2CEC54D3449B036BF21DFEB* __this, int32_t ___i0, const RuntimeMethod* method)
+{
+	InvokerActionInvoker1< int32_t >::Invoke(__this->___method_ptr_0, method, NULL, ___i0);
+}
+void ForEach_Invoke_m9356E6A80540B1E9D4B62D735E750241C9134F79_ClosedStaticInvoker(ForEach_t9D4A8E0E0060FDAED2CEC54D3449B036BF21DFEB* __this, int32_t ___i0, const RuntimeMethod* method)
+{
+	InvokerActionInvoker2< RuntimeObject*, int32_t >::Invoke(__this->___method_ptr_0, method, NULL, __this->___m_target_2, ___i0);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_ForEach_t9D4A8E0E0060FDAED2CEC54D3449B036BF21DFEB (ForEach_t9D4A8E0E0060FDAED2CEC54D3449B036BF21DFEB* __this, int32_t ___i0, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc)(int32_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	// Native function invocation
+	il2cppPInvokeFunc(___i0);
+
+}
+// System.Void FillefranzTools.Helper/ForEach::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ForEach__ctor_m74F49CB492C9EC988F40032F5491429122527316 (ForEach_t9D4A8E0E0060FDAED2CEC54D3449B036BF21DFEB* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) 
+{
+	__this->___method_ptr_0 = il2cpp_codegen_get_virtual_call_method_pointer((RuntimeMethod*)___method1);
+	__this->___method_3 = ___method1;
+	__this->___m_target_2 = ___object0;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target_2), (void*)___object0);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___method1);
+	__this->___method_code_6 = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___method1))
+	{
+		bool isOpen = parameterCount == 1;
+		if (il2cpp_codegen_call_method_via_invoker((RuntimeMethod*)___method1))
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&ForEach_Invoke_m9356E6A80540B1E9D4B62D735E750241C9134F79_OpenStaticInvoker;
+			else
+				__this->___invoke_impl_1 = (intptr_t)&ForEach_Invoke_m9356E6A80540B1E9D4B62D735E750241C9134F79_ClosedStaticInvoker;
+		else
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&ForEach_Invoke_m9356E6A80540B1E9D4B62D735E750241C9134F79_OpenStatic;
+			else
+				{
+					__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+					__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+				}
+	}
+	else
+	{
+		if (___object0 == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+		__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+	}
+	__this->___extra_arg_5 = (intptr_t)&ForEach_Invoke_m9356E6A80540B1E9D4B62D735E750241C9134F79_Multicast;
+}
+// System.Void FillefranzTools.Helper/ForEach::Invoke(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ForEach_Invoke_m9356E6A80540B1E9D4B62D735E750241C9134F79 (ForEach_t9D4A8E0E0060FDAED2CEC54D3449B036BF21DFEB* __this, int32_t ___i0, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, int32_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___i0, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
+}
+// System.IAsyncResult FillefranzTools.Helper/ForEach::BeginInvoke(System.Int32,System.AsyncCallback,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ForEach_BeginInvoke_m5599B5BE6BFF2ABEEB39114CD8B9D2E8191DF7C0 (ForEach_t9D4A8E0E0060FDAED2CEC54D3449B036BF21DFEB* __this, int32_t ___i0, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___callback1, RuntimeObject* ___object2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	void *__d_args[2] = {0};
+	__d_args[0] = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &___i0);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___callback1, (RuntimeObject*)___object2);
+}
+// System.Void FillefranzTools.Helper/ForEach::EndInvoke(System.IAsyncResult)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ForEach_EndInvoke_mA87267626A0D08DF6CAB568526B4E82CBFEC21AE (ForEach_t9D4A8E0E0060FDAED2CEC54D3449B036BF21DFEB* __this, RuntimeObject* ___result0, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void Function_Invoke_m4FD89F9D12BFBA16A4574D4A38C19A01C93CB374_Multicast(Function_t067AEBDDB28DF3B009BB38FE3BFD4FDDFEE7742B* __this, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates_13->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates_13->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		Function_t067AEBDDB28DF3B009BB38FE3BFD4FDDFEE7742B* currentDelegate = reinterpret_cast<Function_t067AEBDDB28DF3B009BB38FE3BFD4FDDFEE7742B*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl_1)((Il2CppObject*)currentDelegate->___method_code_6, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method_3));
+	}
+}
+void Function_Invoke_m4FD89F9D12BFBA16A4574D4A38C19A01C93CB374_OpenInst(Function_t067AEBDDB28DF3B009BB38FE3BFD4FDDFEE7742B* __this, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr_0)(method);
+}
+void Function_Invoke_m4FD89F9D12BFBA16A4574D4A38C19A01C93CB374_OpenStatic(Function_t067AEBDDB28DF3B009BB38FE3BFD4FDDFEE7742B* __this, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr_0)(method);
+}
+void Function_Invoke_m4FD89F9D12BFBA16A4574D4A38C19A01C93CB374_OpenStaticInvoker(Function_t067AEBDDB28DF3B009BB38FE3BFD4FDDFEE7742B* __this, const RuntimeMethod* method)
+{
+	InvokerActionInvoker0::Invoke(__this->___method_ptr_0, method, NULL);
+}
+void Function_Invoke_m4FD89F9D12BFBA16A4574D4A38C19A01C93CB374_ClosedStaticInvoker(Function_t067AEBDDB28DF3B009BB38FE3BFD4FDDFEE7742B* __this, const RuntimeMethod* method)
+{
+	InvokerActionInvoker1< RuntimeObject* >::Invoke(__this->___method_ptr_0, method, NULL, __this->___m_target_2);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_Function_t067AEBDDB28DF3B009BB38FE3BFD4FDDFEE7742B (Function_t067AEBDDB28DF3B009BB38FE3BFD4FDDFEE7742B* __this, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc)();
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	// Native function invocation
+	il2cppPInvokeFunc();
+
+}
+// System.Void FillefranzTools.Helper/Function::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Function__ctor_mCAD8A253011E8541886636D8B5EE339D230DB7C1 (Function_t067AEBDDB28DF3B009BB38FE3BFD4FDDFEE7742B* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) 
+{
+	__this->___method_ptr_0 = il2cpp_codegen_get_virtual_call_method_pointer((RuntimeMethod*)___method1);
+	__this->___method_3 = ___method1;
+	__this->___m_target_2 = ___object0;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target_2), (void*)___object0);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___method1);
+	__this->___method_code_6 = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___method1))
+	{
+		bool isOpen = parameterCount == 0;
+		if (il2cpp_codegen_call_method_via_invoker((RuntimeMethod*)___method1))
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&Function_Invoke_m4FD89F9D12BFBA16A4574D4A38C19A01C93CB374_OpenStaticInvoker;
+			else
+				__this->___invoke_impl_1 = (intptr_t)&Function_Invoke_m4FD89F9D12BFBA16A4574D4A38C19A01C93CB374_ClosedStaticInvoker;
+		else
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&Function_Invoke_m4FD89F9D12BFBA16A4574D4A38C19A01C93CB374_OpenStatic;
+			else
+				{
+					__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+					__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+				}
+	}
+	else
+	{
+		if (___object0 == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+		__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+	}
+	__this->___extra_arg_5 = (intptr_t)&Function_Invoke_m4FD89F9D12BFBA16A4574D4A38C19A01C93CB374_Multicast;
+}
+// System.Void FillefranzTools.Helper/Function::Invoke()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Function_Invoke_m4FD89F9D12BFBA16A4574D4A38C19A01C93CB374 (Function_t067AEBDDB28DF3B009BB38FE3BFD4FDDFEE7742B* __this, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
+}
+// System.IAsyncResult FillefranzTools.Helper/Function::BeginInvoke(System.AsyncCallback,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Function_BeginInvoke_mC5C6312B88F60124745A5C07A46BF9CCE31C1D93 (Function_t067AEBDDB28DF3B009BB38FE3BFD4FDDFEE7742B* __this, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___callback0, RuntimeObject* ___object1, const RuntimeMethod* method) 
+{
+	void *__d_args[1] = {0};
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___callback0, (RuntimeObject*)___object1);
+}
+// System.Void FillefranzTools.Helper/Function::EndInvoke(System.IAsyncResult)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Function_EndInvoke_m0FD3092C91A3925649D28C179C4DF6A7C8B0671C (Function_t067AEBDDB28DF3B009BB38FE3BFD4FDDFEE7742B* __this, RuntimeObject* ___result0, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Conversion methods for marshalling of: FillefranzTools.Parabola
+IL2CPP_EXTERN_C void Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877_marshal_pinvoke(const Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877& unmarshaled, Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877_marshaled_pinvoke& marshaled)
+{
+	marshaled.___startPoint_0 = unmarshaled.___startPoint_0;
+	marshaled.___endPoint_1 = unmarshaled.___endPoint_1;
+	marshaled.___fixHeight_2 = static_cast<int32_t>(unmarshaled.___fixHeight_2);
+	marshaled.___fixedHeight_3 = unmarshaled.___fixedHeight_3;
+	marshaled.___curveDown_4 = static_cast<int32_t>(unmarshaled.___curveDown_4);
+	marshaled.___flatness_5 = unmarshaled.___flatness_5;
+	marshaled.___U3CaU3Ek__BackingField_6 = unmarshaled.___U3CaU3Ek__BackingField_6;
+	marshaled.___U3CbU3Ek__BackingField_7 = unmarshaled.___U3CbU3Ek__BackingField_7;
+	marshaled.___U3CcU3Ek__BackingField_8 = unmarshaled.___U3CcU3Ek__BackingField_8;
+	marshaled.___angle_9 = unmarshaled.___angle_9;
+	marshaled.___v0_10 = unmarshaled.___v0_10;
+	marshaled.___time_11 = unmarshaled.___time_11;
+	marshaled.___height_12 = unmarshaled.___height_12;
+	marshaled.___gndDst_13 = unmarshaled.___gndDst_13;
+	marshaled.___direction_14 = unmarshaled.___direction_14;
+	marshaled.___groundDirection_15 = unmarshaled.___groundDirection_15;
+	marshaled.___targetPos_16 = unmarshaled.___targetPos_16;
+}
+IL2CPP_EXTERN_C void Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877_marshal_pinvoke_back(const Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877_marshaled_pinvoke& marshaled, Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877& unmarshaled)
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 unmarshaledstartPoint_temp_0;
+	memset((&unmarshaledstartPoint_temp_0), 0, sizeof(unmarshaledstartPoint_temp_0));
+	unmarshaledstartPoint_temp_0 = marshaled.___startPoint_0;
+	unmarshaled.___startPoint_0 = unmarshaledstartPoint_temp_0;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 unmarshaledendPoint_temp_1;
+	memset((&unmarshaledendPoint_temp_1), 0, sizeof(unmarshaledendPoint_temp_1));
+	unmarshaledendPoint_temp_1 = marshaled.___endPoint_1;
+	unmarshaled.___endPoint_1 = unmarshaledendPoint_temp_1;
+	bool unmarshaledfixHeight_temp_2 = false;
+	unmarshaledfixHeight_temp_2 = static_cast<bool>(marshaled.___fixHeight_2);
+	unmarshaled.___fixHeight_2 = unmarshaledfixHeight_temp_2;
+	float unmarshaledfixedHeight_temp_3 = 0.0f;
+	unmarshaledfixedHeight_temp_3 = marshaled.___fixedHeight_3;
+	unmarshaled.___fixedHeight_3 = unmarshaledfixedHeight_temp_3;
+	bool unmarshaledcurveDown_temp_4 = false;
+	unmarshaledcurveDown_temp_4 = static_cast<bool>(marshaled.___curveDown_4);
+	unmarshaled.___curveDown_4 = unmarshaledcurveDown_temp_4;
+	float unmarshaledflatness_temp_5 = 0.0f;
+	unmarshaledflatness_temp_5 = marshaled.___flatness_5;
+	unmarshaled.___flatness_5 = unmarshaledflatness_temp_5;
+	float unmarshaledU3CaU3Ek__BackingField_temp_6 = 0.0f;
+	unmarshaledU3CaU3Ek__BackingField_temp_6 = marshaled.___U3CaU3Ek__BackingField_6;
+	unmarshaled.___U3CaU3Ek__BackingField_6 = unmarshaledU3CaU3Ek__BackingField_temp_6;
+	float unmarshaledU3CbU3Ek__BackingField_temp_7 = 0.0f;
+	unmarshaledU3CbU3Ek__BackingField_temp_7 = marshaled.___U3CbU3Ek__BackingField_7;
+	unmarshaled.___U3CbU3Ek__BackingField_7 = unmarshaledU3CbU3Ek__BackingField_temp_7;
+	float unmarshaledU3CcU3Ek__BackingField_temp_8 = 0.0f;
+	unmarshaledU3CcU3Ek__BackingField_temp_8 = marshaled.___U3CcU3Ek__BackingField_8;
+	unmarshaled.___U3CcU3Ek__BackingField_8 = unmarshaledU3CcU3Ek__BackingField_temp_8;
+	float unmarshaledangle_temp_9 = 0.0f;
+	unmarshaledangle_temp_9 = marshaled.___angle_9;
+	unmarshaled.___angle_9 = unmarshaledangle_temp_9;
+	float unmarshaledv0_temp_10 = 0.0f;
+	unmarshaledv0_temp_10 = marshaled.___v0_10;
+	unmarshaled.___v0_10 = unmarshaledv0_temp_10;
+	float unmarshaledtime_temp_11 = 0.0f;
+	unmarshaledtime_temp_11 = marshaled.___time_11;
+	unmarshaled.___time_11 = unmarshaledtime_temp_11;
+	float unmarshaledheight_temp_12 = 0.0f;
+	unmarshaledheight_temp_12 = marshaled.___height_12;
+	unmarshaled.___height_12 = unmarshaledheight_temp_12;
+	float unmarshaledgndDst_temp_13 = 0.0f;
+	unmarshaledgndDst_temp_13 = marshaled.___gndDst_13;
+	unmarshaled.___gndDst_13 = unmarshaledgndDst_temp_13;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 unmarshaleddirection_temp_14;
+	memset((&unmarshaleddirection_temp_14), 0, sizeof(unmarshaleddirection_temp_14));
+	unmarshaleddirection_temp_14 = marshaled.___direction_14;
+	unmarshaled.___direction_14 = unmarshaleddirection_temp_14;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 unmarshaledgroundDirection_temp_15;
+	memset((&unmarshaledgroundDirection_temp_15), 0, sizeof(unmarshaledgroundDirection_temp_15));
+	unmarshaledgroundDirection_temp_15 = marshaled.___groundDirection_15;
+	unmarshaled.___groundDirection_15 = unmarshaledgroundDirection_temp_15;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 unmarshaledtargetPos_temp_16;
+	memset((&unmarshaledtargetPos_temp_16), 0, sizeof(unmarshaledtargetPos_temp_16));
+	unmarshaledtargetPos_temp_16 = marshaled.___targetPos_16;
+	unmarshaled.___targetPos_16 = unmarshaledtargetPos_temp_16;
+}
+// Conversion method for clean up from marshalling of: FillefranzTools.Parabola
+IL2CPP_EXTERN_C void Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877_marshal_pinvoke_cleanup(Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877_marshaled_pinvoke& marshaled)
+{
+}
+// Conversion methods for marshalling of: FillefranzTools.Parabola
+IL2CPP_EXTERN_C void Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877_marshal_com(const Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877& unmarshaled, Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877_marshaled_com& marshaled)
+{
+	marshaled.___startPoint_0 = unmarshaled.___startPoint_0;
+	marshaled.___endPoint_1 = unmarshaled.___endPoint_1;
+	marshaled.___fixHeight_2 = static_cast<int32_t>(unmarshaled.___fixHeight_2);
+	marshaled.___fixedHeight_3 = unmarshaled.___fixedHeight_3;
+	marshaled.___curveDown_4 = static_cast<int32_t>(unmarshaled.___curveDown_4);
+	marshaled.___flatness_5 = unmarshaled.___flatness_5;
+	marshaled.___U3CaU3Ek__BackingField_6 = unmarshaled.___U3CaU3Ek__BackingField_6;
+	marshaled.___U3CbU3Ek__BackingField_7 = unmarshaled.___U3CbU3Ek__BackingField_7;
+	marshaled.___U3CcU3Ek__BackingField_8 = unmarshaled.___U3CcU3Ek__BackingField_8;
+	marshaled.___angle_9 = unmarshaled.___angle_9;
+	marshaled.___v0_10 = unmarshaled.___v0_10;
+	marshaled.___time_11 = unmarshaled.___time_11;
+	marshaled.___height_12 = unmarshaled.___height_12;
+	marshaled.___gndDst_13 = unmarshaled.___gndDst_13;
+	marshaled.___direction_14 = unmarshaled.___direction_14;
+	marshaled.___groundDirection_15 = unmarshaled.___groundDirection_15;
+	marshaled.___targetPos_16 = unmarshaled.___targetPos_16;
+}
+IL2CPP_EXTERN_C void Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877_marshal_com_back(const Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877_marshaled_com& marshaled, Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877& unmarshaled)
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 unmarshaledstartPoint_temp_0;
+	memset((&unmarshaledstartPoint_temp_0), 0, sizeof(unmarshaledstartPoint_temp_0));
+	unmarshaledstartPoint_temp_0 = marshaled.___startPoint_0;
+	unmarshaled.___startPoint_0 = unmarshaledstartPoint_temp_0;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 unmarshaledendPoint_temp_1;
+	memset((&unmarshaledendPoint_temp_1), 0, sizeof(unmarshaledendPoint_temp_1));
+	unmarshaledendPoint_temp_1 = marshaled.___endPoint_1;
+	unmarshaled.___endPoint_1 = unmarshaledendPoint_temp_1;
+	bool unmarshaledfixHeight_temp_2 = false;
+	unmarshaledfixHeight_temp_2 = static_cast<bool>(marshaled.___fixHeight_2);
+	unmarshaled.___fixHeight_2 = unmarshaledfixHeight_temp_2;
+	float unmarshaledfixedHeight_temp_3 = 0.0f;
+	unmarshaledfixedHeight_temp_3 = marshaled.___fixedHeight_3;
+	unmarshaled.___fixedHeight_3 = unmarshaledfixedHeight_temp_3;
+	bool unmarshaledcurveDown_temp_4 = false;
+	unmarshaledcurveDown_temp_4 = static_cast<bool>(marshaled.___curveDown_4);
+	unmarshaled.___curveDown_4 = unmarshaledcurveDown_temp_4;
+	float unmarshaledflatness_temp_5 = 0.0f;
+	unmarshaledflatness_temp_5 = marshaled.___flatness_5;
+	unmarshaled.___flatness_5 = unmarshaledflatness_temp_5;
+	float unmarshaledU3CaU3Ek__BackingField_temp_6 = 0.0f;
+	unmarshaledU3CaU3Ek__BackingField_temp_6 = marshaled.___U3CaU3Ek__BackingField_6;
+	unmarshaled.___U3CaU3Ek__BackingField_6 = unmarshaledU3CaU3Ek__BackingField_temp_6;
+	float unmarshaledU3CbU3Ek__BackingField_temp_7 = 0.0f;
+	unmarshaledU3CbU3Ek__BackingField_temp_7 = marshaled.___U3CbU3Ek__BackingField_7;
+	unmarshaled.___U3CbU3Ek__BackingField_7 = unmarshaledU3CbU3Ek__BackingField_temp_7;
+	float unmarshaledU3CcU3Ek__BackingField_temp_8 = 0.0f;
+	unmarshaledU3CcU3Ek__BackingField_temp_8 = marshaled.___U3CcU3Ek__BackingField_8;
+	unmarshaled.___U3CcU3Ek__BackingField_8 = unmarshaledU3CcU3Ek__BackingField_temp_8;
+	float unmarshaledangle_temp_9 = 0.0f;
+	unmarshaledangle_temp_9 = marshaled.___angle_9;
+	unmarshaled.___angle_9 = unmarshaledangle_temp_9;
+	float unmarshaledv0_temp_10 = 0.0f;
+	unmarshaledv0_temp_10 = marshaled.___v0_10;
+	unmarshaled.___v0_10 = unmarshaledv0_temp_10;
+	float unmarshaledtime_temp_11 = 0.0f;
+	unmarshaledtime_temp_11 = marshaled.___time_11;
+	unmarshaled.___time_11 = unmarshaledtime_temp_11;
+	float unmarshaledheight_temp_12 = 0.0f;
+	unmarshaledheight_temp_12 = marshaled.___height_12;
+	unmarshaled.___height_12 = unmarshaledheight_temp_12;
+	float unmarshaledgndDst_temp_13 = 0.0f;
+	unmarshaledgndDst_temp_13 = marshaled.___gndDst_13;
+	unmarshaled.___gndDst_13 = unmarshaledgndDst_temp_13;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 unmarshaleddirection_temp_14;
+	memset((&unmarshaleddirection_temp_14), 0, sizeof(unmarshaleddirection_temp_14));
+	unmarshaleddirection_temp_14 = marshaled.___direction_14;
+	unmarshaled.___direction_14 = unmarshaleddirection_temp_14;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 unmarshaledgroundDirection_temp_15;
+	memset((&unmarshaledgroundDirection_temp_15), 0, sizeof(unmarshaledgroundDirection_temp_15));
+	unmarshaledgroundDirection_temp_15 = marshaled.___groundDirection_15;
+	unmarshaled.___groundDirection_15 = unmarshaledgroundDirection_temp_15;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 unmarshaledtargetPos_temp_16;
+	memset((&unmarshaledtargetPos_temp_16), 0, sizeof(unmarshaledtargetPos_temp_16));
+	unmarshaledtargetPos_temp_16 = marshaled.___targetPos_16;
+	unmarshaled.___targetPos_16 = unmarshaledtargetPos_temp_16;
+}
+// Conversion method for clean up from marshalling of: FillefranzTools.Parabola
+IL2CPP_EXTERN_C void Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877_marshal_com_cleanup(Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877_marshaled_com& marshaled)
+{
+}
+// System.Single FillefranzTools.Parabola::get_a()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_get_a_m45657B88E4858AB7B90EEC89388F69ACA341E1DD (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) 
+{
+	{
+		// public float a { get; private set; }
+		float L_0 = __this->___U3CaU3Ek__BackingField_6;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_get_a_m45657B88E4858AB7B90EEC89388F69ACA341E1DD_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_get_a_m45657B88E4858AB7B90EEC89388F69ACA341E1DD_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.Void FillefranzTools.Parabola::set_a(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Parabola_set_a_m93234FDAFF2059B499CEC330BB682A802583526B (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___value0, const RuntimeMethod* method) 
+{
+	{
+		// public float a { get; private set; }
+		float L_0 = ___value0;
+		__this->___U3CaU3Ek__BackingField_6 = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void Parabola_set_a_m93234FDAFF2059B499CEC330BB682A802583526B_AdjustorThunk (RuntimeObject* __this, float ___value0, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	Parabola_set_a_m93234FDAFF2059B499CEC330BB682A802583526B_inline(_thisAdjusted, ___value0, method);
+}
+// System.Single FillefranzTools.Parabola::get_b()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_get_b_m06FC4C4FC4136097B8BF0313413B497537BD1FB0 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) 
+{
+	{
+		// public float b { get; private set; }
+		float L_0 = __this->___U3CbU3Ek__BackingField_7;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_get_b_m06FC4C4FC4136097B8BF0313413B497537BD1FB0_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_get_b_m06FC4C4FC4136097B8BF0313413B497537BD1FB0_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.Void FillefranzTools.Parabola::set_b(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Parabola_set_b_m9A9E83C230FEE06963971E2D935587620EBF3380 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___value0, const RuntimeMethod* method) 
+{
+	{
+		// public float b { get; private set; }
+		float L_0 = ___value0;
+		__this->___U3CbU3Ek__BackingField_7 = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void Parabola_set_b_m9A9E83C230FEE06963971E2D935587620EBF3380_AdjustorThunk (RuntimeObject* __this, float ___value0, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	Parabola_set_b_m9A9E83C230FEE06963971E2D935587620EBF3380_inline(_thisAdjusted, ___value0, method);
+}
+// System.Single FillefranzTools.Parabola::get_c()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_get_c_m5AD3671CEE18CCAFBDD327392760C595BB315FA2 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) 
+{
+	{
+		// public float c { get; private set; }
+		float L_0 = __this->___U3CcU3Ek__BackingField_8;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_get_c_m5AD3671CEE18CCAFBDD327392760C595BB315FA2_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_get_c_m5AD3671CEE18CCAFBDD327392760C595BB315FA2_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.Void FillefranzTools.Parabola::set_c(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Parabola_set_c_mAF6F75BA41324AD4C3A56625F2666792E3FE44C3 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___value0, const RuntimeMethod* method) 
+{
+	{
+		// public float c { get; private set; }
+		float L_0 = ___value0;
+		__this->___U3CcU3Ek__BackingField_8 = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void Parabola_set_c_mAF6F75BA41324AD4C3A56625F2666792E3FE44C3_AdjustorThunk (RuntimeObject* __this, float ___value0, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	Parabola_set_c_mAF6F75BA41324AD4C3A56625F2666792E3FE44C3_inline(_thisAdjusted, ___value0, method);
+}
+// System.String FillefranzTools.Parabola::get_equation()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Parabola_get_equation_mECBD56080A3552AA80F33212B8AC7ED47C9C90A8 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralBCD6A8E9DCF930FE19989EC467783CF6B1C53E18);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// public string equation => $"{a}x^2 + {b}x +{c}";
+		float L_0;
+		L_0 = Parabola_get_a_m45657B88E4858AB7B90EEC89388F69ACA341E1DD_inline(__this, NULL);
+		float L_1 = L_0;
+		RuntimeObject* L_2 = Box(Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var, &L_1);
+		float L_3;
+		L_3 = Parabola_get_b_m06FC4C4FC4136097B8BF0313413B497537BD1FB0_inline(__this, NULL);
+		float L_4 = L_3;
+		RuntimeObject* L_5 = Box(Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var, &L_4);
+		float L_6;
+		L_6 = Parabola_get_c_m5AD3671CEE18CCAFBDD327392760C595BB315FA2_inline(__this, NULL);
+		float L_7 = L_6;
+		RuntimeObject* L_8 = Box(Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var, &L_7);
+		String_t* L_9;
+		L_9 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteralBCD6A8E9DCF930FE19989EC467783CF6B1C53E18, L_2, L_5, L_8, NULL);
+		return L_9;
+	}
+}
+IL2CPP_EXTERN_C  String_t* Parabola_get_equation_mECBD56080A3552AA80F33212B8AC7ED47C9C90A8_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	String_t* _returnValue;
+	_returnValue = Parabola_get_equation_mECBD56080A3552AA80F33212B8AC7ED47C9C90A8(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.Single FillefranzTools.Parabola::get_Height()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_get_Height_m1F7CD2074EB90BA935E1E8CCEB06990812E143E4 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) 
+{
+	{
+		// public float Height => height;
+		float L_0 = __this->___height_12;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_get_Height_m1F7CD2074EB90BA935E1E8CCEB06990812E143E4_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_get_Height_m1F7CD2074EB90BA935E1E8CCEB06990812E143E4_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.Single FillefranzTools.Parabola::get_Angle()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_get_Angle_m4E391DC7D8343F68AC9FD5D59D3D68F4EEE88C05 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) 
+{
+	{
+		// public float Angle => angle;
+		float L_0 = __this->___angle_9;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_get_Angle_m4E391DC7D8343F68AC9FD5D59D3D68F4EEE88C05_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_get_Angle_m4E391DC7D8343F68AC9FD5D59D3D68F4EEE88C05_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.Single FillefranzTools.Parabola::get_GroundDistance()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_get_GroundDistance_m74A67B47F8979477CA6AD697A16114C18689209F (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) 
+{
+	{
+		// public float GroundDistance => gndDst;
+		float L_0 = __this->___gndDst_13;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_get_GroundDistance_m74A67B47F8979477CA6AD697A16114C18689209F_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_get_GroundDistance_m74A67B47F8979477CA6AD697A16114C18689209F_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+// UnityEngine.Vector3 FillefranzTools.Parabola::get_Direction()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_get_Direction_m00D4B1A4769B83C9354C52535D6442FCE96162B3 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) 
+{
+	{
+		// public Vector3 Direction => direction.normalized;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_0 = (&__this->___direction_14);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline(L_0, NULL);
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C  Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_get_Direction_m00D4B1A4769B83C9354C52535D6442FCE96162B3_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 _returnValue;
+	_returnValue = Parabola_get_Direction_m00D4B1A4769B83C9354C52535D6442FCE96162B3(_thisAdjusted, method);
+	return _returnValue;
+}
+// UnityEngine.Vector3 FillefranzTools.Parabola::get_GroundDirection()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_get_GroundDirection_m10A1E37CB84CD83F450E2D407125686DE660EBDF (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) 
+{
+	{
+		// public Vector3 GroundDirection => groundDirection.normalized;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_0 = (&__this->___groundDirection_15);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline(L_0, NULL);
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C  Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_get_GroundDirection_m10A1E37CB84CD83F450E2D407125686DE660EBDF_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 _returnValue;
+	_returnValue = Parabola_get_GroundDirection_m10A1E37CB84CD83F450E2D407125686DE660EBDF(_thisAdjusted, method);
+	return _returnValue;
+}
+// UnityEngine.Vector3 FillefranzTools.Parabola::get_Center()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_get_Center_m370021598246A3567F320515FD397863B6C65247 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) 
+{
+	{
+		// public Vector3 Center => Evaluate(0.5f);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0;
+		L_0 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, (0.5f), NULL);
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_get_Center_m370021598246A3567F320515FD397863B6C65247_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 _returnValue;
+	_returnValue = Parabola_get_Center_m370021598246A3567F320515FD397863B6C65247(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.Void FillefranzTools.Parabola::.ctor(UnityEngine.Vector3,UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Parabola__ctor_m294348227A0399934868CDC061D36DF7EF4EE35E (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startPoint0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___endPoint1, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	{
+		// this.startPoint = startPoint;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___startPoint0;
+		__this->___startPoint_0 = L_0;
+		// this.endPoint = endPoint;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = ___endPoint1;
+		__this->___endPoint_1 = L_1;
+		// curveDown = false;
+		__this->___curveDown_4 = (bool)0;
+		// flatness = 2;
+		__this->___flatness_5 = (2.0f);
+		// fixHeight = false;
+		__this->___fixHeight_2 = (bool)0;
+		// fixedHeight = 3;
+		__this->___fixedHeight_3 = (3.0f);
+		// angle = v0 = time = height = 0;
+		float L_2 = (0.0f);
+		V_0 = L_2;
+		__this->___height_12 = L_2;
+		float L_3 = V_0;
+		float L_4 = L_3;
+		V_0 = L_4;
+		__this->___time_11 = L_4;
+		float L_5 = V_0;
+		float L_6 = L_5;
+		V_0 = L_6;
+		__this->___v0_10 = L_6;
+		float L_7 = V_0;
+		__this->___angle_9 = L_7;
+		// direction = groundDirection = targetPos = Vector3.zero;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
+		L_8 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9 = L_8;
+		V_1 = L_9;
+		__this->___targetPos_16 = L_9;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11 = L_10;
+		V_1 = L_11;
+		__this->___groundDirection_15 = L_11;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = V_1;
+		__this->___direction_14 = L_12;
+		// a = 1;
+		Parabola_set_a_m93234FDAFF2059B499CEC330BB682A802583526B_inline(__this, (1.0f), NULL);
+		// b = c = 0;
+		float L_13 = (0.0f);
+		V_0 = L_13;
+		Parabola_set_c_mAF6F75BA41324AD4C3A56625F2666792E3FE44C3_inline(__this, L_13, NULL);
+		float L_14 = V_0;
+		Parabola_set_b_m9A9E83C230FEE06963971E2D935587620EBF3380_inline(__this, L_14, NULL);
+		// gndDst = Vector3.Distance(endPoint.OverrideY(0), startPoint.OverrideY(0));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15 = ___endPoint1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
+		L_16 = ExtensionMethods_OverrideY_mD6CCA8D712AEA47186521FA999EFDB16D3854334(L_15, (0.0f), NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17 = ___startPoint0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18;
+		L_18 = ExtensionMethods_OverrideY_mD6CCA8D712AEA47186521FA999EFDB16D3854334(L_17, (0.0f), NULL);
+		float L_19;
+		L_19 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_16, L_18, NULL);
+		__this->___gndDst_13 = L_19;
+		// Recalculate();
+		bool L_20;
+		L_20 = Parabola_Recalculate_mBBFFF00304A2B0269CE16E3F3BDA8FEEA98E3D1F(__this, NULL);
+		// }
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void Parabola__ctor_m294348227A0399934868CDC061D36DF7EF4EE35E_AdjustorThunk (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startPoint0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___endPoint1, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	Parabola__ctor_m294348227A0399934868CDC061D36DF7EF4EE35E(_thisAdjusted, ___startPoint0, ___endPoint1, method);
+}
+// System.Void FillefranzTools.Parabola::.ctor(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Parabola__ctor_m4878780E0853590DE3289CCBC460E33A18E5B142 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startPoint0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___endPoint1, float ___fixedHeight2, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	{
+		// this.startPoint = startPoint;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___startPoint0;
+		__this->___startPoint_0 = L_0;
+		// this.endPoint = endPoint;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = ___endPoint1;
+		__this->___endPoint_1 = L_1;
+		// this.fixedHeight = fixedHeight;
+		float L_2 = ___fixedHeight2;
+		__this->___fixedHeight_3 = L_2;
+		// fixHeight = true;
+		__this->___fixHeight_2 = (bool)1;
+		// curveDown = false;
+		__this->___curveDown_4 = (bool)0;
+		// flatness = 2;
+		__this->___flatness_5 = (2.0f);
+		// angle = v0 = time = height = 0;
+		float L_3 = (0.0f);
+		V_0 = L_3;
+		__this->___height_12 = L_3;
+		float L_4 = V_0;
+		float L_5 = L_4;
+		V_0 = L_5;
+		__this->___time_11 = L_5;
+		float L_6 = V_0;
+		float L_7 = L_6;
+		V_0 = L_7;
+		__this->___v0_10 = L_7;
+		float L_8 = V_0;
+		__this->___angle_9 = L_8;
+		// direction = groundDirection = targetPos = Vector3.zero;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
+		L_9 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = L_9;
+		V_1 = L_10;
+		__this->___targetPos_16 = L_10;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = L_11;
+		V_1 = L_12;
+		__this->___groundDirection_15 = L_12;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13 = V_1;
+		__this->___direction_14 = L_13;
+		// a = 1;
+		Parabola_set_a_m93234FDAFF2059B499CEC330BB682A802583526B_inline(__this, (1.0f), NULL);
+		// b = c = 0;
+		float L_14 = (0.0f);
+		V_0 = L_14;
+		Parabola_set_c_mAF6F75BA41324AD4C3A56625F2666792E3FE44C3_inline(__this, L_14, NULL);
+		float L_15 = V_0;
+		Parabola_set_b_m9A9E83C230FEE06963971E2D935587620EBF3380_inline(__this, L_15, NULL);
+		// gndDst = Vector3.Distance(endPoint.OverrideY(0), startPoint.OverrideY(0));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16 = ___endPoint1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17;
+		L_17 = ExtensionMethods_OverrideY_mD6CCA8D712AEA47186521FA999EFDB16D3854334(L_16, (0.0f), NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18 = ___startPoint0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19;
+		L_19 = ExtensionMethods_OverrideY_mD6CCA8D712AEA47186521FA999EFDB16D3854334(L_18, (0.0f), NULL);
+		float L_20;
+		L_20 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_17, L_19, NULL);
+		__this->___gndDst_13 = L_20;
+		// Recalculate();
+		bool L_21;
+		L_21 = Parabola_Recalculate_mBBFFF00304A2B0269CE16E3F3BDA8FEEA98E3D1F(__this, NULL);
+		// }
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void Parabola__ctor_m4878780E0853590DE3289CCBC460E33A18E5B142_AdjustorThunk (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startPoint0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___endPoint1, float ___fixedHeight2, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	Parabola__ctor_m4878780E0853590DE3289CCBC460E33A18E5B142(_thisAdjusted, ___startPoint0, ___endPoint1, ___fixedHeight2, method);
+}
+// UnityEngine.Vector3 FillefranzTools.Parabola::Evaluate(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___t0, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	{
+		// if (t == 0) return startPoint;
+		float L_0 = ___t0;
+		if ((!(((float)L_0) == ((float)(0.0f)))))
+		{
+			goto IL_000f;
+		}
+	}
+	{
+		// if (t == 0) return startPoint;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = __this->___startPoint_0;
+		return L_1;
+	}
+
+IL_000f:
+	{
+		// if (t == 1) return endPoint;
+		float L_2 = ___t0;
+		if ((!(((float)L_2) == ((float)(1.0f)))))
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		// if (t == 1) return endPoint;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = __this->___endPoint_1;
+		return L_3;
+	}
+
+IL_001e:
+	{
+		// float scaledTime = t * time;
+		float L_4 = ___t0;
+		float L_5 = __this->___time_11;
+		V_0 = ((float)il2cpp_codegen_multiply(L_4, L_5));
+		// float x = v0 * scaledTime * Mathf.Cos(angle);
+		float L_6 = __this->___v0_10;
+		float L_7 = V_0;
+		float L_8 = __this->___angle_9;
+		float L_9;
+		L_9 = cosf(L_8);
+		V_1 = ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_6, L_7)), L_9));
+		// float y = v0 * scaledTime * Mathf.Sin(angle) - 0.5f * -Physics.gravity.y * Mathf.Pow(scaledTime, 2);
+		float L_10 = __this->___v0_10;
+		float L_11 = V_0;
+		float L_12 = __this->___angle_9;
+		float L_13;
+		L_13 = sinf(L_12);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
+		L_14 = Physics_get_gravity_m94393492AE4ED8B38A22ECCDCD2DDDB71BFA010D(NULL);
+		float L_15 = L_14.___y_3;
+		float L_16 = V_0;
+		float L_17;
+		L_17 = powf(L_16, (2.0f));
+		V_2 = ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_10, L_11)), L_13)), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply((0.5f), ((-L_15)))), L_17))));
+		// if (curveDown && startPoint.y - endPoint.y < height) y = -y;
+		bool L_18 = __this->___curveDown_4;
+		if (!L_18)
+		{
+			goto IL_0099;
+		}
+	}
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_19 = (&__this->___startPoint_0);
+		float L_20 = L_19->___y_3;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_21 = (&__this->___endPoint_1);
+		float L_22 = L_21->___y_3;
+		float L_23 = __this->___height_12;
+		if ((!(((float)((float)il2cpp_codegen_subtract(L_20, L_22))) < ((float)L_23))))
+		{
+			goto IL_0099;
+		}
+	}
+	{
+		// if (curveDown && startPoint.y - endPoint.y < height) y = -y;
+		float L_24 = V_2;
+		V_2 = ((-L_24));
+	}
+
+IL_0099:
+	{
+		// return startPoint + groundDirection.normalized * x + Vector3.up * y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25 = __this->___startPoint_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_26 = (&__this->___groundDirection_15);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27;
+		L_27 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline(L_26, NULL);
+		float L_28 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29;
+		L_29 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_27, L_28, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30;
+		L_30 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_25, L_29, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31;
+		L_31 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
+		float L_32 = V_2;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_33;
+		L_33 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_31, L_32, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_34;
+		L_34 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_30, L_33, NULL);
+		return L_34;
+	}
+}
+IL2CPP_EXTERN_C  Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B_AdjustorThunk (RuntimeObject* __this, float ___t0, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 _returnValue;
+	_returnValue = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(_thisAdjusted, ___t0, method);
+	return _returnValue;
+}
+// System.Single FillefranzTools.Parabola::GetTFromY(System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_GetTFromY_m8E08DB230D50BAFECFB8D4122841F6FFBE19AEBF (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___y0, float ___sign1, const RuntimeMethod* method) 
+{
+	{
+		// float time = Mathf.Abs((Mathf.Sign(angle) + sign * Mathf.Sqrt(Mathf.Sin(angle).Square() + 2 * -Physics.gravity.y * y)) / -Physics.gravity.y);
+		float L_0 = __this->___angle_9;
+		float L_1;
+		L_1 = Mathf_Sign_m42EE1F0BC041AF14F89DED7F762BE996E2C50D8A_inline(L_0, NULL);
+		float L_2 = ___sign1;
+		float L_3 = __this->___angle_9;
+		float L_4;
+		L_4 = sinf(L_3);
+		float L_5;
+		L_5 = ExtensionMethods_Square_m381CF8C8AC297B3435EF8E93C07B7DBA499CBC1E(L_4, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
+		L_6 = Physics_get_gravity_m94393492AE4ED8B38A22ECCDCD2DDDB71BFA010D(NULL);
+		float L_7 = L_6.___y_3;
+		float L_8 = ___y0;
+		float L_9;
+		L_9 = sqrtf(((float)il2cpp_codegen_add(L_5, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply((2.0f), ((-L_7)))), L_8)))));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
+		L_10 = Physics_get_gravity_m94393492AE4ED8B38A22ECCDCD2DDDB71BFA010D(NULL);
+		float L_11 = L_10.___y_3;
+		float L_12;
+		L_12 = fabsf(((float)(((float)il2cpp_codegen_add(L_1, ((float)il2cpp_codegen_multiply(L_2, L_9))))/((-L_11)))));
+		// return  time / this.time -1;
+		float L_13 = __this->___time_11;
+		return ((float)il2cpp_codegen_subtract(((float)(L_12/L_13)), (1.0f)));
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_GetTFromY_m8E08DB230D50BAFECFB8D4122841F6FFBE19AEBF_AdjustorThunk (RuntimeObject* __this, float ___y0, float ___sign1, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_GetTFromY_m8E08DB230D50BAFECFB8D4122841F6FFBE19AEBF(_thisAdjusted, ___y0, ___sign1, method);
+	return _returnValue;
+}
+// System.Single FillefranzTools.Parabola::GetTFromX(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_GetTFromX_m32768B2D6A72CAE005D72CF94F1F10B85C47DC49 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___x0, const RuntimeMethod* method) 
+{
+	{
+		// return x / (v0 * Mathf.Cos(angle));
+		float L_0 = ___x0;
+		float L_1 = __this->___v0_10;
+		float L_2 = __this->___angle_9;
+		float L_3;
+		L_3 = cosf(L_2);
+		return ((float)(L_0/((float)il2cpp_codegen_multiply(L_1, L_3))));
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_GetTFromX_m32768B2D6A72CAE005D72CF94F1F10B85C47DC49_AdjustorThunk (RuntimeObject* __this, float ___x0, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_GetTFromX_m32768B2D6A72CAE005D72CF94F1F10B85C47DC49(_thisAdjusted, ___x0, method);
+	return _returnValue;
+}
+// System.Single FillefranzTools.Parabola::GetY(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_GetY_mD83C77375BF4FA34724B9EA6524634795BDCFBF9 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___x0, const RuntimeMethod* method) 
+{
+	{
+		// public float GetY(float x) =>  a* x.Square() + b* x + c;
+		float L_0;
+		L_0 = Parabola_get_a_m45657B88E4858AB7B90EEC89388F69ACA341E1DD_inline(__this, NULL);
+		float L_1 = ___x0;
+		float L_2;
+		L_2 = ExtensionMethods_Square_m381CF8C8AC297B3435EF8E93C07B7DBA499CBC1E(L_1, NULL);
+		float L_3;
+		L_3 = Parabola_get_b_m06FC4C4FC4136097B8BF0313413B497537BD1FB0_inline(__this, NULL);
+		float L_4 = ___x0;
+		float L_5;
+		L_5 = Parabola_get_c_m5AD3671CEE18CCAFBDD327392760C595BB315FA2_inline(__this, NULL);
+		return ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_0, L_2)), ((float)il2cpp_codegen_multiply(L_3, L_4)))), L_5));
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_GetY_mD83C77375BF4FA34724B9EA6524634795BDCFBF9_AdjustorThunk (RuntimeObject* __this, float ___x0, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_GetY_mD83C77375BF4FA34724B9EA6524634795BDCFBF9(_thisAdjusted, ___x0, method);
+	return _returnValue;
+}
+// System.Single FillefranzTools.Parabola::GetX(System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_GetX_m3074D8B2CEF2AFE54050B653920654FDD0337EB9 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___y0, float ___sign1, const RuntimeMethod* method) 
+{
+	{
+		// public float GetX(float y, float sign) => (-b + sign * Mathf.Sqrt(b - 4 * a * (c - y))) / 2 * a;
+		float L_0;
+		L_0 = Parabola_get_b_m06FC4C4FC4136097B8BF0313413B497537BD1FB0_inline(__this, NULL);
+		float L_1 = ___sign1;
+		float L_2;
+		L_2 = Parabola_get_b_m06FC4C4FC4136097B8BF0313413B497537BD1FB0_inline(__this, NULL);
+		float L_3;
+		L_3 = Parabola_get_a_m45657B88E4858AB7B90EEC89388F69ACA341E1DD_inline(__this, NULL);
+		float L_4;
+		L_4 = Parabola_get_c_m5AD3671CEE18CCAFBDD327392760C595BB315FA2_inline(__this, NULL);
+		float L_5 = ___y0;
+		float L_6;
+		L_6 = sqrtf(((float)il2cpp_codegen_subtract(L_2, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply((4.0f), L_3)), ((float)il2cpp_codegen_subtract(L_4, L_5)))))));
+		float L_7;
+		L_7 = Parabola_get_a_m45657B88E4858AB7B90EEC89388F69ACA341E1DD_inline(__this, NULL);
+		return ((float)il2cpp_codegen_multiply(((float)(((float)il2cpp_codegen_add(((-L_0)), ((float)il2cpp_codegen_multiply(L_1, L_6))))/(2.0f))), L_7));
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_GetX_m3074D8B2CEF2AFE54050B653920654FDD0337EB9_AdjustorThunk (RuntimeObject* __this, float ___y0, float ___sign1, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_GetX_m3074D8B2CEF2AFE54050B653920654FDD0337EB9(_thisAdjusted, ___y0, ___sign1, method);
+	return _returnValue;
+}
+// System.Boolean FillefranzTools.Parabola::Recalculate()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Parabola_Recalculate_mBBFFF00304A2B0269CE16E3F3BDA8FEEA98E3D1F (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) 
+{
+	{
+		// direction = endPoint - startPoint;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = __this->___endPoint_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = __this->___startPoint_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
+		L_2 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_0, L_1, NULL);
+		__this->___direction_14 = L_2;
+		// groundDirection = direction;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = __this->___direction_14;
+		__this->___groundDirection_15 = L_3;
+		// groundDirection.y = 0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_4 = (&__this->___groundDirection_15);
+		L_4->___y_3 = (0.0f);
+		// targetPos = new Vector3(groundDirection.magnitude, direction.y, 0);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_5 = (&__this->___groundDirection_15);
+		float L_6;
+		L_6 = Vector3_get_magnitude_mF0D6017E90B345F1F52D1CC564C640F1A847AF2D_inline(L_5, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_7 = (&__this->___direction_14);
+		float L_8 = L_7->___y_3;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
+		memset((&L_9), 0, sizeof(L_9));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_9), L_6, L_8, (0.0f), /*hidden argument*/NULL);
+		__this->___targetPos_16 = L_9;
+		// if (fixHeight)
+		bool L_10 = __this->___fixHeight_2;
+		if (!L_10)
+		{
+			goto IL_006f;
+		}
+	}
+	{
+		// height = fixedHeight;
+		float L_11 = __this->___fixedHeight_3;
+		__this->___height_12 = L_11;
+		goto IL_0093;
+	}
+
+IL_006f:
+	{
+		// height = targetPos.y + targetPos.magnitude / flatness;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_12 = (&__this->___targetPos_16);
+		float L_13 = L_12->___y_3;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_14 = (&__this->___targetPos_16);
+		float L_15;
+		L_15 = Vector3_get_magnitude_mF0D6017E90B345F1F52D1CC564C640F1A847AF2D_inline(L_14, NULL);
+		float L_16 = __this->___flatness_5;
+		__this->___height_12 = ((float)il2cpp_codegen_add(L_13, ((float)(L_15/L_16))));
+	}
+
+IL_0093:
+	{
+		// CalculatePathWithHeight(targetPos, height, out v0, out angle, out time);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17 = __this->___targetPos_16;
+		float L_18 = __this->___height_12;
+		float* L_19 = (&__this->___v0_10);
+		float* L_20 = (&__this->___angle_9);
+		float* L_21 = (&__this->___time_11);
+		Parabola_CalculatePathWithHeight_mD97EC9597A2A12FB3A16314780C64C28BA7B0DE4(__this, L_17, L_18, L_19, L_20, L_21, NULL);
+		// return v0 != float.NaN && angle != float.NaN && time != float.NaN;
+		float L_22 = __this->___v0_10;
+		if ((((float)L_22) == ((float)(std::numeric_limits<float>::quiet_NaN()))))
+		{
+			goto IL_00e2;
+		}
+	}
+	{
+		float L_23 = __this->___angle_9;
+		if ((((float)L_23) == ((float)(std::numeric_limits<float>::quiet_NaN()))))
+		{
+			goto IL_00e2;
+		}
+	}
+	{
+		float L_24 = __this->___time_11;
+		return (bool)((((int32_t)((((float)L_24) == ((float)(std::numeric_limits<float>::quiet_NaN())))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+	}
+
+IL_00e2:
+	{
+		return (bool)0;
+	}
+}
+IL2CPP_EXTERN_C  bool Parabola_Recalculate_mBBFFF00304A2B0269CE16E3F3BDA8FEEA98E3D1F_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	bool _returnValue;
+	_returnValue = Parabola_Recalculate_mBBFFF00304A2B0269CE16E3F3BDA8FEEA98E3D1F(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.Void FillefranzTools.Parabola::CalculatePathWithHeight(UnityEngine.Vector3,System.Single,System.Single&,System.Single&,System.Single&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Parabola_CalculatePathWithHeight_mD97EC9597A2A12FB3A16314780C64C28BA7B0DE4 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___targetPos0, float ___h1, float* ___v02, float* ___angle3, float* ___time4, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Helper_t4C1D75F8F501E3C3350F5CF4596BAE983DB527EB_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	float V_3 = 0.0f;
+	float V_4 = 0.0f;
+	float G_B7_0 = 0.0f;
+	{
+		// if (h == 0)
+		float L_0 = ___h1;
+		if ((!(((float)L_0) == ((float)(0.0f)))))
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		// h = 0.00001f;
+		___h1 = (9.99999975E-06f);
+		// height = h;
+		float L_1 = ___h1;
+		__this->___height_12 = L_1;
+	}
+
+IL_0016:
+	{
+		// if(h < 0)
+		float L_2 = ___h1;
+		if ((!(((float)L_2) < ((float)(0.0f)))))
+		{
+			goto IL_003c;
+		}
+	}
+	{
+		// curveDown = !curveDown;
+		bool L_3 = __this->___curveDown_4;
+		__this->___curveDown_4 = (bool)((((int32_t)L_3) == ((int32_t)0))? 1 : 0);
+		// h = Mathf.Abs(h);
+		float L_4 = ___h1;
+		float L_5;
+		L_5 = fabsf(L_4);
+		___h1 = L_5;
+		// height = h;
+		float L_6 = ___h1;
+		__this->___height_12 = L_6;
+	}
+
+IL_003c:
+	{
+		// float xt = targetPos.x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = ___targetPos0;
+		float L_8 = L_7.___x_2;
+		V_0 = L_8;
+		// float yt = !curveDown ? targetPos.y : -targetPos.y;
+		bool L_9 = __this->___curveDown_4;
+		if (!L_9)
+		{
+			goto IL_0054;
+		}
+	}
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___targetPos0;
+		float L_11 = L_10.___y_3;
+		G_B7_0 = ((-L_11));
+		goto IL_005a;
+	}
+
+IL_0054:
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = ___targetPos0;
+		float L_13 = L_12.___y_3;
+		G_B7_0 = L_13;
+	}
+
+IL_005a:
+	{
+		V_1 = G_B7_0;
+		// float g = -Physics.gravity.y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
+		L_14 = Physics_get_gravity_m94393492AE4ED8B38A22ECCDCD2DDDB71BFA010D(NULL);
+		float L_15 = L_14.___y_3;
+		V_2 = ((-L_15));
+		// a = -0.5f * g;
+		float L_16 = V_2;
+		Parabola_set_a_m93234FDAFF2059B499CEC330BB682A802583526B_inline(__this, ((float)il2cpp_codegen_multiply((-0.5f), L_16)), NULL);
+		// b = Mathf.Sqrt(2 * g * h);
+		float L_17 = V_2;
+		float L_18 = ___h1;
+		float L_19;
+		L_19 = sqrtf(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply((2.0f), L_17)), L_18)));
+		Parabola_set_b_m9A9E83C230FEE06963971E2D935587620EBF3380_inline(__this, L_19, NULL);
+		// c = -yt;
+		float L_20 = V_1;
+		Parabola_set_c_mAF6F75BA41324AD4C3A56625F2666792E3FE44C3_inline(__this, ((-L_20)), NULL);
+		// float tPlus = Helper.QuadraticFormula(a, b, c, 1);
+		float L_21;
+		L_21 = Parabola_get_a_m45657B88E4858AB7B90EEC89388F69ACA341E1DD_inline(__this, NULL);
+		float L_22;
+		L_22 = Parabola_get_b_m06FC4C4FC4136097B8BF0313413B497537BD1FB0_inline(__this, NULL);
+		float L_23;
+		L_23 = Parabola_get_c_m5AD3671CEE18CCAFBDD327392760C595BB315FA2_inline(__this, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Helper_t4C1D75F8F501E3C3350F5CF4596BAE983DB527EB_il2cpp_TypeInfo_var);
+		float L_24;
+		L_24 = Helper_QuadraticFormula_m75133E30977735435261ADCBF0ACA3B2291C4216(L_21, L_22, L_23, (1.0f), NULL);
+		V_3 = L_24;
+		// float tMinus = Helper.QuadraticFormula(a, b, c, -1);
+		float L_25;
+		L_25 = Parabola_get_a_m45657B88E4858AB7B90EEC89388F69ACA341E1DD_inline(__this, NULL);
+		float L_26;
+		L_26 = Parabola_get_b_m06FC4C4FC4136097B8BF0313413B497537BD1FB0_inline(__this, NULL);
+		float L_27;
+		L_27 = Parabola_get_c_m5AD3671CEE18CCAFBDD327392760C595BB315FA2_inline(__this, NULL);
+		float L_28;
+		L_28 = Helper_QuadraticFormula_m75133E30977735435261ADCBF0ACA3B2291C4216(L_25, L_26, L_27, (-1.0f), NULL);
+		V_4 = L_28;
+		// if (tPlus == float.NaN) time = tMinus;
+		float L_29 = V_3;
+		if ((!(((float)L_29) == ((float)(std::numeric_limits<float>::quiet_NaN())))))
+		{
+			goto IL_00da;
+		}
+	}
+	{
+		// if (tPlus == float.NaN) time = tMinus;
+		float* L_30 = ___time4;
+		float L_31 = V_4;
+		*((float*)L_30) = (float)L_31;
+		goto IL_00f4;
+	}
+
+IL_00da:
+	{
+		// else if (tMinus == float.NaN) time = tPlus;
+		float L_32 = V_4;
+		if ((!(((float)L_32) == ((float)(std::numeric_limits<float>::quiet_NaN())))))
+		{
+			goto IL_00e9;
+		}
+	}
+	{
+		// else if (tMinus == float.NaN) time = tPlus;
+		float* L_33 = ___time4;
+		float L_34 = V_3;
+		*((float*)L_33) = (float)L_34;
+		goto IL_00f4;
+	}
+
+IL_00e9:
+	{
+		// else time = Mathf.Max(tPlus, tMinus);
+		float* L_35 = ___time4;
+		float L_36 = V_3;
+		float L_37 = V_4;
+		float L_38;
+		L_38 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline(L_36, L_37, NULL);
+		*((float*)L_35) = (float)L_38;
+	}
+
+IL_00f4:
+	{
+		// angle = Mathf.Atan(b * time / xt);
+		float* L_39 = ___angle3;
+		float L_40;
+		L_40 = Parabola_get_b_m06FC4C4FC4136097B8BF0313413B497537BD1FB0_inline(__this, NULL);
+		float* L_41 = ___time4;
+		float L_42 = *((float*)L_41);
+		float L_43 = V_0;
+		float L_44;
+		L_44 = atanf(((float)(((float)il2cpp_codegen_multiply(L_40, L_42))/L_43)));
+		*((float*)L_39) = (float)L_44;
+		// v0 = b / Mathf.Sin(angle);
+		float* L_45 = ___v02;
+		float L_46;
+		L_46 = Parabola_get_b_m06FC4C4FC4136097B8BF0313413B497537BD1FB0_inline(__this, NULL);
+		float* L_47 = ___angle3;
+		float L_48 = *((float*)L_47);
+		float L_49;
+		L_49 = sinf(L_48);
+		*((float*)L_45) = (float)((float)(L_46/L_49));
+		// }
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void Parabola_CalculatePathWithHeight_mD97EC9597A2A12FB3A16314780C64C28BA7B0DE4_AdjustorThunk (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___targetPos0, float ___h1, float* ___v02, float* ___angle3, float* ___time4, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	Parabola_CalculatePathWithHeight_mD97EC9597A2A12FB3A16314780C64C28BA7B0DE4(_thisAdjusted, ___targetPos0, ___h1, ___v02, ___angle3, ___time4, method);
+}
+// System.Single FillefranzTools.Parabola::Length(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_Length_m5C058B5C13FAAF93B48AE7990EB9A01616757BDD (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___step0, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	{
+		// float length = 0;
+		V_0 = (0.0f);
+		// for (float t = 0; t <= 1; t += step)
+		V_1 = (0.0f);
+		goto IL_002c;
+	}
+
+IL_000e:
+	{
+		// float dst = Vector3.Distance(Evaluate(t), Evaluate(t + step));
+		float L_0 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, L_0, NULL);
+		float L_2 = V_1;
+		float L_3 = ___step0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, ((float)il2cpp_codegen_add(L_2, L_3)), NULL);
+		float L_5;
+		L_5 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_1, L_4, NULL);
+		V_2 = L_5;
+		// length += dst;
+		float L_6 = V_0;
+		float L_7 = V_2;
+		V_0 = ((float)il2cpp_codegen_add(L_6, L_7));
+		// for (float t = 0; t <= 1; t += step)
+		float L_8 = V_1;
+		float L_9 = ___step0;
+		V_1 = ((float)il2cpp_codegen_add(L_8, L_9));
+	}
+
+IL_002c:
+	{
+		// for (float t = 0; t <= 1; t += step)
+		float L_10 = V_1;
+		if ((((float)L_10) <= ((float)(1.0f))))
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		// return length;
+		float L_11 = V_0;
+		return L_11;
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_Length_m5C058B5C13FAAF93B48AE7990EB9A01616757BDD_AdjustorThunk (RuntimeObject* __this, float ___step0, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_Length_m5C058B5C13FAAF93B48AE7990EB9A01616757BDD(_thisAdjusted, ___step0, method);
+	return _returnValue;
+}
+// System.Single FillefranzTools.Parabola::Length(System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_Length_m76630EEFF6F4726D05986E883A29373A9E0B0394 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___step0, float ___maxT1, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	{
+		// float length = 0;
+		V_0 = (0.0f);
+		// for (float t = 0; t <= maxT; t += step)
+		V_1 = (0.0f);
+		goto IL_002c;
+	}
+
+IL_000e:
+	{
+		// float dst = Vector3.Distance(Evaluate(t), Evaluate(t + step));
+		float L_0 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, L_0, NULL);
+		float L_2 = V_1;
+		float L_3 = ___step0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, ((float)il2cpp_codegen_add(L_2, L_3)), NULL);
+		float L_5;
+		L_5 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_1, L_4, NULL);
+		V_2 = L_5;
+		// length += dst;
+		float L_6 = V_0;
+		float L_7 = V_2;
+		V_0 = ((float)il2cpp_codegen_add(L_6, L_7));
+		// for (float t = 0; t <= maxT; t += step)
+		float L_8 = V_1;
+		float L_9 = ___step0;
+		V_1 = ((float)il2cpp_codegen_add(L_8, L_9));
+	}
+
+IL_002c:
+	{
+		// for (float t = 0; t <= maxT; t += step)
+		float L_10 = V_1;
+		float L_11 = ___maxT1;
+		if ((((float)L_10) <= ((float)L_11)))
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		// return length;
+		float L_12 = V_0;
+		return L_12;
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_Length_m76630EEFF6F4726D05986E883A29373A9E0B0394_AdjustorThunk (RuntimeObject* __this, float ___step0, float ___maxT1, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_Length_m76630EEFF6F4726D05986E883A29373A9E0B0394(_thisAdjusted, ___step0, ___maxT1, method);
+	return _returnValue;
+}
+// System.Int32 FillefranzTools.Parabola::Sections(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Parabola_Sections_m06EB57E4D58E369DFC90A217B00B88B73F3FBA34 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___step0, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	float V_1 = 0.0f;
+	{
+		// int i = 0;
+		V_0 = 0;
+		// for (float t = 0; t <= 1; t += step)
+		V_1 = (0.0f);
+		goto IL_0012;
+	}
+
+IL_000a:
+	{
+		// i++;
+		int32_t L_0 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_0, 1));
+		// for (float t = 0; t <= 1; t += step)
+		float L_1 = V_1;
+		float L_2 = ___step0;
+		V_1 = ((float)il2cpp_codegen_add(L_1, L_2));
+	}
+
+IL_0012:
+	{
+		// for (float t = 0; t <= 1; t += step)
+		float L_3 = V_1;
+		if ((((float)L_3) <= ((float)(1.0f))))
+		{
+			goto IL_000a;
+		}
+	}
+	{
+		// return i;
+		int32_t L_4 = V_0;
+		return L_4;
+	}
+}
+IL2CPP_EXTERN_C  int32_t Parabola_Sections_m06EB57E4D58E369DFC90A217B00B88B73F3FBA34_AdjustorThunk (RuntimeObject* __this, float ___step0, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	int32_t _returnValue;
+	_returnValue = Parabola_Sections_m06EB57E4D58E369DFC90A217B00B88B73F3FBA34(_thisAdjusted, ___step0, method);
+	return _returnValue;
+}
+// System.Single FillefranzTools.Parabola::DstToTime(System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_DstToTime_m00E7882CE989C77E9362C2C28F27E4AB1A0C6E43 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___step0, float ___distance1, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	{
+		// float length = Length(step);
+		float L_0 = ___step0;
+		float L_1;
+		L_1 = Parabola_Length_m5C058B5C13FAAF93B48AE7990EB9A01616757BDD(__this, L_0, NULL);
+		V_0 = L_1;
+		// return distance / length;
+		float L_2 = ___distance1;
+		float L_3 = V_0;
+		return ((float)(L_2/L_3));
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_DstToTime_m00E7882CE989C77E9362C2C28F27E4AB1A0C6E43_AdjustorThunk (RuntimeObject* __this, float ___step0, float ___distance1, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_DstToTime_m00E7882CE989C77E9362C2C28F27E4AB1A0C6E43(_thisAdjusted, ___step0, ___distance1, method);
+	return _returnValue;
+}
+// System.Single FillefranzTools.Parabola::Derivation(System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_Derivation_m62302FBD24228DAD89DC2A2A58F5F69F5454CBEC (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___t0, float ___dX1, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		// Vector3 pointA = Evaluate(t);
+		float L_0 = ___t0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, L_0, NULL);
+		// Vector3 pointB = Evaluate(t + dX);
+		float L_2 = ___t0;
+		float L_3 = ___dX1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, ((float)il2cpp_codegen_add(L_2, L_3)), NULL);
+		V_0 = L_4;
+		// float dY = pointA.y - pointB.y;
+		float L_5 = L_1.___y_3;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = V_0;
+		float L_7 = L_6.___y_3;
+		// return dY / dX;
+		float L_8 = ___dX1;
+		return ((float)(((float)il2cpp_codegen_subtract(L_5, L_7))/L_8));
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_Derivation_m62302FBD24228DAD89DC2A2A58F5F69F5454CBEC_AdjustorThunk (RuntimeObject* __this, float ___t0, float ___dX1, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_Derivation_m62302FBD24228DAD89DC2A2A58F5F69F5454CBEC(_thisAdjusted, ___t0, ___dX1, method);
+	return _returnValue;
+}
+// UnityEngine.Vector3 FillefranzTools.Parabola::DirectionAtPoint(System.Single,System.Single,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_DirectionAtPoint_m96613167B3F1BB5B1BA62A910745DC978CF5837A (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___t0, float ___step1, int32_t ___sign2, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	{
+		// if (sign > 0)
+		int32_t L_0 = ___sign2;
+		if ((((int32_t)L_0) <= ((int32_t)0)))
+		{
+			goto IL_0024;
+		}
+	}
+	{
+		// Vector3 pointA = Evaluate(t);
+		float L_1 = ___t0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
+		L_2 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, L_1, NULL);
+		V_0 = L_2;
+		// Vector3 pointB = Evaluate(t + step);
+		float L_3 = ___t0;
+		float L_4 = ___step1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
+		L_5 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, ((float)il2cpp_codegen_add(L_3, L_4)), NULL);
+		// return (pointB - pointA).normalized;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
+		L_7 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_5, L_6, NULL);
+		V_1 = L_7;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
+		L_8 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_1), NULL);
+		return L_8;
+	}
+
+IL_0024:
+	{
+		// Vector3 pointA = Evaluate(t);
+		float L_9 = ___t0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
+		L_10 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, L_9, NULL);
+		V_2 = L_10;
+		// Vector3 pointB = Evaluate(t - step);
+		float L_11 = ___t0;
+		float L_12 = ___step1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
+		L_13 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, ((float)il2cpp_codegen_subtract(L_11, L_12)), NULL);
+		// return (pointB - pointA).normalized;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14 = V_2;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
+		L_15 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_13, L_14, NULL);
+		V_1 = L_15;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
+		L_16 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_1), NULL);
+		return L_16;
+	}
+}
+IL2CPP_EXTERN_C  Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_DirectionAtPoint_m96613167B3F1BB5B1BA62A910745DC978CF5837A_AdjustorThunk (RuntimeObject* __this, float ___t0, float ___step1, int32_t ___sign2, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 _returnValue;
+	_returnValue = Parabola_DirectionAtPoint_m96613167B3F1BB5B1BA62A910745DC978CF5837A(_thisAdjusted, ___t0, ___step1, ___sign2, method);
+	return _returnValue;
+}
+// UnityEngine.Vector3 FillefranzTools.Parabola::NormalAtPoint(System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_NormalAtPoint_m2DA3EA91DF7271DB78089DF12E23AC3413B05953 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___t0, float ___step1, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	{
+		// Vector3 pointA = Evaluate(t);
+		float L_0 = ___t0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, L_0, NULL);
+		V_0 = L_1;
+		// Vector3 pointB = Evaluate(t + step);
+		float L_2 = ___t0;
+		float L_3 = ___step1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, ((float)il2cpp_codegen_add(L_2, L_3)), NULL);
+		// return Quaternion.LookRotation((pointB - pointA).normalized) * Vector3.up;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
+		L_6 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_4, L_5, NULL);
+		V_1 = L_6;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
+		L_7 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_1), NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_8;
+		L_8 = Quaternion_LookRotation_mDB2CCA75B8E1AB98104F2A6E1A1EA57D0D1298D7(L_7, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
+		L_9 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
+		L_10 = Quaternion_op_Multiply_mE1EBA73F9173432B50F8F17CE8190C5A7986FB8C(L_8, L_9, NULL);
+		return L_10;
+	}
+}
+IL2CPP_EXTERN_C  Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_NormalAtPoint_m2DA3EA91DF7271DB78089DF12E23AC3413B05953_AdjustorThunk (RuntimeObject* __this, float ___t0, float ___step1, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 _returnValue;
+	_returnValue = Parabola_NormalAtPoint_m2DA3EA91DF7271DB78089DF12E23AC3413B05953(_thisAdjusted, ___t0, ___step1, method);
+	return _returnValue;
+}
+// System.Single FillefranzTools.Parabola::GetClosestTFromPos(UnityEngine.Vector3,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_GetClosestTFromPos_m3A9177D00AEB699959D1CC663B5349C96D773354 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___pos0, float ___step1, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	float V_3 = 0.0f;
+	{
+		// float finalT = 0;
+		V_0 = (0.0f);
+		// float minDst = float.MaxValue;
+		V_1 = ((std::numeric_limits<float>::max)());
+		// for (float t = 0; t <= 1; t += step)
+		V_2 = (0.0f);
+		goto IL_002e;
+	}
+
+IL_0014:
+	{
+		// float dst = Vector3.Distance(pos, Evaluate(t));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___pos0;
+		float L_1 = V_2;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
+		L_2 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, L_1, NULL);
+		float L_3;
+		L_3 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_0, L_2, NULL);
+		V_3 = L_3;
+		// if (dst < minDst)
+		float L_4 = V_3;
+		float L_5 = V_1;
+		if ((!(((float)L_4) < ((float)L_5))))
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		// minDst = dst;
+		float L_6 = V_3;
+		V_1 = L_6;
+		// finalT = t;
+		float L_7 = V_2;
+		V_0 = L_7;
+	}
+
+IL_002a:
+	{
+		// for (float t = 0; t <= 1; t += step)
+		float L_8 = V_2;
+		float L_9 = ___step1;
+		V_2 = ((float)il2cpp_codegen_add(L_8, L_9));
+	}
+
+IL_002e:
+	{
+		// for (float t = 0; t <= 1; t += step)
+		float L_10 = V_2;
+		if ((((float)L_10) <= ((float)(1.0f))))
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		// return finalT;
+		float L_11 = V_0;
+		return L_11;
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_GetClosestTFromPos_m3A9177D00AEB699959D1CC663B5349C96D773354_AdjustorThunk (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___pos0, float ___step1, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_GetClosestTFromPos_m3A9177D00AEB699959D1CC663B5349C96D773354(_thisAdjusted, ___pos0, ___step1, method);
+	return _returnValue;
+}
+// System.Single FillefranzTools.Parabola::GetHeightFromXZ(UnityEngine.Vector3,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_GetHeightFromXZ_m8AFD7D1D7A6D0E9B40D136841241DD39C997DFB8 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position0, float ___step1, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_3;
+	memset((&V_3), 0, sizeof(V_3));
+	float V_4 = 0.0f;
+	{
+		// float height = 0;
+		V_0 = (0.0f);
+		// float minDst = float.MaxValue;
+		V_1 = ((std::numeric_limits<float>::max)());
+		// for (float t = 0; t <= 1; t+= step)
+		V_2 = (0.0f);
+		goto IL_0042;
+	}
+
+IL_0014:
+	{
+		// Vector3 checkPoint = Evaluate(t);
+		float L_0 = V_2;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, L_0, NULL);
+		V_3 = L_1;
+		// float dst = Vector2.Distance(position.FromXZ(), checkPoint.FromXZ());
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___position0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_3;
+		L_3 = ExtensionMethods_FromXZ_m6074BC8E1147608844517952C23BE0A0C2FBF136(L_2, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = V_3;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_5;
+		L_5 = ExtensionMethods_FromXZ_m6074BC8E1147608844517952C23BE0A0C2FBF136(L_4, NULL);
+		float L_6;
+		L_6 = Vector2_Distance_mBACBB1609E1894D68F882D86A93519E311810C89_inline(L_3, L_5, NULL);
+		V_4 = L_6;
+		// if (dst < minDst)
+		float L_7 = V_4;
+		float L_8 = V_1;
+		if ((!(((float)L_7) < ((float)L_8))))
+		{
+			goto IL_003e;
+		}
+	}
+	{
+		// minDst = dst;
+		float L_9 = V_4;
+		V_1 = L_9;
+		// height = checkPoint.y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = V_3;
+		float L_11 = L_10.___y_3;
+		V_0 = L_11;
+	}
+
+IL_003e:
+	{
+		// for (float t = 0; t <= 1; t+= step)
+		float L_12 = V_2;
+		float L_13 = ___step1;
+		V_2 = ((float)il2cpp_codegen_add(L_12, L_13));
+	}
+
+IL_0042:
+	{
+		// for (float t = 0; t <= 1; t+= step)
+		float L_14 = V_2;
+		if ((((float)L_14) <= ((float)(1.0f))))
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		// return Mathf.Abs(height /Evaluate(0.5f).y * Height );
+		float L_15 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
+		L_16 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, (0.5f), NULL);
+		float L_17 = L_16.___y_3;
+		float L_18;
+		L_18 = Parabola_get_Height_m1F7CD2074EB90BA935E1E8CCEB06990812E143E4_inline(__this, NULL);
+		float L_19;
+		L_19 = fabsf(((float)il2cpp_codegen_multiply(((float)(L_15/L_17)), L_18)));
+		return L_19;
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_GetHeightFromXZ_m8AFD7D1D7A6D0E9B40D136841241DD39C997DFB8_AdjustorThunk (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position0, float ___step1, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_GetHeightFromXZ_m8AFD7D1D7A6D0E9B40D136841241DD39C997DFB8(_thisAdjusted, ___position0, ___step1, method);
+	return _returnValue;
+}
+// UnityEngine.Vector3 FillefranzTools.Parabola::MaxPoint(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_MaxPoint_m35A55A88C3F7D60FD28BDBB8A329583764BE234A (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___step0, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	float V_1 = 0.0f;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	{
+		// Vector3 maxPoint = new Vector3(float.MinValue, float.MinValue, float.MinValue);
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_0), (-(std::numeric_limits<float>::max)()), (-(std::numeric_limits<float>::max)()), (-(std::numeric_limits<float>::max)()), NULL);
+		// for (float t = 0; t <= 1; t += step)
+		V_1 = (0.0f);
+		goto IL_003a;
+	}
+
+IL_001e:
+	{
+		// Vector3 checkedPoint = Evaluate(t);
+		float L_0 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, L_0, NULL);
+		V_2 = L_1;
+		// if (checkedPoint.y > maxPoint.y)
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = V_2;
+		float L_3 = L_2.___y_3;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = V_0;
+		float L_5 = L_4.___y_3;
+		if ((!(((float)L_3) > ((float)L_5))))
+		{
+			goto IL_0036;
+		}
+	}
+	{
+		// maxPoint = checkedPoint;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = V_2;
+		V_0 = L_6;
+	}
+
+IL_0036:
+	{
+		// for (float t = 0; t <= 1; t += step)
+		float L_7 = V_1;
+		float L_8 = ___step0;
+		V_1 = ((float)il2cpp_codegen_add(L_7, L_8));
+	}
+
+IL_003a:
+	{
+		// for (float t = 0; t <= 1; t += step)
+		float L_9 = V_1;
+		if ((((float)L_9) <= ((float)(1.0f))))
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		// return maxPoint;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = V_0;
+		return L_10;
+	}
+}
+IL2CPP_EXTERN_C  Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Parabola_MaxPoint_m35A55A88C3F7D60FD28BDBB8A329583764BE234A_AdjustorThunk (RuntimeObject* __this, float ___step0, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 _returnValue;
+	_returnValue = Parabola_MaxPoint_m35A55A88C3F7D60FD28BDBB8A329583764BE234A(_thisAdjusted, ___step0, method);
+	return _returnValue;
+}
+// System.Single FillefranzTools.Parabola::MaxPointT(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_MaxPointT_m385947A4BB37321C638E89A729B7D19CA39FA252 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___step0, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_3;
+	memset((&V_3), 0, sizeof(V_3));
+	{
+		// Vector3 maxPoint = new Vector3(float.MinValue, float.MinValue, float.MinValue);
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_0), (-(std::numeric_limits<float>::max)()), (-(std::numeric_limits<float>::max)()), (-(std::numeric_limits<float>::max)()), NULL);
+		// float maxT = -1;
+		V_1 = (-1.0f);
+		// for (float t = 0; t <= 1; t += step)
+		V_2 = (0.0f);
+		goto IL_0042;
+	}
+
+IL_0024:
+	{
+		// Vector3 checkedPoint = Evaluate(t);
+		float L_0 = V_2;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Parabola_Evaluate_m48BAE59794AEFD1812011DCD578FFB33EC41340B(__this, L_0, NULL);
+		V_3 = L_1;
+		// if (checkedPoint.y > maxPoint.y)
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = V_3;
+		float L_3 = L_2.___y_3;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = V_0;
+		float L_5 = L_4.___y_3;
+		if ((!(((float)L_3) > ((float)L_5))))
+		{
+			goto IL_003e;
+		}
+	}
+	{
+		// maxPoint = checkedPoint;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = V_3;
+		V_0 = L_6;
+		// maxT = t;
+		float L_7 = V_2;
+		V_1 = L_7;
+	}
+
+IL_003e:
+	{
+		// for (float t = 0; t <= 1; t += step)
+		float L_8 = V_2;
+		float L_9 = ___step0;
+		V_2 = ((float)il2cpp_codegen_add(L_8, L_9));
+	}
+
+IL_0042:
+	{
+		// for (float t = 0; t <= 1; t += step)
+		float L_10 = V_2;
+		if ((((float)L_10) <= ((float)(1.0f))))
+		{
+			goto IL_0024;
+		}
+	}
+	{
+		// return maxT;
+		float L_11 = V_1;
+		return L_11;
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_MaxPointT_m385947A4BB37321C638E89A729B7D19CA39FA252_AdjustorThunk (RuntimeObject* __this, float ___step0, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_MaxPointT_m385947A4BB37321C638E89A729B7D19CA39FA252(_thisAdjusted, ___step0, method);
+	return _returnValue;
+}
+// System.Single FillefranzTools.Parabola::StartToMaxDst(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_StartToMaxDst_m1FD573D14A44914FDE8330C00941826F46DCD23D (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___step0, const RuntimeMethod* method) 
+{
+	{
+		// Vector3 maxPoint = MaxPoint(step);
+		float L_0 = ___step0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Parabola_MaxPoint_m35A55A88C3F7D60FD28BDBB8A329583764BE234A(__this, L_0, NULL);
+		// return Vector2.Distance(maxPoint.FromXZ(), startPoint.FromXZ());
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2;
+		L_2 = ExtensionMethods_FromXZ_m6074BC8E1147608844517952C23BE0A0C2FBF136(L_1, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = __this->___startPoint_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4;
+		L_4 = ExtensionMethods_FromXZ_m6074BC8E1147608844517952C23BE0A0C2FBF136(L_3, NULL);
+		float L_5;
+		L_5 = Vector2_Distance_mBACBB1609E1894D68F882D86A93519E311810C89_inline(L_2, L_4, NULL);
+		return L_5;
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_StartToMaxDst_m1FD573D14A44914FDE8330C00941826F46DCD23D_AdjustorThunk (RuntimeObject* __this, float ___step0, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_StartToMaxDst_m1FD573D14A44914FDE8330C00941826F46DCD23D(_thisAdjusted, ___step0, method);
+	return _returnValue;
+}
+// System.Single FillefranzTools.Parabola::DstToMax(UnityEngine.Vector3,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_DstToMax_m53D5100CBB064C83951292053ACF3BBD0FC3BAC9 (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___point0, float ___step1, const RuntimeMethod* method) 
+{
+	{
+		// Vector3 maxPoint = MaxPoint(step);
+		float L_0 = ___step1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Parabola_MaxPoint_m35A55A88C3F7D60FD28BDBB8A329583764BE234A(__this, L_0, NULL);
+		// return Vector2.Distance(maxPoint.FromXZ(), point.FromXZ());
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2;
+		L_2 = ExtensionMethods_FromXZ_m6074BC8E1147608844517952C23BE0A0C2FBF136(L_1, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = ___point0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4;
+		L_4 = ExtensionMethods_FromXZ_m6074BC8E1147608844517952C23BE0A0C2FBF136(L_3, NULL);
+		float L_5;
+		L_5 = Vector2_Distance_mBACBB1609E1894D68F882D86A93519E311810C89_inline(L_2, L_4, NULL);
+		return L_5;
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_DstToMax_m53D5100CBB064C83951292053ACF3BBD0FC3BAC9_AdjustorThunk (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___point0, float ___step1, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_DstToMax_m53D5100CBB064C83951292053ACF3BBD0FC3BAC9(_thisAdjusted, ___point0, ___step1, method);
+	return _returnValue;
+}
+// System.Single FillefranzTools.Parabola::GetAngleAtPoint(System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Parabola_GetAngleAtPoint_m8BDF2CD07F8C971D2BD4EFBBC16ADE589A60672E (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___t0, float ___step1, const RuntimeMethod* method) 
+{
+	{
+		// Vector3 fwd= DirectionAtPoint(t, step);
+		float L_0 = ___t0;
+		float L_1 = ___step1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
+		L_2 = Parabola_DirectionAtPoint_m96613167B3F1BB5B1BA62A910745DC978CF5837A(__this, L_0, L_1, 1, NULL);
+		// return Vector3.Angle( fwd, direction);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = __this->___direction_14;
+		float L_4;
+		L_4 = Vector3_Angle_mB16906B482814C140FE5BA9D041D2DC11E42A68D_inline(L_2, L_3, NULL);
+		return L_4;
+	}
+}
+IL2CPP_EXTERN_C  float Parabola_GetAngleAtPoint_m8BDF2CD07F8C971D2BD4EFBBC16ADE589A60672E_AdjustorThunk (RuntimeObject* __this, float ___t0, float ___step1, const RuntimeMethod* method)
+{
+	Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877*>(__this + _offset);
+	float _returnValue;
+	_returnValue = Parabola_GetAngleAtPoint_m8BDF2CD07F8C971D2BD4EFBBC16ADE589A60672E(_thisAdjusted, ___t0, ___step1, method);
+	return _returnValue;
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -7879,6 +10567,280 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Prop_U3CCreate4FaceCubeU3Eg__SetFaceU7C3
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Parabola_get_a_m45657B88E4858AB7B90EEC89388F69ACA341E1DD_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) 
+{
+	{
+		// public float a { get; private set; }
+		float L_0 = __this->___U3CaU3Ek__BackingField_6;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Parabola_set_a_m93234FDAFF2059B499CEC330BB682A802583526B_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___value0, const RuntimeMethod* method) 
+{
+	{
+		// public float a { get; private set; }
+		float L_0 = ___value0;
+		__this->___U3CaU3Ek__BackingField_6 = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Parabola_get_b_m06FC4C4FC4136097B8BF0313413B497537BD1FB0_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) 
+{
+	{
+		// public float b { get; private set; }
+		float L_0 = __this->___U3CbU3Ek__BackingField_7;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Parabola_set_b_m9A9E83C230FEE06963971E2D935587620EBF3380_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___value0, const RuntimeMethod* method) 
+{
+	{
+		// public float b { get; private set; }
+		float L_0 = ___value0;
+		__this->___U3CbU3Ek__BackingField_7 = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Parabola_get_c_m5AD3671CEE18CCAFBDD327392760C595BB315FA2_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) 
+{
+	{
+		// public float c { get; private set; }
+		float L_0 = __this->___U3CcU3Ek__BackingField_8;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Parabola_set_c_mAF6F75BA41324AD4C3A56625F2666792E3FE44C3_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, float ___value0, const RuntimeMethod* method) 
+{
+	{
+		// public float c { get; private set; }
+		float L_0 = ___value0;
+		__this->___U3CcU3Ek__BackingField_8 = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Parabola_get_Height_m1F7CD2074EB90BA935E1E8CCEB06990812E143E4_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) 
+{
+	{
+		// public float Height => height;
+		float L_0 = __this->___height_12;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Parabola_get_Angle_m4E391DC7D8343F68AC9FD5D59D3D68F4EEE88C05_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) 
+{
+	{
+		// public float Angle => angle;
+		float L_0 = __this->___angle_9;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Parabola_get_GroundDistance_m74A67B47F8979477CA6AD697A16114C18689209F_inline (Parabola_t374F318FDB112292F0E8AD18EF9E08D8EEC29877* __this, const RuntimeMethod* method) 
+{
+	{
+		// public float GroundDistance => gndDst;
+		float L_0 = __this->___gndDst_13;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = (*(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)__this);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Vector3_Normalize_mEF8349CC39674236CFC694189AFD36E31F89AC8F_inline(L_0, NULL);
+		V_0 = L_1;
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = V_0;
+		return L_2;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields*)il2cpp_codegen_static_fields_for(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))->___zeroVector_5;
+		V_0 = L_0;
+		goto IL_0009;
+	}
+
+IL_0009:
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = V_0;
+		return L_1;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___a0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___b1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	float V_3 = 0.0f;
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___a0;
+		float L_1 = L_0.___x_2;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___b1;
+		float L_3 = L_2.___x_2;
+		V_0 = ((float)il2cpp_codegen_subtract(L_1, L_3));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___a0;
+		float L_5 = L_4.___y_3;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___b1;
+		float L_7 = L_6.___y_3;
+		V_1 = ((float)il2cpp_codegen_subtract(L_5, L_7));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___a0;
+		float L_9 = L_8.___z_4;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___b1;
+		float L_11 = L_10.___z_4;
+		V_2 = ((float)il2cpp_codegen_subtract(L_9, L_11));
+		float L_12 = V_0;
+		float L_13 = V_0;
+		float L_14 = V_1;
+		float L_15 = V_1;
+		float L_16 = V_2;
+		float L_17 = V_2;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_18;
+		L_18 = sqrt(((double)((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_12, L_13)), ((float)il2cpp_codegen_multiply(L_14, L_15)))), ((float)il2cpp_codegen_multiply(L_16, L_17))))));
+		V_3 = ((float)L_18);
+		goto IL_0040;
+	}
+
+IL_0040:
+	{
+		float L_19 = V_3;
+		return L_19;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___a0, float ___d1, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___a0;
+		float L_1 = L_0.___x_2;
+		float L_2 = ___d1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = ___a0;
+		float L_4 = L_3.___y_3;
+		float L_5 = ___d1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___a0;
+		float L_7 = L_6.___z_4;
+		float L_8 = ___d1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
+		memset((&L_9), 0, sizeof(L_9));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_9), ((float)il2cpp_codegen_multiply(L_1, L_2)), ((float)il2cpp_codegen_multiply(L_4, L_5)), ((float)il2cpp_codegen_multiply(L_7, L_8)), /*hidden argument*/NULL);
+		V_0 = L_9;
+		goto IL_0021;
+	}
+
+IL_0021:
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = V_0;
+		return L_10;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___a0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___b1, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___a0;
+		float L_1 = L_0.___x_2;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___b1;
+		float L_3 = L_2.___x_2;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___a0;
+		float L_5 = L_4.___y_3;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___b1;
+		float L_7 = L_6.___y_3;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___a0;
+		float L_9 = L_8.___z_4;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___b1;
+		float L_11 = L_10.___z_4;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
+		memset((&L_12), 0, sizeof(L_12));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_12), ((float)il2cpp_codegen_add(L_1, L_3)), ((float)il2cpp_codegen_add(L_5, L_7)), ((float)il2cpp_codegen_add(L_9, L_11)), /*hidden argument*/NULL);
+		V_0 = L_12;
+		goto IL_0030;
+	}
+
+IL_0030:
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13 = V_0;
+		return L_13;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields*)il2cpp_codegen_static_fields_for(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))->___upVector_7;
+		V_0 = L_0;
+		goto IL_0009;
+	}
+
+IL_0009:
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = V_0;
+		return L_1;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Sign_m42EE1F0BC041AF14F89DED7F762BE996E2C50D8A_inline (float ___f0, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float G_B3_0 = 0.0f;
+	{
+		float L_0 = ___f0;
+		if ((((float)L_0) >= ((float)(0.0f))))
+		{
+			goto IL_0010;
+		}
+	}
+	{
+		G_B3_0 = (-1.0f);
+		goto IL_0015;
+	}
+
+IL_0010:
+	{
+		G_B3_0 = (1.0f);
+	}
+
+IL_0015:
+	{
+		V_0 = G_B3_0;
+		goto IL_0018;
+	}
+
+IL_0018:
+	{
+		float L_1 = V_0;
+		return L_1;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___a0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___b1, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -7909,22 +10871,178 @@ IL_0030:
 		return L_13;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_get_magnitude_mF0D6017E90B345F1F52D1CC564C640F1A847AF2D_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) 
 {
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
-	memset((&V_0), 0, sizeof(V_0));
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = (*(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)__this);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
-		L_1 = Vector3_Normalize_mEF8349CC39674236CFC694189AFD36E31F89AC8F_inline(L_0, NULL);
-		V_0 = L_1;
-		goto IL_000f;
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	{
+		float L_0 = __this->___x_2;
+		float L_1 = __this->___x_2;
+		float L_2 = __this->___y_3;
+		float L_3 = __this->___y_3;
+		float L_4 = __this->___z_4;
+		float L_5 = __this->___z_4;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_6;
+		L_6 = sqrt(((double)((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_0, L_1)), ((float)il2cpp_codegen_multiply(L_2, L_3)))), ((float)il2cpp_codegen_multiply(L_4, L_5))))));
+		V_0 = ((float)L_6);
+		goto IL_0034;
 	}
 
-IL_000f:
+IL_0034:
 	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = V_0;
-		return L_2;
+		float L_7 = V_0;
+		return L_7;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___x0;
+		__this->___x_2 = L_0;
+		float L_1 = ___y1;
+		__this->___y_3 = L_1;
+		float L_2 = ___z2;
+		__this->___z_4 = L_2;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline (float ___a0, float ___b1, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float G_B3_0 = 0.0f;
+	{
+		float L_0 = ___a0;
+		float L_1 = ___b1;
+		if ((((float)L_0) > ((float)L_1)))
+		{
+			goto IL_0008;
+		}
+	}
+	{
+		float L_2 = ___b1;
+		G_B3_0 = L_2;
+		goto IL_0009;
+	}
+
+IL_0008:
+	{
+		float L_3 = ___a0;
+		G_B3_0 = L_3;
+	}
+
+IL_0009:
+	{
+		V_0 = G_B3_0;
+		goto IL_000c;
+	}
+
+IL_000c:
+	{
+		float L_4 = V_0;
+		return L_4;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector2_Distance_mBACBB1609E1894D68F882D86A93519E311810C89_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___b1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___a0;
+		float L_1 = L_0.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___b1;
+		float L_3 = L_2.___x_0;
+		V_0 = ((float)il2cpp_codegen_subtract(L_1, L_3));
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = ___a0;
+		float L_5 = L_4.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = ___b1;
+		float L_7 = L_6.___y_1;
+		V_1 = ((float)il2cpp_codegen_subtract(L_5, L_7));
+		float L_8 = V_0;
+		float L_9 = V_0;
+		float L_10 = V_1;
+		float L_11 = V_1;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_12;
+		L_12 = sqrt(((double)((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_8, L_9)), ((float)il2cpp_codegen_multiply(L_10, L_11))))));
+		V_2 = ((float)L_12);
+		goto IL_002e;
+	}
+
+IL_002e:
+	{
+		float L_13 = V_2;
+		return L_13;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Angle_mB16906B482814C140FE5BA9D041D2DC11E42A68D_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___from0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___to1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	bool V_2 = false;
+	float V_3 = 0.0f;
+	{
+		float L_0;
+		L_0 = Vector3_get_sqrMagnitude_m43C27DEC47C4811FB30AB474FF2131A963B66FC8_inline((&___from0), NULL);
+		float L_1;
+		L_1 = Vector3_get_sqrMagnitude_m43C27DEC47C4811FB30AB474FF2131A963B66FC8_inline((&___to1), NULL);
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_2;
+		L_2 = sqrt(((double)((float)il2cpp_codegen_multiply(L_0, L_1))));
+		V_0 = ((float)L_2);
+		float L_3 = V_0;
+		V_2 = (bool)((((float)L_3) < ((float)(1.0E-15f)))? 1 : 0);
+		bool L_4 = V_2;
+		if (!L_4)
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		V_3 = (0.0f);
+		goto IL_0056;
+	}
+
+IL_002c:
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5 = ___from0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___to1;
+		float L_7;
+		L_7 = Vector3_Dot_mBB86BB940AA0A32FA7D3C02AC42E5BC7095A5D52_inline(L_5, L_6, NULL);
+		float L_8 = V_0;
+		float L_9;
+		L_9 = Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline(((float)(L_7/L_8)), (-1.0f), (1.0f), NULL);
+		V_1 = L_9;
+		float L_10 = V_1;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_11;
+		L_11 = acos(((double)L_10));
+		V_3 = ((float)il2cpp_codegen_multiply(((float)L_11), (57.2957802f)));
+		goto IL_0056;
+	}
+
+IL_0056:
+	{
+		float L_12 = V_3;
+		return L_12;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___lhs0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___rhs1, const RuntimeMethod* method) 
@@ -8052,110 +11170,6 @@ IL_005a:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25 = V_0;
 		return L_25;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___a0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___b1, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	float V_0 = 0.0f;
-	float V_1 = 0.0f;
-	float V_2 = 0.0f;
-	float V_3 = 0.0f;
-	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___a0;
-		float L_1 = L_0.___x_2;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___b1;
-		float L_3 = L_2.___x_2;
-		V_0 = ((float)il2cpp_codegen_subtract(L_1, L_3));
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___a0;
-		float L_5 = L_4.___y_3;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___b1;
-		float L_7 = L_6.___y_3;
-		V_1 = ((float)il2cpp_codegen_subtract(L_5, L_7));
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___a0;
-		float L_9 = L_8.___z_4;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___b1;
-		float L_11 = L_10.___z_4;
-		V_2 = ((float)il2cpp_codegen_subtract(L_9, L_11));
-		float L_12 = V_0;
-		float L_13 = V_0;
-		float L_14 = V_1;
-		float L_15 = V_1;
-		float L_16 = V_2;
-		float L_17 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
-		double L_18;
-		L_18 = sqrt(((double)((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_12, L_13)), ((float)il2cpp_codegen_multiply(L_14, L_15)))), ((float)il2cpp_codegen_multiply(L_16, L_17))))));
-		V_3 = ((float)L_18);
-		goto IL_0040;
-	}
-
-IL_0040:
-	{
-		float L_19 = V_3;
-		return L_19;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___a0, float ___d1, const RuntimeMethod* method) 
-{
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___a0;
-		float L_1 = L_0.___x_2;
-		float L_2 = ___d1;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = ___a0;
-		float L_4 = L_3.___y_3;
-		float L_5 = ___d1;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___a0;
-		float L_7 = L_6.___z_4;
-		float L_8 = ___d1;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
-		memset((&L_9), 0, sizeof(L_9));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_9), ((float)il2cpp_codegen_multiply(L_1, L_2)), ((float)il2cpp_codegen_multiply(L_4, L_5)), ((float)il2cpp_codegen_multiply(L_7, L_8)), /*hidden argument*/NULL);
-		V_0 = L_9;
-		goto IL_0021;
-	}
-
-IL_0021:
-	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = V_0;
-		return L_10;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___a0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___b1, const RuntimeMethod* method) 
-{
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___a0;
-		float L_1 = L_0.___x_2;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___b1;
-		float L_3 = L_2.___x_2;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___a0;
-		float L_5 = L_4.___y_3;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___b1;
-		float L_7 = L_6.___y_3;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___a0;
-		float L_9 = L_8.___z_4;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___b1;
-		float L_11 = L_10.___z_4;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
-		memset((&L_12), 0, sizeof(L_12));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_12), ((float)il2cpp_codegen_add(L_1, L_3)), ((float)il2cpp_codegen_add(L_5, L_7)), ((float)il2cpp_codegen_add(L_9, L_11)), /*hidden argument*/NULL);
-		V_0 = L_12;
-		goto IL_0030;
-	}
-
-IL_0030:
-	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13 = V_0;
-		return L_13;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___x0, float ___y1, const RuntimeMethod* method) 
@@ -8321,28 +11335,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Prop_set_meshCollider_m8DC2D
 		return;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields*)il2cpp_codegen_static_fields_for(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))->___zeroVector_5;
-		V_0 = L_0;
-		goto IL_0009;
-	}
-
-IL_0009:
-	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = V_0;
-		return L_1;
-	}
-}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Inequality_m9F170CDFBF1E490E559DA5D06D6547501A402BBF_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___lhs0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___rhs1, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -8485,28 +11477,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 	memset((&V_0), 0, sizeof(V_0));
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields*)il2cpp_codegen_static_fields_for(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))->___backVector_12;
-		V_0 = L_0;
-		goto IL_0009;
-	}
-
-IL_0009:
-	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = V_0;
-		return L_1;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline (const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields*)il2cpp_codegen_static_fields_for(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))->___upVector_7;
 		V_0 = L_0;
 		goto IL_0009;
 	}
@@ -8840,18 +11810,6 @@ IL_0034:
 		return;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method) 
-{
-	{
-		float L_0 = ___x0;
-		__this->___x_2 = L_0;
-		float L_1 = ___y1;
-		__this->___y_3 = L_1;
-		float L_2 = ___z2;
-		__this->___z_4 = L_2;
-		return;
-	}
-}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Normalize_mEF8349CC39674236CFC694189AFD36E31F89AC8F_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___value0, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -8892,6 +11850,102 @@ IL_0026:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = V_2;
 		return L_8;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_get_sqrMagnitude_m43C27DEC47C4811FB30AB474FF2131A963B66FC8_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	{
+		float L_0 = __this->___x_2;
+		float L_1 = __this->___x_2;
+		float L_2 = __this->___y_3;
+		float L_3 = __this->___y_3;
+		float L_4 = __this->___z_4;
+		float L_5 = __this->___z_4;
+		V_0 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_0, L_1)), ((float)il2cpp_codegen_multiply(L_2, L_3)))), ((float)il2cpp_codegen_multiply(L_4, L_5))));
+		goto IL_002d;
+	}
+
+IL_002d:
+	{
+		float L_6 = V_0;
+		return L_6;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Dot_mBB86BB940AA0A32FA7D3C02AC42E5BC7095A5D52_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___lhs0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___rhs1, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___lhs0;
+		float L_1 = L_0.___x_2;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___rhs1;
+		float L_3 = L_2.___x_2;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___lhs0;
+		float L_5 = L_4.___y_3;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___rhs1;
+		float L_7 = L_6.___y_3;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___lhs0;
+		float L_9 = L_8.___z_4;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___rhs1;
+		float L_11 = L_10.___z_4;
+		V_0 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_1, L_3)), ((float)il2cpp_codegen_multiply(L_5, L_7)))), ((float)il2cpp_codegen_multiply(L_9, L_11))));
+		goto IL_002d;
+	}
+
+IL_002d:
+	{
+		float L_12 = V_0;
+		return L_12;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline (float ___value0, float ___min1, float ___max2, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	bool V_1 = false;
+	float V_2 = 0.0f;
+	{
+		float L_0 = ___value0;
+		float L_1 = ___min1;
+		V_0 = (bool)((((float)L_0) < ((float)L_1))? 1 : 0);
+		bool L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		float L_3 = ___min1;
+		___value0 = L_3;
+		goto IL_0019;
+	}
+
+IL_000e:
+	{
+		float L_4 = ___value0;
+		float L_5 = ___max2;
+		V_1 = (bool)((((float)L_4) > ((float)L_5))? 1 : 0);
+		bool L_6 = V_1;
+		if (!L_6)
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		float L_7 = ___max2;
+		___value0 = L_7;
+	}
+
+IL_0019:
+	{
+		float L_8 = ___value0;
+		V_2 = L_8;
+		goto IL_001d;
+	}
+
+IL_001d:
+	{
+		float L_9 = V_2;
+		return L_9;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Magnitude_m21652D951393A3D7CE92CE40049A0E7F76544D1B_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___vector0, const RuntimeMethod* method) 

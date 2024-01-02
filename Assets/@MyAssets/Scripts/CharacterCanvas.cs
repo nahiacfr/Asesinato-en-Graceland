@@ -12,6 +12,7 @@ public class CharacterCanvas : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(Wait(1));
         canvasPersonaje.SetActive(false);
         if (rightRayInteractor != null)
         {
@@ -23,10 +24,11 @@ public class CharacterCanvas : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.GameObject().CompareTag("Jugador"))
-        {  
+        {
             canvasPersonaje.SetActive(true);
+            //GetComponentInChildren<DialogController>().fillPanel(1);
 
-            if(rightRayInteractor!=null)
+            if (rightRayInteractor!=null)
             {
                 rightRayInteractor.SetActive(true);
                 leftRayInteractor.SetActive(true);
@@ -48,5 +50,10 @@ public class CharacterCanvas : MonoBehaviour
             }
             this.gameObject.transform.LookAt(other.transform.position);
         }
+    }
+
+    IEnumerator Wait(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
     }
 }

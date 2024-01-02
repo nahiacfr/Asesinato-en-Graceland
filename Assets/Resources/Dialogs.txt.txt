@@ -1,0 +1,33 @@
+#N#Brian
+#C#001
+#T#texto de Brian
+#R#Respuesta B11||002||1||0
+#R#Respuesta B12||002||1||0
+#R#Respuesta B13||002||1||0
+#R#Respuesta B14||002||1||0
+#F
+#N#Brian
+#C#002
+#T#texto de Brian
+#R#Respuesta B21||003||1||0
+#R#Respuesta B22||003||1||0
+#R#Respuesta B23||003||1||0
+#R#Respuesta B24||003||1||0
+#F
+#N#Brian
+#C#003
+#T#texto de Brian
+#R#Respuesta B31||004||1||0
+#R#Respuesta B32||004||1||0
+#R#Respuesta B33||004||1||0
+#R#Respuesta B34||004||1||0
+#F
+#N#Brian
+#C#004
+#T#texto de Brian
+#R#Respuesta B41||001||1||0
+#R#Respuesta B42||001||1||0
+#R#Respuesta B43||001||1||0
+#R#Respuesta B44||001||1||0
+#F
+#NEXT
