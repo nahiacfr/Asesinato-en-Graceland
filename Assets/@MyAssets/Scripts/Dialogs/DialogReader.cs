@@ -7,6 +7,10 @@ using UnityEngine;
 public class DialogReader : MonoBehaviour
 {
     public GameObject dialogBrian;
+    public GameObject dialogSophie;
+    public GameObject dialogJames;
+    public GameObject dialogMegan;
+    public GameObject dialogAmber;
     void Start()
     {
         Dictionary<string, Dialog[]> dialogDicAux;
@@ -17,6 +21,10 @@ public class DialogReader : MonoBehaviour
         dialogDicAux = ReadFromTXT(contenido);
 
         dialogBrian.GetComponent<DialogController>().InitDialogs(dialogDicAux.GetValueOrDefault("Brian"));
+        dialogSophie.GetComponent<DialogController>().InitDialogs(dialogDicAux.GetValueOrDefault("Sophie"));
+        dialogJames.GetComponent<DialogController>().InitDialogs(dialogDicAux.GetValueOrDefault("James"));
+        dialogMegan.GetComponent<DialogController>().InitDialogs(dialogDicAux.GetValueOrDefault("Megan"));
+        dialogAmber.GetComponent<DialogController>().InitDialogs(dialogDicAux.GetValueOrDefault("Amber"));
     }
 
     private Dictionary<string, Dialog[]> ReadFromTXT(string data)
@@ -70,6 +78,8 @@ public class DialogReader : MonoBehaviour
                     string[,] respuestasAux3 = { { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" }, { "", "", "", "" } };
                     respuestasAux = respuestasAux3;
                     dicFinal.Add(personaAux, dialogList.ToArray());
+                    List<Dialog> dialogList2 = new List<Dialog>();
+                    dialogList = dialogList2;
                     break;
                 default:
 
