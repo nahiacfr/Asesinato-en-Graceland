@@ -10,6 +10,7 @@ public class BooksPuzle : MonoBehaviour
     public GameObject puzleManager;
     public XRSocketInteractor socketInteractor;
     public GameObject book;
+    private bool check = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +20,9 @@ public class BooksPuzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (puzleManager.GetComponent<PuzlesController>().socketCheck(socketInteractor, book))
+        if (puzleManager.GetComponent<PuzlesController>().socketCheck(socketInteractor, book) && check == false)
         {
+            check = true;
             puzleManager.GetComponent<PuzlesController>().LibroColocado();
         }
     }

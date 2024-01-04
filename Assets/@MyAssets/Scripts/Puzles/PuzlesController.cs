@@ -11,13 +11,21 @@ public class PuzlesController : MonoBehaviour
 {
     public int numLibros;
     public GameObject libreria;
+    public GameObject libro1;
+    public GameObject libro2;
+    public GameObject libro3;
+
     public GameObject phoneCanvasButon;
     public GameObject phoneCanvasButon2;
     private int counter;
     private int counter2;
     public TextMeshProUGUI textCounter;
     public TextMeshProUGUI textCounter2;
+
+    private GameObject weaponToAnalize;
     private Vector3 libreriaMoveLocation;
+    private bool weapon = false;
+    public bool analizingWeapon = false;
 
     // Start is called before the first frame update
     void Start()
@@ -82,30 +90,59 @@ public class PuzlesController : MonoBehaviour
 
     private void Puzle3Solve()
     { 
-        libreria.GetComponent<Rigidbody>().MovePosition(libreriaMoveLocation);
+        //libreria.GetComponent<Rigidbody>().MovePosition(libreriaMoveLocation);
+        libreria.SetActive(false);
+        libro1.SetActive(false);
+        libro2.SetActive(false);
+        libro3.SetActive(false);
+        /*
+        List<GameObject> list = new List<GameObject>();
+        libreria.GetChildGameObjects(list);
+        foreach (GameObject book in list)
+        {
+            book.SetActive(false);
+        }
+        */
     }
 
-    public void StartAnalizingWeapon()
+    public void StartAnalizingWeapon(bool weapon, GameObject weaponToAnalize)
     {
+        this.weaponToAnalize = weaponToAnalize;
+        this.weapon = weapon;
+        this.analizingWeapon = true;
+        counter2 = 0;
+        textCounter2.text = counter2.ToString();
         AnalizeWeapon();
     }
 
     private void AnalizeWeapon()
     {
-        counter2++;
-        textCounter2.text = counter2.ToString();
-        if (counter2 >= 10)
+        if (analizingWeapon)
         {
-            weaponAnalized();
+            counter2++;
+            textCounter2.text = counter2.ToString();
+            if (counter2 >= 10)
+            {
+                weaponAnalized();
+            }
+            else
+            {
+                Invoke("AnalizeWeapon", 2f);
+            }
         }
         else
         {
-            Invoke("AnalizeWeapon", 2f);
-        }
+            counter2 = 0;
+            textCounter2.text = counter2.ToString();
+        }  
     }
 
     private void weaponAnalized()
     {
-        phoneCanvasButon2.SetActive(true);
+        if (weapon)
+        {
+            weaponToAnalize.GetComponent<WeaponPuzle>().analazingWeapon = false;
+            phoneCanvasButon2.SetActive(true);
+        }
     }
 }

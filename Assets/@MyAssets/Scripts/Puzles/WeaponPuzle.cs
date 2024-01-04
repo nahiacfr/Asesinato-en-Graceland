@@ -7,9 +7,14 @@ public class WeaponPuzle : MonoBehaviour
 {
     public GameObject puzleManager;
     public XRSocketInteractor socketInteractor;
-    public GameObject weapon;
+    public GameObject trueWeapon;
+    public GameObject falseWeapon1;
+    public GameObject falseWeapon2;
 
-    private bool analazingWeapon;
+    public bool analazingWeapon;
+
+    private GameObject actualWeaponSocket;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +24,28 @@ public class WeaponPuzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (puzleManager.GetComponent<PuzlesController>().socketCheck(socketInteractor, weapon) && analazingWeapon == false)
+        if (puzleManager.GetComponent<PuzlesController>().socketCheck(socketInteractor, trueWeapon) && analazingWeapon == false)
         {
             analazingWeapon = true;
-            puzleManager.GetComponent<PuzlesController>().StartAnalizingWeapon();
+            actualWeaponSocket = trueWeapon;
+            puzleManager.GetComponent<PuzlesController>().StartAnalizingWeapon(true, gameObject);
+        }else if (puzleManager.GetComponent<PuzlesController>().socketCheck(socketInteractor, falseWeapon1) && analazingWeapon == false)
+        {
+            analazingWeapon = true;
+            actualWeaponSocket = falseWeapon1;
+            puzleManager.GetComponent<PuzlesController>().StartAnalizingWeapon(false, gameObject);
+        }
+        else if (puzleManager.GetComponent<PuzlesController>().socketCheck(socketInteractor, falseWeapon2) && analazingWeapon == false)
+        {
+            analazingWeapon = true;
+            actualWeaponSocket = falseWeapon2;
+            puzleManager.GetComponent<PuzlesController>().StartAnalizingWeapon(false, gameObject);
+        }
+
+        if (puzleManager.GetComponent<PuzlesController>().socketCheck(socketInteractor, actualWeaponSocket) == false && analazingWeapon == true)
+        {
+            analazingWeapon = false;
+            puzleManager.GetComponent<PuzlesController>().analizingWeapon = false;
         }
     }
 }

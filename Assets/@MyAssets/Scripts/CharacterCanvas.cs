@@ -2,18 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CharacterCanvas : MonoBehaviour
 {
 
-    public GameObject canvasPersonaje;
+    public GameObject canvasPersonaje = null;
     public GameObject rightRayInteractor = null;
     public GameObject leftRayInteractor = null;
 
     private void Start()
     {
         StartCoroutine(Wait(1));
-        canvasPersonaje.SetActive(false);
+        if(canvasPersonaje != null)
+        {
+            canvasPersonaje.SetActive(false);
+        }
         if (rightRayInteractor != null)
         {
             rightRayInteractor.SetActive(false);
@@ -21,20 +25,46 @@ public class CharacterCanvas : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (GetComponent<NavMeshAgent>().remainingDistance > 1)
+        {
+            Walk();
+        }
+        else
+        {
+            Stop();
+        }
+    }
+
+    private void Stop()
+    {
+        GetComponent<Animator>().SetTrigger("Stand");
+    }
+
+    private void Walk()
+    {
+        GetComponent<Animator>().SetTrigger("Walk");
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.GameObject().CompareTag("Jugador"))
         {
-            canvasPersonaje.SetActive(true);
+            if(canvasPersonaje != null)
+            {
+                canvasPersonaje.SetActive(true);
+                this.GetComponent<Animator>().SetTrigger("Salute");
+                this.gameObject.transform.LookAt(other.transform.position);
+            }
+            
             //GetComponentInChildren<DialogController>().fillPanel(1);
 
             if (rightRayInteractor!=null)
             {
                 rightRayInteractor.SetActive(true);
                 leftRayInteractor.SetActive(true);
-                this.GetComponent<Animator>().SetTrigger("Salute");
             }
-            this.gameObject.transform.LookAt(other.transform.position);
         }
     }
 
@@ -42,18 +72,26 @@ public class CharacterCanvas : MonoBehaviour
     {
         if (other.GameObject().CompareTag("Jugador"))
         {
-            canvasPersonaje.SetActive(false);
+            if (canvasPersonaje != null)
+            {
+                canvasPersonaje.SetActive(false);
+                this.gameObject.transform.LookAt(other.transform.position);
+            }
             if (rightRayInteractor != null)
             {
                 rightRayInteractor.SetActive(false);
                 leftRayInteractor.SetActive(false);
             }
-            this.gameObject.transform.LookAt(other.transform.position);
         }
     }
 
     IEnumerator Wait(float seconds)
     {
         yield return new WaitForSeconds(seconds);
+    }
+
+    public void moveTo(Transform destination)
+    {
+        GetComponent<NavMeshAgent>().destination = destination.position;
     }
 }
