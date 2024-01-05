@@ -18,7 +18,7 @@ public class EndGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (endText== null)
+        if (endText == null)
         {
             texto.text = loseByChoice;
         }

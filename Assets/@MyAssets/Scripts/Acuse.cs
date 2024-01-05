@@ -17,6 +17,12 @@ public class Acuse : MonoBehaviour
     public Transform MeganLocation;
     public Transform WangLocation;
 
+    public GameObject actualDialog;
+    public GameObject acuseDialog;
+    public GameObject cantAcuseDialog;
+
+    public GameObject puzlesController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +33,20 @@ public class Acuse : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void WantToAcuse()
+    {
+        if (CanAcuse())
+        {
+            acuseDialog.SetActive(true);
+            actualDialog.SetActive(false);
+        }
+        else
+        {
+            cantAcuseDialog.SetActive(true);
+            actualDialog.SetActive(false);
+        }
     }
 
     public void AcuseSomebody()
@@ -42,5 +62,23 @@ public class Acuse : MonoBehaviour
         Megan.GetComponent<CharacterCanvas>().moveTo(MeganLocation);
         Megan.GetComponent<CharacterCanvas>().detention = true;
         GetComponent<CharacterCanvas>().moveTo(WangLocation);
+    }
+
+    public bool CanAcuse()
+    {
+        if(puzlesController.GetComponent<PuzlesController>().puzle1 && puzlesController.GetComponent<PuzlesController>().puzle2)
+        {
+            return true;
+        }else if(puzlesController.GetComponent<PuzlesController>().puzle1 && puzlesController.GetComponent<PuzlesController>().puzle3)
+        {
+            return true;
+        }else if(puzlesController.GetComponent<PuzlesController>().puzle1 && puzlesController.GetComponent<PuzlesController>().puzle4)
+        {
+            return true;
+        }else if(puzlesController.GetComponent<PuzlesController>().puzle2 && puzlesController.GetComponent<PuzlesController>().puzle3 && puzlesController.GetComponent<PuzlesController>().puzle4)
+        {
+            return true;
+        }
+        return false;
     }
 }

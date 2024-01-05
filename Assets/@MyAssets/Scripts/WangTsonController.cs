@@ -22,27 +22,7 @@ public class WangTsonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        GetComponent<NavMeshAgent>().destination = player.transform.position;
-        if (GetComponent<NavMeshAgent>().remainingDistance > 2)
-        {
-            Walk();
-        }
-        else
-        {
-            Stop();
-        }
-        */
-    }
 
-    private void Stop()
-    {
-        GetComponent<Animator>().SetTrigger("Stand");
-    }
-
-    private void Walk()
-    {
-        GetComponent<Animator>().SetTrigger("Walk");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -52,22 +32,8 @@ public class WangTsonController : MonoBehaviour
 
     public void ApuntarEnPizarra(int numPista)
     {
-        //Animacion de caminar
-    //    Walk();
-        //Moverse hasta la pizarra
-    //    GoTo(pizarraLocation);
-        //Actualizar la pizarra con la pista
         numeroPista = numPista;
-    //    if (Arrive())
-    //    {
-            pizarra.GetComponent<PizarraController>().Apuntar(numeroPista);
-    /*        GoTo(baseLocation);
-            if (Arrive())
-            {
-                Stop();
-            }
-        }
-    */
+        pizarra.GetComponent<PizarraController>().Apuntar(numeroPista);
     }
 
     private bool Arrive()

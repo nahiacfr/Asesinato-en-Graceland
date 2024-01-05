@@ -31,6 +31,7 @@ public class PuzlesController : MonoBehaviour
     public bool puzle1 = false;
     public bool puzle2 = false;
     public bool puzle3 = false;
+    public bool puzle4 = false;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,7 @@ public class PuzlesController : MonoBehaviour
         puzle1 = false;
         puzle2 = false;
         puzle3 = false;
+        puzle4 = false;
 }
 
     // Update is called once per frame
