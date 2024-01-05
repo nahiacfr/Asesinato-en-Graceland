@@ -61,8 +61,6 @@
 #N#Sophie
 #C#001
 #T#No se quien habrá podido ser estoy muy desconcertada. Todos nos llevamos muy bien con él, es muy amigo de todos nosotros.
-#R#Respuesta B31||008||0||0
-#R#Respuesta B32||008||0||0
 #R#¿Siempre ha sido amigable con todos?||002||0||0
 #F
 #N#Sophie
@@ -186,9 +184,6 @@
 #C#000
 #T#¿Desea algo detective?
 #R#¿Que puede decirme de Elvis?||001||0||0
-#R#Respuesta B32||006||1||0
-#R#Respuesta B33||006||1||0
-#R#Respuesta B34||006||1||0
 #F
 #N#Megan
 #C#001
