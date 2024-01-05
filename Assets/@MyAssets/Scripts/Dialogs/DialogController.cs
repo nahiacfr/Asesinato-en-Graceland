@@ -85,7 +85,6 @@ public class DialogController : MonoBehaviour
                 fillPanelByCode(actualDialog.getRespuestas()[3,1]);
                 break;
             default:
-                texto.text = "Texto prueba 3";
                 break;
         }
         
@@ -93,11 +92,11 @@ public class DialogController : MonoBehaviour
 
     private void ActualizarCooperatividad(int i)
     {
-        if (actualDialog.getRespuestas()[i, 3] == "1")
+        if (actualDialog.getRespuestas()[i, 2] == "1")
         {
             cooperatividad++;
         }
-        else if (actualDialog.getRespuestas()[i, 3] == "-1")
+        else if (actualDialog.getRespuestas()[i, 2] == "-1")
         {
             cooperatividad--;
         }
@@ -114,7 +113,6 @@ public class DialogController : MonoBehaviour
                 coop2.SetActive(true);
                 coop3.SetActive(false);
                 coop4.SetActive(false);
-
                 break;
             case 3:
                 coop1.SetActive(true);
@@ -129,21 +127,17 @@ public class DialogController : MonoBehaviour
                 coop4.SetActive(true);
                 break;
             default:
-                coop1.SetActive(true);
-                coop2.SetActive(false);
-                coop3.SetActive(false);
-                coop4.SetActive(false);
                 break;
         }
     }
 
     private void ActualizarNerviosismo(int i)
     {
-        if (actualDialog.getRespuestas()[i, 4] == "1")
+        if (actualDialog.getRespuestas()[i, 3] == "1")
         {
             nerviosismo++;
         }
-        else if (actualDialog.getRespuestas()[i, 4] == "-1")
+        else if (actualDialog.getRespuestas()[i, 3] == "-1")
         {
             nerviosismo--;
         }
@@ -174,10 +168,6 @@ public class DialogController : MonoBehaviour
                 nerv4.SetActive(true);
                 break;
             default:
-                nerv1.SetActive(true);
-                nerv2.SetActive(false);
-                nerv3.SetActive(false);
-                nerv4.SetActive(false);
                 break;
         }
     }

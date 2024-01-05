@@ -3,7 +3,7 @@
 #T#¿Hola, querias algo?
 #R#¿Sabes que le a podido pasar a Big Vegas?||001||0||0
 #R#¿Sabes algo sobre unos libros?||005||0||0
-#R#Respuesta||001||0||0
+#R#¿Puedo preguntarte donde has estado?||C2+08/07||0||0
 #R#Respuesta||001||0||0
 #F
 #C#001
@@ -35,6 +35,21 @@
 #C#006
 #T#La verdad es que no. Aunque durante la fiesta cuando le pregunté por el desorden que hizo con los libros dejándolos así me dijo: “El orden más simple puede ser el más complicado”. No entendí a qué se refería la verdad.
 #R#Voy a seguir investigando.||000||0||0
+#F
+#N#Brian
+#C#007
+#T#¡Que pasa! ¿Sospecha de mi?
+#R#Para nada, perdona||000||0||0
+#F
+#N#Brian
+#C#008
+#T#Antes de nada que sepa que he ido al baño de Elvis. Se lo digo porque no quiero que se haga ideas equivocadas.
+#R#¿Por qué subiste al baño de Elvis?||009||0||0
+#F
+#N#Brian
+#C#009
+#T#No me acordaba de donde estaba el de abajo sinceramente, ni lo ví y buscando subí al cuarto de Elvis a preguntarle y me dijo que podía usar el suyo. Mientras meaba, me pareció escuchar que hablaba por teléfono con una chica. Cuando salí me dijo para hablar y me pidió perdón. Perdón por todo lo que me había llegado a hacer hace años que había cambiado y que esperaba que todo pudiera estar bien entre los dos. Le dije que se lo agradecía y me fui rápidamente de su cuarto.
+#R#Gracias, seguire investigando.||000||0||0
 #F
 #NEXT
 #N#Sophie
@@ -86,12 +101,35 @@
 #N#James
 #C#003
 #T#Eramos mejores amigos Big y yo pero estos últimos años perdimos un poco el contacto. Se alejo de todo para poder rehabilitarse de las drogas, el alcohol y todo eso. Por eso se acabó alejando de mí, yo le arrastré a ese mundo.
-#R#Voy a seguir investigando.||000||0||0
+#R#Voy a seguir investigando.||005||0||0
 #F
 #N#James
 #C#004
 #T#Eramos mejores amigos pero tampoco hablamos mucho estos últimos años. No hay mucho más que pueda decirte.
-#R#Voy a seguir investigando.||000||0||0
+#R#Voy a seguir investigando.||005||0||0
+#F
+#N#James
+#C#005
+#T#¿Que quieres?
+#R#¿Cómo era tu relación con Elvis?||C1+03/04||0||0
+#R#¿Has visto algo sospechoso?||C2+06/08||0||0
+#F
+#N#James
+#C#006
+#T#Vi a 1 de las chicas que estuvo mirando durante mucho rato ese cuadro con armas de la pared. Aunque no recuerdo quien de las 3 si te soy sincero.
+#R#Bien, lo investigaré||005||0||0
+#F
+#N#James
+#C#007
+#T#Si, a ti te lo voy a decir.
+#R#Vale, seguire investigando||005||1||0
+#R#Sabes, eso es obstruccion a la justicia||008||-1||0
+#F
+#N#James
+#C#008
+#T#A si, que vas a detenerme
+#R#Ganas no me faltan, pero necesito pruebas||005||-1||0
+#R#No quisiera llegar a esos extremos||005||0||0
 #F
 #NEXT
 #N#Amber
@@ -163,7 +201,7 @@
 #R#¿Qué tiene que ver James?||003||0||1
 #F
 #N#Megan
-#C#002
+#C#003
 #T#Él le alejó de todos, desde que le conoció se fue distanciando de nosotros y cada vez probaba drogas mayores. Yo quise detenerle y alejarlo de ese delincuente. Me acabo haciendo caso; pero no me parece muy correcto hablar sobre este problema suyo…
 #R#Voy a seguir investigando.||000||0||0
 #F
