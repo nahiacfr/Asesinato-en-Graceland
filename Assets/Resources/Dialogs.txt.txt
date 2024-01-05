@@ -97,36 +97,51 @@
 #F
 #NEXT
 #N#Amber
-#C#011
-#T#texto de Amber
-#R#Respuesta B31||012||1||0
+#C#000
+#T#¿Hola, querias algo?
+#R#¿Que puedes decirme de Big Vegas?||001||0||0
 #R#Respuesta B32||012||1||0
 #R#Respuesta B33||012||1||0
 #R#Respuesta B34||012||1||0
 #F
 #N#Amber
-#C#012
-#T#texto de Amber
-#R#Respuesta B41||011||1||0
-#R#Respuesta B42||011||1||0
-#R#Respuesta B43||011||1||0
-#R#Respuesta B44||011||1||0
+#C#001
+#T#Éramos conscientes de que la vida de artista que llevaba y siempre pensaba que eso lo acabaría destruyendo pero tanto como para que alguien quiera matarle? Esto es demasiado.
+#R#¿Por qué estabas tan segura de que acabaría destruyendo su propia vida?||002||0||0
+#F
+#N#Amber
+#C#002
+#T#Pues con esa vida de estrella del rock que llevaba con tanto consumo de drogas y alcohol ¿que se puede esperar detective?
+#R#¿No está hablando con mucho rencor?||003||-1||0
+#R#Voy a seguir investigando.||000||0||0
+#F
+#N#Amber
+#C#003
+#T#No es rencor, es la cruda realidad. Nunca ha sido trigo limpio, solo hay que ver su círculo de gente más cercana. La gran mayoría estamos en esta fiesta por respeto a Sophie, ella nos pidió que vinieramos para que arreglaramos nuestros asuntos con él.
+#R#Voy a seguir investigando.||000||0||0
 #F
 #NEXT
 #N#Megan
-#C#005
-#T#texto de Megan
-#R#Respuesta B31||006||1||0
+#C#000
+#T#¿Desea algo detective?
+#R#¿Que puede decirme de Elvis?||001||0||0
 #R#Respuesta B32||006||1||0
 #R#Respuesta B33||006||1||0
 #R#Respuesta B34||006||1||0
 #F
 #N#Megan
-#C#006
-#T#texto de Megan
-#R#Respuesta B41||005||1||0
-#R#Respuesta B42||005||1||0
-#R#Respuesta B43||005||1||0
-#R#Respuesta B44||005||1||0
+#C#001
+#T#Pobre Elvis, nunca pensé que él tendría un final así. Por mucho que no llevase una buena vida no era mal tipo. 
+#R#¿Qué clase de vida llevaba?||002||0||0
+#F
+#N#Megan
+#C#002
+#T#Todo el mundo pensaba que vivía la vida de toda una estrella del rock; pero él no era así, puede que el alcohol y las drogas sí que haya perjudicado su carrera en parte; pero siempre fue un buen hombre. Quizás si nunca hubiese conocido a James…
+#R#¿Qué tiene que ver James?||003||0||1
+#F
+#N#Megan
+#C#002
+#T#Él le alejó de todos, desde que le conoció se fue distanciando de nosotros y cada vez probaba drogas mayores. Yo quise detenerle y alejarlo de ese delincuente. Me acabo haciendo caso; pero no me parece muy correcto hablar sobre este problema suyo…
+#R#Voy a seguir investigando.||000||0||0
 #F
 #NEXT
