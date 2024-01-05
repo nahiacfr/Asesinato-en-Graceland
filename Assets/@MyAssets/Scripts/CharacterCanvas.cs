@@ -8,8 +8,11 @@ public class CharacterCanvas : MonoBehaviour
 {
 
     public GameObject canvasPersonaje = null;
+    public GameObject canvasDetention = null;
     public GameObject rightRayInteractor = null;
     public GameObject leftRayInteractor = null;
+
+    public bool detention = false;
 
     private void Start()
     {
@@ -27,31 +30,14 @@ public class CharacterCanvas : MonoBehaviour
 
     private void Update()
     {
-        if (GetComponent<NavMeshAgent>().remainingDistance > 1)
-        {
-            Walk();
-        }
-        else
-        {
-            Stop();
-        }
-    }
 
-    private void Stop()
-    {
-        GetComponent<Animator>().SetTrigger("Stand");
-    }
-
-    private void Walk()
-    {
-        GetComponent<Animator>().SetTrigger("Walk");
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.GameObject().CompareTag("Jugador"))
         {
-            if(canvasPersonaje != null)
+            if(canvasPersonaje != null && detention == false)
             {
                 canvasPersonaje.SetActive(true);
                 this.GetComponent<Animator>().SetTrigger("Salute");
@@ -72,7 +58,7 @@ public class CharacterCanvas : MonoBehaviour
     {
         if (other.GameObject().CompareTag("Jugador"))
         {
-            if (canvasPersonaje != null)
+            if (canvasPersonaje != null && detention == false)
             {
                 canvasPersonaje.SetActive(false);
                 this.gameObject.transform.LookAt(other.transform.position);
@@ -92,6 +78,9 @@ public class CharacterCanvas : MonoBehaviour
 
     public void moveTo(Transform destination)
     {
+        canvasDetention.SetActive(true);
         GetComponent<NavMeshAgent>().destination = destination.position;
+        GetComponent<NavMeshAgent>().speed = 1000;
+        GetComponent<NavMeshAgent>().acceleration = 100;
     }
 }
