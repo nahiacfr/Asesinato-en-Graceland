@@ -24578,8 +24578,30 @@ struct DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A  : public Mono
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___opcionD_9;
 	// UnityEngine.GameObject DialogController::dialogReader
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___dialogReader_10;
+	// UnityEngine.GameObject DialogController::coop1
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___coop1_11;
+	// UnityEngine.GameObject DialogController::coop2
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___coop2_12;
+	// UnityEngine.GameObject DialogController::coop3
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___coop3_13;
+	// UnityEngine.GameObject DialogController::coop4
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___coop4_14;
+	// UnityEngine.GameObject DialogController::nerv1
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___nerv1_15;
+	// UnityEngine.GameObject DialogController::nerv2
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___nerv2_16;
+	// UnityEngine.GameObject DialogController::nerv3
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___nerv3_17;
+	// UnityEngine.GameObject DialogController::nerv4
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___nerv4_18;
+	// System.Int32 DialogController::cooperatividad
+	int32_t ___cooperatividad_19;
+	// System.Int32 DialogController::nerviosismo
+	int32_t ___nerviosismo_20;
+	// UnityEngine.GameObject DialogController::puzleController
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___puzleController_21;
 	// Dialog DialogController::actualDialog
-	Dialog_t1A3474C8E604C61E022BDF82747C68A6C1E11972* ___actualDialog_11;
+	Dialog_t1A3474C8E604C61E022BDF82747C68A6C1E11972* ___actualDialog_22;
 };
 
 // DialogReader
@@ -25321,6 +25343,12 @@ struct PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1  : public Mono
 	bool ___weapon_18;
 	// System.Boolean PuzlesController::analizingWeapon
 	bool ___analizingWeapon_19;
+	// System.Boolean PuzlesController::puzle1
+	bool ___puzle1_20;
+	// System.Boolean PuzlesController::puzle2
+	bool ___puzle2_21;
+	// System.Boolean PuzlesController::puzle3
+	bool ___puzle3_22;
 };
 
 // RemoveObjectsWithTag

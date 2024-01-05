@@ -28,13 +28,20 @@ public class PuzlesController : MonoBehaviour
     private bool weapon = false;
     public bool analizingWeapon = false;
 
+    public bool puzle1 = false;
+    public bool puzle2 = false;
+    public bool puzle3 = false;
+
     // Start is called before the first frame update
     void Start()
     {
         libreriaMoveLocation = new Vector3(libreria.transform.position.x + 3, libreria.transform.position.y, libreria.transform.position.z);
         counter = 0;
         counter2 = 0;
-    }
+        puzle1 = false;
+        puzle2 = false;
+        puzle3 = false;
+}
 
     // Update is called once per frame
     void Update()
@@ -87,6 +94,7 @@ public class PuzlesController : MonoBehaviour
     private void PhoneCharged()
     {
         phoneCanvasButon.SetActive(true);
+        puzle2 = true;
     }
 
     private void Puzle3Solve()
@@ -97,6 +105,7 @@ public class PuzlesController : MonoBehaviour
         libro2.SetActive(false);
         libro3.SetActive(false);
         canvasPista3.SetActive(true);
+        puzle3 = true;
     }
 
     public void StartAnalizingWeapon(bool weapon, GameObject weaponToAnalize)
@@ -137,6 +146,7 @@ public class PuzlesController : MonoBehaviour
         {
             weaponToAnalize.GetComponent<WeaponPuzle>().analazingWeapon = false;
             phoneCanvasButon2.SetActive(true);
+            puzle1= true;
         }
     }
 }

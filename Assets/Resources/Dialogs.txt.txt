@@ -42,8 +42,6 @@
 #T#¿Hola, querias algo?
 #R#¿Sabes que le a podido pasar a Big Vegas?||001||0||0
 #R#Igual me puedes ayudar con algo||003||0||0
-#R#Respuesta||001||0||0
-#R#Respuesta||001||0||0
 #F
 #N#Sophie
 #C#001
@@ -78,21 +76,21 @@
 #N#James
 #C#001
 #T#Igual podemos entendernos tú y yo entonces.
-#R#¿Cómo era tu relación con Elvis?||003||0||0
+#R#¿Cómo era tu relación con Elvis?||C1+03/04||0||0
 #F
 #N#James
 #C#002
 #T#¿Quién te crees para hablarme en ese tono perro? Mejor hablemos del crimen antes de que te quiera meter una.
-#R#¿Cómo era tu relación con Elvis?||003||0||0
+#R#¿Cómo era tu relación con Elvis?||C1+03/04||0||0
 #F
 #N#James
-#C#C03
-#T#Eramos mejores amigos pero tampoco hablamos mucho estos últimos años. No hay mucho más que pueda decirte.
+#C#003
+#T#Eramos mejores amigos Big y yo pero estos últimos años perdimos un poco el contacto. Se alejo de todo para poder rehabilitarse de las drogas, el alcohol y todo eso. Por eso se acabó alejando de mí, yo le arrastré a ese mundo.
 #R#Voy a seguir investigando.||000||0||0
 #F
 #N#James
-#C#C13
-#T#Eramos mejores amigos Big y yo pero estos últimos años perdimos un poco el contacto. Se alejo de todo para poder rehabilitarse de las drogas, el alcohol y todo eso. Por eso se acabó alejando de mí, yo le arrastré a ese mundo.
+#C#004
+#T#Eramos mejores amigos pero tampoco hablamos mucho estos últimos años. No hay mucho más que pueda decirte.
 #R#Voy a seguir investigando.||000||0||0
 #F
 #NEXT
@@ -100,9 +98,8 @@
 #C#000
 #T#¿Hola, querias algo?
 #R#¿Que puedes decirme de Big Vegas?||001||0||0
-#R#Respuesta B32||012||1||0
-#R#Respuesta B33||012||1||0
-#R#Respuesta B34||012||1||0
+#R#¿Sabes algo sobre unos libros?||008||0||0
+#R#¿Puedo preguntarte por el telefono de Elvis?||P2R05/04||0||1
 #F
 #N#Amber
 #C#001
@@ -119,6 +116,32 @@
 #C#003
 #T#No es rencor, es la cruda realidad. Nunca ha sido trigo limpio, solo hay que ver su círculo de gente más cercana. La gran mayoría estamos en esta fiesta por respeto a Sophie, ella nos pidió que vinieramos para que arreglaramos nuestros asuntos con él.
 #R#Voy a seguir investigando.||000||0||0
+#F
+#N#Amber
+#C#004
+#T#¿Que, lo habeis encontrado?
+#R#No. Ire a buscarlo||000||-1||1
+#R#No. Tampoco sera para tanto||000||0||-1
+#F
+#N#Amber
+#C#005
+#T#¿Que, lo habeis encontrado?
+#R#Si, ¿sabes quien es Nicky?||006||0||1
+#F
+#N#Amber
+#C#006
+#T#Pues ella es Nicky, una amiga del grupo. La conocimos en la universidad igual que al resto.
+#R#¿Por qué no estaba ella en la fiesta?||007||0||0
+#F
+#N#Amber
+#C#007
+#T#Ella es actriz, tenía que hacer un rodaje de última hora en Bilbao y no pudo venir a la fiesta.
+#R#Voy a seguir investigando.||000||0||0
+#F
+#N#Amber
+#C#008
+#T#No, ¿por?
+#R#Por nada. Voy a seguir investigando.||000||0||0
 #F
 #NEXT
 #N#Megan

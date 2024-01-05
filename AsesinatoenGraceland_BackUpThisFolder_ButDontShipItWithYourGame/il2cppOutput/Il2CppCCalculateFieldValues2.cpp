@@ -13716,8 +13716,30 @@ struct DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A  : public Mono
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___opcionD_9;
 	// UnityEngine.GameObject DialogController::dialogReader
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___dialogReader_10;
+	// UnityEngine.GameObject DialogController::coop1
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___coop1_11;
+	// UnityEngine.GameObject DialogController::coop2
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___coop2_12;
+	// UnityEngine.GameObject DialogController::coop3
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___coop3_13;
+	// UnityEngine.GameObject DialogController::coop4
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___coop4_14;
+	// UnityEngine.GameObject DialogController::nerv1
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___nerv1_15;
+	// UnityEngine.GameObject DialogController::nerv2
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___nerv2_16;
+	// UnityEngine.GameObject DialogController::nerv3
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___nerv3_17;
+	// UnityEngine.GameObject DialogController::nerv4
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___nerv4_18;
+	// System.Int32 DialogController::cooperatividad
+	int32_t ___cooperatividad_19;
+	// System.Int32 DialogController::nerviosismo
+	int32_t ___nerviosismo_20;
+	// UnityEngine.GameObject DialogController::puzleController
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___puzleController_21;
 	// Dialog DialogController::actualDialog
-	Dialog_t1A3474C8E604C61E022BDF82747C68A6C1E11972* ___actualDialog_11;
+	Dialog_t1A3474C8E604C61E022BDF82747C68A6C1E11972* ___actualDialog_22;
 };
 
 // DialogReader
@@ -14416,6 +14438,12 @@ struct PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1  : public Mono
 	bool ___weapon_18;
 	// System.Boolean PuzlesController::analizingWeapon
 	bool ___analizingWeapon_19;
+	// System.Boolean PuzlesController::puzle1
+	bool ___puzle1_20;
+	// System.Boolean PuzlesController::puzle2
+	bool ___puzle2_21;
+	// System.Boolean PuzlesController::puzle3
+	bool ___puzle3_22;
 };
 
 // RotateObject
@@ -17508,9 +17536,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6469[1] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6470[4] = 
 {
 	static_cast<int32_t>(offsetof(Dialog_t1A3474C8E604C61E022BDF82747C68A6C1E11972, ___persona_0)),static_cast<int32_t>(offsetof(Dialog_t1A3474C8E604C61E022BDF82747C68A6C1E11972, ___codigo_1)),static_cast<int32_t>(offsetof(Dialog_t1A3474C8E604C61E022BDF82747C68A6C1E11972, ___texto_2)),static_cast<int32_t>(offsetof(Dialog_t1A3474C8E604C61E022BDF82747C68A6C1E11972, ___respuestas_3)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6471[8] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6471[19] = 
 {
-	static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___dialogs_4)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___texto_5)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___opcionA_6)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___opcionB_7)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___opcionC_8)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___opcionD_9)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___dialogReader_10)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___actualDialog_11)),};
+	static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___dialogs_4)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___texto_5)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___opcionA_6)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___opcionB_7)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___opcionC_8)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___opcionD_9)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___dialogReader_10)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___coop1_11)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___coop2_12)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___coop3_13)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___coop4_14)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___nerv1_15)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___nerv2_16)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___nerv3_17)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___nerv4_18)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___cooperatividad_19)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___nerviosismo_20)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___puzleController_21)),static_cast<int32_t>(offsetof(DialogController_tF369E97492E465CC8884C86F6636A3B591A0AD6A, ___actualDialog_22)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6472[5] = 
 {
 	static_cast<int32_t>(offsetof(DialogReader_t4073DA03B9DC4BC5A308CB5D1CCC697A98B636E2, ___dialogBrian_4)),static_cast<int32_t>(offsetof(DialogReader_t4073DA03B9DC4BC5A308CB5D1CCC697A98B636E2, ___dialogSophie_5)),static_cast<int32_t>(offsetof(DialogReader_t4073DA03B9DC4BC5A308CB5D1CCC697A98B636E2, ___dialogJames_6)),static_cast<int32_t>(offsetof(DialogReader_t4073DA03B9DC4BC5A308CB5D1CCC697A98B636E2, ___dialogMegan_7)),static_cast<int32_t>(offsetof(DialogReader_t4073DA03B9DC4BC5A308CB5D1CCC697A98B636E2, ___dialogAmber_8)),};
@@ -17541,9 +17569,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6481[4] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6482[4] = 
 {
 	static_cast<int32_t>(offsetof(PhonePuzle_t4B22F51EF03F1315EBA394DF9EB29128C6D2378B, ___puzleManager_4)),static_cast<int32_t>(offsetof(PhonePuzle_t4B22F51EF03F1315EBA394DF9EB29128C6D2378B, ___socketInteractor_5)),static_cast<int32_t>(offsetof(PhonePuzle_t4B22F51EF03F1315EBA394DF9EB29128C6D2378B, ___phone_6)),static_cast<int32_t>(offsetof(PhonePuzle_t4B22F51EF03F1315EBA394DF9EB29128C6D2378B, ___phoneCharging_7)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6483[16] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6483[19] = 
 {
-	static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___numLibros_4)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libreria_5)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libro1_6)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libro2_7)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libro3_8)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___canvasPista3_9)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___phoneCanvasButon_10)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___phoneCanvasButon2_11)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___counter_12)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___counter2_13)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___textCounter_14)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___textCounter2_15)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___weaponToAnalize_16)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libreriaMoveLocation_17)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___weapon_18)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___analizingWeapon_19)),};
+	static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___numLibros_4)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libreria_5)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libro1_6)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libro2_7)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libro3_8)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___canvasPista3_9)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___phoneCanvasButon_10)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___phoneCanvasButon2_11)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___counter_12)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___counter2_13)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___textCounter_14)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___textCounter2_15)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___weaponToAnalize_16)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libreriaMoveLocation_17)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___weapon_18)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___analizingWeapon_19)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___puzle1_20)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___puzle2_21)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___puzle3_22)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6484[7] = 
 {
 	static_cast<int32_t>(offsetof(WeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2, ___puzleManager_4)),static_cast<int32_t>(offsetof(WeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2, ___socketInteractor_5)),static_cast<int32_t>(offsetof(WeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2, ___trueWeapon_6)),static_cast<int32_t>(offsetof(WeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2, ___falseWeapon1_7)),static_cast<int32_t>(offsetof(WeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2, ___falseWeapon2_8)),static_cast<int32_t>(offsetof(WeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2, ___analazingWeapon_9)),static_cast<int32_t>(offsetof(WeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2, ___actualWeaponSocket_10)),};
