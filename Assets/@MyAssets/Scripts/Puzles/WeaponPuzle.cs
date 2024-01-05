@@ -41,11 +41,11 @@ public class WeaponPuzle : MonoBehaviour
             actualWeaponSocket = falseWeapon2;
             puzleManager.GetComponent<PuzlesController>().StartAnalizingWeapon(false, gameObject);
         }
-
         if (puzleManager.GetComponent<PuzlesController>().socketCheck(socketInteractor, actualWeaponSocket) == false && analazingWeapon == true)
         {
             analazingWeapon = false;
             puzleManager.GetComponent<PuzlesController>().analizingWeapon = false;
         }
+
     }
 }

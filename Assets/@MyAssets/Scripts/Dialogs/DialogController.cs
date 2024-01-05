@@ -35,6 +35,7 @@ public class DialogController : MonoBehaviour
 
     public void fillPanelByCode(string codigo)
     {
+
         actualDialog = findDialogByCode(codigo);
         texto.text = actualDialog.getTexto();
 

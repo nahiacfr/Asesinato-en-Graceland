@@ -1,85 +1,99 @@
 #N#Brian
+#C#000
+#T#¿Hola, querias algo?
+#R#¿Sabes que le a podido pasar a Big Vegas?||001||0||0
+#R#¿Sabes algo sobre unos libros?||005||0||0
+#R#Respuesta||001||0||0
+#R#Respuesta||001||0||0
+#F
 #C#001
-#T#texto de Brian
-#R#Respuesta B11||002||1||0
-#R#Respuesta B12||002||1||0
-#R#Respuesta B13||002||1||0
-#R#Respuesta B14||002||1||0
+#T#No sé qué ha podido pasar con Big Vegas. Ellos no tenían ningún problema con él, siempre ha sido el alma de la fiesta hasta cuando era joven, aunque muy engreído la verdad.
+#R#¿No tienes buena relación con él?||002||0||0
 #F
 #N#Brian
 #C#002
-#T#texto de Brian
-#R#Respuesta B21||003||1||0
-#R#Respuesta B22||003||1||0
-#R#Respuesta B23||003||1||0
-#R#Respuesta B24||003||1||0
+#T#La verdad es que no, nunca la tuve y tengo mis motivos. Puede ser muy animado en las fiestas o en sus conciertos pero siempre fue un asco de persona.
+#R#¿Es envidia lo que me está pareciendo escuchar?||003||-1||0
+#R#¿Tienes redecillas con él de antes?||004||1||0
 #F
 #N#Brian
 #C#003
-#T#texto de Brian
-#R#Respuesta B31||004||1||0
-#R#Respuesta B32||004||1||0
-#R#Respuesta B33||004||1||0
-#R#Respuesta B34||004||1||0
+#T#¿Envidia de alguien como él? En la vida. Me niego a ser alguien tan despreciable como él.
+#R#Voy a seguir investigando.||000||0||0
 #F
 #N#Brian
 #C#004
-#T#texto de Brian
-#R#Respuesta B41||001||1||0
-#R#Respuesta B42||001||1||0
-#R#Respuesta B43||001||1||0
-#R#Respuesta B44||001||1||0
+#T#La verdad que sí. Cuando Big Vegas no era tan, como decirlo, BIG jajaja era alguien mucho más prepotente, chulo y un hijo de pu… Perdón detective, son muchos años de rencor desde la universidad. Yo solo estoy aquí porque era muy amigo de Sophie, mi prometida.
+#R#Gracias por colaborar.||000||0||0
 #F
-#NEXT
-#N#Megan
+#N#Brian
 #C#005
-#T#texto de Megan
-#R#Respuesta B31||006||1||0
-#R#Respuesta B32||006||1||0
-#R#Respuesta B33||006||1||0
-#R#Respuesta B34||006||1||0
+#T#Sophie y yo llegamos antes que el resto a la casa. Le estuvimos esperando en la entrada y me pareció ver que estaba cogiendo 3 libros que parecían iguales y estuvo dejándolos por toda la casa. No sé con qué propósito la verdad.
+#R#¿Viste en qué orden los quitó?||006||0||0
 #F
-#N#Megan
+#N#Brian
 #C#006
-#T#texto de Megan
-#R#Respuesta B41||005||1||0
-#R#Respuesta B42||005||1||0
-#R#Respuesta B43||005||1||0
-#R#Respuesta B44||005||1||0
+#T#La verdad es que no. Aunque durante la fiesta cuando le pregunté por el desorden que hizo con los libros dejándolos así me dijo: “El orden más simple puede ser el más complicado”. No entendí a qué se refería la verdad.
+#R#Voy a seguir investigando.||000||0||0
 #F
 #NEXT
 #N#Sophie
-#C#007
-#T#texto de Sophie
-#R#Respuesta B31||008||1||0
-#R#Respuesta B32||008||1||0
-#R#Respuesta B33||008||1||0
-#R#Respuesta B34||008||1||0
+#C#000
+#T#¿Hola, querias algo?
+#R#¿Sabes que le a podido pasar a Big Vegas?||001||0||0
+#R#Igual me puedes ayudar con algo||003||0||0
+#R#Respuesta||001||0||0
+#R#Respuesta||001||0||0
 #F
 #N#Sophie
-#C#008
-#T#texto de Sophie
-#R#Respuesta B41||007||1||0
-#R#Respuesta B42||007||1||0
-#R#Respuesta B43||007||1||0
-#R#Respuesta B44||007||1||0
+#C#001
+#T#No se quien habrá podido ser estoy muy desconcertada. Todos nos llevamos muy bien con él, es muy amigo de todos nosotros.
+#R#Respuesta B31||008||0||0
+#R#Respuesta B32||008||0||0
+#R#¿Siempre ha sido amigable con todos?||002||0||0
+#F
+#N#Sophie
+#C#002
+#T# Así es detective, a pesar de la vida de estrella que ha tenido siempre nos ha tenido en cuenta.
+#R#Voy a seguir investigando||000||0||0
+#F
+#N#Sophie
+#C#003
+#T# ¿En que le podria yo ayudar?
+#R#¿Sabes algo sobre unos libros?||004||0||0
+#R#¿Sabes algo sobre una tal Nicky?||004||0||0
+#F
+#N#Sophie
+#C#004
+#T# Lo siento, no se nada.
+#R#Voy a seguir investigando||000||0||0
 #F
 #NEXT
 #N#James
-#C#009
-#T#texto de James
-#R#Respuesta B31||010||1||0
-#R#Respuesta B32||010||1||0
-#R#Respuesta B33||010||1||0
-#R#Respuesta B34||010||1||0
+#C#000
+#T#Antes de que me vengas a decirme nada sobre mi colega, yo no soy amigo de maderos tenlo claro.
+#R#Yo no estoy con ellos, voy por libre.||001||1||0
+#R#Yo tampoco de gente como tú.||002||-1||0
 #F
 #N#James
-#C#010
-#T#texto de James
-#R#Respuesta B41||009||1||0
-#R#Respuesta B42||009||1||0
-#R#Respuesta B43||009||1||0
-#R#Respuesta B44||009||1||0
+#C#001
+#T#Igual podemos entendernos tú y yo entonces.
+#R#¿Cómo era tu relación con Elvis?||003||0||0
+#F
+#N#James
+#C#002
+#T#¿Quién te crees para hablarme en ese tono perro? Mejor hablemos del crimen antes de que te quiera meter una.
+#R#¿Cómo era tu relación con Elvis?||003||0||0
+#F
+#N#James
+#C#C03
+#T#Eramos mejores amigos pero tampoco hablamos mucho estos últimos años. No hay mucho más que pueda decirte.
+#R#Voy a seguir investigando.||000||0||0
+#F
+#N#James
+#C#C13
+#T#Eramos mejores amigos Big y yo pero estos últimos años perdimos un poco el contacto. Se alejo de todo para poder rehabilitarse de las drogas, el alcohol y todo eso. Por eso se acabó alejando de mí, yo le arrastré a ese mundo.
+#R#Voy a seguir investigando.||000||0||0
 #F
 #NEXT
 #N#Amber
@@ -97,5 +111,22 @@
 #R#Respuesta B42||011||1||0
 #R#Respuesta B43||011||1||0
 #R#Respuesta B44||011||1||0
+#F
+#NEXT
+#N#Megan
+#C#005
+#T#texto de Megan
+#R#Respuesta B31||006||1||0
+#R#Respuesta B32||006||1||0
+#R#Respuesta B33||006||1||0
+#R#Respuesta B34||006||1||0
+#F
+#N#Megan
+#C#006
+#T#texto de Megan
+#R#Respuesta B41||005||1||0
+#R#Respuesta B42||005||1||0
+#R#Respuesta B43||005||1||0
+#R#Respuesta B44||005||1||0
 #F
 #NEXT

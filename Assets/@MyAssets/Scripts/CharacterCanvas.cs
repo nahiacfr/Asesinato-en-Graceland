@@ -40,10 +40,9 @@ public class CharacterCanvas : MonoBehaviour
             if(canvasPersonaje != null && detention == false)
             {
                 canvasPersonaje.SetActive(true);
-                this.GetComponent<Animator>().SetTrigger("Salute");
-                this.gameObject.transform.LookAt(other.transform.position);
+                GetComponent<Animator>().SetTrigger("Salute");
             }
-            
+            gameObject.transform.LookAt(other.transform.position);
             //GetComponentInChildren<DialogController>().fillPanel(1);
 
             if (rightRayInteractor!=null)
@@ -61,8 +60,8 @@ public class CharacterCanvas : MonoBehaviour
             if (canvasPersonaje != null && detention == false)
             {
                 canvasPersonaje.SetActive(false);
-                this.gameObject.transform.LookAt(other.transform.position);
             }
+            gameObject.transform.LookAt(other.transform.position);
             if (rightRayInteractor != null)
             {
                 rightRayInteractor.SetActive(false);
@@ -81,6 +80,6 @@ public class CharacterCanvas : MonoBehaviour
         canvasDetention.SetActive(true);
         GetComponent<NavMeshAgent>().destination = destination.position;
         GetComponent<NavMeshAgent>().speed = 1000;
-        GetComponent<NavMeshAgent>().acceleration = 100;
+        GetComponent<NavMeshAgent>().acceleration = 1000;
     }
 }

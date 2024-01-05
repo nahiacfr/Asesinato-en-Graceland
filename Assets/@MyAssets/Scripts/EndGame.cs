@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour
 {
-    public static string endText;
+    public static string endText = null;
 
     public GameObject culpable = null;
 
@@ -18,7 +18,14 @@ public class EndGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        texto.text = endText;
+        if (endText== null)
+        {
+            texto.text = loseByChoice;
+        }
+        else
+        {
+            texto.text = endText;
+        }
     }
 
     // Update is called once per frame

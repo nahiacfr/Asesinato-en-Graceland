@@ -14,6 +14,7 @@ public class PuzlesController : MonoBehaviour
     public GameObject libro1;
     public GameObject libro2;
     public GameObject libro3;
+    public GameObject canvasPista3;
 
     public GameObject phoneCanvasButon;
     public GameObject phoneCanvasButon2;
@@ -95,14 +96,7 @@ public class PuzlesController : MonoBehaviour
         libro1.SetActive(false);
         libro2.SetActive(false);
         libro3.SetActive(false);
-        /*
-        List<GameObject> list = new List<GameObject>();
-        libreria.GetChildGameObjects(list);
-        foreach (GameObject book in list)
-        {
-            book.SetActive(false);
-        }
-        */
+        canvasPista3.SetActive(true);
     }
 
     public void StartAnalizingWeapon(bool weapon, GameObject weaponToAnalize)

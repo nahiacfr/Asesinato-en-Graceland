@@ -32,10 +32,15 @@ public class Acuse : MonoBehaviour
     public void AcuseSomebody()
     {
         Brian.GetComponent<CharacterCanvas>().moveTo(BrianLocation);
+        Brian.GetComponent<CharacterCanvas>().detention = true;
         Sophie.GetComponent<CharacterCanvas>().moveTo(SophieLocation);
+        Sophie.GetComponent<CharacterCanvas>().detention = true;
         Amber.GetComponent<CharacterCanvas>().moveTo(AmberLocation);
+        Amber.GetComponent<CharacterCanvas>().detention = true;
         James.GetComponent<CharacterCanvas>().moveTo(JamesLocation);
+        James.GetComponent<CharacterCanvas>().detention = true;
         Megan.GetComponent<CharacterCanvas>().moveTo(MeganLocation);
+        Megan.GetComponent<CharacterCanvas>().detention = true;
         GetComponent<CharacterCanvas>().moveTo(WangLocation);
     }
 }
