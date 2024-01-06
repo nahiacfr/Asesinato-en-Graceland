@@ -672,6 +672,8 @@ struct ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1;
 struct PersistentCallGroup_tB826EDF15DC80F71BCBCD8E410FD959A04C33F25;
 // PhonePuzle
 struct PhonePuzle_t4B22F51EF03F1315EBA394DF9EB29128C6D2378B;
+// PhotosPuzle
+struct PhotosPuzle_t95FDFF45F859573C8823FDDAA192C9D096DCB3B8;
 // PizarraController
 struct PizarraController_tAB04C39AA2203FD494C9D77555DDA5211556F97B;
 // PlayAnimation
@@ -5851,6 +5853,19 @@ struct PhonePuzle_t4B22F51EF03F1315EBA394DF9EB29128C6D2378B  : public MonoBehavi
 	bool ___phoneCharging_7;
 };
 
+// PhotosPuzle
+struct PhotosPuzle_t95FDFF45F859573C8823FDDAA192C9D096DCB3B8  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// UnityEngine.GameObject PhotosPuzle::puzleManager
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___puzleManager_4;
+	// UnityEngine.XR.Interaction.Toolkit.XRSocketInteractor PhotosPuzle::socketInteractor
+	XRSocketInteractor_t955B5778E5057E61463018DC1817B84363C54591* ___socketInteractor_5;
+	// UnityEngine.GameObject PhotosPuzle::photo
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___photo_6;
+	// System.Boolean PhotosPuzle::check
+	bool ___check_7;
+};
+
 // PizarraController
 struct PizarraController_tAB04C39AA2203FD494C9D77555DDA5211556F97B  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -5997,24 +6012,26 @@ struct PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1  : public Mono
 	bool ___weapon_18;
 	// System.Boolean PuzlesController::analizingWeapon
 	bool ___analizingWeapon_19;
+	// System.Int32 PuzlesController::numFotos
+	int32_t ___numFotos_20;
 	// UnityEngine.GameObject PuzlesController::parteFoto1
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto1_20;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto1_21;
 	// UnityEngine.GameObject PuzlesController::parteFoto2
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto2_21;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto2_22;
 	// UnityEngine.GameObject PuzlesController::parteFoto3
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto3_22;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto3_23;
 	// UnityEngine.GameObject PuzlesController::parteFoto4
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto4_23;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto4_24;
 	// UnityEngine.GameObject PuzlesController::canvasPista4
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvasPista4_24;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvasPista4_25;
 	// System.Boolean PuzlesController::puzle1
-	bool ___puzle1_25;
+	bool ___puzle1_26;
 	// System.Boolean PuzlesController::puzle2
-	bool ___puzle2_26;
+	bool ___puzle2_27;
 	// System.Boolean PuzlesController::puzle3
-	bool ___puzle3_27;
+	bool ___puzle3_28;
 	// System.Boolean PuzlesController::puzle4
-	bool ___puzle4_28;
+	bool ___puzle4_29;
 };
 
 // RemoveObjectsWithTag
@@ -9110,6 +9127,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PuzlesController_socketCheck_m00F5CBDED1
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_LibroColocado_m32B78F4950283BA0A7ABF2DE65A56BD4DFAE1D9A (PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* __this, const RuntimeMethod* method) ;
 // System.Void PuzlesController::StartChargePhone()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_StartChargePhone_mA91226C3E4BE7079E22EB64E6732BC6E8074201D (PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* __this, const RuntimeMethod* method) ;
+// System.Void PuzlesController::FotoColocada()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_FotoColocada_mADBC85238911AB466429FAB95F7216062CF1FBF5 (PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* __this, const RuntimeMethod* method) ;
 // UnityEngine.XR.Interaction.Toolkit.IXRSelectInteractable UnityEngine.XR.Interaction.Toolkit.XRSelectInteractorExtensions::GetOldestInteractableSelected(UnityEngine.XR.Interaction.Toolkit.IXRSelectInteractor)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XRSelectInteractorExtensions_GetOldestInteractableSelected_m0B2DE85BDB1C32F90F7869724EC50B5FF9116FBA (RuntimeObject* ___interactor0, const RuntimeMethod* method) ;
 // System.String UnityEngine.Object::get_name()
@@ -9131,6 +9150,8 @@ inline WeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2* GameObject_GetComp
 {
 	return ((  WeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared)(__this, method);
 }
+// System.Void PuzlesController::Puzle4Solve()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_Puzle4Solve_mFE2CA8B0F27C5AE14A6D0AF9B5DAB6043DC91E2E (PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* __this, const RuntimeMethod* method) ;
 // System.Void PuzlesController::StartAnalizingWeapon(System.Boolean,UnityEngine.GameObject)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_StartAnalizingWeapon_m8FBAEB953CB28B0A3555D52515A1D7A6A6D50157 (PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* __this, bool ___weapon0, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___weaponToAnalize1, const RuntimeMethod* method) ;
 // T UnityEngine.GameObject::GetComponent<PizarraController>()
@@ -11403,7 +11424,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Acuse_CanAcuse_m8304DCFCB91E12CEB01B93C9
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_1;
 		L_1 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_0, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_1);
-		bool L_2 = L_1->___puzle1_25;
+		bool L_2 = L_1->___puzle1_26;
 		if (!L_2)
 		{
 			goto IL_0026;
@@ -11415,7 +11436,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Acuse_CanAcuse_m8304DCFCB91E12CEB01B93C9
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_4;
 		L_4 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_3, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_4);
-		bool L_5 = L_4->___puzle2_26;
+		bool L_5 = L_4->___puzle2_27;
 		if (!L_5)
 		{
 			goto IL_0026;
@@ -11434,7 +11455,7 @@ IL_0026:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_7;
 		L_7 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_6, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_7);
-		bool L_8 = L_7->___puzle1_25;
+		bool L_8 = L_7->___puzle1_26;
 		if (!L_8)
 		{
 			goto IL_004c;
@@ -11446,7 +11467,7 @@ IL_0026:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_10;
 		L_10 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_9, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_10);
-		bool L_11 = L_10->___puzle3_27;
+		bool L_11 = L_10->___puzle3_28;
 		if (!L_11)
 		{
 			goto IL_004c;
@@ -11465,7 +11486,7 @@ IL_004c:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_13;
 		L_13 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_12, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_13);
-		bool L_14 = L_13->___puzle1_25;
+		bool L_14 = L_13->___puzle1_26;
 		if (!L_14)
 		{
 			goto IL_0072;
@@ -11477,7 +11498,7 @@ IL_004c:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_16;
 		L_16 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_15, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_16);
-		bool L_17 = L_16->___puzle4_28;
+		bool L_17 = L_16->___puzle4_29;
 		if (!L_17)
 		{
 			goto IL_0072;
@@ -11496,7 +11517,7 @@ IL_0072:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_19;
 		L_19 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_18, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_19);
-		bool L_20 = L_19->___puzle2_26;
+		bool L_20 = L_19->___puzle2_27;
 		if (!L_20)
 		{
 			goto IL_00aa;
@@ -11508,7 +11529,7 @@ IL_0072:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_22;
 		L_22 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_21, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_22);
-		bool L_23 = L_22->___puzle3_27;
+		bool L_23 = L_22->___puzle3_28;
 		if (!L_23)
 		{
 			goto IL_00aa;
@@ -11520,7 +11541,7 @@ IL_0072:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_25;
 		L_25 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_24, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_25);
-		bool L_26 = L_25->___puzle4_28;
+		bool L_26 = L_25->___puzle4_29;
 		if (!L_26)
 		{
 			goto IL_00aa;
@@ -13727,7 +13748,7 @@ IL_01e6:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_82;
 		L_82 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_81, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_82);
-		bool L_83 = L_82->___puzle1_25;
+		bool L_83 = L_82->___puzle1_26;
 		if (!L_83)
 		{
 			goto IL_02c6;
@@ -13762,7 +13783,7 @@ IL_0224:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_92;
 		L_92 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_91, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_92);
-		bool L_93 = L_92->___puzle2_26;
+		bool L_93 = L_92->___puzle2_27;
 		if (!L_93)
 		{
 			goto IL_02c6;
@@ -13797,7 +13818,7 @@ IL_0262:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_102;
 		L_102 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_101, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_102);
-		bool L_103 = L_102->___puzle3_27;
+		bool L_103 = L_102->___puzle3_28;
 		if (!L_103)
 		{
 			goto IL_02c6;
@@ -15373,6 +15394,80 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhonePuzle__ctor_m521459320FA42CFCA57F21
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void PhotosPuzle::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotosPuzle_Start_m29FEF8CF2C69D0AD73DD21F409966D7D256DFABD (PhotosPuzle_t95FDFF45F859573C8823FDDAA192C9D096DCB3B8* __this, const RuntimeMethod* method) 
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void PhotosPuzle::Update()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotosPuzle_Update_m5D01571E15A28939C1BDAC5EBD83B55BF98D79FB (PhotosPuzle_t95FDFF45F859573C8823FDDAA192C9D096DCB3B8* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if (puzleManager.GetComponent<PuzlesController>().socketCheck(socketInteractor, photo) && check == false)
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___puzleManager_4;
+		NullCheck(L_0);
+		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_1;
+		L_1 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_0, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
+		XRSocketInteractor_t955B5778E5057E61463018DC1817B84363C54591* L_2 = __this->___socketInteractor_5;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___photo_6;
+		NullCheck(L_1);
+		bool L_4;
+		L_4 = PuzlesController_socketCheck_m00F5CBDED1BA5F501497D385286E04C30C75D66D(L_1, L_2, L_3, NULL);
+		if (!L_4)
+		{
+			goto IL_003d;
+		}
+	}
+	{
+		bool L_5 = __this->___check_7;
+		if (L_5)
+		{
+			goto IL_003d;
+		}
+	}
+	{
+		// check = true;
+		__this->___check_7 = (bool)1;
+		// puzleManager.GetComponent<PuzlesController>().FotoColocada();
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = __this->___puzleManager_4;
+		NullCheck(L_6);
+		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_7;
+		L_7 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_6, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
+		NullCheck(L_7);
+		PuzlesController_FotoColocada_mADBC85238911AB466429FAB95F7216062CF1FBF5(L_7, NULL);
+	}
+
+IL_003d:
+	{
+		// }
+		return;
+	}
+}
+// System.Void PhotosPuzle::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotosPuzle__ctor_m84742FCC43040DD41067EAC7D5DC3897126631E1 (PhotosPuzle_t95FDFF45F859573C8823FDDAA192C9D096DCB3B8* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // System.Void PuzlesController::Start()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_Start_mFDAA5E68990FAF970F66343DCAFC493E4B681F41 (PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* __this, const RuntimeMethod* method) 
 {
@@ -15411,13 +15506,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_Start_mFDAA5E68990FAF97
 		// counter2 = 0;
 		__this->___counter2_13 = 0;
 		// puzle1 = false;
-		__this->___puzle1_25 = (bool)0;
+		__this->___puzle1_26 = (bool)0;
 		// puzle2 = false;
-		__this->___puzle2_26 = (bool)0;
+		__this->___puzle2_27 = (bool)0;
 		// puzle3 = false;
-		__this->___puzle3_27 = (bool)0;
+		__this->___puzle3_28 = (bool)0;
 		// puzle4 = false;
-		__this->___puzle4_28 = (bool)0;
+		__this->___puzle4_29 = (bool)0;
 		// }
 		return;
 	}
@@ -15558,7 +15653,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_PhoneCharged_m7CE23B1CB
 		NullCheck(L_0);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)1, NULL);
 		// puzle2 = true;
-		__this->___puzle2_26 = (bool)1;
+		__this->___puzle2_27 = (bool)1;
 		// }
 		return;
 	}
@@ -15588,7 +15683,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_Puzle3Solve_m5F9DAE60CB
 		NullCheck(L_4);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)1, NULL);
 		// puzle3 = true;
-		__this->___puzle3_27 = (bool)1;
+		__this->___puzle3_28 = (bool)1;
 		// }
 		return;
 	}
@@ -15714,11 +15809,66 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_weaponAnalized_m5014FF4
 		NullCheck(L_3);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)1, NULL);
 		// puzle1= true;
-		__this->___puzle1_25 = (bool)1;
+		__this->___puzle1_26 = (bool)1;
 	}
 
 IL_002c:
 	{
+		// }
+		return;
+	}
+}
+// System.Void PuzlesController::FotoColocada()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_FotoColocada_mADBC85238911AB466429FAB95F7216062CF1FBF5 (PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* __this, const RuntimeMethod* method) 
+{
+	{
+		// numFotos--;
+		int32_t L_0 = __this->___numFotos_20;
+		__this->___numFotos_20 = ((int32_t)il2cpp_codegen_subtract(L_0, 1));
+		// if (numFotos <= 0)
+		int32_t L_1 = __this->___numFotos_20;
+		if ((((int32_t)L_1) > ((int32_t)0)))
+		{
+			goto IL_001d;
+		}
+	}
+	{
+		// Puzle4Solve();
+		PuzlesController_Puzle4Solve_mFE2CA8B0F27C5AE14A6D0AF9B5DAB6043DC91E2E(__this, NULL);
+	}
+
+IL_001d:
+	{
+		// }
+		return;
+	}
+}
+// System.Void PuzlesController::Puzle4Solve()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_Puzle4Solve_mFE2CA8B0F27C5AE14A6D0AF9B5DAB6043DC91E2E (PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* __this, const RuntimeMethod* method) 
+{
+	{
+		// parteFoto1.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___parteFoto1_21;
+		NullCheck(L_0);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)0, NULL);
+		// parteFoto2.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___parteFoto2_22;
+		NullCheck(L_1);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, (bool)0, NULL);
+		// parteFoto3.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___parteFoto3_23;
+		NullCheck(L_2);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)0, NULL);
+		// parteFoto4.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___parteFoto4_24;
+		NullCheck(L_3);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)0, NULL);
+		// canvasPista4.SetActive(true);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___canvasPista4_25;
+		NullCheck(L_4);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)1, NULL);
+		// puzle4 = true;
+		__this->___puzle4_29 = (bool)1;
 		// }
 		return;
 	}
