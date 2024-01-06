@@ -17,7 +17,9 @@ public class PuzlesController : MonoBehaviour
     public GameObject canvasPista3;
 
     public GameObject phoneCanvasButon;
-    public GameObject phoneCanvasButon2;
+    public GameObject weaponCanvasButonTrue;
+    public GameObject weaponCanvasButonFalse;
+
     private int counter;
     private int counter2;
     public TextMeshProUGUI textCounter;
@@ -154,8 +156,14 @@ public class PuzlesController : MonoBehaviour
         if (weapon)
         {
             weaponToAnalize.GetComponent<WeaponPuzle>().analazingWeapon = false;
-            phoneCanvasButon2.SetActive(true);
-            puzle1= true;
+            weaponCanvasButonTrue.SetActive(true);
+            weaponCanvasButonFalse.SetActive(false);
+            puzle1 = true;
+        }
+        else
+        {
+            weaponCanvasButonTrue.SetActive(false);
+            weaponCanvasButonFalse.SetActive(true);
         }
     }
     public void FotoColocada()
