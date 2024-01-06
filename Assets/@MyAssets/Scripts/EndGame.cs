@@ -6,24 +6,36 @@ using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour
 {
-
     public GameObject culpable = null;
+    public GameObject winVideo = null;
+    public GameObject loseVideo = null;
+    private static bool win = false; 
 
-    public GameObject winVideo;
-    public GameObject loseVideo;
+    void Start()
+    {
+        if (win)
+        {
+            loseVideo.SetActive(false);
+            winVideo.SetActive(true);
+        }
+        else
+        {
+            loseVideo.SetActive(true);
+            winVideo.SetActive(false);
+        }
+    }
 
     public void acuse(GameObject acusado)
     {
         if(acusado == culpable)
         {
-            loseVideo.SetActive(false);
+            win = true;
             SceneManager.LoadScene("Lose");
-            winVideo.SetActive(true);
         }
         else
         {
+            win = false;
             SceneManager.LoadScene("Lose");
-            loseVideo.SetActive(true);
         }
     }
 }
