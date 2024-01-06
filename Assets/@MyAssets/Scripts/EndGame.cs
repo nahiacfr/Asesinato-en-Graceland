@@ -6,45 +6,24 @@ using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour
 {
-    public static string endText = null;
 
     public GameObject culpable = null;
 
-    private string win = "Felicidades, has capturado al culpable";
-    private string loseByTime = "Se te a acabado el tiempo";
-    private string loseByChoice = "Has detenido a un inocente, el asesino a escapado";
-
-    public TextMeshProUGUI texto = null;
-    // Start is called before the first frame update
-    void Start()
-    {
-        if (endText == null)
-        {
-            texto.text = loseByChoice;
-        }
-        else
-        {
-            texto.text = endText;
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject winVideo;
+    public GameObject loseVideo;
 
     public void acuse(GameObject acusado)
     {
         if(acusado == culpable)
         {
-            endText = win;
+            loseVideo.SetActive(false);
             SceneManager.LoadScene("Lose");
+            winVideo.SetActive(true);
         }
         else
         {
-            endText = loseByChoice;
             SceneManager.LoadScene("Lose");
+            loseVideo.SetActive(true);
         }
     }
 }
