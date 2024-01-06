@@ -5994,44 +5994,46 @@ struct PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1  : public Mono
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvasPista3_9;
 	// UnityEngine.GameObject PuzlesController::phoneCanvasButon
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___phoneCanvasButon_10;
-	// UnityEngine.GameObject PuzlesController::phoneCanvasButon2
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___phoneCanvasButon2_11;
+	// UnityEngine.GameObject PuzlesController::weaponCanvasButonTrue
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___weaponCanvasButonTrue_11;
+	// UnityEngine.GameObject PuzlesController::weaponCanvasButonFalse
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___weaponCanvasButonFalse_12;
 	// System.Int32 PuzlesController::counter
-	int32_t ___counter_12;
+	int32_t ___counter_13;
 	// System.Int32 PuzlesController::counter2
-	int32_t ___counter2_13;
+	int32_t ___counter2_14;
 	// TMPro.TextMeshProUGUI PuzlesController::textCounter
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textCounter_14;
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textCounter_15;
 	// TMPro.TextMeshProUGUI PuzlesController::textCounter2
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textCounter2_15;
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textCounter2_16;
 	// UnityEngine.GameObject PuzlesController::weaponToAnalize
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___weaponToAnalize_16;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___weaponToAnalize_17;
 	// UnityEngine.Vector3 PuzlesController::libreriaMoveLocation
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___libreriaMoveLocation_17;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___libreriaMoveLocation_18;
 	// System.Boolean PuzlesController::weapon
-	bool ___weapon_18;
+	bool ___weapon_19;
 	// System.Boolean PuzlesController::analizingWeapon
-	bool ___analizingWeapon_19;
+	bool ___analizingWeapon_20;
 	// System.Int32 PuzlesController::numFotos
-	int32_t ___numFotos_20;
+	int32_t ___numFotos_21;
 	// UnityEngine.GameObject PuzlesController::parteFoto1
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto1_21;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto1_22;
 	// UnityEngine.GameObject PuzlesController::parteFoto2
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto2_22;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto2_23;
 	// UnityEngine.GameObject PuzlesController::parteFoto3
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto3_23;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto3_24;
 	// UnityEngine.GameObject PuzlesController::parteFoto4
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto4_24;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto4_25;
 	// UnityEngine.GameObject PuzlesController::canvasPista4
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvasPista4_25;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvasPista4_26;
 	// System.Boolean PuzlesController::puzle1
-	bool ___puzle1_26;
+	bool ___puzle1_27;
 	// System.Boolean PuzlesController::puzle2
-	bool ___puzle2_27;
+	bool ___puzle2_28;
 	// System.Boolean PuzlesController::puzle3
-	bool ___puzle3_28;
+	bool ___puzle3_29;
 	// System.Boolean PuzlesController::puzle4
-	bool ___puzle4_29;
+	bool ___puzle4_30;
 };
 
 // RemoveObjectsWithTag
@@ -11424,7 +11426,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Acuse_CanAcuse_m8304DCFCB91E12CEB01B93C9
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_1;
 		L_1 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_0, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_1);
-		bool L_2 = L_1->___puzle1_26;
+		bool L_2 = L_1->___puzle1_27;
 		if (!L_2)
 		{
 			goto IL_0026;
@@ -11436,7 +11438,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Acuse_CanAcuse_m8304DCFCB91E12CEB01B93C9
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_4;
 		L_4 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_3, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_4);
-		bool L_5 = L_4->___puzle2_27;
+		bool L_5 = L_4->___puzle2_28;
 		if (!L_5)
 		{
 			goto IL_0026;
@@ -11455,7 +11457,7 @@ IL_0026:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_7;
 		L_7 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_6, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_7);
-		bool L_8 = L_7->___puzle1_26;
+		bool L_8 = L_7->___puzle1_27;
 		if (!L_8)
 		{
 			goto IL_004c;
@@ -11467,7 +11469,7 @@ IL_0026:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_10;
 		L_10 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_9, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_10);
-		bool L_11 = L_10->___puzle3_28;
+		bool L_11 = L_10->___puzle3_29;
 		if (!L_11)
 		{
 			goto IL_004c;
@@ -11486,7 +11488,7 @@ IL_004c:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_13;
 		L_13 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_12, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_13);
-		bool L_14 = L_13->___puzle1_26;
+		bool L_14 = L_13->___puzle1_27;
 		if (!L_14)
 		{
 			goto IL_0072;
@@ -11498,7 +11500,7 @@ IL_004c:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_16;
 		L_16 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_15, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_16);
-		bool L_17 = L_16->___puzle4_29;
+		bool L_17 = L_16->___puzle4_30;
 		if (!L_17)
 		{
 			goto IL_0072;
@@ -11517,7 +11519,7 @@ IL_0072:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_19;
 		L_19 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_18, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_19);
-		bool L_20 = L_19->___puzle2_27;
+		bool L_20 = L_19->___puzle2_28;
 		if (!L_20)
 		{
 			goto IL_00aa;
@@ -11529,7 +11531,7 @@ IL_0072:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_22;
 		L_22 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_21, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_22);
-		bool L_23 = L_22->___puzle3_28;
+		bool L_23 = L_22->___puzle3_29;
 		if (!L_23)
 		{
 			goto IL_00aa;
@@ -11541,7 +11543,7 @@ IL_0072:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_25;
 		L_25 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_24, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_25);
-		bool L_26 = L_25->___puzle4_29;
+		bool L_26 = L_25->___puzle4_30;
 		if (!L_26)
 		{
 			goto IL_00aa;
@@ -13748,7 +13750,7 @@ IL_01e6:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_82;
 		L_82 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_81, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_82);
-		bool L_83 = L_82->___puzle1_26;
+		bool L_83 = L_82->___puzle1_27;
 		if (!L_83)
 		{
 			goto IL_02c6;
@@ -13783,7 +13785,7 @@ IL_0224:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_92;
 		L_92 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_91, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_92);
-		bool L_93 = L_92->___puzle2_27;
+		bool L_93 = L_92->___puzle2_28;
 		if (!L_93)
 		{
 			goto IL_02c6;
@@ -13818,7 +13820,7 @@ IL_0262:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_102;
 		L_102 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_101, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_102);
-		bool L_103 = L_102->___puzle3_28;
+		bool L_103 = L_102->___puzle3_29;
 		if (!L_103)
 		{
 			goto IL_02c6;
@@ -15500,19 +15502,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_Start_mFDAA5E68990FAF97
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
 		memset((&L_12), 0, sizeof(L_12));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_12), ((float)il2cpp_codegen_add(L_3, (3.0f))), L_7, L_11, /*hidden argument*/NULL);
-		__this->___libreriaMoveLocation_17 = L_12;
+		__this->___libreriaMoveLocation_18 = L_12;
 		// counter = 0;
-		__this->___counter_12 = 0;
+		__this->___counter_13 = 0;
 		// counter2 = 0;
-		__this->___counter2_13 = 0;
+		__this->___counter2_14 = 0;
 		// puzle1 = false;
-		__this->___puzle1_26 = (bool)0;
+		__this->___puzle1_27 = (bool)0;
 		// puzle2 = false;
-		__this->___puzle2_27 = (bool)0;
+		__this->___puzle2_28 = (bool)0;
 		// puzle3 = false;
-		__this->___puzle3_28 = (bool)0;
+		__this->___puzle3_29 = (bool)0;
 		// puzle4 = false;
-		__this->___puzle4_29 = (bool)0;
+		__this->___puzle4_30 = (bool)0;
 		// }
 		return;
 	}
@@ -15614,17 +15616,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_ChargingPhone_m880CB8D8
 	}
 	{
 		// counter++;
-		int32_t L_0 = __this->___counter_12;
-		__this->___counter_12 = ((int32_t)il2cpp_codegen_add(L_0, 1));
+		int32_t L_0 = __this->___counter_13;
+		__this->___counter_13 = ((int32_t)il2cpp_codegen_add(L_0, 1));
 		// textCounter.text = counter.ToString();
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_1 = __this->___textCounter_14;
-		int32_t* L_2 = (&__this->___counter_12);
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_1 = __this->___textCounter_15;
+		int32_t* L_2 = (&__this->___counter_13);
 		String_t* L_3;
 		L_3 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_2, NULL);
 		NullCheck(L_1);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_1, L_3);
 		// if (counter >= 100)
-		int32_t L_4 = __this->___counter_12;
+		int32_t L_4 = __this->___counter_13;
 		if ((((int32_t)L_4) < ((int32_t)((int32_t)100))))
 		{
 			goto IL_0035;
@@ -15653,7 +15655,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_PhoneCharged_m7CE23B1CB
 		NullCheck(L_0);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)1, NULL);
 		// puzle2 = true;
-		__this->___puzle2_27 = (bool)1;
+		__this->___puzle2_28 = (bool)1;
 		// }
 		return;
 	}
@@ -15683,7 +15685,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_Puzle3Solve_m5F9DAE60CB
 		NullCheck(L_4);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)1, NULL);
 		// puzle3 = true;
-		__this->___puzle3_28 = (bool)1;
+		__this->___puzle3_29 = (bool)1;
 		// }
 		return;
 	}
@@ -15694,18 +15696,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_StartAnalizingWeapon_m8
 	{
 		// this.weaponToAnalize = weaponToAnalize;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___weaponToAnalize1;
-		__this->___weaponToAnalize_16 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___weaponToAnalize_16), (void*)L_0);
+		__this->___weaponToAnalize_17 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___weaponToAnalize_17), (void*)L_0);
 		// this.weapon = weapon;
 		bool L_1 = ___weapon0;
-		__this->___weapon_18 = L_1;
+		__this->___weapon_19 = L_1;
 		// this.analizingWeapon = true;
-		__this->___analizingWeapon_19 = (bool)1;
+		__this->___analizingWeapon_20 = (bool)1;
 		// counter2 = 0;
-		__this->___counter2_13 = 0;
+		__this->___counter2_14 = 0;
 		// textCounter2.text = counter2.ToString();
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_2 = __this->___textCounter2_15;
-		int32_t* L_3 = (&__this->___counter2_13);
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_2 = __this->___textCounter2_16;
+		int32_t* L_3 = (&__this->___counter2_14);
 		String_t* L_4;
 		L_4 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_3, NULL);
 		NullCheck(L_2);
@@ -15727,7 +15729,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_AnalizeWeapon_mDADCA4DE
 	}
 	{
 		// if (analizingWeapon)
-		bool L_0 = __this->___analizingWeapon_19;
+		bool L_0 = __this->___analizingWeapon_20;
 		if (!L_0)
 		{
 			goto IL_004e;
@@ -15735,17 +15737,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_AnalizeWeapon_mDADCA4DE
 	}
 	{
 		// counter2++;
-		int32_t L_1 = __this->___counter2_13;
-		__this->___counter2_13 = ((int32_t)il2cpp_codegen_add(L_1, 1));
+		int32_t L_1 = __this->___counter2_14;
+		__this->___counter2_14 = ((int32_t)il2cpp_codegen_add(L_1, 1));
 		// textCounter2.text = counter2.ToString();
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_2 = __this->___textCounter2_15;
-		int32_t* L_3 = (&__this->___counter2_13);
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_2 = __this->___textCounter2_16;
+		int32_t* L_3 = (&__this->___counter2_14);
 		String_t* L_4;
 		L_4 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_3, NULL);
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_2, L_4);
 		// if (counter2 >= 100)
-		int32_t L_5 = __this->___counter2_13;
+		int32_t L_5 = __this->___counter2_14;
 		if ((((int32_t)L_5) < ((int32_t)((int32_t)100))))
 		{
 			goto IL_003d;
@@ -15767,10 +15769,10 @@ IL_003d:
 IL_004e:
 	{
 		// counter2 = 0;
-		__this->___counter2_13 = 0;
+		__this->___counter2_14 = 0;
 		// textCounter2.text = counter2.ToString();
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_6 = __this->___textCounter2_15;
-		int32_t* L_7 = (&__this->___counter2_13);
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_6 = __this->___textCounter2_16;
+		int32_t* L_7 = (&__this->___counter2_14);
 		String_t* L_8;
 		L_8 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_7, NULL);
 		NullCheck(L_6);
@@ -15790,30 +15792,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_weaponAnalized_m5014FF4
 	}
 	{
 		// if (weapon)
-		bool L_0 = __this->___weapon_18;
+		bool L_0 = __this->___weapon_19;
 		if (!L_0)
 		{
-			goto IL_002c;
+			goto IL_0039;
 		}
 	}
 	{
 		// weaponToAnalize.GetComponent<WeaponPuzle>().analazingWeapon = false;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___weaponToAnalize_16;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___weaponToAnalize_17;
 		NullCheck(L_1);
 		WeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2* L_2;
 		L_2 = GameObject_GetComponent_TisWeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2_mE1B440E78A7F3E59AD3C09395AF3022B930D43DF(L_1, GameObject_GetComponent_TisWeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2_mE1B440E78A7F3E59AD3C09395AF3022B930D43DF_RuntimeMethod_var);
 		NullCheck(L_2);
 		L_2->___analazingWeapon_9 = (bool)0;
-		// phoneCanvasButon2.SetActive(true);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___phoneCanvasButon2_11;
+		// weaponCanvasButonTrue.SetActive(true);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___weaponCanvasButonTrue_11;
 		NullCheck(L_3);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)1, NULL);
-		// puzle1= true;
-		__this->___puzle1_26 = (bool)1;
+		// weaponCanvasButonFalse.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___weaponCanvasButonFalse_12;
+		NullCheck(L_4);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)0, NULL);
+		// puzle1 = true;
+		__this->___puzle1_27 = (bool)1;
+		return;
 	}
 
-IL_002c:
+IL_0039:
 	{
+		// weaponCanvasButonTrue.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___weaponCanvasButonTrue_11;
+		NullCheck(L_5);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_5, (bool)0, NULL);
+		// weaponCanvasButonFalse.SetActive(true);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = __this->___weaponCanvasButonFalse_12;
+		NullCheck(L_6);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_6, (bool)1, NULL);
 		// }
 		return;
 	}
@@ -15823,10 +15838,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_FotoColocada_mADBC85238
 {
 	{
 		// numFotos--;
-		int32_t L_0 = __this->___numFotos_20;
-		__this->___numFotos_20 = ((int32_t)il2cpp_codegen_subtract(L_0, 1));
+		int32_t L_0 = __this->___numFotos_21;
+		__this->___numFotos_21 = ((int32_t)il2cpp_codegen_subtract(L_0, 1));
 		// if (numFotos <= 0)
-		int32_t L_1 = __this->___numFotos_20;
+		int32_t L_1 = __this->___numFotos_21;
 		if ((((int32_t)L_1) > ((int32_t)0)))
 		{
 			goto IL_001d;
@@ -15848,27 +15863,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_Puzle4Solve_mFE2CA8B0F2
 {
 	{
 		// parteFoto1.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___parteFoto1_21;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___parteFoto1_22;
 		NullCheck(L_0);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)0, NULL);
 		// parteFoto2.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___parteFoto2_22;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___parteFoto2_23;
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, (bool)0, NULL);
 		// parteFoto3.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___parteFoto3_23;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___parteFoto3_24;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)0, NULL);
 		// parteFoto4.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___parteFoto4_24;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___parteFoto4_25;
 		NullCheck(L_3);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)0, NULL);
 		// canvasPista4.SetActive(true);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___canvasPista4_25;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___canvasPista4_26;
 		NullCheck(L_4);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)1, NULL);
 		// puzle4 = true;
-		__this->___puzle4_29 = (bool)1;
+		__this->___puzle4_30 = (bool)1;
 		// }
 		return;
 	}
@@ -16068,7 +16083,7 @@ IL_00f7:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_37;
 		L_37 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_36, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_37);
-		L_37->___analizingWeapon_19 = (bool)0;
+		L_37->___analizingWeapon_20 = (bool)0;
 	}
 
 IL_0135:

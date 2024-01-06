@@ -25359,44 +25359,46 @@ struct PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1  : public Mono
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvasPista3_9;
 	// UnityEngine.GameObject PuzlesController::phoneCanvasButon
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___phoneCanvasButon_10;
-	// UnityEngine.GameObject PuzlesController::phoneCanvasButon2
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___phoneCanvasButon2_11;
+	// UnityEngine.GameObject PuzlesController::weaponCanvasButonTrue
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___weaponCanvasButonTrue_11;
+	// UnityEngine.GameObject PuzlesController::weaponCanvasButonFalse
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___weaponCanvasButonFalse_12;
 	// System.Int32 PuzlesController::counter
-	int32_t ___counter_12;
+	int32_t ___counter_13;
 	// System.Int32 PuzlesController::counter2
-	int32_t ___counter2_13;
+	int32_t ___counter2_14;
 	// TMPro.TextMeshProUGUI PuzlesController::textCounter
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textCounter_14;
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textCounter_15;
 	// TMPro.TextMeshProUGUI PuzlesController::textCounter2
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textCounter2_15;
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textCounter2_16;
 	// UnityEngine.GameObject PuzlesController::weaponToAnalize
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___weaponToAnalize_16;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___weaponToAnalize_17;
 	// UnityEngine.Vector3 PuzlesController::libreriaMoveLocation
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___libreriaMoveLocation_17;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___libreriaMoveLocation_18;
 	// System.Boolean PuzlesController::weapon
-	bool ___weapon_18;
+	bool ___weapon_19;
 	// System.Boolean PuzlesController::analizingWeapon
-	bool ___analizingWeapon_19;
+	bool ___analizingWeapon_20;
 	// System.Int32 PuzlesController::numFotos
-	int32_t ___numFotos_20;
+	int32_t ___numFotos_21;
 	// UnityEngine.GameObject PuzlesController::parteFoto1
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto1_21;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto1_22;
 	// UnityEngine.GameObject PuzlesController::parteFoto2
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto2_22;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto2_23;
 	// UnityEngine.GameObject PuzlesController::parteFoto3
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto3_23;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto3_24;
 	// UnityEngine.GameObject PuzlesController::parteFoto4
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto4_24;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto4_25;
 	// UnityEngine.GameObject PuzlesController::canvasPista4
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvasPista4_25;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvasPista4_26;
 	// System.Boolean PuzlesController::puzle1
-	bool ___puzle1_26;
+	bool ___puzle1_27;
 	// System.Boolean PuzlesController::puzle2
-	bool ___puzle2_27;
+	bool ___puzle2_28;
 	// System.Boolean PuzlesController::puzle3
-	bool ___puzle3_28;
+	bool ___puzle3_29;
 	// System.Boolean PuzlesController::puzle4
-	bool ___puzle4_29;
+	bool ___puzle4_30;
 };
 
 // RemoveObjectsWithTag
