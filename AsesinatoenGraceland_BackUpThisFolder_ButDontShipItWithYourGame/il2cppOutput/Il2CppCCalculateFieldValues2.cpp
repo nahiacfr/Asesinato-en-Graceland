@@ -13677,14 +13677,22 @@ struct Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B  : public MonoBehaviour_t
 	float ___tiempo_5;
 	// UnityEngine.GameObject Crono::tiempoTerminado
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___tiempoTerminado_6;
+	// TMPro.TextMeshProUGUI Crono::textoSmith
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textoSmith_7;
+	// TMPro.TextMeshProUGUI Crono::textoTrevor
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textoTrevor_8;
+	// UnityEngine.GameObject Crono::block
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___block_9;
+	// UnityEngine.GameObject Crono::block1
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___block1_10;
 	// System.Boolean Crono::iniciaCrono
-	bool ___iniciaCrono_7;
+	bool ___iniciaCrono_11;
 	// System.Int32 Crono::tiempoMinutos
-	int32_t ___tiempoMinutos_8;
+	int32_t ___tiempoMinutos_12;
 	// System.Int32 Crono::tiempoSegundos
-	int32_t ___tiempoSegundos_9;
+	int32_t ___tiempoSegundos_13;
 	// System.Int32 Crono::tiempoDecimasSegundo
-	int32_t ___tiempoDecimasSegundo_10;
+	int32_t ___tiempoDecimasSegundo_14;
 };
 
 // DestroyObject
@@ -14446,14 +14454,24 @@ struct PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1  : public Mono
 	bool ___weapon_18;
 	// System.Boolean PuzlesController::analizingWeapon
 	bool ___analizingWeapon_19;
+	// UnityEngine.GameObject PuzlesController::parteFoto1
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto1_20;
+	// UnityEngine.GameObject PuzlesController::parteFoto2
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto2_21;
+	// UnityEngine.GameObject PuzlesController::parteFoto3
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto3_22;
+	// UnityEngine.GameObject PuzlesController::parteFoto4
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto4_23;
+	// UnityEngine.GameObject PuzlesController::canvasPista4
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvasPista4_24;
 	// System.Boolean PuzlesController::puzle1
-	bool ___puzle1_20;
+	bool ___puzle1_25;
 	// System.Boolean PuzlesController::puzle2
-	bool ___puzle2_21;
+	bool ___puzle2_26;
 	// System.Boolean PuzlesController::puzle3
-	bool ___puzle3_22;
+	bool ___puzle3_27;
 	// System.Boolean PuzlesController::puzle4
-	bool ___puzle4_23;
+	bool ___puzle4_28;
 };
 
 // RotateObject
@@ -17534,9 +17552,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6465[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6466[5] = 
 {
 	static_cast<int32_t>(offsetof(CharacterCanvas_t3E3F1A2861EFD10ED503E7FAA3C8A96DE0F3BB58, ___canvasPersonaje_4)),static_cast<int32_t>(offsetof(CharacterCanvas_t3E3F1A2861EFD10ED503E7FAA3C8A96DE0F3BB58, ___canvasDetention_5)),static_cast<int32_t>(offsetof(CharacterCanvas_t3E3F1A2861EFD10ED503E7FAA3C8A96DE0F3BB58, ___rightRayInteractor_6)),static_cast<int32_t>(offsetof(CharacterCanvas_t3E3F1A2861EFD10ED503E7FAA3C8A96DE0F3BB58, ___leftRayInteractor_7)),static_cast<int32_t>(offsetof(CharacterCanvas_t3E3F1A2861EFD10ED503E7FAA3C8A96DE0F3BB58, ___detention_8)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6467[7] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6467[11] = 
 {
-	static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___textoCrono_4)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempo_5)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempoTerminado_6)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___iniciaCrono_7)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempoMinutos_8)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempoSegundos_9)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempoDecimasSegundo_10)),};
+	static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___textoCrono_4)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempo_5)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempoTerminado_6)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___textoSmith_7)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___textoTrevor_8)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___block_9)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___block1_10)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___iniciaCrono_11)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempoMinutos_12)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempoSegundos_13)),static_cast<int32_t>(offsetof(Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B, ___tiempoDecimasSegundo_14)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6468[4] = 
 {
 	static_cast<int32_t>(offsetof(DialogCanvas_t7E2257464E772BBA695EA2BA0BD36977AB43ED1B, ___text1_4)),static_cast<int32_t>(offsetof(DialogCanvas_t7E2257464E772BBA695EA2BA0BD36977AB43ED1B, ___text2_5)),static_cast<int32_t>(offsetof(DialogCanvas_t7E2257464E772BBA695EA2BA0BD36977AB43ED1B, ___buttonGroup_6)),static_cast<int32_t>(offsetof(DialogCanvas_t7E2257464E772BBA695EA2BA0BD36977AB43ED1B, ___buttonGroup1_7)),};
@@ -17579,9 +17597,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6481[4] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6482[4] = 
 {
 	static_cast<int32_t>(offsetof(PhonePuzle_t4B22F51EF03F1315EBA394DF9EB29128C6D2378B, ___puzleManager_4)),static_cast<int32_t>(offsetof(PhonePuzle_t4B22F51EF03F1315EBA394DF9EB29128C6D2378B, ___socketInteractor_5)),static_cast<int32_t>(offsetof(PhonePuzle_t4B22F51EF03F1315EBA394DF9EB29128C6D2378B, ___phone_6)),static_cast<int32_t>(offsetof(PhonePuzle_t4B22F51EF03F1315EBA394DF9EB29128C6D2378B, ___phoneCharging_7)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6483[20] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6483[25] = 
 {
-	static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___numLibros_4)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libreria_5)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libro1_6)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libro2_7)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libro3_8)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___canvasPista3_9)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___phoneCanvasButon_10)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___phoneCanvasButon2_11)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___counter_12)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___counter2_13)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___textCounter_14)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___textCounter2_15)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___weaponToAnalize_16)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libreriaMoveLocation_17)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___weapon_18)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___analizingWeapon_19)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___puzle1_20)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___puzle2_21)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___puzle3_22)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___puzle4_23)),};
+	static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___numLibros_4)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libreria_5)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libro1_6)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libro2_7)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libro3_8)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___canvasPista3_9)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___phoneCanvasButon_10)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___phoneCanvasButon2_11)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___counter_12)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___counter2_13)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___textCounter_14)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___textCounter2_15)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___weaponToAnalize_16)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___libreriaMoveLocation_17)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___weapon_18)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___analizingWeapon_19)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___parteFoto1_20)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___parteFoto2_21)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___parteFoto3_22)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___parteFoto4_23)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___canvasPista4_24)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___puzle1_25)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___puzle2_26)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___puzle3_27)),static_cast<int32_t>(offsetof(PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1, ___puzle4_28)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6484[7] = 
 {
 	static_cast<int32_t>(offsetof(WeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2, ___puzleManager_4)),static_cast<int32_t>(offsetof(WeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2, ___socketInteractor_5)),static_cast<int32_t>(offsetof(WeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2, ___trueWeapon_6)),static_cast<int32_t>(offsetof(WeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2, ___falseWeapon1_7)),static_cast<int32_t>(offsetof(WeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2, ___falseWeapon2_8)),static_cast<int32_t>(offsetof(WeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2, ___analazingWeapon_9)),static_cast<int32_t>(offsetof(WeaponPuzle_tF59B95B5C7796074656861F7E9555B84A54A93A2, ___actualWeaponSocket_10)),};

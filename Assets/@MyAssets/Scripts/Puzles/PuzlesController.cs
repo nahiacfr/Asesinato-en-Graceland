@@ -28,6 +28,13 @@ public class PuzlesController : MonoBehaviour
     private bool weapon = false;
     public bool analizingWeapon = false;
 
+    public int numFotos;
+    public GameObject parteFoto1;
+    public GameObject parteFoto2;
+    public GameObject parteFoto3;
+    public GameObject parteFoto4;
+    public GameObject canvasPista4;
+
     public bool puzle1 = false;
     public bool puzle2 = false;
     public bool puzle3 = false;
@@ -83,7 +90,7 @@ public class PuzlesController : MonoBehaviour
     {
         counter++;
         textCounter.text = counter.ToString();
-        if (counter >= 5)
+        if (counter >= 100)
         {
             PhoneCharged();
         }
@@ -126,7 +133,7 @@ public class PuzlesController : MonoBehaviour
         {
             counter2++;
             textCounter2.text = counter2.ToString();
-            if (counter2 >= 10)
+            if (counter2 >= 100)
             {
                 weaponAnalized();
             }
@@ -150,5 +157,24 @@ public class PuzlesController : MonoBehaviour
             phoneCanvasButon2.SetActive(true);
             puzle1= true;
         }
+    }
+    public void FotoColocada()
+    {
+
+        numFotos--;
+        if (numFotos <= 0)
+        {
+            Puzle4Solve();
+        }
+    }
+
+    public void Puzle4Solve()
+    {
+        parteFoto1.SetActive(false);
+        parteFoto2.SetActive(false);
+        parteFoto3.SetActive(false);
+        parteFoto4.SetActive(false);
+        canvasPista4.SetActive(true);
+        puzle4 = true;
     }
 }

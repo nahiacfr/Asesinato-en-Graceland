@@ -1115,8 +1115,10 @@ IL2CPP_EXTERN_C String_t* _stringLiteral55F097B2603C69F9353B2AE824F1FE43E6B46F87
 IL2CPP_EXTERN_C String_t* _stringLiteral626EF77ABD00197B9E0E9015CCF21B7E2160F73F;
 IL2CPP_EXTERN_C String_t* _stringLiteral650FF93E8BB03D2C099549DAA653E636C9C78E78;
 IL2CPP_EXTERN_C String_t* _stringLiteral66F22AD4A5E86489498D0F8D1DF828BE62F054D5;
+IL2CPP_EXTERN_C String_t* _stringLiteral734A5D8D18B00557399867FF043F604F95DEC614;
 IL2CPP_EXTERN_C String_t* _stringLiteral74B83A50A58269C4EECA165C2ABB62B80AAFC9D0;
 IL2CPP_EXTERN_C String_t* _stringLiteral75A94EE44309525CF46FB9C022ED6E9EFAC8B506;
+IL2CPP_EXTERN_C String_t* _stringLiteral762FAA5BFF80F4A69FCE153873E3EAD29D90B238;
 IL2CPP_EXTERN_C String_t* _stringLiteral7B18F301A198B83778B5E546729B0539A0D4E758;
 IL2CPP_EXTERN_C String_t* _stringLiteral7C0AC29A8D0286851370B7150A2AF361A5073C40;
 IL2CPP_EXTERN_C String_t* _stringLiteral7F8C014BD4810CC276D0F9F81A1E759C7B098B1E;
@@ -5355,14 +5357,22 @@ struct Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B  : public MonoBehaviour_t
 	float ___tiempo_5;
 	// UnityEngine.GameObject Crono::tiempoTerminado
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___tiempoTerminado_6;
+	// TMPro.TextMeshProUGUI Crono::textoSmith
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textoSmith_7;
+	// TMPro.TextMeshProUGUI Crono::textoTrevor
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textoTrevor_8;
+	// UnityEngine.GameObject Crono::block
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___block_9;
+	// UnityEngine.GameObject Crono::block1
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___block1_10;
 	// System.Boolean Crono::iniciaCrono
-	bool ___iniciaCrono_7;
+	bool ___iniciaCrono_11;
 	// System.Int32 Crono::tiempoMinutos
-	int32_t ___tiempoMinutos_8;
+	int32_t ___tiempoMinutos_12;
 	// System.Int32 Crono::tiempoSegundos
-	int32_t ___tiempoSegundos_9;
+	int32_t ___tiempoSegundos_13;
 	// System.Int32 Crono::tiempoDecimasSegundo
-	int32_t ___tiempoDecimasSegundo_10;
+	int32_t ___tiempoDecimasSegundo_14;
 };
 
 // DestroyObject
@@ -5987,14 +5997,24 @@ struct PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1  : public Mono
 	bool ___weapon_18;
 	// System.Boolean PuzlesController::analizingWeapon
 	bool ___analizingWeapon_19;
+	// UnityEngine.GameObject PuzlesController::parteFoto1
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto1_20;
+	// UnityEngine.GameObject PuzlesController::parteFoto2
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto2_21;
+	// UnityEngine.GameObject PuzlesController::parteFoto3
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto3_22;
+	// UnityEngine.GameObject PuzlesController::parteFoto4
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto4_23;
+	// UnityEngine.GameObject PuzlesController::canvasPista4
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvasPista4_24;
 	// System.Boolean PuzlesController::puzle1
-	bool ___puzle1_20;
+	bool ___puzle1_25;
 	// System.Boolean PuzlesController::puzle2
-	bool ___puzle2_21;
+	bool ___puzle2_26;
 	// System.Boolean PuzlesController::puzle3
-	bool ___puzle3_22;
+	bool ___puzle3_27;
 	// System.Boolean PuzlesController::puzle4
-	bool ___puzle4_23;
+	bool ___puzle4_28;
 };
 
 // RemoveObjectsWithTag
@@ -11383,7 +11403,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Acuse_CanAcuse_m8304DCFCB91E12CEB01B93C9
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_1;
 		L_1 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_0, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_1);
-		bool L_2 = L_1->___puzle1_20;
+		bool L_2 = L_1->___puzle1_25;
 		if (!L_2)
 		{
 			goto IL_0026;
@@ -11395,7 +11415,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Acuse_CanAcuse_m8304DCFCB91E12CEB01B93C9
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_4;
 		L_4 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_3, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_4);
-		bool L_5 = L_4->___puzle2_21;
+		bool L_5 = L_4->___puzle2_26;
 		if (!L_5)
 		{
 			goto IL_0026;
@@ -11414,7 +11434,7 @@ IL_0026:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_7;
 		L_7 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_6, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_7);
-		bool L_8 = L_7->___puzle1_20;
+		bool L_8 = L_7->___puzle1_25;
 		if (!L_8)
 		{
 			goto IL_004c;
@@ -11426,7 +11446,7 @@ IL_0026:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_10;
 		L_10 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_9, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_10);
-		bool L_11 = L_10->___puzle3_22;
+		bool L_11 = L_10->___puzle3_27;
 		if (!L_11)
 		{
 			goto IL_004c;
@@ -11445,7 +11465,7 @@ IL_004c:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_13;
 		L_13 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_12, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_13);
-		bool L_14 = L_13->___puzle1_20;
+		bool L_14 = L_13->___puzle1_25;
 		if (!L_14)
 		{
 			goto IL_0072;
@@ -11457,7 +11477,7 @@ IL_004c:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_16;
 		L_16 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_15, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_16);
-		bool L_17 = L_16->___puzle4_23;
+		bool L_17 = L_16->___puzle4_28;
 		if (!L_17)
 		{
 			goto IL_0072;
@@ -11476,7 +11496,7 @@ IL_0072:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_19;
 		L_19 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_18, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_19);
-		bool L_20 = L_19->___puzle2_21;
+		bool L_20 = L_19->___puzle2_26;
 		if (!L_20)
 		{
 			goto IL_00aa;
@@ -11488,7 +11508,7 @@ IL_0072:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_22;
 		L_22 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_21, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_22);
-		bool L_23 = L_22->___puzle3_22;
+		bool L_23 = L_22->___puzle3_27;
 		if (!L_23)
 		{
 			goto IL_00aa;
@@ -11500,7 +11520,7 @@ IL_0072:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_25;
 		L_25 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_24, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_25);
-		bool L_26 = L_25->___puzle4_23;
+		bool L_26 = L_25->___puzle4_28;
 		if (!L_26)
 		{
 			goto IL_00aa;
@@ -12274,16 +12294,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Crono_Cronometro_m74E905AC0D97B5A7FE8305
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral734A5D8D18B00557399867FF043F604F95DEC614);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral74B83A50A58269C4EECA165C2ABB62B80AAFC9D0);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral762FAA5BFF80F4A69FCE153873E3EAD29D90B238);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA8239D7D184C3B9CB62A6BDF5686BE90EB8CF240);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
 		// if (iniciaCrono)
-		bool L_0 = __this->___iniciaCrono_7;
+		bool L_0 = __this->___iniciaCrono_11;
 		if (!L_0)
 		{
-			goto IL_001a;
+			goto IL_0052;
 		}
 	}
 	{
@@ -12292,60 +12314,76 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Crono_Cronometro_m74E905AC0D97B5A7FE8305
 		float L_2;
 		L_2 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___tiempo_5 = ((float)il2cpp_codegen_subtract(L_1, L_2));
+		// block.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___block_9;
+		NullCheck(L_3);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)0, NULL);
+		// block1.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___block1_10;
+		NullCheck(L_4);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)0, NULL);
+		// textoSmith.text = "Pase para dentro que tiene poco tiempo para investigar";
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_5 = __this->___textoSmith_7;
+		NullCheck(L_5);
+		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_5, _stringLiteral734A5D8D18B00557399867FF043F604F95DEC614);
+		// textoTrevor.text = "El tiempo esta corriendo. Aligerando Jude, que ya tengo ganas de que te vayas de aqu?. Es imposible que puedas resolver este caso a tiempo.";
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_6 = __this->___textoTrevor_8;
+		NullCheck(L_6);
+		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_6, _stringLiteral762FAA5BFF80F4A69FCE153873E3EAD29D90B238);
 	}
 
-IL_001a:
+IL_0052:
 	{
 		// tiempoMinutos = Mathf.FloorToInt(tiempo / 60);
-		float L_3 = __this->___tiempo_5;
-		int32_t L_4;
-		L_4 = Mathf_FloorToInt_m2A39AE881CAEE6B6A4B3BFEF9CA1ED40625F5AB7_inline(((float)(L_3/(60.0f))), NULL);
-		__this->___tiempoMinutos_8 = L_4;
-		// tiempoSegundos = Mathf.FloorToInt(tiempo % 60);
-		float L_5 = __this->___tiempo_5;
-		int32_t L_6;
-		L_6 = Mathf_FloorToInt_m2A39AE881CAEE6B6A4B3BFEF9CA1ED40625F5AB7_inline((fmodf(L_5, (60.0f))), NULL);
-		__this->___tiempoSegundos_9 = L_6;
-		// tiempoDecimasSegundo = Mathf.FloorToInt((tiempo % 1) * 100);
 		float L_7 = __this->___tiempo_5;
 		int32_t L_8;
-		L_8 = Mathf_FloorToInt_m2A39AE881CAEE6B6A4B3BFEF9CA1ED40625F5AB7_inline(((float)il2cpp_codegen_multiply((fmodf(L_7, (1.0f))), (100.0f))), NULL);
-		__this->___tiempoDecimasSegundo_10 = L_8;
+		L_8 = Mathf_FloorToInt_m2A39AE881CAEE6B6A4B3BFEF9CA1ED40625F5AB7_inline(((float)(L_7/(60.0f))), NULL);
+		__this->___tiempoMinutos_12 = L_8;
+		// tiempoSegundos = Mathf.FloorToInt(tiempo % 60);
+		float L_9 = __this->___tiempo_5;
+		int32_t L_10;
+		L_10 = Mathf_FloorToInt_m2A39AE881CAEE6B6A4B3BFEF9CA1ED40625F5AB7_inline((fmodf(L_9, (60.0f))), NULL);
+		__this->___tiempoSegundos_13 = L_10;
+		// tiempoDecimasSegundo = Mathf.FloorToInt((tiempo % 1) * 100);
+		float L_11 = __this->___tiempo_5;
+		int32_t L_12;
+		L_12 = Mathf_FloorToInt_m2A39AE881CAEE6B6A4B3BFEF9CA1ED40625F5AB7_inline(((float)il2cpp_codegen_multiply((fmodf(L_11, (1.0f))), (100.0f))), NULL);
+		__this->___tiempoDecimasSegundo_14 = L_12;
 		// textoCrono.text = string.Format("{0:00}:{1:00}:{2:00}", tiempoMinutos, tiempoSegundos, tiempoDecimasSegundo);
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_9 = __this->___textoCrono_4;
-		int32_t L_10 = __this->___tiempoMinutos_8;
-		int32_t L_11 = L_10;
-		RuntimeObject* L_12 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_11);
-		int32_t L_13 = __this->___tiempoSegundos_9;
-		int32_t L_14 = L_13;
-		RuntimeObject* L_15 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_14);
-		int32_t L_16 = __this->___tiempoDecimasSegundo_10;
-		int32_t L_17 = L_16;
-		RuntimeObject* L_18 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_17);
-		String_t* L_19;
-		L_19 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteralA8239D7D184C3B9CB62A6BDF5686BE90EB8CF240, L_12, L_15, L_18, NULL);
-		NullCheck(L_9);
-		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_9, L_19);
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_13 = __this->___textoCrono_4;
+		int32_t L_14 = __this->___tiempoMinutos_12;
+		int32_t L_15 = L_14;
+		RuntimeObject* L_16 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_15);
+		int32_t L_17 = __this->___tiempoSegundos_13;
+		int32_t L_18 = L_17;
+		RuntimeObject* L_19 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_18);
+		int32_t L_20 = __this->___tiempoDecimasSegundo_14;
+		int32_t L_21 = L_20;
+		RuntimeObject* L_22 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_21);
+		String_t* L_23;
+		L_23 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteralA8239D7D184C3B9CB62A6BDF5686BE90EB8CF240, L_16, L_19, L_22, NULL);
+		NullCheck(L_13);
+		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_13, L_23);
 		// if (tiempo <= 0)
-		float L_20 = __this->___tiempo_5;
-		if ((!(((float)L_20) <= ((float)(0.0f)))))
+		float L_24 = __this->___tiempo_5;
+		if ((!(((float)L_24) <= ((float)(0.0f)))))
 		{
-			goto IL_00c9;
+			goto IL_0101;
 		}
 	}
 	{
 		// tiempo = 0;
 		__this->___tiempo_5 = (0.0f);
 		// tiempoTerminado.SetActive(true);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_21 = __this->___tiempoTerminado_6;
-		NullCheck(L_21);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_21, (bool)1, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_25 = __this->___tiempoTerminado_6;
+		NullCheck(L_25);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_25, (bool)1, NULL);
 		// SceneManager.LoadScene("Lose");
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(_stringLiteral74B83A50A58269C4EECA165C2ABB62B80AAFC9D0, NULL);
 	}
 
-IL_00c9:
+IL_0101:
 	{
 		// }
 		return;
@@ -12356,7 +12394,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Crono_Update_mCBB88224303AD32DD62BCB0389
 {
 	{
 		// if (iniciaCrono)
-		bool L_0 = __this->___iniciaCrono_7;
+		bool L_0 = __this->___iniciaCrono_11;
 		if (!L_0)
 		{
 			goto IL_000e;
@@ -12378,7 +12416,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Crono_IniciarCronometro_mD0B865F7823D96F
 {
 	{
 		// iniciaCrono = true;
-		__this->___iniciaCrono_7 = (bool)1;
+		__this->___iniciaCrono_11 = (bool)1;
 		// }
 		return;
 	}
@@ -13689,7 +13727,7 @@ IL_01e6:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_82;
 		L_82 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_81, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_82);
-		bool L_83 = L_82->___puzle1_20;
+		bool L_83 = L_82->___puzle1_25;
 		if (!L_83)
 		{
 			goto IL_02c6;
@@ -13724,7 +13762,7 @@ IL_0224:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_92;
 		L_92 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_91, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_92);
-		bool L_93 = L_92->___puzle2_21;
+		bool L_93 = L_92->___puzle2_26;
 		if (!L_93)
 		{
 			goto IL_02c6;
@@ -13759,7 +13797,7 @@ IL_0262:
 		PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1* L_102;
 		L_102 = GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129(L_101, GameObject_GetComponent_TisPuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1_mE9BDE3729964C444D19E0625D229E3F52C6F3129_RuntimeMethod_var);
 		NullCheck(L_102);
-		bool L_103 = L_102->___puzle3_22;
+		bool L_103 = L_102->___puzle3_27;
 		if (!L_103)
 		{
 			goto IL_02c6;
@@ -15373,13 +15411,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_Start_mFDAA5E68990FAF97
 		// counter2 = 0;
 		__this->___counter2_13 = 0;
 		// puzle1 = false;
-		__this->___puzle1_20 = (bool)0;
+		__this->___puzle1_25 = (bool)0;
 		// puzle2 = false;
-		__this->___puzle2_21 = (bool)0;
+		__this->___puzle2_26 = (bool)0;
 		// puzle3 = false;
-		__this->___puzle3_22 = (bool)0;
+		__this->___puzle3_27 = (bool)0;
 		// puzle4 = false;
-		__this->___puzle4_23 = (bool)0;
+		__this->___puzle4_28 = (bool)0;
 		// }
 		return;
 	}
@@ -15490,11 +15528,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_ChargingPhone_m880CB8D8
 		L_3 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_2, NULL);
 		NullCheck(L_1);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_1, L_3);
-		// if (counter >= 5)
+		// if (counter >= 100)
 		int32_t L_4 = __this->___counter_12;
-		if ((((int32_t)L_4) < ((int32_t)5)))
+		if ((((int32_t)L_4) < ((int32_t)((int32_t)100))))
 		{
-			goto IL_0034;
+			goto IL_0035;
 		}
 	}
 	{
@@ -15503,7 +15541,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_ChargingPhone_m880CB8D8
 		return;
 	}
 
-IL_0034:
+IL_0035:
 	{
 		// Invoke("ChargingPhone", 5f);
 		MonoBehaviour_Invoke_mF724350C59362B0F1BFE26383209A274A29A63FB(__this, _stringLiteral66F22AD4A5E86489498D0F8D1DF828BE62F054D5, (5.0f), NULL);
@@ -15520,7 +15558,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_PhoneCharged_m7CE23B1CB
 		NullCheck(L_0);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)1, NULL);
 		// puzle2 = true;
-		__this->___puzle2_21 = (bool)1;
+		__this->___puzle2_26 = (bool)1;
 		// }
 		return;
 	}
@@ -15550,7 +15588,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_Puzle3Solve_m5F9DAE60CB
 		NullCheck(L_4);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)1, NULL);
 		// puzle3 = true;
-		__this->___puzle3_22 = (bool)1;
+		__this->___puzle3_27 = (bool)1;
 		// }
 		return;
 	}
@@ -15611,9 +15649,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_AnalizeWeapon_mDADCA4DE
 		L_4 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_3, NULL);
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_2, L_4);
-		// if (counter2 >= 10)
+		// if (counter2 >= 100)
 		int32_t L_5 = __this->___counter2_13;
-		if ((((int32_t)L_5) < ((int32_t)((int32_t)10))))
+		if ((((int32_t)L_5) < ((int32_t)((int32_t)100))))
 		{
 			goto IL_003d;
 		}
@@ -15676,7 +15714,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PuzlesController_weaponAnalized_m5014FF4
 		NullCheck(L_3);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)1, NULL);
 		// puzle1= true;
-		__this->___puzle1_20 = (bool)1;
+		__this->___puzle1_25 = (bool)1;
 	}
 
 IL_002c:

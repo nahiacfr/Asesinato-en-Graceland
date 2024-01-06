@@ -24544,14 +24544,22 @@ struct Crono_t7CA7B9AD2E6035623DA4CA27FFFE9E6CE22C921B  : public MonoBehaviour_t
 	float ___tiempo_5;
 	// UnityEngine.GameObject Crono::tiempoTerminado
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___tiempoTerminado_6;
+	// TMPro.TextMeshProUGUI Crono::textoSmith
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textoSmith_7;
+	// TMPro.TextMeshProUGUI Crono::textoTrevor
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textoTrevor_8;
+	// UnityEngine.GameObject Crono::block
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___block_9;
+	// UnityEngine.GameObject Crono::block1
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___block1_10;
 	// System.Boolean Crono::iniciaCrono
-	bool ___iniciaCrono_7;
+	bool ___iniciaCrono_11;
 	// System.Int32 Crono::tiempoMinutos
-	int32_t ___tiempoMinutos_8;
+	int32_t ___tiempoMinutos_12;
 	// System.Int32 Crono::tiempoSegundos
-	int32_t ___tiempoSegundos_9;
+	int32_t ___tiempoSegundos_13;
 	// System.Int32 Crono::tiempoDecimasSegundo
-	int32_t ___tiempoDecimasSegundo_10;
+	int32_t ___tiempoDecimasSegundo_14;
 };
 
 // DestroyObject
@@ -25356,14 +25364,24 @@ struct PuzlesController_tFEB723224C3C10E8335306C24588DE2030DC30E1  : public Mono
 	bool ___weapon_18;
 	// System.Boolean PuzlesController::analizingWeapon
 	bool ___analizingWeapon_19;
+	// UnityEngine.GameObject PuzlesController::parteFoto1
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto1_20;
+	// UnityEngine.GameObject PuzlesController::parteFoto2
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto2_21;
+	// UnityEngine.GameObject PuzlesController::parteFoto3
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto3_22;
+	// UnityEngine.GameObject PuzlesController::parteFoto4
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parteFoto4_23;
+	// UnityEngine.GameObject PuzlesController::canvasPista4
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvasPista4_24;
 	// System.Boolean PuzlesController::puzle1
-	bool ___puzle1_20;
+	bool ___puzle1_25;
 	// System.Boolean PuzlesController::puzle2
-	bool ___puzle2_21;
+	bool ___puzle2_26;
 	// System.Boolean PuzlesController::puzle3
-	bool ___puzle3_22;
+	bool ___puzle3_27;
 	// System.Boolean PuzlesController::puzle4
-	bool ___puzle4_23;
+	bool ___puzle4_28;
 };
 
 // RemoveObjectsWithTag
