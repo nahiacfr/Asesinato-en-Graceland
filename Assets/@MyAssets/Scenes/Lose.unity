@@ -277,7 +277,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &179472968
 RectTransform:
   m_ObjectHideFlags: 0
@@ -925,7 +925,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   culpable: {fileID: 0}
-  texto: {fileID: 0}
+  winVideo: {fileID: 0}
+  loseVideo: {fileID: 0}
 --- !u!1 &510029142
 GameObject:
   m_ObjectHideFlags: 0
