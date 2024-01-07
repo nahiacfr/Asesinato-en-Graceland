@@ -4,7 +4,6 @@
 #R#¿Sabes que le ha podido pasar a Big Vegas?||001||0||0
 #R#¿Sabes algo sobre unos libros?||005||0||0
 #R#¿Puedo preguntarte dónde has estado?||C2+08/07||0||0
-#R#Respuesta||001||0||0
 #F
 #C#001
 #T#No sé qué ha podido pasar con Big Vegas. Ellos no tenían ningún problema con él, siempre ha sido el alma de la fiesta hasta cuando era joven, aunque muy engreído la verdad.
