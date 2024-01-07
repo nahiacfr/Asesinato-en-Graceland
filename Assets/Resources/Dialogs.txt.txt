@@ -80,53 +80,54 @@
 #F
 #NEXT
 #N#James
-#C#000
-#T#Antes de que me vengas a decirme nada sobre mi colega, yo no soy amigo de maderos tenlo claro.
-#R#Yo no estoy con ellos, voy por libre.||001||1||0
-#R#Yo tampoco de gente como tú.||002||-1||0
+#C#000	
+#T#¿Qué quieres?
+#R#¿Te puedo hacer unas preguntas sobre Elvis?||001||0||0
+#R#¿Cómo era tu relación con Elvis?||C1+04/05||0||0
+#R#¿Has visto algo sospechoso?||C2+06/08||0||0
 #F
 #N#James
 #C#001
-#T#Igual podemos entendernos tú y yo entonces.
-#R#¿Cómo era tu relación con Elvis?||C1+03/04||0||0
+#T#Antes de que me vengas a decirme nada sobre mi colega, yo no soy amigo de maderos tenlo claro.
+#R#Yo no estoy con ellos, voy por libre.||002||1||0
+#R#Yo tampoco de gente como tú.||003||-1||0
 #F
 #N#James
 #C#002
-#T#¿Quién te crees para hablarme en ese tono perro? Mejor hablemos del crimen antes de que te quiera meter una.
-#R#¿Cómo era tu relación con Elvis?||C1+03/04||0||0
+#T#Igual podemos entendernos tú y yo entonces.
+#R#¿Cómo era tu relación con Elvis?||C1+04/05||0||0
 #F
 #N#James
 #C#003
-#T#Eramos mejores amigos Big y yo pero estos últimos años perdimos un poco el contacto. Se alejo de todo para poder rehabilitarse de las drogas, el alcohol y todo eso. Por eso se acabó alejando de mí, yo le arrastré a ese mundo.
-#R#Voy a seguir investigando.||005||0||0
+#T#¿Quién te crees para hablarme en ese tono perro? Mejor hablemos del crimen antes de que te quiera meter una.
+#R#¿Cómo era tu relación con Elvis?||C1+04/05||0||0
 #F
 #N#James
 #C#004
-#T#Eramos mejores amigos pero tampoco hablamos mucho estos últimos años. No hay mucho más que pueda decirte.
-#R#Voy a seguir investigando.||005||0||0
+#T#Eramos mejores amigos Big y yo pero estos últimos años perdimos un poco el contacto. Se alejo de todo para poder rehabilitarse de las drogas, el alcohol y todo eso. Por eso se acabó alejando de mí, yo le arrastré a ese mundo.
+#R#Voy a seguir investigando.||000||0||0
 #F
 #N#James
-#C#005	
-#T#¿Qué quieres?
-#R#¿Cómo era tu relación con Elvis?||C1+03/04||0||0
-#R#¿Has visto algo sospechoso?||C2+06/08||0||0
+#C#005
+#T#Eramos mejores amigos pero tampoco hablamos mucho estos últimos años. No hay mucho más que pueda decirte.
+#R#Voy a seguir investigando.||000||0||0
 #F
 #N#James
 #C#006
 #T#Vi a 1 de las chicas que estuvo mirando durante mucho rato ese cuadro con armas de la pared. Aunque no recuerdo quien de las 3 si te soy sincero.
-#R#Bien, lo investigaré||005||0||0
+#R#Bien, lo investigaré||000||0||0
 #F
 #N#James
 #C#007
 #T#Si, a ti te lo voy a decir.
-#R#Vale, seguiré investigando||005||1||0
+#R#Vale, seguiré investigando||000||1||0
 #R#Sabes, eso es obstrucción a la justicia||008||-1||0
 #F
 #N#James
 #C#008
 #T#Así que, ¿qué? ¿Vas a detenerme?
-#R#Ganas no me faltan, pero necesito pruebas||005||-1||0
-#R#No quisiera llegar a esos extremos||005||0||0
+#R#Ganas no me faltan, pero necesito pruebas||000||-1||0
+#R#No quisiera llegar a esos extremos||000||0||0
 #F
 #NEXT
 #N#Amber
