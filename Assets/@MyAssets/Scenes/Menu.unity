@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d4393bf45f92e74499f230d78e8cab9f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.1571315, g: 0.29067084, b: 0.4731707, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -811,19 +811,18 @@ MonoBehaviour:
   head: {fileID: 419254259}
   spawnDistance: 4
   menu: {fileID: 1246870924}
-  showButoon:
-    m_UseReference: 1
+  showButton:
+    m_UseReference: 0
     m_Action:
-      m_Name: Show Butoon
+      m_Name: 
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 4cc771ff-ca86-4d0c-8063-6375f76ad55b
+      m_Id: 
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -6994888847752532685, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
+    m_Reference: {fileID: 0}
   rightRay: {fileID: 1216828153}
   leftRay: {fileID: 1084686484}
 --- !u!1 &195253785
@@ -9068,8 +9067,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "- Para moverte usa el joystick izquierdo\n- Para girar la camara usa el
-    joystick derecho\n- Pulsa el boton men\xFA del joystick izquierdo para abrir
-    un menu general\n- Acercate a los distintos personajes para abrir un men\xFA
+    joystick derecho\n- Acercate a los distintos personajes para abrir un men\xFA
     de dialogo e interactuar con ellos"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9097,8 +9095,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1.15
-  m_fontSizeBase: 1.15
+  m_fontSize: 1.3
+  m_fontSizeBase: 1.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
