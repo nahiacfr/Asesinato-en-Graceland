@@ -740,11 +740,6 @@ struct CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A  : public C
 {
 };
 
-// UnityEngine.ConfigurableJoint
-struct ConfigurableJoint_t8B33AB5A6B8D52493F14C4B8DBDF78A1C94ECB77  : public Joint_tB2C5499F976EBB1EA1C11A80E1BD9F5E2EE4D682
-{
-};
-
 // UnityEngine.HingeJoint
 struct HingeJoint_t70A95A9F77881D06B0A7BE99B7B16EA40332D2D7  : public Joint_tB2C5499F976EBB1EA1C11A80E1BD9F5E2EE4D682
 {
@@ -3063,14 +3058,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterController_set_center_Injected_
 	_il2cpp_icall_func = (CharacterController_set_center_Injected_m2685DB01CE4D0DE542CD29E70B97D84A0F659980_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CharacterController::set_center_Injected(UnityEngine.Vector3&)");
 	_il2cpp_icall_func(__this, ___value0);
 }
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

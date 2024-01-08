@@ -69,7 +69,7 @@
 #F
 #N#Sophie
 #C#003
-#T# ¿En qué le podría yo ayudar?
+#T# ¿En qué le podría ayudar?
 #R#¿Sabes algo sobre unos libros?||004||0||0
 #R#¿Sabes algo sobre una tal Nicky?||004||0||0
 #F

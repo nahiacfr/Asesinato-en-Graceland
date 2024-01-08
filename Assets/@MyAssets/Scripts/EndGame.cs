@@ -13,34 +13,32 @@ public class EndGame : MonoBehaviour
 
     private VideoPlayer winVideoPlayer;
     private VideoPlayer loseVideoPlayer;
-    private AudioSource winAudioSource;
-    private AudioSource loseAudioSource;
+    private AudioSource winVideoAudioSource;
+    private AudioSource loseVideoAudioSource;
 
     void Start()
     {
         winVideoPlayer = winVideo.GetComponent<VideoPlayer>();
         loseVideoPlayer = loseVideo.GetComponent<VideoPlayer>();
-        winAudioSource = winVideo.GetComponent<AudioSource>();
-        loseAudioSource = loseVideo.GetComponent<AudioSource>();
+        winVideoAudioSource = winVideo.GetComponent<AudioSource>();
+        loseVideoAudioSource = loseVideo.GetComponent<AudioSource>();
 
         winVideoPlayer.Stop();
         loseVideoPlayer.Stop();
-        winAudioSource.Stop();
-        loseAudioSource.Stop();
+        winVideoAudioSource.Stop();
+        loseVideoAudioSource.Stop();
 
         if (win)
         {
             loseVideo.SetActive(false);
             winVideo.SetActive(true);
             winVideoPlayer.Play();
-            winAudioSource.Play();
         }
         else
         {
             loseVideo.SetActive(true);
             winVideo.SetActive(false);
             loseVideoPlayer.Play();
-            loseAudioSource.Play();
         }
     }
 

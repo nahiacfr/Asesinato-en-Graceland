@@ -98,7 +98,7 @@ public class PuzlesController : MonoBehaviour
         }
         else
         {
-            Invoke("ChargingPhone", 5f);
+            Invoke("ChargingPhone", 3f);
         }
     }
 
@@ -133,14 +133,14 @@ public class PuzlesController : MonoBehaviour
     {
         if (analizingWeapon)
         {
-            counter2++;
-            textCounter2.text = counter2.ToString();
             if (counter2 >= 100)
             {
                 weaponAnalized();
             }
             else
             {
+                counter2++;
+                textCounter2.text = counter2.ToString();
                 Invoke("AnalizeWeapon", 2f);
             }
         }
