@@ -9,7 +9,7 @@ public class SelectPlayer : NetworkBehaviour
     [SerializeField] float waitTime = 2;
     private float actualTime;
     // Start is called before the first frame update
-    void Start()
+    public void  StartGame()
     {
         NetworkManager.Singleton.StartClient();
         actualTime = waitTime;
