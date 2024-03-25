@@ -12,6 +12,11 @@ public class MenuInicio : MonoBehaviour
         SceneManager.LoadScene("Loading");
     }
 
+    public void ConectarseMulti()
+    {
+        SceneManager.LoadScene("WaitingScene");
+    }
+
     public void MostrarInstrucciones()
     {
         panelInicio.SetActive(false);
