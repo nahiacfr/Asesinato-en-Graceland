@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Unity.Netcode;
+using Unity.Netcode.Transports.UTP;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -57,9 +58,17 @@ public class LabGameMannager : NetworkBehaviour
 
     private void Start()
     {
-        StartGame();
+        //StartGame();
+        NetworkManager.Singleton.StartHost();
+        UnityTransport Ut = NetworkManager.Singleton.GetComponent<UnityTransport>();
+        Debug.Log(Ut);
+        Ut.OnTransportEvent += OnTransportEvent;
     }
 
+    private void OnTransportEvent(Unity.Netcode.NetworkEvent eventType, ulong clientId, ArraySegment<byte> payload, float receiveTime)
+    {
+        Debug.Log("OnTransportEvent: " + eventType);
+    }
     public void StartGame()
     {
         NetworkManager.Singleton.StartClient();
