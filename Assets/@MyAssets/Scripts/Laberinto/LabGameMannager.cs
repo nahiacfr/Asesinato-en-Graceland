@@ -18,6 +18,7 @@ public class LabGameMannager : NetworkBehaviour
 
     [SerializeField] float waitTime = 2;
     private float actualTime;
+    private bool start = false;
 
     public enum State
     {
@@ -54,26 +55,42 @@ public class LabGameMannager : NetworkBehaviour
         selectedPlayer = new NetworkVariable<PlayerData>();
     }
 
+    private void Start()
+    {
+        StartGame();
+    }
+
     public void StartGame()
     {
         NetworkManager.Singleton.StartClient();
         actualTime = waitTime;
+        start = true;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsHost)
+        if (start)
         {
-            this.enabled = false;
-        }
-        else if (actualTime > 0)
-        {
-            actualTime -= 0.2f;
-        }
-        else
-        {
-            NetworkManager.Singleton.StartHost();
+            if (NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsHost)
+            {
+                Debug.Log("client ");
+                this.enabled = false;
+                //currentState.Value = State.WaitingScene;
+                //LoadNetworkScene();
+            }
+            else if (actualTime > 0)
+            {
+                Debug.Log("time:" + actualTime);
+                actualTime -= 0.2f;
+            }
+            else
+            {
+                Debug.Log("host");
+                NetworkManager.Singleton.StartHost();
+                currentState.Value = State.WaitingScene;
+                LoadNetworkScene();
+            }
         }
     }
 
