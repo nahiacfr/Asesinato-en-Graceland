@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/@MyAssets/Scenes/WaitingScene.unity
     guid: 3f3844f644c15a64f8e6d5273955a6bc
-  - enabled: 0
+  - enabled: 1
     path: Assets/@MyAssets/Scenes/LaOscuridadEnElLaberinto.unity
     guid: 1c0de0cfd77761f499b78f82821a63f7
   m_configObjects:

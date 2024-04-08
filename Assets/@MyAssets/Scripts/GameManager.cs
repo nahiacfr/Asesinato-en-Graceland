@@ -7,6 +7,17 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+    public enum State
+    {
+        Init,
+        Main
+    }
+
+    private State currentState;
+
+    public delegate void ClientDisconnectedDelegate();
+    public event ClientDisconnectedDelegate ClientDisconnected;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -50,30 +61,16 @@ public class GameManager : MonoBehaviour
 
     private void NetworkManager_OnClientDisconnected(ulong _clientID)
     {
-        switch (currentState.Value)
+        switch (currentState)
         {
             case State.Init:
-                ClientDisconnected.Invoke();
-                break;
-            case State.SelectPlayer:
-                if (_clientID == NetworkManager.ServerClientId)
-                {
-                    LoadInitialMenu();
-                }
-                else
-                {
-                    if (selectedPlayer.Value.type != -1 && selectedPlayer.Value.playerId == _clientID)
-                    {
-                        selectedPlayer.Value = new PlayerData
-                        {
-                            type = -1
-                        };
-                    }
-                }
+                ClientDisconnected?.Invoke();
                 break;
             case State.Main:
-                LoadInitialMenu();
+
+                SceneManager.LoadScene("Menu");
                 break;
         }
     }
 }
+
