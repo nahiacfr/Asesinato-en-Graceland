@@ -2,10 +2,14 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Unity.Netcode;
+using Unity.Networking.Transport;
+
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+
+    [SerializeField] private string ipAddress = "127.0.0.1"; // Dirección IP por defecto
 
     public enum State
     {
@@ -39,14 +43,33 @@ public class GameManager : MonoBehaviour
 
     public void StartAsHost()
     {
+        SetConnectionData(ipAddress);
         NetworkManager.Singleton.StartHost();
         SceneManager.LoadScene("WaitingScene");
     }
 
     public void StartAsClient()
     {
+        SetConnectionData(ipAddress);
         NetworkManager.Singleton.StartClient();
         SceneManager.LoadScene("WaitingScene");
+    }
+
+    public void SetIPAddress(string newIPAddress)
+    {
+        ipAddress = newIPAddress;
+    }
+
+    private void SetConnectionData(string ip)
+    {
+        NetworkManager.Singleton.GetComponent<NetworkManager>().NetworkConfig.ConnectionData =
+            new Unity.Networking.Transport.ConnectionEndPoint[]
+            {
+                new Unity.Networking.Transport.ConnectionEndPoint
+                {
+                    Address = ip
+                }
+            };
     }
 
     public void QuitGame()
@@ -67,7 +90,6 @@ public class GameManager : MonoBehaviour
                 ClientDisconnected?.Invoke();
                 break;
             case State.Main:
-
                 SceneManager.LoadScene("Menu");
                 break;
         }
