@@ -185,7 +185,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4192717782078048105}
+  - {fileID: 4193798147893305958}
   m_Father: {fileID: 6065400693839881522}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -330,7 +330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6065400693839881522
 Transform:
   m_ObjectHideFlags: 0
@@ -467,7 +467,7 @@ MonoBehaviour:
   ScaleThreshold: 0.01
   InLocalSpace: 0
   Interpolate: 1
---- !u!1001 &4442026867272491138
+--- !u!1001 &4447837136542123405
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -536,9 +536,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf6a35fe3f6ed24ebe39b9284bbedd3, type: 3}
---- !u!4 &4192717782078048105 stripped
+--- !u!4 &4193798147893305958 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7bf6a35fe3f6ed24ebe39b9284bbedd3,
     type: 3}
-  m_PrefabInstance: {fileID: 4442026867272491138}
+  m_PrefabInstance: {fileID: 4447837136542123405}
   m_PrefabAsset: {fileID: 0}
