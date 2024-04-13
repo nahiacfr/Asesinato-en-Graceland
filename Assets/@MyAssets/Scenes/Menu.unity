@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1571315, g: 0.29067084, b: 0.4731707, a: 1}
+  m_IndirectSpecularColor: {r: 0.15706864, g: 0.29086187, b: 0.47342837, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1406,7 +1406,7 @@ MonoBehaviour:
   m_MaxConnectAttempts: 60
   m_DisconnectTimeoutMS: 30000
   ConnectionData:
-    Address: 192.168.1.144
+    Address: 127.1.1.1
     Port: 7777
     ServerListenAddress: 
   DebugSimulator:
@@ -11245,7 +11245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2081106157
 Transform:
   m_ObjectHideFlags: 0

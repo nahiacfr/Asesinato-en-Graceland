@@ -54,6 +54,11 @@ public class LabGameManager : NetworkBehaviour
         selectedPlayer = new NetworkVariable<PlayerData>();
     }
 
+    private void Start()
+    {
+        StartAsHost();
+    }
+
     /*  StartAsHost
      *
      *  Start a connection as a Host
