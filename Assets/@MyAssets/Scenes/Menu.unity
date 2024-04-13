@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15706864, g: 0.29086187, b: 0.47342837, a: 1}
+  m_IndirectSpecularColor: {r: 0.1571315, g: 0.29067084, b: 0.4731707, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -536,6 +536,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116636106}
   m_CullTransparentMesh: 1
+--- !u!1 &126708899 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5669448160619408300, guid: 7efc5950b88dec94ab56fe1c12e27ad7,
+    type: 3}
+  m_PrefabInstance: {fileID: 603108100}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &133148965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1406,7 +1412,7 @@ MonoBehaviour:
   m_MaxConnectAttempts: 60
   m_DisconnectTimeoutMS: 30000
   ConnectionData:
-    Address: 127.1.1.1
+    Address: 192.168.1.144
     Port: 7777
     ServerListenAddress: 
   DebugSimulator:
@@ -2768,8 +2774,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugadorTag: Jugador
-  rightRayInteractor: {fileID: 0}
-  leftRayInteractor: {fileID: 0}
+  rightRayInteractor: {fileID: 1661161115}
+  leftRayInteractor: {fileID: 126708899}
 --- !u!65 &523933727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3159,7 +3165,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 583594254}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1769103024}
+        m_TargetAssemblyTypeName: UIControllerMenu, Assembly-CSharp
+        m_MethodName: OnClientButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &583594254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4647,7 +4665,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1054409823}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1769103024}
+        m_TargetAssemblyTypeName: UIControllerMenu, Assembly-CSharp
+        m_MethodName: OnHostButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1054409823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6676,6 +6706,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1661161115 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5669448160751548865, guid: 7efc5950b88dec94ab56fe1c12e27ad7,
+    type: 3}
+  m_PrefabInstance: {fileID: 603108100}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1671906100
 PrefabInstance:
   m_ObjectHideFlags: 0

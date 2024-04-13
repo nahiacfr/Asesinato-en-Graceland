@@ -16143,6 +16143,14 @@ IL_0084:
 		return;
 	}
 }
+// System.Void LabGameManager::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LabGameManager_Start_mE28CE4F99C56691E936B58F55AA4CF6350026D58 (LabGameManager_t132E42FB0844F191AF02AC9BD768DDBC18837241* __this, const RuntimeMethod* method) 
+{
+	{
+		// }
+		return;
+	}
+}
 // System.Void LabGameManager::StartAsHost()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LabGameManager_StartAsHost_m8135F7ABFCB8C728D865AFE3A703BC45F0AB5414 (LabGameManager_t132E42FB0844F191AF02AC9BD768DDBC18837241* __this, const RuntimeMethod* method) 
 {
