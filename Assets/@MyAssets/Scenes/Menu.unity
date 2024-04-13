@@ -1340,16 +1340,18 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 262151954}
-    PlayerPrefab: {fileID: 0}
+    PlayerPrefab: {fileID: 4767352812499784875, guid: dd9f7178bbf72904198031dad07a5f0b,
+      type: 3}
     NetworkPrefabs:
     - Override: 0
-      Prefab: {fileID: 6619141083712866479, guid: 5f9ec14ba04c0664e8eea8fd85cd5aef,
+      Prefab: {fileID: 4767352812499784875, guid: dd9f7178bbf72904198031dad07a5f0b,
         type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
     - Override: 0
-      Prefab: {fileID: 0}
+      Prefab: {fileID: 6619141083712866479, guid: 5f9ec14ba04c0664e8eea8fd85cd5aef,
+        type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
@@ -4077,8 +4079,6 @@ GameObject:
   - component: {fileID: 813500941}
   - component: {fileID: 813500943}
   - component: {fileID: 813500942}
-  - component: {fileID: 813500945}
-  - component: {fileID: 813500944}
   m_Layer: 5
   m_Name: PanelLaberinto
   m_TagString: Untagged
@@ -4147,36 +4147,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813500940}
   m_CullTransparentMesh: 1
---- !u!114 &813500944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813500940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 4057956473
-  AlwaysReplicateAsRoot: 0
-  DontDestroyWithOwner: 0
-  AutoObjectParentSync: 1
---- !u!114 &813500945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813500940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 692950ca70c1cc349ada141834b0f428, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hostButton: {fileID: 0}
-  clientButton: {fileID: 0}
 --- !u!1001 &893019784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9479,11 +9449,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1720429624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 692950ca70c1cc349ada141834b0f428, type: 3}
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hostButton: {fileID: 1054409822}
-  clientButton: {fileID: 583594253}
+  GlobalObjectIdHash: 106692532
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1 &1724455750
 GameObject:
   m_ObjectHideFlags: 0
@@ -9642,8 +9614,7 @@ GameObject:
   - component: {fileID: 1769103022}
   - component: {fileID: 1769103021}
   - component: {fileID: 1769103020}
-  - component: {fileID: 1769103019}
-  - component: {fileID: 1769103018}
+  - component: {fileID: 1769103024}
   m_Layer: 5
   m_Name: PanelHostClient
   m_TagString: Untagged
@@ -9673,31 +9644,6 @@ RectTransform:
   m_AnchoredPosition: {x: 10.09, y: 9.2}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1769103018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769103016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f07fb71c676f5749b6f81e2ae1626e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ipAddress: 127.0.0.1
---- !u!114 &1769103019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769103016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8c5f8b4c660b7b4eab98efcbfba4647, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1769103020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9761,6 +9707,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1769103024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769103016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 692950ca70c1cc349ada141834b0f428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hostButton: {fileID: 1054409822}
+  clientButton: {fileID: 583594253}
 --- !u!1 &1816527655
 GameObject:
   m_ObjectHideFlags: 0

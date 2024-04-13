@@ -16856,19 +16856,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LabGameManager_NetworkManager_OnClientDi
 		{
 			case 0:
 			{
-				goto IL_0023;
+				goto IL_001f;
 			}
 			case 1:
 			{
-				goto IL_002f;
+				goto IL_002b;
 			}
 			case 2:
 			{
-				goto IL_0082;
-			}
-			case 3:
-			{
-				goto IL_007c;
+				goto IL_0078;
 			}
 		}
 	}
@@ -16876,7 +16872,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LabGameManager_NetworkManager_OnClientDi
 		return;
 	}
 
-IL_0023:
+IL_001f:
 	{
 		// ClientDisconnected.Invoke();
 		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_3 = __this->___ClientDisconnected_30;
@@ -16886,13 +16882,13 @@ IL_0023:
 		return;
 	}
 
-IL_002f:
+IL_002b:
 	{
 		// if (_clientID == NetworkManager.ServerClientId)
 		uint64_t L_4 = ____clientID0;
 		if (L_4)
 		{
-			goto IL_0039;
+			goto IL_0035;
 		}
 	}
 	{
@@ -16901,7 +16897,7 @@ IL_002f:
 		return;
 	}
 
-IL_0039:
+IL_0035:
 	{
 		// if (selectedPlayer.Value.type != -1 && selectedPlayer.Value.playerId == _clientID)
 		NetworkVariable_1_tAE3B1DDBCB6086785AC1F9E79526B7FF099B86D7* L_5 = __this->___selectedPlayer_31;
@@ -16911,7 +16907,7 @@ IL_0039:
 		int32_t L_7 = L_6.___type_1;
 		if ((((int32_t)L_7) == ((int32_t)(-1))))
 		{
-			goto IL_0082;
+			goto IL_007e;
 		}
 	}
 	{
@@ -16923,7 +16919,7 @@ IL_0039:
 		uint64_t L_11 = ____clientID0;
 		if ((!(((uint64_t)L_10) == ((uint64_t)L_11))))
 		{
-			goto IL_0082;
+			goto IL_007e;
 		}
 	}
 	{
@@ -16941,13 +16937,13 @@ IL_0039:
 		return;
 	}
 
-IL_007c:
+IL_0078:
 	{
 		// LoadInitialMenu();
 		LabGameManager_LoadInitialMenu_mA14D778EF6A3893961A5EE7D658A369E864F0D18(__this, NULL);
 	}
 
-IL_0082:
+IL_007e:
 	{
 		// }
 		return;
@@ -16974,7 +16970,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LabGameManager_LoadSceneGame_m698AC81BC7
 		// currentState.Value = State.LaOscuridadEnElLaberinto;
 		NetworkVariable_1_t55BBDA55B8E38E7183A776BF0597EF45A8F50AA9* L_0 = __this->___currentState_32;
 		NullCheck(L_0);
-		VirtualActionInvoker1< int32_t >::Invoke(14 /* System.Void Unity.Netcode.NetworkVariable`1<LabGameManager/State>::set_Value(T) */, L_0, 3);
+		VirtualActionInvoker1< int32_t >::Invoke(14 /* System.Void Unity.Netcode.NetworkVariable`1<LabGameManager/State>::set_Value(T) */, L_0, 2);
 		// LoadNetworkScene();
 		LabGameManager_LoadNetworkScene_m151BDAD69F1B8AE4F3D0CCF0C1BA15C6B9CA0342(__this, NULL);
 		// }
