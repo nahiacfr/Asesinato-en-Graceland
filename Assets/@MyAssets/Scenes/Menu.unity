@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1571315, g: 0.29067084, b: 0.4731707, a: 1}
+  m_IndirectSpecularColor: {r: 0.15706864, g: 0.29086187, b: 0.47342837, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2696,37 +2696,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8240c58a23d4fa84884f7ba88d8eb987, type: 3}
---- !u!4 &523933720 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3636905315514848009, guid: 8240c58a23d4fa84884f7ba88d8eb987,
-    type: 3}
-  m_PrefabInstance: {fileID: 523933719}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &523933721 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4889198331029073748, guid: 8240c58a23d4fa84884f7ba88d8eb987,
-    type: 3}
-  m_PrefabInstance: {fileID: 523933719}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &523933722 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5141583366308253931, guid: 8240c58a23d4fa84884f7ba88d8eb987,
-    type: 3}
-  m_PrefabInstance: {fileID: 523933719}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &523933723 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6244337585602184360, guid: 8240c58a23d4fa84884f7ba88d8eb987,
-    type: 3}
-  m_PrefabInstance: {fileID: 523933719}
-  m_PrefabAsset: {fileID: 0}
 --- !u!64 &523933724
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523933721}
+  m_GameObject: {fileID: 4889198330574354243}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -2740,7 +2716,7 @@ MeshCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523933722}
+  m_GameObject: {fileID: 5141583366191499516}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -2754,7 +2730,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523933723}
+  m_GameObject: {fileID: 6244337585079639231}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e6070eed35497e438dcd347c5432eae, type: 3}
@@ -2769,7 +2745,7 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523933723}
+  m_GameObject: {fileID: 6244337585079639231}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -3153,9 +3129,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1769103024}
-        m_TargetAssemblyTypeName: UIControllerMenu, Assembly-CSharp
-        m_MethodName: OnClientButtonClicked
+      - m_Target: {fileID: 1344749938}
+        m_TargetAssemblyTypeName: LabGameManager, Assembly-CSharp
+        m_MethodName: StartAsClient
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4653,9 +4629,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1769103024}
-        m_TargetAssemblyTypeName: UIControllerMenu, Assembly-CSharp
-        m_MethodName: OnHostButtonClicked
+      - m_Target: {fileID: 1344749938}
+        m_TargetAssemblyTypeName: LabGameManager, Assembly-CSharp
+        m_MethodName: StartAsHost
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5307,7 +5283,6 @@ GameObject:
   - component: {fileID: 1344749939}
   - component: {fileID: 1344749938}
   - component: {fileID: 1344749937}
-  - component: {fileID: 1344749940}
   m_Layer: 0
   m_Name: LaberintoGameMannager
   m_TagString: Untagged
@@ -5365,20 +5340,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1344749940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1344749936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 692950ca70c1cc349ada141834b0f428, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hostButton: {fileID: 1054409822}
-  clientButton: {fileID: 583594253}
 --- !u!1 &1362248078
 GameObject:
   m_ObjectHideFlags: 0
@@ -6311,7 +6272,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 523933720}
+  - {fileID: 3636905315896953630}
   - {fileID: 1037210926}
   - {fileID: 49813581}
   - {fileID: 1537167081}
@@ -7566,7 +7527,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769103016}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 692950ca70c1cc349ada141834b0f428, type: 3}
   m_Name: 
@@ -9783,3 +9744,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &3636905315896953630 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3636905315514848009, guid: 8240c58a23d4fa84884f7ba88d8eb987,
+    type: 3}
+  m_PrefabInstance: {fileID: 523933719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4889198330574354243 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4889198331029073748, guid: 8240c58a23d4fa84884f7ba88d8eb987,
+    type: 3}
+  m_PrefabInstance: {fileID: 523933719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5141583366191499516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5141583366308253931, guid: 8240c58a23d4fa84884f7ba88d8eb987,
+    type: 3}
+  m_PrefabInstance: {fileID: 523933719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6244337585079639231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6244337585602184360, guid: 8240c58a23d4fa84884f7ba88d8eb987,
+    type: 3}
+  m_PrefabInstance: {fileID: 523933719}
+  m_PrefabAsset: {fileID: 0}
