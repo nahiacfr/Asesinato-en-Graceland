@@ -56,7 +56,7 @@ public class LabGameManager : NetworkBehaviour
 
     private void Start()
     {
-        //StartAsHost();
+        StartAsHost();
     }
 
     /*  StartAsHost
@@ -67,7 +67,7 @@ public class LabGameManager : NetworkBehaviour
     public void StartAsHost()
     {
         NetworkManager.Singleton.StartHost();
-// SelectedPlayer(true);
+    // SelectedPlayer(true);
         LoadSceneWaitingRoom();
     }
 
@@ -79,7 +79,7 @@ public class LabGameManager : NetworkBehaviour
     public void StartAsClient()
     {
         NetworkManager.Singleton.StartClient();
-// SelectedPlayer(false);
+    // SelectedPlayer(false);
         LoadSceneWaitingRoom();
     }
 
