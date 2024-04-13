@@ -6,10 +6,10 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-public class LabGameMannager : NetworkBehaviour
+public class LabGameManager : NetworkBehaviour
 {
     const int MAX_PLAYER_AMOUNT = 2;
-    public static LabGameMannager Instance { get; private set; }
+    public static LabGameManager Instance { get; private set; }
 
     [SerializeField] GameObject leftPlayerPrefab, rightPlayerPrefab;
 
@@ -25,7 +25,8 @@ public class LabGameMannager : NetworkBehaviour
     {
         Menu = 0,
         WaitingScene = 1,
-        LaOscuridadEnElLaberinto = 2
+        HostClient = 2,
+        LaOscuridadEnElLaberinto = 3
     }
 
     private NetworkVariable<State> currentState = new NetworkVariable<State>();
@@ -35,6 +36,7 @@ public class LabGameMannager : NetworkBehaviour
 
     private void Awake()
     {
+        //To do not duplicate the Network Manager
         NetworkManager[] networkManagers = FindObjectsOfType<NetworkManager>();
         if (networkManagers.Length > 1)
             Destroy(networkManagers[1].gameObject);
@@ -56,53 +58,52 @@ public class LabGameMannager : NetworkBehaviour
         selectedPlayer = new NetworkVariable<PlayerData>();
     }
 
-    private void Start()
+    /*  StartSelection
+     *
+     *  Load the select client or host scene
+     */
+    public void StartSelection()
     {
-        //StartGame();
-        NetworkManager.Singleton.StartHost();
-        UnityTransport Ut = NetworkManager.Singleton.GetComponent<UnityTransport>();
-        Debug.Log(Ut);
-        Ut.OnTransportEvent += OnTransportEvent;
+        LoadSceneSelectHostClient();
     }
 
-    private void OnTransportEvent(Unity.Netcode.NetworkEvent eventType, ulong clientId, ArraySegment<byte> payload, float receiveTime)
+    /*  StartAsHost
+     *
+     *  Start a connection as a Host
+     *  Load the waiting room scene
+     */
+    public void StartAsHost()
     {
-        Debug.Log("OnTransportEvent: " + eventType);
+        NetworkManager.Singleton.StartHost();
+        LoadSceneWaitingRoom();
     }
-    public void StartGame()
+
+    /*  StartAsClient
+     *
+     *  Start a connection as a Client
+     *  Load the waiting room scene
+     */
+    public void StartAsClient()
     {
         NetworkManager.Singleton.StartClient();
-        actualTime = waitTime;
-        start = true;
+        LoadSceneWaitingRoom();
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    /*  StartGame
+     *
+     *  Load the game scene
+     */
+    public void StartGame()
     {
-        if (start)
-        {
-            if (NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsHost)
-            {
-                Debug.Log("client ");
-                this.enabled = false;
-                //currentState.Value = State.WaitingScene;
-                //LoadNetworkScene();
-            }
-            else if (actualTime > 0)
-            {
-                Debug.Log("time:" + actualTime);
-                actualTime -= 0.2f;
-            }
-            else
-            {
-                Debug.Log("host");
-                NetworkManager.Singleton.StartHost();
-                currentState.Value = State.WaitingScene;
-                LoadNetworkScene();
-            }
-        }
+        LoadSceneGame();
     }
 
+    /*  NetworkManager_ConnectionApproval
+     *
+     *  If there are more than MAX_PLAYER_AMOUNT conected 
+     *  the connection is declined, else the conecction is
+     *  aproved
+     */
     private void NetworkManager_ConnectionApproval(NetworkManager.ConnectionApprovalRequest
         connectionApprovalRequest, NetworkManager.ConnectionApprovalResponse
         connectionApprovalResponse)
@@ -119,6 +120,7 @@ public class LabGameMannager : NetworkBehaviour
             - playerReadyDictionary --> Diccionario con los jugadores listos para jugar
             - selectedPlayer --> El estado del jugador actual pasa a -1
      */
+    //TODO
     private void ResetVariables()
     {
         playerReadyDictionary = new Dictionary<ulong, bool>();
@@ -127,29 +129,7 @@ public class LabGameMannager : NetworkBehaviour
             type = -1
         };
     }
-    /*
-        Iniciamos el juego
-        
-        Iniciamos el juego como Host carganado la escena de seleccion de jugadores
-     */
-   /* public void StartGame()
-    {
-        NetworkManager.Singleton.StartHost();
-        ResetVariables();
-        currentState.Value = State.WaitingScene;
-        LoadNetworkScene();
-    }
-   */
-    /*
-     *  Nos conectamos como clientes
-     * 
-     */
-    /*
-    public void JoinGame()
-    {
-        NetworkManager.Singleton.StartClient();
-    }
-    */
+
     /*
      *  Volver al menu inicial
      *  
@@ -158,28 +138,13 @@ public class LabGameMannager : NetworkBehaviour
     public void LoadInitialMenu()
     {
         NetworkManager.Singleton.Shutdown();
-        SceneManager.LoadScene(State.Menu.ToString());
-    }
-
-    /*
-     *  Cerramos la aplicacion
-     */
-    public void Quit()
-    {
-        Application.Quit();
-    }
-    /*
-     *  Cargamos la escena de juego
-     */
-    private void GoToMainGame()
-    {
-        currentState.Value = State.LaOscuridadEnElLaberinto;
-        LoadNetworkScene();
+        LoadSceneMenu();
     }
 
     /*
      *  Spawneamos los jugadores
      */
+    //TODO
     public void SpawnPlayers()
     {
         GameObject playerGO;
@@ -208,6 +173,7 @@ public class LabGameMannager : NetworkBehaviour
         SelectedPlayerServerRpc(_left);
     }
 
+    //TODO
     [ServerRpc(RequireOwnership = false)]
     private void SelectedPlayerServerRpc(bool _left, ServerRpcParams _params = default)
     {
@@ -240,7 +206,7 @@ public class LabGameMannager : NetworkBehaviour
         //Si estan todos listos iniciamos el juego
         if (allClientsReady)
         {
-            GoToMainGame();
+            StartGame();
         }
     }
 
@@ -263,6 +229,7 @@ public class LabGameMannager : NetworkBehaviour
                 }
                 else
                 {
+                    //TODO
                     //Si se desconecta un cliente y este NO es de tipo -1
                     if (selectedPlayer.Value.type != -1 && selectedPlayer.Value.playerId == _clientID)
                     {
@@ -282,6 +249,32 @@ public class LabGameMannager : NetworkBehaviour
         }
     }
 
+    //LoadScene functions
+
+    private void LoadSceneMenu()
+    {
+        currentState.Value = State.Menu;
+        LoadNetworkScene();
+    }
+
+    private void LoadSceneGame()
+    {
+        currentState.Value = State.LaOscuridadEnElLaberinto;
+        LoadNetworkScene();
+    }
+
+    private void LoadSceneWaitingRoom()
+    {
+        currentState.Value = State.WaitingScene;
+        LoadNetworkScene();
+    }
+
+    private void LoadSceneSelectHostClient()
+    {
+        currentState.Value = State.HostClient;
+        LoadNetworkScene();
+    }
+
     /*
      *  Cargamos la escena asignada a CurrentState
      */
@@ -292,4 +285,11 @@ public class LabGameMannager : NetworkBehaviour
             LoadSceneMode.Single);
     }
 
+    /*
+     *  Cerramos la aplicacion
+     */
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

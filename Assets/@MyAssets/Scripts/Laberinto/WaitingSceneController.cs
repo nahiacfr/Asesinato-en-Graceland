@@ -10,8 +10,8 @@ public class WaitingSceneController : NetworkBehaviour
         NetworkManager.Singleton.OnClientConnectedCallback += ClientConnected;
         NetworkManager.Singleton.OnServerStarted += ServerStarted;
     }
-
-    private void OnDestroy()
+    override
+    public void OnDestroy()
     {
         NetworkManager.Singleton.OnClientConnectedCallback -= ClientConnected;
         NetworkManager.Singleton.OnServerStarted -= ServerStarted;

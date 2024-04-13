@@ -43,14 +43,14 @@ public class GameManager : MonoBehaviour
 
     public void StartAsHost()
     {
-        SetConnectionData(ipAddress);
+        //SetConnectionData(ipAddress);
         NetworkManager.Singleton.StartHost();
         SceneManager.LoadScene("WaitingScene");
     }
 
     public void StartAsClient()
     {
-        SetConnectionData(ipAddress);
+        //SetConnectionData(ipAddress);
         NetworkManager.Singleton.StartClient();
         SceneManager.LoadScene("WaitingScene");
     }
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
 
     private void SetConnectionData(string ip)
     {
-        NetworkManager.Singleton.GetComponent<NetworkManager>().NetworkConfig.ConnectionData =
+        /*NetworkManager.Singleton.GetComponent<NetworkManager>().NetworkConfig.ConnectionData =
             new Unity.Networking.Transport.ConnectionEndPoint[]
             {
                 new Unity.Networking.Transport.ConnectionEndPoint
@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour
                     Address = ip
                 }
             };
+            */
     }
 
     public void QuitGame()

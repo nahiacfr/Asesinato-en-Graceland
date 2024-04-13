@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Unity.Netcode;
 
-public class UIController : MonoBehaviour
+public class UIControllerMenu : MonoBehaviour
 {
     public Button hostButton; 
     public Button clientButton; 
@@ -18,16 +18,11 @@ public class UIController : MonoBehaviour
 
     public void OnHostButtonClicked()
     {
-        GameManager.Instance.StartAsHost();
+        LabGameManager.Instance.StartAsHost();
     }
 
     public void OnClientButtonClicked()
     {
-        GameManager.Instance.StartAsClient();
-    }
-
-    public void OnQuitButtonClicked()
-    {
-        GameManager.Instance.QuitGame();
+        LabGameManager.Instance.StartAsClient();
     }
 }
