@@ -17,15 +17,11 @@ public class LabGameManager : NetworkBehaviour
 
     public NetworkVariable<PlayerData> selectedPlayer;
 
-    [SerializeField] float waitTime = 2;
-    private float actualTime;
-    private bool start = false;
 
     public enum State
     {
         Menu = 0,
         WaitingScene = 1,
-        HostClient = 2,
         LaOscuridadEnElLaberinto = 3
     }
 
@@ -58,15 +54,6 @@ public class LabGameManager : NetworkBehaviour
         selectedPlayer = new NetworkVariable<PlayerData>();
     }
 
-    /*  StartSelection
-     *
-     *  Load the select client or host scene
-     */
-    public void StartSelection()
-    {
-        LoadSceneSelectHostClient();
-    }
-
     /*  StartAsHost
      *
      *  Start a connection as a Host
@@ -75,6 +62,7 @@ public class LabGameManager : NetworkBehaviour
     public void StartAsHost()
     {
         NetworkManager.Singleton.StartHost();
+        SelectedPlayer(true);
         LoadSceneWaitingRoom();
     }
 
@@ -86,6 +74,7 @@ public class LabGameManager : NetworkBehaviour
     public void StartAsClient()
     {
         NetworkManager.Singleton.StartClient();
+        SelectedPlayer(false);
         LoadSceneWaitingRoom();
     }
 
@@ -173,7 +162,6 @@ public class LabGameManager : NetworkBehaviour
         SelectedPlayerServerRpc(_left);
     }
 
-    //TODO
     [ServerRpc(RequireOwnership = false)]
     private void SelectedPlayerServerRpc(bool _left, ServerRpcParams _params = default)
     {
@@ -266,12 +254,6 @@ public class LabGameManager : NetworkBehaviour
     private void LoadSceneWaitingRoom()
     {
         currentState.Value = State.WaitingScene;
-        LoadNetworkScene();
-    }
-
-    private void LoadSceneSelectHostClient()
-    {
-        currentState.Value = State.HostClient;
         LoadNetworkScene();
     }
 

@@ -6,18 +6,24 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StartOL : NetworkBehaviour
+public class UIControllerMenu : NetworkBehaviour
 {
-    [SerializeField] Button selectPlayerButton;
+    public Button hostButton;
+    public Button clientButton;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        selectPlayerButton.onClick.AddListener(Connect);
+        hostButton.onClick.AddListener(OnHostButtonClicked);
+        clientButton.onClick.AddListener(OnClientButtonClicked);
     }
 
-    public void Connect()
+    public void OnHostButtonClicked()
     {
-        LabGameManager.Instance.StartSelection();
+        LabGameManager.Instance.StartAsHost();
+    }
+
+    public void OnClientButtonClicked()
+    {
+        LabGameManager.Instance.StartAsClient();
     }
 }
