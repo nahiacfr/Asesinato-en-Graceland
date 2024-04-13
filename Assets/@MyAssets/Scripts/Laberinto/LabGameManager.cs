@@ -22,7 +22,7 @@ public class LabGameManager : NetworkBehaviour
     {
         Menu = 0,
         WaitingScene = 1,
-        LaOscuridadEnElLaberinto = 3
+        LaOscuridadEnElLaberinto = 2
     }
 
     private NetworkVariable<State> currentState = new NetworkVariable<State>();
@@ -62,7 +62,7 @@ public class LabGameManager : NetworkBehaviour
     public void StartAsHost()
     {
         NetworkManager.Singleton.StartHost();
-        SelectedPlayer(true);
+// SelectedPlayer(true);
         LoadSceneWaitingRoom();
     }
 
@@ -74,7 +74,7 @@ public class LabGameManager : NetworkBehaviour
     public void StartAsClient()
     {
         NetworkManager.Singleton.StartClient();
-        SelectedPlayer(false);
+// SelectedPlayer(false);
         LoadSceneWaitingRoom();
     }
 
