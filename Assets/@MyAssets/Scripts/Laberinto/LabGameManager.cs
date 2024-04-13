@@ -246,18 +246,24 @@ public class LabGameManager : NetworkBehaviour
 
     private void LoadSceneMenu()
     {
+        if (!NetworkManager.Singleton.IsHost)
+            return;
         currentState.Value = State.Menu;
         LoadNetworkScene();
     }
 
     private void LoadSceneGame()
     {
+        if (!NetworkManager.Singleton.IsHost)
+            return;
         currentState.Value = State.LaOscuridadEnElLaberinto;
         LoadNetworkScene();
     }
 
     private void LoadSceneWaitingRoom()
     {
+        if (!NetworkManager.Singleton.IsHost)
+            return;
         currentState.Value = State.WaitingScene;
         LoadNetworkScene();
     }
