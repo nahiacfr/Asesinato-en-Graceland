@@ -1474,6 +1474,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_2__ctor_mC75313448B2ABE238198CDD
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_3_Invoke_m279F1BE667EB6AACD304BC58E7B39C09CE0E2D69_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_3_Invoke_mA9B8756BF3A597179581D20E1EDC4ECAAC73F0F6_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_3__ctor_m945E5A788027E4B7491C93E2ACBD523B5A8E1829_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_3__ctor_mFE0002F38DAAC29805C09ACB9F397DE80F6CB7BC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* WaitingSceneController_ClientConnected_m614C5FC1A57BAE400314AC10A4A1E5C7B4284812_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* WaitingSceneController_ServerStarted_m39BAAA312A97C6A0FA3D870DF58AF9D380809D07_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* XRButton_EndPress_m2B7C95F0865CA262D6FE898723F56DC837D864FF_RuntimeMethod_var;
@@ -9457,6 +9458,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_3_Invoke_m1331145C187AE9ABB8C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_2__ctor_mC75313448B2ABE238198CDD698EA81B87F379C61_gshared (UnityEvent_2_tE1EF7CBD9965CD9466B63C1AD8FB3661A30C25B3* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Events.UnityEvent`3<System.Object,System.Int32,System.Int32>::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_3__ctor_m941EF00E4EF658BB1461C8BD9E6527F9E495DCFE_gshared (UnityEvent_3_tD7E14BDD38F12B63EFECBD1604C666F9AF100EAA* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Events.UnityEvent`3<System.Object,System.Object,System.Int32>::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_3__ctor_mB689E1A15DDACB9ED22ACAB2BCA3D97B893FFA5B_gshared (UnityEvent_3_tCE934710A8225E2574DC47F0C89DD63B7324C18F* __this, const RuntimeMethod* method) ;
 // System.Void Unity.Netcode.FastBufferWriter::WriteUnmanagedSafe<System.Boolean>(T&)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FastBufferWriter_WriteUnmanagedSafe_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m556E2C02530764D05030F387C8FBE7FB6AA24E63_gshared_inline (FastBufferWriter_tE6AFE9436BD125AF309056A81B70F95625FB96EC* __this, bool* ___value0, const RuntimeMethod* method) ;
 // System.Void Unity.Netcode.FastBufferReader::ReadUnmanagedSafe<System.Boolean>(T&)
@@ -9776,8 +9779,6 @@ inline void NetworkVariable_1__ctor_mD88D7CD4A2474543DC66ECCEA02B07300A618847 (N
 {
 	((  void (*) (NetworkVariable_1_tAE3B1DDBCB6086785AC1F9E79526B7FF099B86D7*, PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A, int32_t, int32_t, const RuntimeMethod*))NetworkVariable_1__ctor_mD88D7CD4A2474543DC66ECCEA02B07300A618847_gshared)(__this, ___value0, ___readPerm1, ___writePerm2, method);
 }
-// System.Void LabGameManager::StartAsHost()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LabGameManager_StartAsHost_m8135F7ABFCB8C728D865AFE3A703BC45F0AB5414 (LabGameManager_t132E42FB0844F191AF02AC9BD768DDBC18837241* __this, const RuntimeMethod* method) ;
 // System.Void LabGameManager::LoadSceneWaitingRoom()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LabGameManager_LoadSceneWaitingRoom_m38245FD6FDE03938A356F9F2F191AA07E8989B11 (LabGameManager_t132E42FB0844F191AF02AC9BD768DDBC18837241* __this, const RuntimeMethod* method) ;
 // System.Void LabGameManager::LoadSceneGame()
@@ -9896,6 +9897,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131 (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Events.UnityEvent::AddListener(UnityEngine.Events.UnityAction)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302 (UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* __this, UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* ___call0, const RuntimeMethod* method) ;
+// System.Void LabGameManager::StartAsHost()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LabGameManager_StartAsHost_m8135F7ABFCB8C728D865AFE3A703BC45F0AB5414 (LabGameManager_t132E42FB0844F191AF02AC9BD768DDBC18837241* __this, const RuntimeMethod* method) ;
 // System.Void LabGameManager::StartAsClient()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LabGameManager_StartAsClient_mDBAA94EECB8FC22861A344D7E7D2124C0E090F2F (LabGameManager_t132E42FB0844F191AF02AC9BD768DDBC18837241* __this, const RuntimeMethod* method) ;
 // System.Void Unity.Netcode.NetworkManager::add_OnClientConnectedCallback(System.Action`1<System.UInt64>)
@@ -11040,6 +11043,11 @@ inline void UnityEvent_2__ctor_mC75313448B2ABE238198CDD698EA81B87F379C61 (UnityE
 inline void UnityEvent_3__ctor_m945E5A788027E4B7491C93E2ACBD523B5A8E1829 (UnityEvent_3_t5EE2DC870C12CB60384C5FCBB0DAD36392E701AD* __this, const RuntimeMethod* method)
 {
 	((  void (*) (UnityEvent_3_t5EE2DC870C12CB60384C5FCBB0DAD36392E701AD*, const RuntimeMethod*))UnityEvent_3__ctor_m941EF00E4EF658BB1461C8BD9E6527F9E495DCFE_gshared)(__this, method);
+}
+// System.Void UnityEngine.Events.UnityEvent`3<System.String,System.String,System.Int32>::.ctor()
+inline void UnityEvent_3__ctor_mFE0002F38DAAC29805C09ACB9F397DE80F6CB7BC (UnityEvent_3_t978FAA968D1FEECACADDD0969B822861FA0C6622* __this, const RuntimeMethod* method)
+{
+	((  void (*) (UnityEvent_3_t978FAA968D1FEECACADDD0969B822861FA0C6622*, const RuntimeMethod*))UnityEvent_3__ctor_mB689E1A15DDACB9ED22ACAB2BCA3D97B893FFA5B_gshared)(__this, method);
 }
 // System.Single UnityEngine.Vector3::get_sqrMagnitude()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_get_sqrMagnitude_m43C27DEC47C4811FB30AB474FF2131A963B66FC8_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) ;
@@ -16139,8 +16147,6 @@ IL_0084:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LabGameManager_Start_mE28CE4F99C56691E936B58F55AA4CF6350026D58 (LabGameManager_t132E42FB0844F191AF02AC9BD768DDBC18837241* __this, const RuntimeMethod* method) 
 {
 	{
-		// StartAsHost();
-		LabGameManager_StartAsHost_m8135F7ABFCB8C728D865AFE3A703BC45F0AB5414(__this, NULL);
 		// }
 		return;
 	}
@@ -32368,6 +32374,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LineSelectionEvent__ctor_m419828B3E32BC3
 	}
 	{
 		UnityEvent_3__ctor_m945E5A788027E4B7491C93E2ACBD523B5A8E1829(__this, UnityEvent_3__ctor_m945E5A788027E4B7491C93E2ACBD523B5A8E1829_RuntimeMethod_var);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void TMPro.TMP_TextEventHandler/LinkSelectionEvent::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LinkSelectionEvent__ctor_m4083D6FF46F61AAF956F77FFE849B5166E2579BC (LinkSelectionEvent_t5CE74F742D231580ED2C810ECE394E1A2BC81B3D* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityEvent_3__ctor_mFE0002F38DAAC29805C09ACB9F397DE80F6CB7BC_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		UnityEvent_3__ctor_mFE0002F38DAAC29805C09ACB9F397DE80F6CB7BC(__this, UnityEvent_3__ctor_mFE0002F38DAAC29805C09ACB9F397DE80F6CB7BC_RuntimeMethod_var);
 		return;
 	}
 }
