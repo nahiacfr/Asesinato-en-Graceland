@@ -56,8 +56,7 @@ public class LabGameManager : NetworkBehaviour
 
     private void Start()
     {
-        StartAsClient();
-        LoadSceneWaitingRoom();
+        StartAsHost();
     }
 
     /*  StartAsHost
