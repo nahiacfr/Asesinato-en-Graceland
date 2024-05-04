@@ -16,7 +16,9 @@ public class LabGameManager : NetworkBehaviour
     public UnityEvent ClientDisconnected = new UnityEvent();
 
     public NetworkVariable<PlayerData> selectedPlayer;
-
+   
+    [SerializeField] Transform hostSpawnPoint;
+    [SerializeField] Transform clientSpawnPoint; 
 
     public enum State
     {
@@ -244,6 +246,25 @@ public class LabGameManager : NetworkBehaviour
 
     //LoadScene functions
 
+    public void SpawnPlayer2(float hostX, float hostY, float clientX, float clientY)
+    {
+        Vector3 spawnPosition;
+
+        if (NetworkManager.Singleton.IsHost)
+        {
+            spawnPosition = new Vector3(hostX, hostY, hostSpawnPoint.position.z);
+        }
+        else
+        {
+            spawnPosition = new Vector3(clientX, clientY, clientSpawnPoint.position.z);
+        }
+
+        UnityEngine.Object.Instantiate(leftPlayerPrefab, spawnPosition, Quaternion.identity);
+    }
+
+
+
+
     private void LoadSceneMenu()
     {
         if (!NetworkManager.Singleton.IsHost)
@@ -252,13 +273,19 @@ public class LabGameManager : NetworkBehaviour
         LoadNetworkScene();
     }
 
+
+
+
     private void LoadSceneGame()
     {
         if (!NetworkManager.Singleton.IsHost)
             return;
+
         currentState.Value = State.LaOscuridadEnElLaberinto;
         LoadNetworkScene();
+        SpawnPlayer2(10.0f, 2.0f, 1.0f, 0.0f);
     }
+   
 
     private void LoadSceneWaitingRoom()
     {

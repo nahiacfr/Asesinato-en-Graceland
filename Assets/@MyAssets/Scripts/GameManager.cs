@@ -10,6 +10,11 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [SerializeField] private string ipAddress = "127.0.0.1"; // Dirección IP por defecto
+   
+    [SerializeField] private GameObject playerPrefab; 
+
+    [SerializeField] private Transform hostSpawnPoint;
+    [SerializeField] private Transform clientSpawnPoint;
 
     public enum State
     {
@@ -95,5 +100,6 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+
 }
 
