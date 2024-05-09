@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
@@ -8,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class LabGameManager : NetworkBehaviour
 {
-    const int MAX_PLAYER_AMOUNT = 2;
+    const int MAX_PLAYER_AMOUNT = 1;
     public static LabGameManager Instance { get; private set; }
 
     [SerializeField] GameObject leftPlayerPrefab, rightPlayerPrefab;
@@ -24,7 +25,8 @@ public class LabGameManager : NetworkBehaviour
     {
         Menu = 0,
         WaitingScene = 1,
-        LaOscuridadEnElLaberinto = 2
+        LaOscuridadEnElLaberinto = 2,
+        Basic = 3
     }
 
     private NetworkVariable<State> currentState = new NetworkVariable<State>();
@@ -58,6 +60,7 @@ public class LabGameManager : NetworkBehaviour
 
     private void Start()
     {
+        ResetVariables();
         StartAsHost();
     }
 
@@ -179,6 +182,8 @@ public class LabGameManager : NetworkBehaviour
             type = _left ? 0 : 1
         };
 
+        Debug.Log(playerReadyDictionary);
+        Debug.Log(_params.Receive.SenderClientId);
         //Marcamos como ready al jugador
         playerReadyDictionary[_params.Receive.SenderClientId] = true;
 
@@ -252,11 +257,11 @@ public class LabGameManager : NetworkBehaviour
 
         if (NetworkManager.Singleton.IsHost)
         {
-            spawnPosition = new Vector3(hostX, hostY, hostSpawnPoint.position.z);
+            spawnPosition = new Vector3(hostX, hostY, 1);
         }
         else
         {
-            spawnPosition = new Vector3(clientX, clientY, clientSpawnPoint.position.z);
+            spawnPosition = new Vector3(clientX, clientY, -1);
         }
 
         UnityEngine.Object.Instantiate(leftPlayerPrefab, spawnPosition, Quaternion.identity);
@@ -280,10 +285,21 @@ public class LabGameManager : NetworkBehaviour
     {
         if (!NetworkManager.Singleton.IsHost)
             return;
-
+        Debug.Log("LoadSceneGame");
         currentState.Value = State.LaOscuridadEnElLaberinto;
+        Debug.Log("LoadSceneGame2");
+        //LoadNetworkScene();
+        StartCoroutine(WaitAndLoad());
+        Debug.Log("LoadSceneGame3");
+        //SpawnPlayer2(10.0f, 2.0f, 1.0f, 0.0f);
+        Debug.Log("LoadSceneGame4");
+    }
+
+    IEnumerator WaitAndLoad()
+    {
+        yield return new WaitForSeconds(1);
+        Debug.Log("LoadSceneGame3");
         LoadNetworkScene();
-        SpawnPlayer2(10.0f, 2.0f, 1.0f, 0.0f);
     }
    
 
@@ -300,6 +316,7 @@ public class LabGameManager : NetworkBehaviour
      */
     private void LoadNetworkScene()
     {
+        Debug.Log(currentState.Value.ToString());
         Time.timeScale = 1;
         NetworkManager.Singleton.SceneManager.LoadScene(currentState.Value.ToString(),
             LoadSceneMode.Single);

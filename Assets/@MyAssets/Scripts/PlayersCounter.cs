@@ -5,6 +5,7 @@ using TMPro;
 
 public class PlayersCounter : MonoBehaviour
 {
+    const int MAX_PLAYER_AMOUNT = 1;
     public int numberOfPlayers = 0;
     public TextMeshProUGUI playersText;
 
@@ -29,6 +30,11 @@ public class PlayersCounter : MonoBehaviour
         if (playersText != null)
         {
             playersText.text = numberOfPlayers.ToString();
+            if (numberOfPlayers == MAX_PLAYER_AMOUNT)
+            {
+                Debug.Log("Max Players Reach");
+                LabGameManager.Instance.SelectedPlayer(false);
+            }
         }
         else
         {
