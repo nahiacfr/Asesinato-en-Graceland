@@ -7,6 +7,7 @@ TagManager:
   - Jugador
   - Player1
   - Player2
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
