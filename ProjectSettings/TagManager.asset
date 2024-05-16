@@ -7,8 +7,7 @@ TagManager:
   - Jugador
   - Player1
   - Player2
-  - BlueDoor
-  - RedDoor
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
