@@ -19,7 +19,9 @@ public class LabGameManager : NetworkBehaviour
     public NetworkVariable<PlayerData> selectedPlayer;
    
     [SerializeField] Transform hostSpawnPoint;
-    [SerializeField] Transform clientSpawnPoint; 
+    [SerializeField] Transform clientSpawnPoint;
+
+    public NetworkVariable<bool> redDoor, blueDoor;
 
     public enum State
     {
@@ -32,6 +34,8 @@ public class LabGameManager : NetworkBehaviour
     private NetworkVariable<State> currentState = new NetworkVariable<State>();
 
     private Dictionary<ulong, bool> playerReadyDictionary;
+
+    private GameObject[] redDoors, blueDoors;
 
 
     private void Awake()
@@ -56,6 +60,51 @@ public class LabGameManager : NetworkBehaviour
         currentState.Value = State.Menu;
 
         selectedPlayer = new NetworkVariable<PlayerData>();
+
+        redDoor.OnValueChanged += ChangeRedDoors;
+        blueDoor.OnValueChanged += ChangeBlueDoors;
+    }
+
+    private void ChangeBlueDoors(bool previousValue, bool newValue)
+    {
+        ChangeDoors("Blue");
+    }
+
+    private void ChangeRedDoors(bool previousValue, bool newValue)
+    {
+        Debug.Log("ChangeRedDoors");
+        ChangeDoors("Red");
+    }
+
+    private void ChangeDoors(String color)
+    {
+        if (color == "Red")
+        {
+            Debug.Log("ChageDoors - Red");
+            foreach (GameObject door in redDoors)
+            {
+                door.SetActive(false);
+                Debug.Log("Red door false");
+            }
+            foreach (GameObject door in blueDoors)
+            {
+                door.SetActive(true);
+                Debug.Log("Blue door true");
+            }
+        }
+        else if (color == "Blue")
+        {
+            foreach (GameObject door in redDoors)
+            {
+                door.SetActive(true);
+                Debug.Log("Red door true");
+            }
+            foreach (GameObject door in blueDoors)
+            {
+                door.SetActive(false);
+                Debug.Log("Blue door false");
+            }
+        }
     }
 
     private void Start()
@@ -328,5 +377,25 @@ public class LabGameManager : NetworkBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void OpenCloseDoors(String color)
+    {
+        if (!IsHost) return;
+        if(color == "Red")
+        {
+            redDoor.Value = true;
+            blueDoor.Value = false;
+        }else if (color == "Blue")
+        {
+            redDoor.Value = false;
+            blueDoor.Value = true;
+        }
+    }
+
+    public void chargeDoors()
+    {
+        redDoors = GameObject.FindGameObjectsWithTag("RedDoor");
+        blueDoors = GameObject.FindGameObjectsWithTag("BlueDoor");
     }
 }
