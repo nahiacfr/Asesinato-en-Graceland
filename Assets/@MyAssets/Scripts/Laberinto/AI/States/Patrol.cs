@@ -5,27 +5,22 @@ using UnityEngine.AI;
 
 public class Patrol : State
 {
-
     int currentIndex = -1;
 
     public Patrol(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player)
         : base(_npc, _agent, _anim, _player)
     {
-
         name = STATE.PATROL;
-        agent.speed = 2.0f;
+        agent.speed = 0.7f;  // Reducir la velocidad para que se alinee con la animación
         agent.isStopped = false;
-
     }
 
     public override void Enter()
     {
-
         float lastDistance = Mathf.Infinity;
 
         for (int i = 0; i < CheckpointsEnvironment.Singleton.Checkpoints.Count; ++i)
         {
-
             GameObject thisWP = CheckpointsEnvironment.Singleton.Checkpoints[i];
             float distance = Vector3.Distance(npc.transform.position, thisWP.transform.position);
             if (distance < lastDistance)
@@ -35,13 +30,12 @@ public class Patrol : State
             }
         }
 
-        anim.SetTrigger("isWalking");
+        SetAnimatorBooleans(false, true, false);
         base.Enter();
     }
 
     public override void Update()
     {
-
         if (agent.remainingDistance < 1)
         {
             if (currentIndex >= CheckpointsEnvironment.Singleton.Checkpoints.Count - 1)
@@ -58,7 +52,6 @@ public class Patrol : State
 
         if (CanSeePlayer())
         {
-
             nextState = new Pursue(npc, agent, anim, player);
             stage = EVENT.EXIT;
         }
@@ -66,7 +59,7 @@ public class Patrol : State
 
     public override void Exit()
     {
-        anim.ResetTrigger("isWalking");
+        SetAnimatorBooleans(false, false, false);
         base.Exit();
     }
 }

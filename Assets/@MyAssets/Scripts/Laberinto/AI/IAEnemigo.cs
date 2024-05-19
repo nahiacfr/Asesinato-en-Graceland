@@ -13,12 +13,10 @@ public class IAEnemigo : MonoBehaviour
 
     void Start()
     {
-
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         currentState = new Idle(gameObject, agent, anim, player);
     }
-
 
     void Update()
     {

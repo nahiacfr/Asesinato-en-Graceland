@@ -5,10 +5,8 @@ using UnityEngine.AI;
 
 public class State
 {
-
     public enum STATE
     {
-
         IDLE,
         PATROL,
         PURSUE
@@ -34,7 +32,6 @@ public class State
 
     public State(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player)
     {
-
         npc = _npc;
         agent = _agent;
         anim = _anim;
@@ -60,18 +57,29 @@ public class State
 
     public bool CanSeePlayer()
     {
-
         Vector3 direction = player.position - npc.transform.position;
         float angle = Vector3.Angle(direction, npc.transform.forward);
 
         if (direction.magnitude < visDist && angle < visAngle)
         {
-
-            return true;
+            RaycastHit hit;
+            if (Physics.Raycast(npc.transform.position, direction.normalized, out hit, visDist))
+            {
+                if (hit.collider.gameObject == player.gameObject)
+                {
+                    return true;
+                }
+            }
         }
 
         return false;
     }
+
+
+    protected void SetAnimatorBooleans(bool isIdle, bool isPatrolling, bool isRunning)
+    {
+        anim.SetBool("isIdle", isIdle);
+        anim.SetBool("isPatrolling", isPatrolling);
+        anim.SetBool("isRunning", isRunning);
+    }
 }
-
-

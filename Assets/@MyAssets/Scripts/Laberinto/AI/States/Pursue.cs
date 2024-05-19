@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Pursue : State
 {
-
     public Pursue(GameObject _npc, UnityEngine.AI.NavMeshAgent _agent, Animator _anim, Transform _player)
         : base(_npc, _agent, _anim, _player)
     {
@@ -15,14 +15,12 @@ public class Pursue : State
 
     public override void Enter()
     {
-
-        anim.SetTrigger("isRunning");
+        SetAnimatorBooleans(false, false, true);
         base.Enter();
     }
 
     public override void Update()
     {
-
         agent.SetDestination(player.position);
 
         if (agent.hasPath)
@@ -37,7 +35,7 @@ public class Pursue : State
 
     public override void Exit()
     {
-        anim.ResetTrigger("isRunning");
+        SetAnimatorBooleans(false, false, false);
         base.Exit();
     }
 }

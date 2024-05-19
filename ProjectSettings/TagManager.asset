@@ -8,6 +8,8 @@ TagManager:
   - Player1
   - Player2
   - Checkpoint
+  - BlueDoor
+  - RedDoor
   layers:
   - Default
   - TransparentFX
