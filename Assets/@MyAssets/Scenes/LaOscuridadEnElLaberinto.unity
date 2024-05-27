@@ -1138,7 +1138,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1057673788}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &183460087
 MeshCollider:
@@ -2015,7 +2015,7 @@ GameObject:
   - component: {fileID: 379076878}
   m_Layer: 0
   m_Name: Door Red 2
-  m_TagString: Untagged
+  m_TagString: RedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2531,7 +2531,7 @@ GameObject:
   - component: {fileID: 473280403}
   m_Layer: 0
   m_Name: Door Red 2
-  m_TagString: Untagged
+  m_TagString: RedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3030,7 +3030,7 @@ GameObject:
   - component: {fileID: 524845132}
   m_Layer: 0
   m_Name: Door Blue 2
-  m_TagString: Untagged
+  m_TagString: BlueDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3449,7 +3449,7 @@ GameObject:
   - component: {fileID: 565055736}
   m_Layer: 0
   m_Name: Door Red
-  m_TagString: Untagged
+  m_TagString: RedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3546,7 +3546,7 @@ GameObject:
   - component: {fileID: 568305143}
   m_Layer: 0
   m_Name: Door Blue
-  m_TagString: Untagged
+  m_TagString: BlueDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3670,7 +3670,7 @@ Transform:
   - {fileID: 838931682}
   - {fileID: 1089629789}
   m_Father: {fileID: 1057673788}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &592456186
 GameObject:
@@ -3866,6 +3866,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609223842}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &617022847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 617022848}
+  m_Layer: 0
+  m_Name: SpawnHost
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &617022848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617022847}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.6109562, y: 6.89674, z: 10.806184}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1864882036}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &618468498
 GameObject:
   m_ObjectHideFlags: 0
@@ -4118,7 +4149,7 @@ GameObject:
   - component: {fileID: 634936606}
   m_Layer: 0
   m_Name: Door Red
-  m_TagString: Untagged
+  m_TagString: RedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4590,7 +4621,7 @@ GameObject:
   - component: {fileID: 683981058}
   m_Layer: 0
   m_Name: Door Red
-  m_TagString: Untagged
+  m_TagString: RedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4687,7 +4718,7 @@ GameObject:
   - component: {fileID: 720355503}
   m_Layer: 0
   m_Name: Door Blue 2
-  m_TagString: Untagged
+  m_TagString: BlueDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4699,14 +4730,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720355501}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1.3462887, y: -0.68343174, z: 1.5139234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.079, y: -0.68343174, z: -0.621}
   m_LocalScale: {x: 1.1999999, y: 3, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1515839647}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &720355503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5206,7 +5237,7 @@ Transform:
   - {fileID: 1294796788}
   - {fileID: 1226283305}
   m_Father: {fileID: 1057673788}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &837228513
 GameObject:
@@ -5452,7 +5483,7 @@ GameObject:
   - component: {fileID: 850773832}
   m_Layer: 0
   m_Name: Door Red 2
-  m_TagString: Untagged
+  m_TagString: RedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5549,7 +5580,7 @@ GameObject:
   - component: {fileID: 856372988}
   m_Layer: 0
   m_Name: Door Blue 2
-  m_TagString: Untagged
+  m_TagString: BlueDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5655,12 +5686,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870517621}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.64, y: 1.48, z: -0.59}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.6109562, y: -19.31326, z: 10.806184}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1057673788}
+  m_Father: {fileID: 1864882036}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &909533482
@@ -5968,7 +5999,7 @@ GameObject:
   - component: {fileID: 926701687}
   m_Layer: 0
   m_Name: Door Blue
-  m_TagString: Untagged
+  m_TagString: BlueDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6516,7 +6547,7 @@ Transform:
   - {fileID: 1409865707}
   - {fileID: 1972382823}
   m_Father: {fileID: 1057673788}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1037765963
 GameObject:
@@ -6740,7 +6771,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 870517622}
   - {fileID: 183460086}
   - {fileID: 826681511}
   - {fileID: 1035127632}
@@ -6864,7 +6894,7 @@ GameObject:
   - component: {fileID: 1083785713}
   m_Layer: 0
   m_Name: Door Blue 2
-  m_TagString: Untagged
+  m_TagString: BlueDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7238,7 +7268,7 @@ Transform:
   - {fileID: 1749125920}
   - {fileID: 1519734731}
   m_Father: {fileID: 1057673788}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1183110452
 GameObject:
@@ -7254,7 +7284,7 @@ GameObject:
   - component: {fileID: 1183110454}
   m_Layer: 0
   m_Name: Door Red
-  m_TagString: Untagged
+  m_TagString: RedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7351,7 +7381,7 @@ GameObject:
   - component: {fileID: 1200406899}
   m_Layer: 0
   m_Name: Door Red 2
-  m_TagString: Untagged
+  m_TagString: RedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7678,7 +7708,7 @@ GameObject:
   - component: {fileID: 1226283306}
   m_Layer: 0
   m_Name: Door Blue
-  m_TagString: Untagged
+  m_TagString: BlueDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9312,7 +9342,7 @@ Transform:
   - {fileID: 143836418}
   - {fileID: 1208795722}
   m_Father: {fileID: 1057673788}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1391501260
 GameObject:
@@ -9651,7 +9681,7 @@ Transform:
   - {fileID: 926701686}
   - {fileID: 759092811}
   m_Father: {fileID: 1057673788}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1465830626
 GameObject:
@@ -9893,7 +9923,7 @@ Transform:
   - {fileID: 29388086}
   - {fileID: 1901929455}
   m_Father: {fileID: 1057673788}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1519734730
 GameObject:
@@ -11341,7 +11371,7 @@ GameObject:
   - component: {fileID: 1672692784}
   m_Layer: 0
   m_Name: Door Blue 2
-  m_TagString: Untagged
+  m_TagString: BlueDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11990,7 +12020,7 @@ GameObject:
   - component: {fileID: 1716825007}
   m_Layer: 0
   m_Name: Door Red
-  m_TagString: Untagged
+  m_TagString: RedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12849,6 +12879,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849521207}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1864882035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1864882036}
+  m_Layer: 0
+  m_Name: ---SPAWNS---
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1864882036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864882035}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.223101, y: 17.6049, z: -14.214205}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 870517622}
+  - {fileID: 617022848}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1876126053
 GameObject:
   m_ObjectHideFlags: 0
@@ -12863,7 +12926,7 @@ GameObject:
   - component: {fileID: 1876126055}
   m_Layer: 0
   m_Name: Door Red 2
-  m_TagString: Untagged
+  m_TagString: RedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12875,14 +12938,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1876126053}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1.3462887, y: -0.68343174, z: -6.6360765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.81, y: -0.68343174, z: -8.378}
   m_LocalScale: {x: 1.1999999, y: 3, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1113989442}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1876126055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13154,7 +13217,7 @@ GameObject:
   - component: {fileID: 1894931593}
   m_Layer: 0
   m_Name: Door Blue 2
-  m_TagString: Untagged
+  m_TagString: BlueDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13251,7 +13314,7 @@ GameObject:
   - component: {fileID: 1901929456}
   m_Layer: 0
   m_Name: Door Blue
-  m_TagString: Untagged
+  m_TagString: BlueDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14014,7 +14077,7 @@ GameObject:
   - component: {fileID: 1972382824}
   m_Layer: 0
   m_Name: Door Blue
-  m_TagString: Untagged
+  m_TagString: BlueDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14223,7 +14286,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1057673788}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1997835453
 GameObject:

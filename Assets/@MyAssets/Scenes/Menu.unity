@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15706864, g: 0.29086187, b: 0.47342837, a: 1}
+  m_IndirectSpecularColor: {r: 0.1571315, g: 0.29067084, b: 0.4731707, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1411,7 +1411,7 @@ MonoBehaviour:
   m_MaxConnectAttempts: 60
   m_DisconnectTimeoutMS: 30000
   ConnectionData:
-    Address: 127.0.0.1
+    Address: 192.168.1.144
     Port: 7777
     ServerListenAddress: 
   DebugSimulator:
@@ -5327,6 +5327,10 @@ MonoBehaviour:
       m_Calls: []
   hostSpawnPoint: {fileID: 0}
   clientSpawnPoint: {fileID: 0}
+  redDoor:
+    m_InternalValue: 0
+  blueDoor:
+    m_InternalValue: 0
 --- !u!4 &1344749939
 Transform:
   m_ObjectHideFlags: 0

@@ -7,29 +7,45 @@ public class WaitingSceneController : NetworkBehaviour
 {
     private void Start()
     {
-        NetworkManager.Singleton.OnClientConnectedCallback += ClientConnected;
-        NetworkManager.Singleton.OnServerStarted += ServerStarted;
+        if (IsServer)
+        {
+            NetworkManager.Singleton.OnClientConnectedCallback += ClientConnected;
+            NetworkManager.Singleton.OnClientDisconnectCallback += ClientDisconnected;
+        }
     }
-    override
-    public void OnDestroy()
+
+    public override void OnDestroy()
     {
-        NetworkManager.Singleton.OnClientConnectedCallback -= ClientConnected;
-        NetworkManager.Singleton.OnServerStarted -= ServerStarted;
+        if (IsServer)
+        {
+            NetworkManager.Singleton.OnClientConnectedCallback -= ClientConnected;
+            NetworkManager.Singleton.OnClientDisconnectCallback -= ClientDisconnected;
+        }
     }
 
     private void ClientConnected(ulong clientId)
     {
-        if (NetworkManager.Singleton.IsServer && NetworkManager.Singleton.ConnectedClientsList.Count >= 2)
-        {
-            GameManager.Instance.LoadMainScene();
-        }
+        Debug.Log($"Client connected: {clientId}");
+        CheckPlayersAndStartGame();
     }
 
-    private void ServerStarted()
+    private void ClientDisconnected(ulong clientId)
     {
-        if (NetworkManager.Singleton.IsServer && NetworkManager.Singleton.ConnectedClientsList.Count >= 2)
+        Debug.Log($"Client disconnected: {clientId}");
+        CheckPlayersAndStartGame();
+    }
+
+    private void CheckPlayersAndStartGame()
+    {
+        if (IsServer)
         {
-            GameManager.Instance.LoadMainScene();
+            int connectedPlayers = NetworkManager.Singleton.ConnectedClientsList.Count;
+            Debug.Log($"Connected players: {connectedPlayers}");
+
+            if (connectedPlayers >= 2)
+            {
+                GameManager.Instance.LoadMainScene();
+            }
         }
     }
 }

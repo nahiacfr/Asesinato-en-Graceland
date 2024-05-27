@@ -312,6 +312,8 @@ struct List_1_t70EE7982F45810D4B024CF720D910E67974A3094;
 struct ObjectPool_1_t8AC25F7642B86DC900C1E5BB4FF5DDB43900D6F4;
 // UnityEngine.UIElements.ObjectPool`1<UnityEngine.UIElements.Experimental.ValueAnimation`1<UnityEngine.UIElements.Experimental.StyleValues>>
 struct ObjectPool_1_t048E004E7532AED8FD10569876C6065B7527D2AE;
+// Unity.Netcode.UserNetworkVariableSerialization`1/ReadValueDelegate<System.Boolean>
+struct ReadValueDelegate_t6F7B349746C05240C125EAE9D57CA768633AAC7A;
 // Unity.Netcode.UserNetworkVariableSerialization`1/ReadValueDelegate<System.Int32Enum>
 struct ReadValueDelegate_tAD1E3A0BE3B6577EA2A9D712E7754E78DDD61189;
 // Unity.Netcode.UserNetworkVariableSerialization`1/ReadValueDelegate<System.Object>
@@ -356,6 +358,8 @@ struct UnsafeList_1_t557C9C31121D73D732851DA0465D2D22CFFBF099;
 struct UnsafeList_1_t5D77D9399869F973DD7861206FE7B0BB5254BEDA;
 // Unity.Collections.LowLevel.Unsafe.UnsafeList`1<Unity.Netcode.Transports.UTP.UnityTransport/SendTarget>
 struct UnsafeList_1_t501C48EF6B212CE7B242B47AE1184A6DE456C629;
+// Unity.Netcode.UserNetworkVariableSerialization`1<System.Boolean>
+struct UserNetworkVariableSerialization_1_t1CB92E2F86E7BCD39F83CE7C44C53F5385130FFA;
 // Unity.Netcode.UserNetworkVariableSerialization`1<System.Int32Enum>
 struct UserNetworkVariableSerialization_1_t966744A71A1EB9770F9928D55187D726085D4AD1;
 // Unity.Netcode.UserNetworkVariableSerialization`1<System.Object>
@@ -450,6 +454,8 @@ struct ValueCollection_tE8095E528D5C491DA5BF2C8694B3FEF0733A8BEB;
 struct ValueCollection_t96259FE42C45AADD5918C1CDD01C7D732504C523;
 // System.Collections.Generic.Dictionary`2/ValueCollection<UnityEngine.InputSystem.Utilities.InternedString,System.Object>
 struct ValueCollection_t2383760C45EAC651EF20A2036B5D2DBC1B191DC9;
+// Unity.Netcode.UserNetworkVariableSerialization`1/WriteValueDelegate<System.Boolean>
+struct WriteValueDelegate_tAB5E09C0958FE12D6017BA124FB35AEC2A0F69EE;
 // Unity.Netcode.UserNetworkVariableSerialization`1/WriteValueDelegate<System.Int32Enum>
 struct WriteValueDelegate_t56FDBE53C8F6ADF47F9C8662115BF484A42703F8;
 // Unity.Netcode.UserNetworkVariableSerialization`1/WriteValueDelegate<System.Object>
@@ -1689,6 +1695,19 @@ struct ObjectPool_1_t048E004E7532AED8FD10569876C6065B7527D2AE  : public RuntimeO
 	Stack_1_tE1C30C6F23AA6A79A98D33CCD0ADFF9426DB116D* ___m_Stack_0;
 	// System.Int32 UnityEngine.UIElements.ObjectPool`1::m_MaxSize
 	int32_t ___m_MaxSize_1;
+};
+
+// Unity.Netcode.UserNetworkVariableSerialization`1<System.Boolean>
+struct UserNetworkVariableSerialization_1_t1CB92E2F86E7BCD39F83CE7C44C53F5385130FFA  : public RuntimeObject
+{
+};
+
+struct UserNetworkVariableSerialization_1_t1CB92E2F86E7BCD39F83CE7C44C53F5385130FFA_StaticFields
+{
+	// Unity.Netcode.UserNetworkVariableSerialization`1/WriteValueDelegate<T> Unity.Netcode.UserNetworkVariableSerialization`1::WriteValue
+	WriteValueDelegate_tAB5E09C0958FE12D6017BA124FB35AEC2A0F69EE* ___WriteValue_0;
+	// Unity.Netcode.UserNetworkVariableSerialization`1/ReadValueDelegate<T> Unity.Netcode.UserNetworkVariableSerialization`1::ReadValue
+	ReadValueDelegate_t6F7B349746C05240C125EAE9D57CA768633AAC7A* ___ReadValue_1;
 };
 
 // Unity.Netcode.UserNetworkVariableSerialization`1<System.Int32Enum>
@@ -18751,6 +18770,22 @@ IL2CPP_EXTERN_C  ParallelWriter_t940D3FB37B7548484C5E6F493E6AB17E17D94326 Unsafe
 	ParallelWriter_t940D3FB37B7548484C5E6F493E6AB17E17D94326 _returnValue;
 	_returnValue = UnsafePtrList_1_AsParallelWriter_mF5ABD945122C275DE713A52BA88B5A83EEEB40D0(_thisAdjusted, method);
 	return _returnValue;
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void Unity.Netcode.UserNetworkVariableSerialization`1<System.Boolean>::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UserNetworkVariableSerialization_1__ctor_m7ED462631E473FF7F292D600A85D1093F9D808FC_gshared (UserNetworkVariableSerialization_1_t1CB92E2F86E7BCD39F83CE7C44C53F5385130FFA* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2((RuntimeObject*)__this, NULL);
+		return;
+	}
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

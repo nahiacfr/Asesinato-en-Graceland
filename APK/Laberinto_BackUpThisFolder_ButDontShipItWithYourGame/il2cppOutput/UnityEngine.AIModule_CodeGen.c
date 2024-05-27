@@ -18,25 +18,31 @@ extern void NavMeshAgent_SetDestination_mD5D960933827F1F14B29CF4A3B6F305C064EBF4
 extern void NavMeshAgent_set_destination_m5F0A8E4C8ED93798D6B9CE496B10FCE5B7461B95 (void);
 // 0x00000003 System.Single UnityEngine.AI.NavMeshAgent::get_remainingDistance()
 extern void NavMeshAgent_get_remainingDistance_m051C1B408E2740A95B5A5577C5EC7222311AA73A (void);
-// 0x00000004 System.Void UnityEngine.AI.NavMeshAgent::set_speed(System.Single)
+// 0x00000004 System.Boolean UnityEngine.AI.NavMeshAgent::get_hasPath()
+extern void NavMeshAgent_get_hasPath_mE56295431F7774ADC8C39CFD87E13073DDDA178A (void);
+// 0x00000005 System.Void UnityEngine.AI.NavMeshAgent::set_isStopped(System.Boolean)
+extern void NavMeshAgent_set_isStopped_mF374E697F39845233B84D8C4873DEABC3AA490DF (void);
+// 0x00000006 System.Void UnityEngine.AI.NavMeshAgent::set_speed(System.Single)
 extern void NavMeshAgent_set_speed_m820E45289B3AE7DEE16F2F4BF163EAC361E64646 (void);
-// 0x00000005 System.Void UnityEngine.AI.NavMeshAgent::set_acceleration(System.Single)
+// 0x00000007 System.Void UnityEngine.AI.NavMeshAgent::set_acceleration(System.Single)
 extern void NavMeshAgent_set_acceleration_mEAA92D7837B8D726891846DBBB6114DB13CD597E (void);
-// 0x00000006 System.Boolean UnityEngine.AI.NavMeshAgent::SetDestination_Injected(UnityEngine.Vector3&)
+// 0x00000008 System.Boolean UnityEngine.AI.NavMeshAgent::SetDestination_Injected(UnityEngine.Vector3&)
 extern void NavMeshAgent_SetDestination_Injected_mC3EF405F5AAFF9F98C5D5AECAD641525CDF742EA (void);
-// 0x00000007 System.Void UnityEngine.AI.NavMeshAgent::set_destination_Injected(UnityEngine.Vector3&)
+// 0x00000009 System.Void UnityEngine.AI.NavMeshAgent::set_destination_Injected(UnityEngine.Vector3&)
 extern void NavMeshAgent_set_destination_Injected_m7195764B7610A893730EB50F1D9EB70BCDE65BD8 (void);
-// 0x00000008 System.Void UnityEngine.AI.NavMesh::Internal_CallOnNavMeshPreUpdate()
+// 0x0000000A System.Void UnityEngine.AI.NavMesh::Internal_CallOnNavMeshPreUpdate()
 extern void NavMesh_Internal_CallOnNavMeshPreUpdate_m2A62DB32F5E1435F527AD8A59A882B9F2A193177 (void);
-// 0x00000009 System.Void UnityEngine.AI.NavMesh/OnNavMeshPreUpdate::.ctor(System.Object,System.IntPtr)
+// 0x0000000B System.Void UnityEngine.AI.NavMesh/OnNavMeshPreUpdate::.ctor(System.Object,System.IntPtr)
 extern void OnNavMeshPreUpdate__ctor_m7142A3AA991BE50B637A16D946AB7604C64EF9BA (void);
-// 0x0000000A System.Void UnityEngine.AI.NavMesh/OnNavMeshPreUpdate::Invoke()
+// 0x0000000C System.Void UnityEngine.AI.NavMesh/OnNavMeshPreUpdate::Invoke()
 extern void OnNavMeshPreUpdate_Invoke_mFB224B9BBF9C78B7F39AA91A047F175C69897914 (void);
-static Il2CppMethodPointer s_methodPointers[10] = 
+static Il2CppMethodPointer s_methodPointers[12] = 
 {
 	NavMeshAgent_SetDestination_mD5D960933827F1F14B29CF4A3B6F305C064EBF46,
 	NavMeshAgent_set_destination_m5F0A8E4C8ED93798D6B9CE496B10FCE5B7461B95,
 	NavMeshAgent_get_remainingDistance_m051C1B408E2740A95B5A5577C5EC7222311AA73A,
+	NavMeshAgent_get_hasPath_mE56295431F7774ADC8C39CFD87E13073DDDA178A,
+	NavMeshAgent_set_isStopped_mF374E697F39845233B84D8C4873DEABC3AA490DF,
 	NavMeshAgent_set_speed_m820E45289B3AE7DEE16F2F4BF163EAC361E64646,
 	NavMeshAgent_set_acceleration_mEAA92D7837B8D726891846DBBB6114DB13CD597E,
 	NavMeshAgent_SetDestination_Injected_mC3EF405F5AAFF9F98C5D5AECAD641525CDF742EA,
@@ -45,24 +51,26 @@ static Il2CppMethodPointer s_methodPointers[10] =
 	OnNavMeshPreUpdate__ctor_m7142A3AA991BE50B637A16D946AB7604C64EF9BA,
 	OnNavMeshPreUpdate_Invoke_mFB224B9BBF9C78B7F39AA91A047F175C69897914,
 };
-static const int32_t s_InvokerIndices[10] = 
+static const int32_t s_InvokerIndices[12] = 
 {
-	5061,
-	7108,
-	8800,
-	7048,
-	7048,
-	4770,
-	6823,
-	15405,
-	3804,
-	8873,
+	5062,
+	7109,
+	8801,
+	8595,
+	6843,
+	7049,
+	7049,
+	4771,
+	6824,
+	15406,
+	3805,
+	8874,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_AIModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_AIModule_CodeGenModule = 
 {
 	"UnityEngine.AIModule.dll",
-	10,
+	12,
 	s_methodPointers,
 	0,
 	NULL,
