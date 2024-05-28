@@ -10,6 +10,7 @@ TagManager:
   - Checkpoint
   - BlueDoor
   - RedDoor
+  - Exit
   layers:
   - Default
   - TransparentFX

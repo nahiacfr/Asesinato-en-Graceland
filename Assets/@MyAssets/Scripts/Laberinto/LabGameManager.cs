@@ -20,7 +20,8 @@ public class LabGameManager : NetworkBehaviour
     [SerializeField] Transform hostSpawnPoint;
     [SerializeField] Transform clientSpawnPoint;
 
-    public NetworkVariable<bool> redDoor, blueDoor;
+    public NetworkVariable<bool> redDoor = new NetworkVariable<bool>(false);
+    public NetworkVariable<bool> blueDoor = new NetworkVariable<bool>(false);
 
     public enum State
     {
@@ -76,7 +77,7 @@ public class LabGameManager : NetworkBehaviour
     {
         if (color == "Red")
         {
-            Debug.Log("ChageDoors - Red");
+            Debug.Log("ChangeDoors - Red");
             foreach (GameObject door in redDoors)
             {
                 door.SetActive(false);
@@ -107,6 +108,7 @@ public class LabGameManager : NetworkBehaviour
     {
         ResetVariables();
         StartAsClient();
+        chargeDoors();
     }
 
     public void StartAsHost()
