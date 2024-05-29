@@ -7935,7 +7935,7 @@ IL_005d_1:
 				Type_t* L_16 = V_1;
 				NullCheck(L_16);
 				RuntimeArray* L_17;
-				L_17 = VirtualFuncInvoker0< RuntimeArray* >::Invoke(116 /* System.Array System.Type::GetEnumValues() */, L_16);
+				L_17 = VirtualFuncInvoker0< RuntimeArray* >::Invoke(119 /* System.Array System.Type::GetEnumValues() */, L_16);
 				RuntimeObject* L_18;
 				L_18 = Enumerable_Cast_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m9ADDB03C7FE2ED8E2D9B9335721B7462C73C2176(L_17, Enumerable_Cast_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m9ADDB03C7FE2ED8E2D9B9335721B7462C73C2176_RuntimeMethod_var);
 				Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_19;
@@ -9043,7 +9043,7 @@ IL_0031_1:
 				Assembly_t* L_14 = V_4;
 				NullCheck(L_14);
 				Type_t* L_15;
-				L_15 = VirtualFuncInvoker1< Type_t*, String_t* >::Invoke(15 /* System.Type System.Reflection.Assembly::GetType(System.String) */, L_14, _stringLiteral058AAB71D333CB1ADEB82A91D9C0D000B3792695);
+				L_15 = VirtualFuncInvoker1< Type_t*, String_t* >::Invoke(17 /* System.Type System.Reflection.Assembly::GetType(System.String) */, L_14, _stringLiteral058AAB71D333CB1ADEB82A91D9C0D000B3792695);
 				Type_t* L_16 = L_15;
 				G_B6_0 = L_16;
 				if (L_16)
@@ -9082,7 +9082,7 @@ IL_0063_1:
 				Assembly_t* L_20 = V_4;
 				NullCheck(L_20);
 				AssemblyName_t555F1570F523D87D970C6E7F27B1B44C83EADDD2* L_21;
-				L_21 = VirtualFuncInvoker0< AssemblyName_t555F1570F523D87D970C6E7F27B1B44C83EADDD2* >::Invoke(17 /* System.Reflection.AssemblyName System.Reflection.Assembly::GetName() */, L_20);
+				L_21 = VirtualFuncInvoker0< AssemblyName_t555F1570F523D87D970C6E7F27B1B44C83EADDD2* >::Invoke(19 /* System.Reflection.AssemblyName System.Reflection.Assembly::GetName() */, L_20);
 				NullCheck(L_21);
 				String_t* L_22;
 				L_22 = AssemblyName_get_Name_m7899B9B3F289EEBAF62AEAB51D1CA91DA92C4E6A_inline(L_21, NULL);

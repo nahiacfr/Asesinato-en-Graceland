@@ -2073,6 +2073,8 @@ struct PrimitiveValue_t1CC37566F40746757D5E3F87474A05909D85C2D4_marshaled_com
 // UnityEngine.PropertyAttribute
 struct PropertyAttribute_t5E0CB5A6CDA6E24CBD4FF26DE3B0C29D8BB54BF0  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
 {
+	// System.Int32 UnityEngine.PropertyAttribute::<order>k__BackingField
+	int32_t ___U3CorderU3Ek__BackingField_0;
 };
 
 // System.Single
@@ -3408,51 +3410,51 @@ struct InputBindingComposite_tA9230435A30FB5B2D4967D6FAE7EFABBBF26C0C0_StaticFie
 struct InputControlAttribute_t312CA97B153666F873279E81BA4054684715368D  : public PropertyAttribute_t5E0CB5A6CDA6E24CBD4FF26DE3B0C29D8BB54BF0
 {
 	// System.String UnityEngine.InputSystem.Layouts.InputControlAttribute::<layout>k__BackingField
-	String_t* ___U3ClayoutU3Ek__BackingField_0;
+	String_t* ___U3ClayoutU3Ek__BackingField_1;
 	// System.String UnityEngine.InputSystem.Layouts.InputControlAttribute::<variants>k__BackingField
-	String_t* ___U3CvariantsU3Ek__BackingField_1;
+	String_t* ___U3CvariantsU3Ek__BackingField_2;
 	// System.String UnityEngine.InputSystem.Layouts.InputControlAttribute::<name>k__BackingField
-	String_t* ___U3CnameU3Ek__BackingField_2;
+	String_t* ___U3CnameU3Ek__BackingField_3;
 	// System.String UnityEngine.InputSystem.Layouts.InputControlAttribute::<format>k__BackingField
-	String_t* ___U3CformatU3Ek__BackingField_3;
+	String_t* ___U3CformatU3Ek__BackingField_4;
 	// System.String UnityEngine.InputSystem.Layouts.InputControlAttribute::<usage>k__BackingField
-	String_t* ___U3CusageU3Ek__BackingField_4;
+	String_t* ___U3CusageU3Ek__BackingField_5;
 	// System.String[] UnityEngine.InputSystem.Layouts.InputControlAttribute::<usages>k__BackingField
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___U3CusagesU3Ek__BackingField_5;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___U3CusagesU3Ek__BackingField_6;
 	// System.String UnityEngine.InputSystem.Layouts.InputControlAttribute::<parameters>k__BackingField
-	String_t* ___U3CparametersU3Ek__BackingField_6;
+	String_t* ___U3CparametersU3Ek__BackingField_7;
 	// System.String UnityEngine.InputSystem.Layouts.InputControlAttribute::<processors>k__BackingField
-	String_t* ___U3CprocessorsU3Ek__BackingField_7;
+	String_t* ___U3CprocessorsU3Ek__BackingField_8;
 	// System.String UnityEngine.InputSystem.Layouts.InputControlAttribute::<alias>k__BackingField
-	String_t* ___U3CaliasU3Ek__BackingField_8;
+	String_t* ___U3CaliasU3Ek__BackingField_9;
 	// System.String[] UnityEngine.InputSystem.Layouts.InputControlAttribute::<aliases>k__BackingField
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___U3CaliasesU3Ek__BackingField_9;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___U3CaliasesU3Ek__BackingField_10;
 	// System.String UnityEngine.InputSystem.Layouts.InputControlAttribute::<useStateFrom>k__BackingField
-	String_t* ___U3CuseStateFromU3Ek__BackingField_10;
+	String_t* ___U3CuseStateFromU3Ek__BackingField_11;
 	// System.UInt32 UnityEngine.InputSystem.Layouts.InputControlAttribute::<bit>k__BackingField
-	uint32_t ___U3CbitU3Ek__BackingField_11;
+	uint32_t ___U3CbitU3Ek__BackingField_12;
 	// System.UInt32 UnityEngine.InputSystem.Layouts.InputControlAttribute::<offset>k__BackingField
-	uint32_t ___U3CoffsetU3Ek__BackingField_12;
+	uint32_t ___U3CoffsetU3Ek__BackingField_13;
 	// System.UInt32 UnityEngine.InputSystem.Layouts.InputControlAttribute::<sizeInBits>k__BackingField
-	uint32_t ___U3CsizeInBitsU3Ek__BackingField_13;
+	uint32_t ___U3CsizeInBitsU3Ek__BackingField_14;
 	// System.Int32 UnityEngine.InputSystem.Layouts.InputControlAttribute::<arraySize>k__BackingField
-	int32_t ___U3CarraySizeU3Ek__BackingField_14;
+	int32_t ___U3CarraySizeU3Ek__BackingField_15;
 	// System.String UnityEngine.InputSystem.Layouts.InputControlAttribute::<displayName>k__BackingField
-	String_t* ___U3CdisplayNameU3Ek__BackingField_15;
+	String_t* ___U3CdisplayNameU3Ek__BackingField_16;
 	// System.String UnityEngine.InputSystem.Layouts.InputControlAttribute::<shortDisplayName>k__BackingField
-	String_t* ___U3CshortDisplayNameU3Ek__BackingField_16;
+	String_t* ___U3CshortDisplayNameU3Ek__BackingField_17;
 	// System.Boolean UnityEngine.InputSystem.Layouts.InputControlAttribute::<noisy>k__BackingField
-	bool ___U3CnoisyU3Ek__BackingField_17;
+	bool ___U3CnoisyU3Ek__BackingField_18;
 	// System.Boolean UnityEngine.InputSystem.Layouts.InputControlAttribute::<synthetic>k__BackingField
-	bool ___U3CsyntheticU3Ek__BackingField_18;
+	bool ___U3CsyntheticU3Ek__BackingField_19;
 	// System.Boolean UnityEngine.InputSystem.Layouts.InputControlAttribute::<dontReset>k__BackingField
-	bool ___U3CdontResetU3Ek__BackingField_19;
+	bool ___U3CdontResetU3Ek__BackingField_20;
 	// System.Object UnityEngine.InputSystem.Layouts.InputControlAttribute::<defaultState>k__BackingField
-	RuntimeObject* ___U3CdefaultStateU3Ek__BackingField_20;
+	RuntimeObject* ___U3CdefaultStateU3Ek__BackingField_21;
 	// System.Object UnityEngine.InputSystem.Layouts.InputControlAttribute::<minValue>k__BackingField
-	RuntimeObject* ___U3CminValueU3Ek__BackingField_21;
+	RuntimeObject* ___U3CminValueU3Ek__BackingField_22;
 	// System.Object UnityEngine.InputSystem.Layouts.InputControlAttribute::<maxValue>k__BackingField
-	RuntimeObject* ___U3CmaxValueU3Ek__BackingField_22;
+	RuntimeObject* ___U3CmaxValueU3Ek__BackingField_23;
 };
 
 // UnityEngine.InputSystem.LowLevel.InputEvent
@@ -31442,7 +31444,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* InputControlAttribute_g
 {
 	{
 		// public string layout { get; set; }
-		String_t* L_0 = __this->___U3ClayoutU3Ek__BackingField_0;
+		String_t* L_0 = __this->___U3ClayoutU3Ek__BackingField_1;
 		return L_0;
 	}
 }

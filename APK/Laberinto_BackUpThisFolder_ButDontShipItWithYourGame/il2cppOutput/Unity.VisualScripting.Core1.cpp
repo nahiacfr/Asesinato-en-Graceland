@@ -9320,13 +9320,13 @@ IL_00ce:
 		PropertyInfo_t* L_36 = V_4;
 		NullCheck(L_36);
 		MethodInfo_t* L_37;
-		L_37 = VirtualFuncInvoker1< MethodInfo_t*, bool >::Invoke(22 /* System.Reflection.MethodInfo System.Reflection.PropertyInfo::GetGetMethod(System.Boolean) */, L_36, (bool)1);
+		L_37 = VirtualFuncInvoker1< MethodInfo_t*, bool >::Invoke(23 /* System.Reflection.MethodInfo System.Reflection.PropertyInfo::GetGetMethod(System.Boolean) */, L_36, (bool)1);
 		V_5 = L_37;
 		// var setter = property.GetSetMethod(true);
 		PropertyInfo_t* L_38 = V_4;
 		NullCheck(L_38);
 		MethodInfo_t* L_39;
-		L_39 = VirtualFuncInvoker1< MethodInfo_t*, bool >::Invoke(24 /* System.Reflection.MethodInfo System.Reflection.PropertyInfo::GetSetMethod(System.Boolean) */, L_38, (bool)1);
+		L_39 = VirtualFuncInvoker1< MethodInfo_t*, bool >::Invoke(26 /* System.Reflection.MethodInfo System.Reflection.PropertyInfo::GetSetMethod(System.Boolean) */, L_38, (bool)1);
 		V_6 = L_39;
 		// var isGettable = property.CanRead;
 		PropertyInfo_t* L_40 = V_4;
@@ -11548,7 +11548,7 @@ IL_0014:
 		PropertyInfo_t* L_7 = V_0;
 		NullCheck(L_7);
 		MethodInfo_t* L_8;
-		L_8 = VirtualFuncInvoker1< MethodInfo_t*, bool >::Invoke(22 /* System.Reflection.MethodInfo System.Reflection.PropertyInfo::GetGetMethod(System.Boolean) */, L_7, (bool)0);
+		L_8 = VirtualFuncInvoker1< MethodInfo_t*, bool >::Invoke(23 /* System.Reflection.MethodInfo System.Reflection.PropertyInfo::GetGetMethod(System.Boolean) */, L_7, (bool)0);
 		bool L_9;
 		L_9 = MethodInfo_op_Inequality_mB73597A1FCC2F906DBCADDEC68A1B7D5B7E89FA8(L_8, (MethodInfo_t*)NULL, NULL);
 		return L_9;
@@ -11710,7 +11710,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MemberUtility_IsStatic_m518306DE8B210938
 		PropertyInfo_t* L_0 = ___propertyInfo0;
 		NullCheck(L_0);
 		MethodInfo_t* L_1;
-		L_1 = VirtualFuncInvoker1< MethodInfo_t*, bool >::Invoke(22 /* System.Reflection.MethodInfo System.Reflection.PropertyInfo::GetGetMethod(System.Boolean) */, L_0, (bool)1);
+		L_1 = VirtualFuncInvoker1< MethodInfo_t*, bool >::Invoke(23 /* System.Reflection.MethodInfo System.Reflection.PropertyInfo::GetGetMethod(System.Boolean) */, L_0, (bool)1);
 		MethodInfo_t* L_2 = L_1;
 		G_B1_0 = L_2;
 		if (L_2)
@@ -11743,7 +11743,7 @@ IL_0013:
 		PropertyInfo_t* L_4 = ___propertyInfo0;
 		NullCheck(L_4);
 		MethodInfo_t* L_5;
-		L_5 = VirtualFuncInvoker1< MethodInfo_t*, bool >::Invoke(24 /* System.Reflection.MethodInfo System.Reflection.PropertyInfo::GetSetMethod(System.Boolean) */, L_4, (bool)1);
+		L_5 = VirtualFuncInvoker1< MethodInfo_t*, bool >::Invoke(26 /* System.Reflection.MethodInfo System.Reflection.PropertyInfo::GetSetMethod(System.Boolean) */, L_4, (bool)1);
 		MethodInfo_t* L_6 = L_5;
 		G_B5_0 = L_6;
 		if (L_6)
@@ -15497,7 +15497,7 @@ IL_000d:
 		Namespace_t36325594319E587D8BC02F11C4C8C1FD4E683ADC** L_4 = ___value1;
 		NullCheck(L_2);
 		bool L_5;
-		L_5 = InterfaceFuncInvoker2< bool, String_t*, Namespace_t36325594319E587D8BC02F11C4C8C1FD4E683ADC** >::Invoke(6 /* System.Boolean System.Collections.Generic.IDictionary`2<System.String,Unity.VisualScripting.Namespace>::TryGetValue(TKey,TValue&) */, IDictionary_2_t6D974B0AEA53842628EE69DB9B8CA3736CDE8543_il2cpp_TypeInfo_var, L_2, L_3, L_4);
+		L_5 = InterfaceFuncInvoker2< bool, String_t*, Namespace_t36325594319E587D8BC02F11C4C8C1FD4E683ADC** >::Invoke(7 /* System.Boolean System.Collections.Generic.IDictionary`2<System.String,Unity.VisualScripting.Namespace>::TryGetValue(TKey,TValue&) */, IDictionary_2_t6D974B0AEA53842628EE69DB9B8CA3736CDE8543_il2cpp_TypeInfo_var, L_2, L_3, L_4);
 		return L_5;
 	}
 }
