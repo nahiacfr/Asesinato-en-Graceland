@@ -9,9 +9,16 @@ public class SpawnerPlayers : NetworkBehaviour
     public GameObject spawnPlayer1;
     public GameObject spawnPlayer2;
 
-    void Awake()
+    //void Awake()
+    //{
+    //  if (IsServer)
+    //{
+    //  SpawnPlayers();
+    //}
+    // }
+    public override void OnNetworkSpawn()
     {
-        if (IsServer)
+        if (IsOwner)
         {
             SpawnPlayers();
         }
@@ -23,16 +30,20 @@ public class SpawnerPlayers : NetworkBehaviour
         if (IsHost)
         {
             // Si es Host, mueve el jugador a la posición de spawnPlayer1
-            GameObject player = NetworkManager.Singleton.LocalClient.PlayerObject.gameObject;
-            player.transform.position = spawnPlayer1.transform.position;
-            player.transform.rotation = spawnPlayer1.transform.rotation;
+            //GameObject player = NetworkManager.Singleton.LocalClient.PlayerObject.gameObject;
+            //player.transform.position = spawnPlayer1.transform.position;
+            //player.transform.rotation = spawnPlayer1.transform.rotation;
+            transform.position = spawnPlayer1.transform.position;
+            transform.rotation = spawnPlayer1.transform.rotation;
         }
         else if (IsClient)
         {
             // Si es Client, mueve el jugador a la posición de spawnPlayer2
-            GameObject player = NetworkManager.Singleton.LocalClient.PlayerObject.gameObject;
-            player.transform.position = spawnPlayer2.transform.position;
-            player.transform.rotation = spawnPlayer2.transform.rotation;
+            //GameObject player = NetworkManager.Singleton.LocalClient.PlayerObject.gameObject;
+            //player.transform.position = spawnPlayer2.transform.position;
+            //player.transform.rotation = spawnPlayer2.transform.rotation;
+            transform.position = spawnPlayer2.transform.position;
+            transform.rotation = spawnPlayer2.transform.rotation;
         }
     }
 }
