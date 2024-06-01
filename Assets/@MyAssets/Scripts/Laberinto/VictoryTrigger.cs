@@ -12,7 +12,7 @@ public class VictoryTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Jugador"))
         {
 
             other.transform.position = playerNewPosition;

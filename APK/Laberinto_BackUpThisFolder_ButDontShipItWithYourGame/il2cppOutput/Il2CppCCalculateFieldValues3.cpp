@@ -28577,8 +28577,18 @@ struct VibrateController_t0B6AA2FB712411E0534E2B3E82B679C04159C999  : public Mon
 // VictoryTrigger
 struct VictoryTrigger_tB26A2AE4D49FD43EFB341D1C5F5AAFBF11FA41C6  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// UnityEngine.GameObject VictoryTrigger::victoryCanvas
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___victoryCanvas_4;
+	// UnityEngine.GameObject VictoryTrigger::trofeoPrefab
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___trofeoPrefab_4;
+	// UnityEngine.ParticleSystem VictoryTrigger::confetti1
+	ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* ___confetti1_5;
+	// UnityEngine.ParticleSystem VictoryTrigger::confetti2
+	ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* ___confetti2_6;
+	// UnityEngine.AudioSource VictoryTrigger::victorySound
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___victorySound_7;
+	// UnityEngine.Vector3 VictoryTrigger::playerNewPosition
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___playerNewPosition_8;
+	// UnityEngine.Vector3 VictoryTrigger::trofeoPosition
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___trofeoPosition_9;
 };
 
 // WangTsonController
@@ -31653,9 +31663,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9466[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9467[2] = 
 {
 	static_cast<int32_t>(offsetof(UIControllerMenu_t12BB89A21B7A511FCF3DF0286B8190D1036C8188, ___hostButton_26)),static_cast<int32_t>(offsetof(UIControllerMenu_t12BB89A21B7A511FCF3DF0286B8190D1036C8188, ___clientButton_27)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9468[1] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9468[6] = 
 {
-	static_cast<int32_t>(offsetof(VictoryTrigger_tB26A2AE4D49FD43EFB341D1C5F5AAFBF11FA41C6, ___victoryCanvas_4)),};
+	static_cast<int32_t>(offsetof(VictoryTrigger_tB26A2AE4D49FD43EFB341D1C5F5AAFBF11FA41C6, ___trofeoPrefab_4)),static_cast<int32_t>(offsetof(VictoryTrigger_tB26A2AE4D49FD43EFB341D1C5F5AAFBF11FA41C6, ___confetti1_5)),static_cast<int32_t>(offsetof(VictoryTrigger_tB26A2AE4D49FD43EFB341D1C5F5AAFBF11FA41C6, ___confetti2_6)),static_cast<int32_t>(offsetof(VictoryTrigger_tB26A2AE4D49FD43EFB341D1C5F5AAFBF11FA41C6, ___victorySound_7)),static_cast<int32_t>(offsetof(VictoryTrigger_tB26A2AE4D49FD43EFB341D1C5F5AAFBF11FA41C6, ___playerNewPosition_8)),static_cast<int32_t>(offsetof(VictoryTrigger_tB26A2AE4D49FD43EFB341D1C5F5AAFBF11FA41C6, ___trofeoPosition_9)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9470[3] = 
 {
 	static_cast<int32_t>(offsetof(LogicVolume_t461E743CB68F65CAD6A2B9085607F481F70A6CDB, ___slider_4)),static_cast<int32_t>(offsetof(LogicVolume_t461E743CB68F65CAD6A2B9085607F481F70A6CDB, ___sliderValue_5)),static_cast<int32_t>(offsetof(LogicVolume_t461E743CB68F65CAD6A2B9085607F481F70A6CDB, ___imageMute_6)),};
