@@ -6,27 +6,39 @@ using UnityEngine.AI;
 
 public class IAEnemigo : MonoBehaviour
 {
-    NavMeshAgent agent;
     public Animator anim;
-    State currentState;
+    public List<Transform> checkPointList;
+    public Transform player;
 
     Transform actualP;
-    public Transform p1;
-    public Transform p2;
-    public Transform player;
+    int cpIndex = 0;
 
     void Start()
     {
-        //agent = GetComponent<NavMeshAgent>();
-        //anim = GetComponent<Animator>();
-        //currentState = new Idle(gameObject, agent, anim, player);
-        actualP = p1;
-        GetComponent<NavMeshAgent>().destination = actualP.transform.position;
+        NextCheckPoint();
         anim.SetTrigger("Walk");
     }
 
     void Update()
     {
-        //currentState = currentState.Process();
+        if(GetComponent<NavMeshAgent>().remainingDistance < 0.5)
+        {
+            NextCheckPoint();
+        }
+    }
+
+    private void NextCheckPoint()
+    {
+        Debug.Log(checkPointList.Count);
+        if(cpIndex >= checkPointList.Count -1)
+        {
+            cpIndex = 0;
+        }
+        else
+        {
+            cpIndex= cpIndex + 1;
+        }
+        actualP = checkPointList[cpIndex];
+        GetComponent<NavMeshAgent>().destination = actualP.transform.position;
     }
 }
