@@ -11,6 +11,8 @@ TagManager:
   - BlueDoor
   - RedDoor
   - Exit
+  - Controller
+  - Runner
   layers:
   - Default
   - TransparentFX

@@ -5,80 +5,37 @@ using Unity.Netcode;
 
 public class SpawnerPlayers : NetworkBehaviour
 {
-    // Referencias a los objetos vacíos en la escena que se usarán como puntos de spawn
-    public GameObject spawnPlayer1;
-    public GameObject spawnPlayer2;
+    public GameObject spawnController; 
+    public GameObject spawnRunner; 
 
-    private void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        if (IsServer)
+        if (other.CompareTag("Jugador"))
         {
-            Debug.Log("Server is setting up callbacks.");
-            NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
-        }
-    }
-
-    private void OnDestroy()
-    {
-        if (IsServer)
-        {
-            Debug.Log("Server is removing callbacks.");
-            NetworkManager.Singleton.OnClientConnectedCallback -= OnClientConnected;
-        }
-    }
-
-    private void OnClientConnected(ulong clientId)
-    {
-        Debug.Log($"Client connected: {clientId}");
-
-        if (IsServer)
-        {
-            if (clientId == NetworkManager.Singleton.LocalClientId)
+            if (gameObject.CompareTag("Controller"))
             {
-                Debug.Log("This is the local client, skipping spawn.");
-                return;
+                MovePlayer(other.gameObject, spawnController);
+                Destroy(gameObject); 
             }
-
-            if (NetworkManager.Singleton.ConnectedClients.TryGetValue(clientId, out var networkClient))
+            else if (gameObject.CompareTag("Runner"))
             {
-                GameObject spawnPoint = IsHost ? spawnPlayer1 : spawnPlayer2;
-                SpawnPlayer(networkClient.PlayerObject, spawnPoint);
-            }
-            else
-            {
-                Debug.LogError($"Client {clientId} not found in ConnectedClients.");
+                MovePlayer(other.gameObject, spawnRunner);
+                Destroy(gameObject); 
             }
         }
     }
 
-    public override void OnNetworkSpawn()
+    private void MovePlayer(GameObject player, GameObject spawnPoint)
     {
-        Debug.Log("OnNetworkSpawn called.");
-
-        if (IsOwner)
+        if (player != null && spawnPoint != null)
         {
-            Debug.Log("IsOwner is true.");
-            GameObject spawnPoint = IsHost ? spawnPlayer1 : spawnPlayer2;
-            transform.position = spawnPoint.transform.position;
-            transform.rotation = spawnPoint.transform.rotation;
+            player.transform.position = spawnPoint.transform.position;
+            player.transform.rotation = spawnPoint.transform.rotation;
         }
         else
         {
-            Debug.Log("IsOwner is false.");
-        }
-    }
-
-    private void SpawnPlayer(NetworkObject playerObject, GameObject spawnPoint)
-    {
-        if (playerObject != null)
-        {
-            Debug.Log($"Moving player to spawn point {spawnPoint.name}.");
-            playerObject.transform.position = spawnPoint.transform.position;
-            playerObject.transform.rotation = spawnPoint.transform.rotation;
-        }
-        else
-        {
-            Debug.LogError("Player object is null.");
+            Debug.LogError("Player or spawn point is null.");
         }
     }
 }
+
