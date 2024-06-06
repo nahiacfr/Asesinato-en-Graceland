@@ -383,8 +383,6 @@ GameObject:
   - component: {fileID: 3931181069931921661}
   - component: {fileID: 1644046933970136107}
   - component: {fileID: 2601900490948549298}
-  - component: {fileID: 561205978800669628}
-  - component: {fileID: 5863410833276633694}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Jugador
@@ -469,35 +467,6 @@ MonoBehaviour:
   ScaleThreshold: 0.01
   InLocalSpace: 0
   Interpolate: 1
---- !u!65 &561205978800669628
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6619141083712866479}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.0991626, y: 11.610064, z: 2.0898283}
-  m_Center: {x: 0.0038876384, y: 2.087626, z: 0.009226203}
---- !u!54 &5863410833276633694
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6619141083712866479}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &7109905408076144305
 PrefabInstance:
   m_ObjectHideFlags: 0
