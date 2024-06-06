@@ -6,7 +6,10 @@ using UnityEngine.AI;
 
 public class IAEnemigo : MonoBehaviour
 {
-    public Animator anim;
+    NavMeshAgent agent;
+    Animator anim;
+    State currentState;
+
     public List<Transform> checkPointList;
     public Transform player;
 
@@ -15,13 +18,21 @@ public class IAEnemigo : MonoBehaviour
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         NextCheckPoint();
         anim.SetTrigger("Walk");
+        /*
+        agent = GetComponent<NavMeshAgent>();
+        currentState = new Idle(gameObject, agent, anim, player);
+        */
     }
 
     void Update()
     {
-        if(GetComponent<NavMeshAgent>().remainingDistance < 0.5)
+        /*
+        currentState = currentState.Process();
+        */
+        if (GetComponent<NavMeshAgent>().remainingDistance < 0.5)
         {
             NextCheckPoint();
         }
