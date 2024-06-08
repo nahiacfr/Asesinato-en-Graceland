@@ -75,11 +75,120 @@ public class State
         return false;
     }
 
-
     protected void SetAnimatorBooleans(bool isIdle, bool isPatrolling, bool isRunning)
     {
         anim.SetBool("isIdle", isIdle);
         anim.SetBool("isPatrolling", isPatrolling);
         anim.SetBool("isRunning", isRunning);
+    }
+}
+
+public class IdleState : State
+{
+    public IdleState(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player)
+        : base(_npc, _agent, _anim, _player)
+    {
+        name = STATE.IDLE;
+    }
+
+    public override void Enter()
+    {
+        SetAnimatorBooleans(true, false, false);
+        agent.isStopped = true;
+        base.Enter();
+    }
+
+    public override void Update()
+    {
+        if (CanSeePlayer())
+        {
+            nextState = new PursueState(npc, agent, anim, player);
+            stage = EVENT.EXIT;
+        }
+    }
+
+    public override void Exit()
+    {
+        agent.isStopped = false;
+        base.Exit();
+    }
+}
+
+public class PatrolState : State
+{
+    public PatrolState(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player)
+        : base(_npc, _agent, _anim, _player)
+    {
+        name = STATE.PATROL;
+    }
+
+    public override void Enter()
+    {
+        SetAnimatorBooleans(false, true, false);
+        agent.speed = 1.0f; // Set patrol speed
+        base.Enter();
+    }
+
+    public override void Update()
+    {
+        if (CanSeePlayer())
+        {
+            nextState = new PursueState(npc, agent, anim, player);
+            stage = EVENT.EXIT;
+        }
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+    }
+}
+
+public class PursueState : State
+{
+    public PursueState(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player)
+        : base(_npc, _agent, _anim, _player)
+    {
+        name = STATE.PURSUE;
+    }
+
+    public override void Enter()
+    {
+        SetAnimatorBooleans(false, false, true);
+        agent.speed = 1.5f; // Set pursue speed
+        base.Enter();
+    }
+
+    public override void Update()
+    {
+        agent.SetDestination(player.position);
+        if (!CanSeePlayer())
+        {
+            nextState = new PatrolState(npc, agent, anim, player);
+            stage = EVENT.EXIT;
+        }
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+    }
+}
+
+public class NPCController : MonoBehaviour
+{
+    private State currentState;
+    public Transform player;
+    public Animator anim;
+    public NavMeshAgent agent;
+
+    void Start()
+    {
+        currentState = new IdleState(gameObject, agent, anim, player);
+    }
+
+    void Update()
+    {
+        currentState = currentState.Process();
     }
 }

@@ -107,8 +107,8 @@ public class LabGameManager : NetworkBehaviour
     private void Start()
     {
         ResetVariables();
-        //StartAsClient();
-        StartAsHost();
+        StartAsClient();
+        //StartAsHost();
         chargeDoors();
     }
 

@@ -5,37 +5,40 @@ using Unity.Netcode;
 
 public class SpawnerPlayers : NetworkBehaviour
 {
-    public GameObject spawnController; 
-    public GameObject spawnRunner; 
+    public GameObject spawnController;
+    public GameObject spawnRunner;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Jugador"))
+        if (!IsOwner) return; // Asegúrate de que solo el propietario ejecute esta lógica
+
+        if (CompareTag("Controller"))
         {
-            if (gameObject.CompareTag("Controller"))
-            {
-                MovePlayer(other.gameObject, spawnController);
-                Destroy(gameObject); 
-            }
-            else if (gameObject.CompareTag("Runner"))
-            {
-                MovePlayer(other.gameObject, spawnRunner);
-                Destroy(gameObject); 
-            }
+            MovePlayerServerRpc(spawnController.transform.position, spawnController.transform.rotation);
+        }
+        else if (CompareTag("Runner"))
+        {
+            MovePlayerServerRpc(spawnRunner.transform.position, spawnRunner.transform.rotation);
         }
     }
 
-    private void MovePlayer(GameObject player, GameObject spawnPoint)
+    [ServerRpc]
+    private void MovePlayerServerRpc(Vector3 newPosition, Quaternion newRotation)
     {
-        if (player != null && spawnPoint != null)
-        {
-            player.transform.position = spawnPoint.transform.position;
-            player.transform.rotation = spawnPoint.transform.rotation;
-        }
-        else
-        {
-            Debug.LogError("Player or spawn point is null.");
-        }
+        MovePlayerClientRpc(newPosition, newRotation);
+        DestroyObjectServerRpc();
+    }
+
+    [ClientRpc]
+    private void MovePlayerClientRpc(Vector3 newPosition, Quaternion newRotation)
+    {
+        transform.position = newPosition;
+        transform.rotation = newRotation;
+    }
+
+    [ServerRpc]
+    private void DestroyObjectServerRpc()
+    {
+        Destroy(gameObject);
     }
 }
-

@@ -5,9 +5,8 @@ using Unity.MLAgents.Actuators;
 
 public class Player1Agent : Agent
 {
-    public GameObject blueCube;
-    public GameObject redCube;
-    public LabGameManager doorController;  // Script to control the doors
+    public Transform exit;
+    public GameObject[] enemies;
 
     public override void OnEpisodeBegin()
     {
@@ -16,52 +15,48 @@ public class Player1Agent : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        // Collect observations on the positions of the player and the cubes
+        // Collect observations on the positions of the player, exit, and enemies
         sensor.AddObservation(transform.localPosition);
-        sensor.AddObservation(blueCube.transform.localPosition);
-        sensor.AddObservation(redCube.transform.localPosition);
+        sensor.AddObservation(exit.localPosition);
+        foreach (var enemy in enemies)
+        {
+            sensor.AddObservation(enemy.transform.localPosition);
+        }
     }
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
-        // Get actions from the neural network
-        var action = actionBuffers.DiscreteActions[0];
+        // Get movement actions from the neural network
+        var continuousActions = actionBuffers.ContinuousActions;
+        var moveX = continuousActions[0];
+        var moveZ = continuousActions[1];
 
-        // Implement the actions: 0 = do nothing, 1 = touch blue cube, 2 = touch red cube
-        if (action == 1)
-        {
-            TouchCube(blueCube);
-        }
-        else if (action == 2)
-        {
-            TouchCube(redCube);
-        }
-    }
+        // Move the player based on the actions
+        transform.Translate(new Vector3(moveX, 0, moveZ) * Time.deltaTime * 5f);
 
-    private void TouchCube(GameObject cube)
-    {
-        if (cube == blueCube)
+        // Reward and end episode if the player reaches the exit
+        if (Vector3.Distance(transform.localPosition, exit.localPosition) < 1.0f)
         {
-            doorController.OpenCloseDoors("Blue");
+            SetReward(1.0f);
+            EndEpisode();
         }
-        else if (cube == redCube)
+
+        // Penalize and end episode if the player touches an enemy
+        foreach (var enemy in enemies)
         {
-            doorController.OpenCloseDoors("Red");
+            if (Vector3.Distance(transform.localPosition, enemy.transform.localPosition) < 1.0f)
+            {
+                SetReward(-1.0f);
+                EndEpisode();
+            }
         }
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
-        // Manual control for testing: map keys to actions
-        var discreteActionsOut = actionsOut.DiscreteActions;
-        discreteActionsOut[0] = 0; // Default action: do nothing
-        if (Input.GetKey(KeyCode.Alpha1))
-        {
-            discreteActionsOut[0] = 1; // Action: touch blue cube
-        }
-        else if (Input.GetKey(KeyCode.Alpha2))
-        {
-            discreteActionsOut[0] = 2; // Action: touch red cube
-        }
+        // Manual control for testing: map keyboard inputs to actions
+        var continuousActionsOut = actionsOut.ContinuousActions;
+        continuousActionsOut[0] = Input.GetAxis("Horizontal"); // X-axis movement
+        continuousActionsOut[1] = Input.GetAxis("Vertical");   // Z-axis movement
     }
 }
