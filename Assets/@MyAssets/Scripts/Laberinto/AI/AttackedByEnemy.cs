@@ -9,25 +9,12 @@ public class AttackedByEnemy : NetworkBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (!IsHost)
         {
-            MoveToSpawnPointServerRpc();
-        }
-    }
-
-    [ServerRpc]
-    private void MoveToSpawnPointServerRpc()
-    {
-        MoveToSpawnPointClientRpc(spawnRunner.transform.position, spawnRunner.transform.rotation);
-    }
-
-    [ClientRpc]
-    private void MoveToSpawnPointClientRpc(Vector3 newPosition, Quaternion newRotation)
-    {
-        if (IsOwner)
-        {
-            transform.position = newPosition;
-            transform.rotation = newRotation;
-        }
+            if (other.CompareTag("Enemy"))
+            {
+                transform.position = spawnRunner.transform.position;
+            }
+        }  
     }
 }

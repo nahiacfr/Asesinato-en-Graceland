@@ -10,11 +10,11 @@ TagManager:
   - Checkpoint
   - BlueDoor
   - RedDoor
-  - Exit
   - Controller
   - Runner
   - Enemy
   - PlayerHand
+  - Exit
   layers:
   - Default
   - TransparentFX

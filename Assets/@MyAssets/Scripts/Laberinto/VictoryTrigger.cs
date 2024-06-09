@@ -6,34 +6,29 @@ public class VictoryTrigger : NetworkBehaviour
     [SerializeField] private GameObject trofeo;
     [SerializeField] private ParticleSystem confetti1;
     [SerializeField] private ParticleSystem confetti2;
+    [SerializeField] private Transform spawnController; // El punto de spawn al que moveremos al jugador
     [SerializeField] private AudioSource victorySound;
     [SerializeField] private AudioSource currentSound;
-    [SerializeField] private Transform spawnController; // El punto de spawn al que moveremos al jugador
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Jugador") && IsServer)
+        if (other.CompareTag("Finish"))
         {
-            var networkObject = other.GetComponent<NetworkObject>();
-            if (networkObject != null)
-            {
-                MovePlayerToSpawnPoint(networkObject);
-                ActivateEffectsAndSound();
-            }
+            MovePlayerToSpawnPoint();
+            ActivateEffectsAndSound();
         }
     }
 
-    private void MovePlayerToSpawnPoint(NetworkObject playerNetworkObject)
+    private void MovePlayerToSpawnPoint()
     {
-        // Mueve al jugador en el servidor
-        playerNetworkObject.transform.position = spawnController.position;
-        playerNetworkObject.transform.rotation = spawnController.rotation;
+        // Mueve al jugador a la posición del spawnController
+        transform.position = spawnController.position;
+        transform.rotation = spawnController.rotation;
     }
 
-    [ClientRpc]
-    private void ActivateEffectsAndSoundClientRpc()
+    private void ActivateEffectsAndSound()
     {
-        // Activa y reproduce efectos visuales y de sonido en todos los clientes
+        // Activa y reproduce efectos visuales y de sonido
         if (trofeo != null)
         {
             trofeo.SetActive(true);
@@ -60,11 +55,5 @@ public class VictoryTrigger : NetworkBehaviour
         {
             currentSound.Stop();
         }
-    }
-
-    private void ActivateEffectsAndSound()
-    {
-        // Llama a un ClientRpc para activar efectos y sonido en todos los clientes
-        ActivateEffectsAndSoundClientRpc();
     }
 }
