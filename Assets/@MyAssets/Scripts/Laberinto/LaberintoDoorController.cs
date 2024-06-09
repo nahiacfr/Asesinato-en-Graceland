@@ -9,8 +9,6 @@ public class LaberintoDoorController : MonoBehaviour
     {
         LabGameManager.Instance.chargeDoors();
         Debug.Log("Start Door");
-        StartCoroutine( WaitAndLoadRed());
-        StartCoroutine(WaitAndLoadBlue());
     }
 
     // Update is called once per frame
@@ -41,8 +39,10 @@ public class LaberintoDoorController : MonoBehaviour
         }
         else if (color == "Blue")
         {
+            Debug.Log("Blue");
             LabGameManager.Instance.OpenCloseDoors("Blue");
+            Debug.Log("Blue2");
         }
-        
     }
+
 }

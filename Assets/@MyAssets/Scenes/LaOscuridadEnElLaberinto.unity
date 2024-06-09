@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0767156, g: 0.10098912, b: 0.1215116, a: 1}
+  m_IndirectSpecularColor: {r: 0.076677054, g: 0.100896835, b: 0.121635795, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4190,8 +4190,8 @@ Transform:
   - {fileID: 838931682}
   - {fileID: 1089629789}
   - {fileID: 1155818362}
-  - {fileID: 1209346290}
   - {fileID: 1152623461}
+  - {fileID: 1209346290}
   m_Father: {fileID: 1057673788}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4784,6 +4784,7 @@ GameObject:
   - component: {fileID: 638074369}
   - component: {fileID: 638074368}
   - component: {fileID: 638074367}
+  - component: {fileID: 638074370}
   - component: {fileID: 638074366}
   - component: {fileID: 638074365}
   m_Layer: 0
@@ -5050,6 +5051,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638074363}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &638074370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638074363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01050c22c600b8a4eba97e7b937982a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: Blue
 --- !u!1 &639386155
 GameObject:
   m_ObjectHideFlags: 0
@@ -5257,14 +5271,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671912475}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
   m_LocalPosition: {x: 16.26, y: 19.58, z: -27.12}
   m_LocalScale: {x: 0, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
 --- !u!1 &683981056
 GameObject:
   m_ObjectHideFlags: 0
@@ -18212,7 +18226,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 568348180}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1152623462
 MeshCollider:
@@ -18294,7 +18308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1155818362
 Transform:
   m_ObjectHideFlags: 0
@@ -24792,7 +24806,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799056511}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: -1.6}
   m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_ConstrainProportionsScale: 0
@@ -24800,7 +24814,7 @@ RectTransform:
   - {fileID: 1169083304}
   m_Father: {fileID: 904200663}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 15.714, y: 22.094}
@@ -26298,6 +26312,7 @@ GameObject:
   - component: {fileID: 1968912366}
   - component: {fileID: 1968912365}
   - component: {fileID: 1968912364}
+  - component: {fileID: 1968912367}
   - component: {fileID: 1968912363}
   - component: {fileID: 1968912362}
   m_Layer: 0
@@ -26564,6 +26579,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968912360}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1968912367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968912360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01050c22c600b8a4eba97e7b937982a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: Red
 --- !u!1 &1972382822
 GameObject:
   m_ObjectHideFlags: 0
@@ -28016,7 +28044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2768025601962387452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29930,4 +29958,4 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0

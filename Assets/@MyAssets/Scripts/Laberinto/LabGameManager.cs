@@ -58,48 +58,48 @@ public class LabGameManager : NetworkBehaviour
 
         selectedPlayer = new NetworkVariable<PlayerData>();
 
-        redDoor.OnValueChanged += ChangeRedDoors;
-        blueDoor.OnValueChanged += ChangeBlueDoors;
+        redDoor.OnValueChanged += OnRedDoorValueChanged;
+        blueDoor.OnValueChanged += OnBlueDoorValueChanged;
     }
 
-    private void ChangeBlueDoors(bool previousValue, bool newValue)
+    private void OnRedDoorValueChanged(bool previousValue, bool newValue)
     {
-        ChangeDoors("Blue");
-    }
-
-    private void ChangeRedDoors(bool previousValue, bool newValue)
-    {
-        Debug.Log("ChangeRedDoors");
+        Debug.Log("OnRedDoorValueChanged: " + newValue);
         ChangeDoors("Red");
     }
 
-    private void ChangeDoors(String color)
+    private void OnBlueDoorValueChanged(bool previousValue, bool newValue)
+    {
+        Debug.Log("OnBlueDoorValueChanged: " + newValue);
+        ChangeDoors("Blue");
+    }
+
+    private void ChangeDoors(string color)
     {
         if (color == "Red")
         {
-            Debug.Log("ChangeDoors - Red");
             foreach (GameObject door in redDoors)
             {
-                door.SetActive(false);
-                Debug.Log("Red door false");
+                door.SetActive(redDoor.Value); // Usa el valor de la NetworkVariable
+                Debug.Log("Red door " + (redDoor.Value ? "true" : "false"));
             }
             foreach (GameObject door in blueDoors)
             {
-                door.SetActive(true);
-                Debug.Log("Blue door true");
+                door.SetActive(!redDoor.Value); // Usa el valor opuesto de la NetworkVariable
+                Debug.Log("Blue door " + (!redDoor.Value ? "true" : "false"));
             }
         }
         else if (color == "Blue")
         {
             foreach (GameObject door in redDoors)
             {
-                door.SetActive(true);
-                Debug.Log("Red door true");
+                door.SetActive(!blueDoor.Value); // Usa el valor opuesto de la NetworkVariable
+                Debug.Log("Red door " + (!blueDoor.Value ? "true" : "false"));
             }
             foreach (GameObject door in blueDoors)
             {
-                door.SetActive(false);
-                Debug.Log("Blue door false");
+                door.SetActive(blueDoor.Value); // Usa el valor de la NetworkVariable
+                Debug.Log("Blue door " + (blueDoor.Value ? "true" : "false"));
             }
         }
     }
@@ -107,9 +107,16 @@ public class LabGameManager : NetworkBehaviour
     private void Start()
     {
         ResetVariables();
-        //StartAsClient();
-        StartAsHost();
+        StartAsClient();
+        //StartAsHost();
         chargeDoors();
+        SyncDoorStates();
+    }
+
+    private void SyncDoorStates()
+    {
+        ChangeDoors("Red");
+        ChangeDoors("Blue");
     }
 
     public void StartAsHost()
@@ -298,18 +305,20 @@ public class LabGameManager : NetworkBehaviour
         Application.Quit();
     }
 
-    public void OpenCloseDoors(String color)
+    public void OpenCloseDoors(string color)
     {
-        if (!IsHost) return;
-        if (color == "Red")
+        if (IsHost)
         {
-            redDoor.Value = true;
-            blueDoor.Value = false;
-        }
-        else if (color == "Blue")
-        {
-            redDoor.Value = false;
-            blueDoor.Value = true;
+            if (color == "Red")
+            {
+                redDoor.Value = true;
+                blueDoor.Value = false;
+            }
+            else if (color == "Blue")
+            {
+                redDoor.Value = false;
+                blueDoor.Value = true;
+            }
         }
     }
 
