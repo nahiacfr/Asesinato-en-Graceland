@@ -43,7 +43,7 @@ public class WaitingSceneController : NetworkBehaviour
 
             if (connectedPlayers >= 2)
             {
-                GameManager.Instance.LoadMainScene();
+                LabGameManager.Instance.StartGame();
             }
         }
     }

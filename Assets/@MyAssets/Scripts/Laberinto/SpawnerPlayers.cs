@@ -8,6 +8,19 @@ public class SpawnerPlayers : NetworkBehaviour
     public GameObject spawnController;
     public GameObject spawnRunner;
 
+    private void Start()
+    {
+        if (IsHost)
+        {
+            transform.position = spawnController.transform.position;
+        }
+        else
+        {
+            transform.position = spawnRunner.transform.position;
+        }
+    }
+
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if (!IsOwner) return; // Asegúrate de que solo el propietario ejecute esta lógica
@@ -41,4 +54,5 @@ public class SpawnerPlayers : NetworkBehaviour
     {
         Destroy(gameObject);
     }
+    */
 }
